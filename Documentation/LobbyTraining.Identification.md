@@ -30,8 +30,8 @@ In training mode, you must **identify** yourself. This action puts a unique name
 ### Example
 ```json
 {
-  "CommandName":"IdentifyCommand",
-  "Name":"SpongeBob"
+	"CommandName":"IdentifyCommand",
+	"Name":"SpongeBob"
 }
 ```
 
@@ -53,31 +53,32 @@ In training mode, you must **identify** yourself. This action puts a unique name
 		},
 		"Command": {
 			"description": "The command that was sended by the client",
-			"type": "IdentifyCommand",
+			"type": "object",
 			"properties": {
-		    "CommandName": {
-			    "description": "Always contains 'IdentifyCommand' to distinguish the command from others.",
-			     "type": "string"
-		    },
-		    "Name": {
-			    "description": "The name you want to have on the server !",
-			    "type": "string"
-		    }
-	    }
+				"CommandName": {
+					"description": "Always contains 'IdentifyCommand' to distinguish the command from others.",
+					"type": "string"
+				},
+				"Name": {
+					"description": "The name you want to have on the server !",
+					"type": "string"
+				}
+			},
+			"required": ["CommandName", "Name"]
 		}
 	},
-	"required": ["CommandName", "Ok"]
+	"required": ["CommandName", "Ok", "Command"]
 }
 ```
 
 ### Example
 ```json
 {
-  "CommandName":"IdentifyResponse",
-  "Ok":true,
-  "Command":{
-    "CommandName":"IdentifyCommand",
-    "Name":"SpongeBob"
-  }
+	"CommandName":"IdentifyResponse",
+	"Ok":true,
+	"Command":{
+		"CommandName":"IdentifyCommand",
+		"Name":"SpongeBob"
+	}
 }
 ```
