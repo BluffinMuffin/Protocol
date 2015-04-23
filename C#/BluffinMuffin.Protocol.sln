@@ -18,6 +18,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", 
 		References\Com.Ericmas001.Net.Protocol.dll = References\Com.Ericmas001.Net.Protocol.dll
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{E469F8A0-7DB7-48CF-B40A-03BE833DD893}"
+	ProjectSection(SolutionItems) = preProject
+		..\Documentation\LobbyTraining.Identification.md = ..\Documentation\LobbyTraining.Identification.md
+		..\Documentation\LobbyTraining.md = ..\Documentation\LobbyTraining.md
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>30</x>
+      <y>30</y>
+      <w>390</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>title: Lobby Training Mode: Identification
+_Client~c1_|_Server~s1_
+c1-&gt;s1:c1,s1:IdentifyCommand   
+s1-&gt;s1:s1:verify if name already used
+s1-&gt;c1:c1,s1:IdentifyResponse</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
