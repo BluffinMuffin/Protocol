@@ -56,6 +56,11 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                     sw.WriteLine();
                     sw.WriteLine(line.Trim());
                 }
+                if (File.Exists(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"..\..\..\..\Documentation\Sequence Diagrams\", fullname + ".png")))
+                {
+                    sw.WriteLine();
+                    sw.WriteLine("<p align=center><img src=\"https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequence%20Diagrams/{0}.png\" alt=\"Sequence Diagram\"></p>", fullname);
+                }
                 sw.WriteLine();
                 sw.WriteLine("## {0}", commandName);
                 sw.WriteLine();

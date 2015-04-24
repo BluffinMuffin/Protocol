@@ -1,8 +1,8 @@
 # Lobby Training : Identify
 
-This page is about the "Identification" part of the Lobby in Training Mode. For more information on this mode, see the [LobbyTraining]({Link:LobbyTraining}) section.
-
 In training mode, you must **identify** yourself. This action puts a unique name to your Tcp Connection for the server. This name will be used as your playername on every table that you will play.
+
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequence%20Diagrams/BluffinMuffin.Protocol.Lobby.Training.IdentifyCommand.png" alt="Sequence Diagram"></p>
 
 ## IdentifyCommand
 
