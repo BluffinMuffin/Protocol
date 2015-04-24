@@ -108,7 +108,7 @@ BluffinMuffin.Protocol.Lobby.CreateTableCommand
 
 ### Example
 
-## CreateTableCommand
+## CreateTableResponse
 
 ### Command Schema
 

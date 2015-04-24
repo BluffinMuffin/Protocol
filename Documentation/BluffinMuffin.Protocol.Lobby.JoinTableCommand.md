@@ -27,7 +27,7 @@ BluffinMuffin.Protocol.Lobby.JoinTableCommand
 
 ### Example
 
-## JoinTableCommand
+## JoinTableResponse
 
 ### Command Schema
 

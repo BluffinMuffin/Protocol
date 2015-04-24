@@ -30,7 +30,7 @@ BluffinMuffin.Protocol.Game.PlayerSitInCommand
 
 ### Example
 
-## PlayerSitInCommand
+## PlayerSitInResponse
 
 ### Command Schema
 

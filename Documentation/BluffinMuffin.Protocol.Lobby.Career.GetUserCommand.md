@@ -24,7 +24,7 @@ BluffinMuffin.Protocol.Lobby.Career.GetUserCommand
 
 ### Example
 
-## GetUserCommand
+## GetUserResponse
 
 ### Command Schema
 

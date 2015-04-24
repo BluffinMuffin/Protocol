@@ -27,7 +27,7 @@ In training mode, you must **identify** yourself. This action puts a unique name
 
 ### Example
 
-## IdentifyCommand
+## IdentifyResponse
 
 ### Command Schema
 

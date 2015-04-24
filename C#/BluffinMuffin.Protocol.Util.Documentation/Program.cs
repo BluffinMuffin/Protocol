@@ -65,7 +65,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                 if (responseTypeIntefaceType != null)
                 {
                     Type rt = responseTypeIntefaceType.GetGenericArguments()[0];
-                    string responseName = t.Name;
+                    string responseName = rt.Name;
                     sw.WriteLine("## {0}", responseName);
                     sw.WriteLine();
                     GenerateSchema(rt, sw, xmlroot);

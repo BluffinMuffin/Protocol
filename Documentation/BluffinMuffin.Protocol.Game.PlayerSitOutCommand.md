@@ -24,7 +24,7 @@ BluffinMuffin.Protocol.Game.PlayerSitOutCommand
 
 ### Example
 
-## PlayerSitOutCommand
+## PlayerSitOutResponse
 
 ### Command Schema
 

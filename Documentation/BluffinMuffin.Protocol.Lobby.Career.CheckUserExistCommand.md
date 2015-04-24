@@ -24,7 +24,7 @@ BluffinMuffin.Protocol.Lobby.Career.CheckUserExistCommand
 
 ### Example
 
-## CheckUserExistCommand
+## CheckUserExistResponse
 
 ### Command Schema
 

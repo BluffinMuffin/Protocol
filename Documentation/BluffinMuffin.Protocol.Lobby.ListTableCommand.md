@@ -48,7 +48,7 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
 
 ### Example
 
-## ListTableCommand
+## ListTableResponse
 
 ### Command Schema
 

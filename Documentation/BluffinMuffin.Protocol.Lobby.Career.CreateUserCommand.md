@@ -33,7 +33,7 @@ BluffinMuffin.Protocol.Lobby.Career.CreateUserCommand
 
 ### Example
 
-## CreateUserCommand
+## CreateUserResponse
 
 ### Command Schema
 

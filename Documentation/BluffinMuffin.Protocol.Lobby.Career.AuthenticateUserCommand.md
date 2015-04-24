@@ -27,7 +27,7 @@ BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserCommand
 
 ### Example
 
-## AuthenticateUserCommand
+## AuthenticateUserResponse
 
 ### Command Schema
 

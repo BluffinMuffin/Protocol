@@ -24,7 +24,7 @@ BluffinMuffin.Protocol.Lobby.Career.CheckDisplayExistCommand
 
 ### Example
 
-## CheckDisplayExistCommand
+## CheckDisplayExistResponse
 
 ### Command Schema
 

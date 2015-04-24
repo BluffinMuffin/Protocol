@@ -21,7 +21,7 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
 
 ### Example
 
-## SupportedRulesCommand
+## SupportedRulesResponse
 
 ### Command Schema
 
