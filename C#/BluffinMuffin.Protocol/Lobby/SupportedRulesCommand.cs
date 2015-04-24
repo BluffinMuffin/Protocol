@@ -4,7 +4,7 @@ using BluffinMuffin.Protocol.DataTypes;
 
 namespace BluffinMuffin.Protocol.Lobby
 {
-    public class SupportedRulesCommand : AbstractLobbyCommand
+    public class SupportedRulesCommand : AbstractLobbyCommand, ICommandWithResponse<SupportedRulesResponse>
     {
         public SupportedRulesResponse Response(IEnumerable<RuleInfo> rules)
         {

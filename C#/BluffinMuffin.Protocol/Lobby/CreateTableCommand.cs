@@ -2,7 +2,7 @@
 
 namespace BluffinMuffin.Protocol.Lobby
 {
-    public class CreateTableCommand : AbstractLobbyCommand
+    public class CreateTableCommand : AbstractLobbyCommand, ICommandWithResponse<CreateTableResponse>
     {
         public TableParams Params { get; set; }
 

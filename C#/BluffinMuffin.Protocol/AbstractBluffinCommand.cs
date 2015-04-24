@@ -9,6 +9,7 @@ namespace BluffinMuffin.Protocol
 {
     public abstract class AbstractBluffinCommand : AbstractJsonCommand
     {
+        [JsonIgnore]
         public abstract BluffinCommandEnum CommandType { get; }
 
         /// <summary>

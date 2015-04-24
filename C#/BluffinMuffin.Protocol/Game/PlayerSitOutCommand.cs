@@ -1,6 +1,6 @@
 ﻿namespace BluffinMuffin.Protocol.Game
 {
-    public class PlayerSitOutCommand : AbstractGameCommand
+    public class PlayerSitOutCommand : AbstractGameCommand, ICommandWithResponse<PlayerSitOutResponse>
     {
         public PlayerSitOutResponse Response(bool success)
         {

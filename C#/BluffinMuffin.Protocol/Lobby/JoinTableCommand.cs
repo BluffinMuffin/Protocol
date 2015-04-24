@@ -1,6 +1,6 @@
 ﻿namespace BluffinMuffin.Protocol.Lobby
 {
-    public class JoinTableCommand : AbstractLobbyCommand
+    public class JoinTableCommand : AbstractLobbyCommand, ICommandWithResponse<JoinTableResponse>
     {
         public int TableId { get; set; }
         public string PlayerName { get; set; }

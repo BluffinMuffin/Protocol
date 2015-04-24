@@ -1,7 +1,14 @@
 ﻿namespace BluffinMuffin.Protocol.Lobby.Training
 {
-    public class IdentifyCommand : AbstractLobbyCommand
+    /// <summary>
+    /// This page is about the "Identification" part of the Lobby in Training Mode. For more information on this mode, see the [LobbyTraining](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/LobbyTraining.md) section.
+    /// In training mode, you must **identify** yourself. This action puts a unique name to your Tcp Connection for the server. This name will be used as your playername on every table that you will play.
+    /// </summary>
+    public class IdentifyCommand : AbstractLobbyCommand, ICommandWithResponse<IdentifyResponse>
     {
+        /// <summary>
+        /// The name you want to have on the server !
+        /// </summary>
         public string Name { get; set; }
 
         public IdentifyResponse Response(bool success)

@@ -71,6 +71,8 @@
     <Compile Include="Game\SeatUpdatedCommand.cs" />
     <Compile Include="Game\TableClosedCommand.cs" />
     <Compile Include="Game\TableInfoCommand.cs" />
+    <Compile Include="IResponse.cs" />
+    <Compile Include="ICommandWithResponse.cs" />
     <Compile Include="IGameCommand.cs" />
     <Compile Include="Lobby\Career\AuthenticateUserCommand.cs" />
     <Compile Include="Lobby\Career\AuthenticateUserResponse.cs" />

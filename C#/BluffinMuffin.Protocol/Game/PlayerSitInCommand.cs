@@ -1,6 +1,6 @@
 ﻿namespace BluffinMuffin.Protocol.Game
 {
-    public class PlayerSitInCommand : AbstractGameCommand
+    public class PlayerSitInCommand : AbstractGameCommand, ICommandWithResponse<PlayerSitInResponse>
     {
         public int NoSeat { get; set; }
         public int MoneyAmount { get; set; }

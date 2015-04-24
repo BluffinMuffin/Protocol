@@ -1,6 +1,6 @@
 ﻿namespace BluffinMuffin.Protocol.Lobby.Career
 {
-    public class CreateUserCommand : AbstractLobbyCommand
+    public class CreateUserCommand : AbstractLobbyCommand, ICommandWithResponse<CreateUserResponse>
     {
         public string Username { get;  set; }
         public string Password { get;  set; }

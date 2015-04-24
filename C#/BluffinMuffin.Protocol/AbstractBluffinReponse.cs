@@ -1,6 +1,6 @@
 ﻿namespace BluffinMuffin.Protocol
 {
-    public abstract class AbstractBluffinReponse<T> : AbstractBluffinCommand
+    public abstract class AbstractBluffinReponse<T> : AbstractBluffinCommand, IResponse
         where T : AbstractBluffinCommand
     {
         public T Command { get; set; }

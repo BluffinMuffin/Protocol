@@ -4,7 +4,7 @@ using BluffinMuffin.Protocol.DataTypes.Enums;
 
 namespace BluffinMuffin.Protocol.Lobby
 {
-    public class ListTableCommand : AbstractLobbyCommand
+    public class ListTableCommand : AbstractLobbyCommand, ICommandWithResponse<ListTableResponse>
     {
         public LobbyTypeEnum[] LobbyTypes { get; set; }
 
