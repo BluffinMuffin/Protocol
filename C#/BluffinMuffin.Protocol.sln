@@ -47,7 +47,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		..\Documentation\BluffinMuffin.Protocol.Lobby.ListTableCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.ListTableCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Lobby.Training.IdentifyCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.Training.IdentifyCommand.md
-		..\Documentation\LobbyTraining.Identification.md = ..\Documentation\LobbyTraining.Identification.md
 		..\Documentation\LobbyTraining.md = ..\Documentation\LobbyTraining.md
 		..\README.md = ..\README.md
 	EndProjectSection
