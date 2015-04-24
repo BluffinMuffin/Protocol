@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Game.PlayerWonPotCommand
 ```json
 {
   "title": "Schema for PlayerWonPotCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Game.PlayerWonPotCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'PlayerWonPotCommand' to distinguish the command from others.",
@@ -31,7 +31,8 @@ BluffinMuffin.Protocol.Game.PlayerWonPotCommand
       "type": "int"
     }
   }
-}```
+}
+```
 
 ### Example
 

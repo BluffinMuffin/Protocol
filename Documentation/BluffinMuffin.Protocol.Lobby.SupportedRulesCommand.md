@@ -9,14 +9,15 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
 ```json
 {
   "title": "Schema for SupportedRulesCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.SupportedRulesCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'SupportedRulesCommand' to distinguish the command from others.",
       "type": "string"
     }
   }
-}```
+}
+```
 
 ### Example
 
@@ -27,14 +28,14 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
 ```json
 {
   "title": "Schema for SupportedRulesResponse",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.SupportedRulesResponse",
   "properties": {
     "CommandName": {
       "description": "Always contains 'SupportedRulesResponse' to distinguish the command from others.",
       "type": "string"
     },
     "Rules": {
-      "type": "object",
+      "type": "System.Collections.Generic.List`1[[BluffinMuffin.Protocol.DataTypes.RuleInfo, BluffinMuffin.Protocol.DataTypes, Version=0.5.0.0, Culture=neutral, PublicKeyToken=null]]",
       "properties": {
         "Capacity": {
           "type": "int"
@@ -43,10 +44,10 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
           "type": "int"
         },
         "Item": {
-          "type": "object",
+          "type": "BluffinMuffin.Protocol.DataTypes.RuleInfo",
           "properties": {
             "AvailableBlinds": {
-              "type": "object",
+              "type": "System.Collections.Generic.List`1[[BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum, BluffinMuffin.Protocol.DataTypes, Version=0.5.0.0, Culture=neutral, PublicKeyToken=null]]",
               "properties": {
                 "Capacity": {
                   "type": "int"
@@ -55,13 +56,17 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
                   "type": "int"
                 },
                 "Item": {
-                  "type": "object",
-                  "properties": {}
+                  "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
+                  "enum": [
+                    "Antes",
+                    "Blinds",
+                    "None"
+                  ]
                 }
               }
             },
             "AvailableLimits": {
-              "type": "object",
+              "type": "System.Collections.Generic.List`1[[BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum, BluffinMuffin.Protocol.DataTypes, Version=0.5.0.0, Culture=neutral, PublicKeyToken=null]]",
               "properties": {
                 "Capacity": {
                   "type": "int"
@@ -70,13 +75,17 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
                   "type": "int"
                 },
                 "Item": {
-                  "type": "object",
-                  "properties": {}
+                  "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
+                  "enum": [
+                    "FixedLimit",
+                    "NoLimit",
+                    "PotLimit"
+                  ]
                 }
               }
             },
             "AvailableLobbys": {
-              "type": "object",
+              "type": "System.Collections.Generic.List`1[[BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum, BluffinMuffin.Protocol.DataTypes, Version=0.5.0.0, Culture=neutral, PublicKeyToken=null]]",
               "properties": {
                 "Capacity": {
                   "type": "int"
@@ -85,8 +94,11 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
                   "type": "int"
                 },
                 "Item": {
-                  "type": "object",
-                  "properties": {}
+                  "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
+                  "enum": [
+                    "Career",
+                    "Training"
+                  ]
                 }
               }
             },
@@ -94,16 +106,26 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
               "type": "bool"
             },
             "DefaultBlind": {
-              "type": "object",
-              "properties": {}
+              "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
+              "enum": [
+                "Antes",
+                "Blinds",
+                "None"
+              ]
             },
             "DefaultLimit": {
-              "type": "object",
-              "properties": {}
+              "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
+              "enum": [
+                "FixedLimit",
+                "NoLimit",
+                "PotLimit"
+              ]
             },
             "GameType": {
-              "type": "object",
-              "properties": {}
+              "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
+              "enum": [
+                "Holdem"
+              ]
             },
             "MaxPlayers": {
               "type": "int"
@@ -119,7 +141,7 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
       }
     },
     "Command": {
-      "type": "object",
+      "type": "BluffinMuffin.Protocol.Lobby.SupportedRulesCommand",
       "properties": {
         "CommandName": {
           "description": "Always contains 'SupportedRulesCommand' to distinguish the command from others.",
@@ -128,7 +150,8 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
       }
     }
   }
-}```
+}
+```
 
 ### Example
 

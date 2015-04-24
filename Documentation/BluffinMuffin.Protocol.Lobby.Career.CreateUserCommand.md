@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Lobby.Career.CreateUserCommand
 ```json
 {
   "title": "Schema for CreateUserCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.Career.CreateUserCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'CreateUserCommand' to distinguish the command from others.",
@@ -28,7 +28,8 @@ BluffinMuffin.Protocol.Lobby.Career.CreateUserCommand
       "type": "string"
     }
   }
-}```
+}
+```
 
 ### Example
 
@@ -39,7 +40,7 @@ BluffinMuffin.Protocol.Lobby.Career.CreateUserCommand
 ```json
 {
   "title": "Schema for CreateUserResponse",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.Career.CreateUserResponse",
   "properties": {
     "CommandName": {
       "description": "Always contains 'CreateUserResponse' to distinguish the command from others.",
@@ -49,7 +50,7 @@ BluffinMuffin.Protocol.Lobby.Career.CreateUserCommand
       "type": "bool"
     },
     "Command": {
-      "type": "object",
+      "type": "BluffinMuffin.Protocol.Lobby.Career.CreateUserCommand",
       "properties": {
         "CommandName": {
           "description": "Always contains 'CreateUserCommand' to distinguish the command from others.",
@@ -70,7 +71,8 @@ BluffinMuffin.Protocol.Lobby.Career.CreateUserCommand
       }
     }
   }
-}```
+}
+```
 
 ### Example
 

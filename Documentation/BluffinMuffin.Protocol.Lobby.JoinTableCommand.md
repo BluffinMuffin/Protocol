@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Lobby.JoinTableCommand
 ```json
 {
   "title": "Schema for JoinTableCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.JoinTableCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'JoinTableCommand' to distinguish the command from others.",
@@ -22,7 +22,8 @@ BluffinMuffin.Protocol.Lobby.JoinTableCommand
       "type": "int"
     }
   }
-}```
+}
+```
 
 ### Example
 
@@ -33,7 +34,7 @@ BluffinMuffin.Protocol.Lobby.JoinTableCommand
 ```json
 {
   "title": "Schema for JoinTableResponse",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.JoinTableResponse",
   "properties": {
     "CommandName": {
       "description": "Always contains 'JoinTableResponse' to distinguish the command from others.",
@@ -43,7 +44,7 @@ BluffinMuffin.Protocol.Lobby.JoinTableCommand
       "type": "bool"
     },
     "Command": {
-      "type": "object",
+      "type": "BluffinMuffin.Protocol.Lobby.JoinTableCommand",
       "properties": {
         "CommandName": {
           "description": "Always contains 'JoinTableCommand' to distinguish the command from others.",
@@ -58,7 +59,8 @@ BluffinMuffin.Protocol.Lobby.JoinTableCommand
       }
     }
   }
-}```
+}
+```
 
 ### Example
 

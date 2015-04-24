@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Game.PlayerTurnEndedCommand
 ```json
 {
   "title": "Schema for PlayerTurnEndedCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Game.PlayerTurnEndedCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'PlayerTurnEndedCommand' to distinguish the command from others.",
@@ -19,8 +19,16 @@ BluffinMuffin.Protocol.Game.PlayerTurnEndedCommand
       "type": "int"
     },
     "ActionType": {
-      "type": "object",
-      "properties": {}
+      "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameActionEnum",
+      "enum": [
+        "Call",
+        "DoNothing",
+        "Fold",
+        "PostAnte",
+        "PostBigBlind",
+        "PostSmallBlind",
+        "Raise"
+      ]
     },
     "PlayerBet": {
       "type": "int"
@@ -32,8 +40,14 @@ BluffinMuffin.Protocol.Game.PlayerTurnEndedCommand
       "type": "int"
     },
     "State": {
-      "type": "object",
-      "properties": {}
+      "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
+      "enum": [
+        "AllIn",
+        "Joined",
+        "Playing",
+        "SitIn",
+        "Zombie"
+      ]
     },
     "TableId": {
       "type": "int"
@@ -42,7 +56,8 @@ BluffinMuffin.Protocol.Game.PlayerTurnEndedCommand
       "type": "int"
     }
   }
-}```
+}
+```
 
 ### Example
 

@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Game.GameStartedCommand
 ```json
 {
   "title": "Schema for GameStartedCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Game.GameStartedCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'GameStartedCommand' to distinguish the command from others.",
@@ -22,7 +22,8 @@ BluffinMuffin.Protocol.Game.GameStartedCommand
       "type": "int"
     }
   }
-}```
+}
+```
 
 ### Example
 

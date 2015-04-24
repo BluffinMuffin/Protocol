@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Game.PlayerTurnBeganCommand
 ```json
 {
   "title": "Schema for PlayerTurnBeganCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Game.PlayerTurnBeganCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'PlayerTurnBeganCommand' to distinguish the command from others.",
@@ -28,7 +28,8 @@ BluffinMuffin.Protocol.Game.PlayerTurnBeganCommand
       "type": "int"
     }
   }
-}```
+}
+```
 
 ### Example
 

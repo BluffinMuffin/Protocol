@@ -9,14 +9,14 @@ BluffinMuffin.Protocol.Game.BetTurnEndedCommand
 ```json
 {
   "title": "Schema for BetTurnEndedCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Game.BetTurnEndedCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'BetTurnEndedCommand' to distinguish the command from others.",
       "type": "string"
     },
     "PotsAmounts": {
-      "type": "object",
+      "type": "System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
       "properties": {
         "Capacity": {
           "type": "int"
@@ -30,14 +30,20 @@ BluffinMuffin.Protocol.Game.BetTurnEndedCommand
       }
     },
     "Round": {
-      "type": "object",
-      "properties": {}
+      "type": "BluffinMuffin.Protocol.DataTypes.Enums.RoundTypeEnum",
+      "enum": [
+        "Flop",
+        "Preflop",
+        "River",
+        "Turn"
+      ]
     },
     "TableId": {
       "type": "int"
     }
   }
-}```
+}
+```
 
 ### Example
 

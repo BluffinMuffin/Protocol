@@ -9,14 +9,14 @@ BluffinMuffin.Protocol.Game.SeatUpdatedCommand
 ```json
 {
   "title": "Schema for SeatUpdatedCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Game.SeatUpdatedCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'SeatUpdatedCommand' to distinguish the command from others.",
       "type": "string"
     },
     "Seat": {
-      "type": "object",
+      "type": "BluffinMuffin.Protocol.DataTypes.SeatInfo",
       "properties": {
         "IsEmpty": {
           "type": "bool"
@@ -25,10 +25,10 @@ BluffinMuffin.Protocol.Game.SeatUpdatedCommand
           "type": "int"
         },
         "Player": {
-          "type": "object",
+          "type": "BluffinMuffin.Protocol.DataTypes.PlayerInfo",
           "properties": {
             "HoleCards": {
-              "type": "object",
+              "type": "Com.Ericmas001.Games.GameCard[]",
               "properties": {
                 "IsFixedSize": {
                   "type": "bool"
@@ -49,7 +49,7 @@ BluffinMuffin.Protocol.Game.SeatUpdatedCommand
                   "type": "int"
                 },
                 "SyncRoot": {
-                  "type": "object",
+                  "type": "System.Object",
                   "properties": {}
                 }
               }
@@ -73,13 +73,19 @@ BluffinMuffin.Protocol.Game.SeatUpdatedCommand
               "type": "int"
             },
             "State": {
-              "type": "object",
-              "properties": {}
+              "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
+              "enum": [
+                "AllIn",
+                "Joined",
+                "Playing",
+                "SitIn",
+                "Zombie"
+              ]
             }
           }
         },
         "SerializableAttributes": {
-          "type": "object",
+          "type": "BluffinMuffin.Protocol.DataTypes.Enums.SeatAttributeEnum[]",
           "properties": {
             "IsFixedSize": {
               "type": "bool"
@@ -100,7 +106,7 @@ BluffinMuffin.Protocol.Game.SeatUpdatedCommand
               "type": "int"
             },
             "SyncRoot": {
-              "type": "object",
+              "type": "System.Object",
               "properties": {}
             }
           }
@@ -111,7 +117,8 @@ BluffinMuffin.Protocol.Game.SeatUpdatedCommand
       "type": "int"
     }
   }
-}```
+}
+```
 
 ### Example
 

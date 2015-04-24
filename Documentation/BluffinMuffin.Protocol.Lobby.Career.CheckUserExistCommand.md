@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Lobby.Career.CheckUserExistCommand
 ```json
 {
   "title": "Schema for CheckUserExistCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.Career.CheckUserExistCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'CheckUserExistCommand' to distinguish the command from others.",
@@ -19,7 +19,8 @@ BluffinMuffin.Protocol.Lobby.Career.CheckUserExistCommand
       "type": "string"
     }
   }
-}```
+}
+```
 
 ### Example
 
@@ -30,7 +31,7 @@ BluffinMuffin.Protocol.Lobby.Career.CheckUserExistCommand
 ```json
 {
   "title": "Schema for CheckUserExistResponse",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.Career.CheckUserExistResponse",
   "properties": {
     "CommandName": {
       "description": "Always contains 'CheckUserExistResponse' to distinguish the command from others.",
@@ -40,7 +41,7 @@ BluffinMuffin.Protocol.Lobby.Career.CheckUserExistCommand
       "type": "bool"
     },
     "Command": {
-      "type": "object",
+      "type": "BluffinMuffin.Protocol.Lobby.Career.CheckUserExistCommand",
       "properties": {
         "CommandName": {
           "description": "Always contains 'CheckUserExistCommand' to distinguish the command from others.",
@@ -52,7 +53,8 @@ BluffinMuffin.Protocol.Lobby.Career.CheckUserExistCommand
       }
     }
   }
-}```
+}
+```
 
 ### Example
 

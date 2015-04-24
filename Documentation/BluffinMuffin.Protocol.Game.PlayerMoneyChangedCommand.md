@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Game.PlayerMoneyChangedCommand
 ```json
 {
   "title": "Schema for PlayerMoneyChangedCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Game.PlayerMoneyChangedCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'PlayerMoneyChangedCommand' to distinguish the command from others.",
@@ -25,7 +25,8 @@ BluffinMuffin.Protocol.Game.PlayerMoneyChangedCommand
       "type": "int"
     }
   }
-}```
+}
+```
 
 ### Example
 

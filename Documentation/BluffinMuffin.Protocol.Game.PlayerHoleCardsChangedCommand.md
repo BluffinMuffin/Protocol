@@ -9,14 +9,14 @@ BluffinMuffin.Protocol.Game.PlayerHoleCardsChangedCommand
 ```json
 {
   "title": "Schema for PlayerHoleCardsChangedCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Game.PlayerHoleCardsChangedCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'PlayerHoleCardsChangedCommand' to distinguish the command from others.",
       "type": "string"
     },
     "CardsId": {
-      "type": "object",
+      "type": "System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
       "properties": {
         "Capacity": {
           "type": "int"
@@ -33,14 +33,21 @@ BluffinMuffin.Protocol.Game.PlayerHoleCardsChangedCommand
       "type": "int"
     },
     "State": {
-      "type": "object",
-      "properties": {}
+      "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
+      "enum": [
+        "AllIn",
+        "Joined",
+        "Playing",
+        "SitIn",
+        "Zombie"
+      ]
     },
     "TableId": {
       "type": "int"
     }
   }
-}```
+}
+```
 
 ### Example
 

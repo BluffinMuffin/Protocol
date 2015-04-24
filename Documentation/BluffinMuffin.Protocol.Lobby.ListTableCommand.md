@@ -9,14 +9,14 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
 ```json
 {
   "title": "Schema for ListTableCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.ListTableCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'ListTableCommand' to distinguish the command from others.",
       "type": "string"
     },
     "LobbyTypes": {
-      "type": "object",
+      "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum[]",
       "properties": {
         "IsFixedSize": {
           "type": "bool"
@@ -37,13 +37,14 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
           "type": "int"
         },
         "SyncRoot": {
-          "type": "object",
+          "type": "System.Object",
           "properties": {}
         }
       }
     }
   }
-}```
+}
+```
 
 ### Example
 
@@ -54,14 +55,14 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
 ```json
 {
   "title": "Schema for ListTableResponse",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.ListTableResponse",
   "properties": {
     "CommandName": {
       "description": "Always contains 'ListTableResponse' to distinguish the command from others.",
       "type": "string"
     },
     "Tables": {
-      "type": "object",
+      "type": "System.Collections.Generic.List`1[[BluffinMuffin.Protocol.DataTypes.TupleTable, BluffinMuffin.Protocol.DataTypes, Version=0.5.0.0, Culture=neutral, PublicKeyToken=null]]",
       "properties": {
         "Capacity": {
           "type": "int"
@@ -70,7 +71,7 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
           "type": "int"
         },
         "Item": {
-          "type": "object",
+          "type": "BluffinMuffin.Protocol.DataTypes.TupleTable",
           "properties": {
             "BigBlind": {
               "type": "int"
@@ -82,35 +83,45 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
               "type": "int"
             },
             "Params": {
-              "type": "object",
+              "type": "BluffinMuffin.Protocol.DataTypes.TableParams",
               "properties": {
                 "Blind": {
-                  "type": "object",
+                  "type": "BluffinMuffin.Protocol.DataTypes.BlindOptions",
                   "properties": {
                     "MoneyUnit": {
                       "type": "int"
                     },
                     "OptionType": {
-                      "type": "object",
-                      "properties": {}
+                      "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
+                      "enum": [
+                        "Antes",
+                        "Blinds",
+                        "None"
+                      ]
                     }
                   }
                 },
                 "GameType": {
-                  "type": "object",
-                  "properties": {}
+                  "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
+                  "enum": [
+                    "Holdem"
+                  ]
                 },
                 "Limit": {
-                  "type": "object",
+                  "type": "BluffinMuffin.Protocol.DataTypes.LimitOptions",
                   "properties": {
                     "OptionType": {
-                      "type": "object",
-                      "properties": {}
+                      "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
+                      "enum": [
+                        "FixedLimit",
+                        "NoLimit",
+                        "PotLimit"
+                      ]
                     }
                   }
                 },
                 "Lobby": {
-                  "type": "object",
+                  "type": "BluffinMuffin.Protocol.DataTypes.LobbyOptions",
                   "properties": {
                     "MaximumAmountForBuyIn": {
                       "type": "int"
@@ -119,8 +130,11 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
                       "type": "int"
                     },
                     "OptionType": {
-                      "type": "object",
-                      "properties": {}
+                      "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
+                      "enum": [
+                        "Career",
+                        "Training"
+                      ]
                     }
                   }
                 },
@@ -140,7 +154,7 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
                   "type": "string"
                 },
                 "WaitingTimes": {
-                  "type": "object",
+                  "type": "BluffinMuffin.Protocol.DataTypes.ConfigurableWaitingTimes",
                   "properties": {
                     "AfterBoardDealed": {
                       "type": "int"
@@ -156,22 +170,26 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
               }
             },
             "PossibleAction": {
-              "type": "object",
-              "properties": {}
+              "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyActionEnum",
+              "enum": [
+                "Join",
+                "Leave",
+                "None"
+              ]
             }
           }
         }
       }
     },
     "Command": {
-      "type": "object",
+      "type": "BluffinMuffin.Protocol.Lobby.ListTableCommand",
       "properties": {
         "CommandName": {
           "description": "Always contains 'ListTableCommand' to distinguish the command from others.",
           "type": "string"
         },
         "LobbyTypes": {
-          "type": "object",
+          "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum[]",
           "properties": {
             "IsFixedSize": {
               "type": "bool"
@@ -192,7 +210,7 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
               "type": "int"
             },
             "SyncRoot": {
-              "type": "object",
+              "type": "System.Object",
               "properties": {}
             }
           }
@@ -200,7 +218,8 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
       }
     }
   }
-}```
+}
+```
 
 ### Example
 

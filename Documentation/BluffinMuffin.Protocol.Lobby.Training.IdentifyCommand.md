@@ -11,7 +11,7 @@ In training mode, you must **identify** yourself. This action puts a unique name
 ```json
 {
   "title": "Schema for IdentifyCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.Training.IdentifyCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'IdentifyCommand' to distinguish the command from others.",
@@ -22,7 +22,8 @@ In training mode, you must **identify** yourself. This action puts a unique name
       "type": "string"
     }
   }
-}```
+}
+```
 
 ### Example
 
@@ -33,7 +34,7 @@ In training mode, you must **identify** yourself. This action puts a unique name
 ```json
 {
   "title": "Schema for IdentifyResponse",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.Training.IdentifyResponse",
   "properties": {
     "CommandName": {
       "description": "Always contains 'IdentifyResponse' to distinguish the command from others.",
@@ -44,7 +45,7 @@ In training mode, you must **identify** yourself. This action puts a unique name
       "type": "bool"
     },
     "Command": {
-      "type": "object",
+      "type": "BluffinMuffin.Protocol.Lobby.Training.IdentifyCommand",
       "properties": {
         "CommandName": {
           "description": "Always contains 'IdentifyCommand' to distinguish the command from others.",
@@ -57,7 +58,8 @@ In training mode, you must **identify** yourself. This action puts a unique name
       }
     }
   }
-}```
+}
+```
 
 ### Example
 

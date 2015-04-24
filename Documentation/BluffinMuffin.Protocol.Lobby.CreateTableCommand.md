@@ -9,42 +9,52 @@ BluffinMuffin.Protocol.Lobby.CreateTableCommand
 ```json
 {
   "title": "Schema for CreateTableCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.CreateTableCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'CreateTableCommand' to distinguish the command from others.",
       "type": "string"
     },
     "Params": {
-      "type": "object",
+      "type": "BluffinMuffin.Protocol.DataTypes.TableParams",
       "properties": {
         "Blind": {
-          "type": "object",
+          "type": "BluffinMuffin.Protocol.DataTypes.BlindOptions",
           "properties": {
             "MoneyUnit": {
               "type": "int"
             },
             "OptionType": {
-              "type": "object",
-              "properties": {}
+              "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
+              "enum": [
+                "Antes",
+                "Blinds",
+                "None"
+              ]
             }
           }
         },
         "GameType": {
-          "type": "object",
-          "properties": {}
+          "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
+          "enum": [
+            "Holdem"
+          ]
         },
         "Limit": {
-          "type": "object",
+          "type": "BluffinMuffin.Protocol.DataTypes.LimitOptions",
           "properties": {
             "OptionType": {
-              "type": "object",
-              "properties": {}
+              "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
+              "enum": [
+                "FixedLimit",
+                "NoLimit",
+                "PotLimit"
+              ]
             }
           }
         },
         "Lobby": {
-          "type": "object",
+          "type": "BluffinMuffin.Protocol.DataTypes.LobbyOptions",
           "properties": {
             "MaximumAmountForBuyIn": {
               "type": "int"
@@ -53,8 +63,11 @@ BluffinMuffin.Protocol.Lobby.CreateTableCommand
               "type": "int"
             },
             "OptionType": {
-              "type": "object",
-              "properties": {}
+              "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
+              "enum": [
+                "Career",
+                "Training"
+              ]
             }
           }
         },
@@ -74,7 +87,7 @@ BluffinMuffin.Protocol.Lobby.CreateTableCommand
           "type": "string"
         },
         "WaitingTimes": {
-          "type": "object",
+          "type": "BluffinMuffin.Protocol.DataTypes.ConfigurableWaitingTimes",
           "properties": {
             "AfterBoardDealed": {
               "type": "int"
@@ -90,7 +103,8 @@ BluffinMuffin.Protocol.Lobby.CreateTableCommand
       }
     }
   }
-}```
+}
+```
 
 ### Example
 
@@ -101,7 +115,7 @@ BluffinMuffin.Protocol.Lobby.CreateTableCommand
 ```json
 {
   "title": "Schema for CreateTableResponse",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.CreateTableResponse",
   "properties": {
     "CommandName": {
       "description": "Always contains 'CreateTableResponse' to distinguish the command from others.",
@@ -111,42 +125,52 @@ BluffinMuffin.Protocol.Lobby.CreateTableCommand
       "type": "int"
     },
     "Command": {
-      "type": "object",
+      "type": "BluffinMuffin.Protocol.Lobby.CreateTableCommand",
       "properties": {
         "CommandName": {
           "description": "Always contains 'CreateTableCommand' to distinguish the command from others.",
           "type": "string"
         },
         "Params": {
-          "type": "object",
+          "type": "BluffinMuffin.Protocol.DataTypes.TableParams",
           "properties": {
             "Blind": {
-              "type": "object",
+              "type": "BluffinMuffin.Protocol.DataTypes.BlindOptions",
               "properties": {
                 "MoneyUnit": {
                   "type": "int"
                 },
                 "OptionType": {
-                  "type": "object",
-                  "properties": {}
+                  "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
+                  "enum": [
+                    "Antes",
+                    "Blinds",
+                    "None"
+                  ]
                 }
               }
             },
             "GameType": {
-              "type": "object",
-              "properties": {}
+              "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
+              "enum": [
+                "Holdem"
+              ]
             },
             "Limit": {
-              "type": "object",
+              "type": "BluffinMuffin.Protocol.DataTypes.LimitOptions",
               "properties": {
                 "OptionType": {
-                  "type": "object",
-                  "properties": {}
+                  "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
+                  "enum": [
+                    "FixedLimit",
+                    "NoLimit",
+                    "PotLimit"
+                  ]
                 }
               }
             },
             "Lobby": {
-              "type": "object",
+              "type": "BluffinMuffin.Protocol.DataTypes.LobbyOptions",
               "properties": {
                 "MaximumAmountForBuyIn": {
                   "type": "int"
@@ -155,8 +179,11 @@ BluffinMuffin.Protocol.Lobby.CreateTableCommand
                   "type": "int"
                 },
                 "OptionType": {
-                  "type": "object",
-                  "properties": {}
+                  "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
+                  "enum": [
+                    "Career",
+                    "Training"
+                  ]
                 }
               }
             },
@@ -176,7 +203,7 @@ BluffinMuffin.Protocol.Lobby.CreateTableCommand
               "type": "string"
             },
             "WaitingTimes": {
-              "type": "object",
+              "type": "BluffinMuffin.Protocol.DataTypes.ConfigurableWaitingTimes",
               "properties": {
                 "AfterBoardDealed": {
                   "type": "int"
@@ -194,7 +221,8 @@ BluffinMuffin.Protocol.Lobby.CreateTableCommand
       }
     }
   }
-}```
+}
+```
 
 ### Example
 

@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Game.PlayerSitInCommand
 ```json
 {
   "title": "Schema for PlayerSitInCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Game.PlayerSitInCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'PlayerSitInCommand' to distinguish the command from others.",
@@ -25,7 +25,8 @@ BluffinMuffin.Protocol.Game.PlayerSitInCommand
       "type": "int"
     }
   }
-}```
+}
+```
 
 ### Example
 
@@ -36,7 +37,7 @@ BluffinMuffin.Protocol.Game.PlayerSitInCommand
 ```json
 {
   "title": "Schema for PlayerSitInResponse",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Game.PlayerSitInResponse",
   "properties": {
     "CommandName": {
       "description": "Always contains 'PlayerSitInResponse' to distinguish the command from others.",
@@ -49,7 +50,7 @@ BluffinMuffin.Protocol.Game.PlayerSitInCommand
       "type": "int"
     },
     "Command": {
-      "type": "object",
+      "type": "BluffinMuffin.Protocol.Game.PlayerSitInCommand",
       "properties": {
         "CommandName": {
           "description": "Always contains 'PlayerSitInCommand' to distinguish the command from others.",
@@ -67,7 +68,8 @@ BluffinMuffin.Protocol.Game.PlayerSitInCommand
       }
     }
   }
-}```
+}
+```
 
 ### Example
 

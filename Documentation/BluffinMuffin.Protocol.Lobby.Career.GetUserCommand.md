@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Lobby.Career.GetUserCommand
 ```json
 {
   "title": "Schema for GetUserCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.Career.GetUserCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'GetUserCommand' to distinguish the command from others.",
@@ -19,7 +19,8 @@ BluffinMuffin.Protocol.Lobby.Career.GetUserCommand
       "type": "string"
     }
   }
-}```
+}
+```
 
 ### Example
 
@@ -30,7 +31,7 @@ BluffinMuffin.Protocol.Lobby.Career.GetUserCommand
 ```json
 {
   "title": "Schema for GetUserResponse",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.Career.GetUserResponse",
   "properties": {
     "CommandName": {
       "description": "Always contains 'GetUserResponse' to distinguish the command from others.",
@@ -46,7 +47,7 @@ BluffinMuffin.Protocol.Lobby.Career.GetUserCommand
       "type": "double"
     },
     "Command": {
-      "type": "object",
+      "type": "BluffinMuffin.Protocol.Lobby.Career.GetUserCommand",
       "properties": {
         "CommandName": {
           "description": "Always contains 'GetUserCommand' to distinguish the command from others.",
@@ -58,7 +59,8 @@ BluffinMuffin.Protocol.Lobby.Career.GetUserCommand
       }
     }
   }
-}```
+}
+```
 
 ### Example
 

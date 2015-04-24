@@ -9,14 +9,14 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
 ```json
 {
   "title": "Schema for TableInfoCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Game.TableInfoCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'TableInfoCommand' to distinguish the command from others.",
       "type": "string"
     },
     "BoardCardIDs": {
-      "type": "object",
+      "type": "System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
       "properties": {
         "Capacity": {
           "type": "int"
@@ -36,35 +36,45 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
       "type": "int"
     },
     "Params": {
-      "type": "object",
+      "type": "BluffinMuffin.Protocol.DataTypes.TableParams",
       "properties": {
         "Blind": {
-          "type": "object",
+          "type": "BluffinMuffin.Protocol.DataTypes.BlindOptions",
           "properties": {
             "MoneyUnit": {
               "type": "int"
             },
             "OptionType": {
-              "type": "object",
-              "properties": {}
+              "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
+              "enum": [
+                "Antes",
+                "Blinds",
+                "None"
+              ]
             }
           }
         },
         "GameType": {
-          "type": "object",
-          "properties": {}
+          "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
+          "enum": [
+            "Holdem"
+          ]
         },
         "Limit": {
-          "type": "object",
+          "type": "BluffinMuffin.Protocol.DataTypes.LimitOptions",
           "properties": {
             "OptionType": {
-              "type": "object",
-              "properties": {}
+              "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
+              "enum": [
+                "FixedLimit",
+                "NoLimit",
+                "PotLimit"
+              ]
             }
           }
         },
         "Lobby": {
-          "type": "object",
+          "type": "BluffinMuffin.Protocol.DataTypes.LobbyOptions",
           "properties": {
             "MaximumAmountForBuyIn": {
               "type": "int"
@@ -73,8 +83,11 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
               "type": "int"
             },
             "OptionType": {
-              "type": "object",
-              "properties": {}
+              "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
+              "enum": [
+                "Career",
+                "Training"
+              ]
             }
           }
         },
@@ -94,7 +107,7 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
           "type": "string"
         },
         "WaitingTimes": {
-          "type": "object",
+          "type": "BluffinMuffin.Protocol.DataTypes.ConfigurableWaitingTimes",
           "properties": {
             "AfterBoardDealed": {
               "type": "int"
@@ -110,7 +123,7 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
       }
     },
     "PotsAmount": {
-      "type": "object",
+      "type": "System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
       "properties": {
         "Capacity": {
           "type": "int"
@@ -124,7 +137,7 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
       }
     },
     "Seats": {
-      "type": "object",
+      "type": "System.Collections.Generic.List`1[[BluffinMuffin.Protocol.DataTypes.SeatInfo, BluffinMuffin.Protocol.DataTypes, Version=0.5.0.0, Culture=neutral, PublicKeyToken=null]]",
       "properties": {
         "Capacity": {
           "type": "int"
@@ -133,7 +146,7 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
           "type": "int"
         },
         "Item": {
-          "type": "object",
+          "type": "BluffinMuffin.Protocol.DataTypes.SeatInfo",
           "properties": {
             "IsEmpty": {
               "type": "bool"
@@ -142,10 +155,10 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
               "type": "int"
             },
             "Player": {
-              "type": "object",
+              "type": "BluffinMuffin.Protocol.DataTypes.PlayerInfo",
               "properties": {
                 "HoleCards": {
-                  "type": "object",
+                  "type": "Com.Ericmas001.Games.GameCard[]",
                   "properties": {
                     "IsFixedSize": {
                       "type": "bool"
@@ -166,7 +179,7 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
                       "type": "int"
                     },
                     "SyncRoot": {
-                      "type": "object",
+                      "type": "System.Object",
                       "properties": {}
                     }
                   }
@@ -190,13 +203,19 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
                   "type": "int"
                 },
                 "State": {
-                  "type": "object",
-                  "properties": {}
+                  "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
+                  "enum": [
+                    "AllIn",
+                    "Joined",
+                    "Playing",
+                    "SitIn",
+                    "Zombie"
+                  ]
                 }
               }
             },
             "SerializableAttributes": {
-              "type": "object",
+              "type": "BluffinMuffin.Protocol.DataTypes.Enums.SeatAttributeEnum[]",
               "properties": {
                 "IsFixedSize": {
                   "type": "bool"
@@ -217,7 +236,7 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
                   "type": "int"
                 },
                 "SyncRoot": {
-                  "type": "object",
+                  "type": "System.Object",
                   "properties": {}
                 }
               }
@@ -233,7 +252,8 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
       "type": "int"
     }
   }
-}```
+}
+```
 
 ### Example
 

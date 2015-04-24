@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Lobby.Career.CheckDisplayExistCommand
 ```json
 {
   "title": "Schema for CheckDisplayExistCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.Career.CheckDisplayExistCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'CheckDisplayExistCommand' to distinguish the command from others.",
@@ -19,7 +19,8 @@ BluffinMuffin.Protocol.Lobby.Career.CheckDisplayExistCommand
       "type": "string"
     }
   }
-}```
+}
+```
 
 ### Example
 
@@ -30,7 +31,7 @@ BluffinMuffin.Protocol.Lobby.Career.CheckDisplayExistCommand
 ```json
 {
   "title": "Schema for CheckDisplayExistResponse",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.Career.CheckDisplayExistResponse",
   "properties": {
     "CommandName": {
       "description": "Always contains 'CheckDisplayExistResponse' to distinguish the command from others.",
@@ -40,7 +41,7 @@ BluffinMuffin.Protocol.Lobby.Career.CheckDisplayExistCommand
       "type": "bool"
     },
     "Command": {
-      "type": "object",
+      "type": "BluffinMuffin.Protocol.Lobby.Career.CheckDisplayExistCommand",
       "properties": {
         "CommandName": {
           "description": "Always contains 'CheckDisplayExistCommand' to distinguish the command from others.",
@@ -52,7 +53,8 @@ BluffinMuffin.Protocol.Lobby.Career.CheckDisplayExistCommand
       }
     }
   }
-}```
+}
+```
 
 ### Example
 

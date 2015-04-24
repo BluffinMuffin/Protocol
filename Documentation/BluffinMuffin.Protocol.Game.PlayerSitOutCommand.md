@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Game.PlayerSitOutCommand
 ```json
 {
   "title": "Schema for PlayerSitOutCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Game.PlayerSitOutCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'PlayerSitOutCommand' to distinguish the command from others.",
@@ -19,7 +19,8 @@ BluffinMuffin.Protocol.Game.PlayerSitOutCommand
       "type": "int"
     }
   }
-}```
+}
+```
 
 ### Example
 
@@ -30,7 +31,7 @@ BluffinMuffin.Protocol.Game.PlayerSitOutCommand
 ```json
 {
   "title": "Schema for PlayerSitOutResponse",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Game.PlayerSitOutResponse",
   "properties": {
     "CommandName": {
       "description": "Always contains 'PlayerSitOutResponse' to distinguish the command from others.",
@@ -43,7 +44,7 @@ BluffinMuffin.Protocol.Game.PlayerSitOutCommand
       "type": "int"
     },
     "Command": {
-      "type": "object",
+      "type": "BluffinMuffin.Protocol.Game.PlayerSitOutCommand",
       "properties": {
         "CommandName": {
           "description": "Always contains 'PlayerSitOutCommand' to distinguish the command from others.",
@@ -55,7 +56,8 @@ BluffinMuffin.Protocol.Game.PlayerSitOutCommand
       }
     }
   }
-}```
+}
+```
 
 ### Example
 

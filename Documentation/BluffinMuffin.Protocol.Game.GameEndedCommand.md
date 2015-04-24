@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Game.GameEndedCommand
 ```json
 {
   "title": "Schema for GameEndedCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Game.GameEndedCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'GameEndedCommand' to distinguish the command from others.",
@@ -19,7 +19,8 @@ BluffinMuffin.Protocol.Game.GameEndedCommand
       "type": "int"
     }
   }
-}```
+}
+```
 
 ### Example
 

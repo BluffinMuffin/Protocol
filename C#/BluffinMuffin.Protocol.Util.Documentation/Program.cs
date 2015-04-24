@@ -44,7 +44,10 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                 string fullname = t.FullName;
                 var classTag = xmlroot.Element("members").Elements("member").FirstOrDefault(x => x.Attribute("name").Value == ("T:" + fullname));
                 string summary = classTag == null ? fullname : classTag.Element("summary") == null ? fullname : classTag.Element("summary").Value;
-                var sw = new StreamWriter(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), fullname + ".md"));
+                string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"..\..\..\..\Documentation", fullname + ".md");
+                FileInfo info = new FileInfo(path);
+                info.IsReadOnly = false;
+                var sw = new StreamWriter(path);
                 string commandName = t.Name;
                 string title = "# " + t.Namespace.Replace("BluffinMuffin.Protocol.", "").Replace("BluffinMuffin.Protocol", "General").Replace(".", " ") + " : " + commandName.Replace("Command", "");
                 sw.WriteLine(title);
@@ -83,9 +86,10 @@ namespace BluffinMuffin.Protocol.Util.Documentation
             writer.WritePropertyName("title");
             writer.WriteValue("Schema for " + t.Name);
             writer.WritePropertyName("type");
-            writer.WriteValue("object");
+            writer.WriteValue(t.FullName);
             WriteProperties(t, writer, xmlroot);
             writer.WriteEndObject();
+            sw.WriteLine();
             sw.WriteLine("```");
             sw.WriteLine();
         }
@@ -122,12 +126,24 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                     writer.WriteValue(Aliases[p.PropertyType]);
                 else
                 {
-                    writer.WriteValue("object");
-                    WriteProperties(p.PropertyType, writer, xmlroot);
+                    writer.WriteValue(p.PropertyType.FullName);
+                    if(p.PropertyType.IsEnum)
+                        WriteEnum(p.PropertyType, writer, xmlroot);
+                    else
+                        WriteProperties(p.PropertyType, writer, xmlroot);
                 }
                 writer.WriteEndObject();
             }
             writer.WriteEndObject();
+        }
+
+        private static void WriteEnum(Type propertyType, JsonWriter writer, XElement xmlroot)
+        {
+            writer.WritePropertyName("enum");
+            writer.WriteStartArray();
+            foreach(var it in Enum.GetNames(propertyType).OrderBy(x => x))
+                writer.WriteValue(it);
+            writer.WriteEndArray();
         }
 
         private static void GenerateExamples(Type t, StreamWriter sw, XElement xmlroot)

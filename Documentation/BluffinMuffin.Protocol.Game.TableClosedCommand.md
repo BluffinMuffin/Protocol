@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Game.TableClosedCommand
 ```json
 {
   "title": "Schema for TableClosedCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Game.TableClosedCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'TableClosedCommand' to distinguish the command from others.",
@@ -19,7 +19,8 @@ BluffinMuffin.Protocol.Game.TableClosedCommand
       "type": "int"
     }
   }
-}```
+}
+```
 
 ### Example
 

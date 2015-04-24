@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Game.PlayerPlayMoneyCommand
 ```json
 {
   "title": "Schema for PlayerPlayMoneyCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Game.PlayerPlayMoneyCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'PlayerPlayMoneyCommand' to distinguish the command from others.",
@@ -22,7 +22,8 @@ BluffinMuffin.Protocol.Game.PlayerPlayMoneyCommand
       "type": "int"
     }
   }
-}```
+}
+```
 
 ### Example
 

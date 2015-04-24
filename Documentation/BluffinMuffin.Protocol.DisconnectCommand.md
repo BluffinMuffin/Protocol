@@ -9,14 +9,15 @@ BluffinMuffin.Protocol.DisconnectCommand
 ```json
 {
   "title": "Schema for DisconnectCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.DisconnectCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'DisconnectCommand' to distinguish the command from others.",
       "type": "string"
     }
   }
-}```
+}
+```
 
 ### Example
 

@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserCommand
 ```json
 {
   "title": "Schema for AuthenticateUserCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'AuthenticateUserCommand' to distinguish the command from others.",
@@ -22,7 +22,8 @@ BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserCommand
       "type": "string"
     }
   }
-}```
+}
+```
 
 ### Example
 
@@ -33,7 +34,7 @@ BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserCommand
 ```json
 {
   "title": "Schema for AuthenticateUserResponse",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserResponse",
   "properties": {
     "CommandName": {
       "description": "Always contains 'AuthenticateUserResponse' to distinguish the command from others.",
@@ -43,7 +44,7 @@ BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserCommand
       "type": "bool"
     },
     "Command": {
-      "type": "object",
+      "type": "BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserCommand",
       "properties": {
         "CommandName": {
           "description": "Always contains 'AuthenticateUserCommand' to distinguish the command from others.",
@@ -58,7 +59,8 @@ BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserCommand
       }
     }
   }
-}```
+}
+```
 
 ### Example
 

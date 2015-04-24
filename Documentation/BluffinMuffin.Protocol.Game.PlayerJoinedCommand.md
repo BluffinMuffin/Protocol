@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Game.PlayerJoinedCommand
 ```json
 {
   "title": "Schema for PlayerJoinedCommand",
-  "type": "object",
+  "type": "BluffinMuffin.Protocol.Game.PlayerJoinedCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'PlayerJoinedCommand' to distinguish the command from others.",
@@ -22,7 +22,8 @@ BluffinMuffin.Protocol.Game.PlayerJoinedCommand
       "type": "int"
     }
   }
-}```
+}
+```
 
 ### Example
 
