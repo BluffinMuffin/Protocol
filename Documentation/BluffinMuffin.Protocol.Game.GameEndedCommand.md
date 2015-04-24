@@ -24,3 +24,10 @@ BluffinMuffin.Protocol.Game.GameEndedCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "GameEndedCommand",
+  "TableId": 0
+}
+```
+

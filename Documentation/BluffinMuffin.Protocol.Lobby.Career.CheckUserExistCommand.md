@@ -24,6 +24,13 @@ BluffinMuffin.Protocol.Lobby.Career.CheckUserExistCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "CheckUserExistCommand",
+  "Username": null
+}
+```
+
 ## CheckUserExistResponse
 
 ### Command Schema
@@ -57,4 +64,15 @@ BluffinMuffin.Protocol.Lobby.Career.CheckUserExistCommand
 ```
 
 ### Example
+
+```json
+{
+  "CommandName": "CheckUserExistResponse",
+  "Exist": false,
+  "Command": {
+    "CommandName": "CheckUserExistCommand",
+    "Username": null
+  }
+}
+```
 

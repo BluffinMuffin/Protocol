@@ -33,3 +33,13 @@ BluffinMuffin.Protocol.Game.PlayerTurnBeganCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "PlayerTurnBeganCommand",
+  "PlayerPos": 0,
+  "LastPlayerNoSeat": 0,
+  "MinimumRaise": 0,
+  "TableId": 0
+}
+```
+

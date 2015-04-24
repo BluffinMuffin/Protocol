@@ -51,3 +51,13 @@ BluffinMuffin.Protocol.Game.PlayerHoleCardsChangedCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "PlayerHoleCardsChangedCommand",
+  "PlayerPos": 0,
+  "CardsId": [],
+  "State": 0,
+  "TableId": 0
+}
+```
+

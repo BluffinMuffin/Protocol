@@ -47,3 +47,12 @@ BluffinMuffin.Protocol.Game.BetTurnStartedCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "BetTurnStartedCommand",
+  "Round": 0,
+  "CardsId": [],
+  "TableId": 0
+}
+```
+

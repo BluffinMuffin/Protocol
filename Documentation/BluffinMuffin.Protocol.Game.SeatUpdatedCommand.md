@@ -122,3 +122,38 @@ BluffinMuffin.Protocol.Game.SeatUpdatedCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "SeatUpdatedCommand",
+  "Seat": {
+    "IsEmpty": false,
+    "NoSeat": 0,
+    "Player": {
+      "NoSeat": -1,
+      "Name": "Anonymous Player",
+      "MoneySafeAmnt": 0,
+      "MoneyBetAmnt": 0,
+      "HoleCards": [
+        {
+          "Special": 1,
+          "Kind": 0,
+          "Value": 0,
+          "Id": -1
+        },
+        {
+          "Special": 1,
+          "Kind": 0,
+          "Value": 0,
+          "Id": -1
+        }
+      ],
+      "State": 0,
+      "IsShowingCards": false,
+      "MoneyAmnt": 0
+    },
+    "SerializableAttributes": []
+  },
+  "TableId": 0
+}
+```
+

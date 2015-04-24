@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Com.Ericmas001.Net.Protocol;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Schema;
 
@@ -65,7 +66,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                 sw.WriteLine("## {0}", commandName);
                 sw.WriteLine();
                 GenerateSchema(t, sw, xmlroot);
-                GenerateExamples(t, sw, xmlroot);
+                object c = GenerateExamples(t, sw, xmlroot);
                 Type responseTypeIntefaceType = t.GetInterfaces().FirstOrDefault(x => x.Name == typeof (ICommandWithResponse<>).Name);
                 if (responseTypeIntefaceType != null)
                 {
@@ -74,7 +75,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                     sw.WriteLine("## {0}", responseName);
                     sw.WriteLine();
                     GenerateSchema(rt, sw, xmlroot);
-                    GenerateExamples(rt, sw, xmlroot);
+                    GenerateExamples(rt, sw, xmlroot, c);
                 }
                 sw.Close();
             }
@@ -151,10 +152,43 @@ namespace BluffinMuffin.Protocol.Util.Documentation
             writer.WriteEndArray();
         }
 
-        private static void GenerateExamples(Type t, StreamWriter sw, XElement xmlroot)
+        public static object Remplir(Type type, params KeyValuePair<Type,object>[] ctorParms )
+        {
+            var ctor = type.GetConstructor(ctorParms.Select(x => x.Key).ToArray());
+            if (ctor != null)
+            {
+                object c = ctor.Invoke(ctorParms.Select(x => x.Value).ToArray());
+                foreach (var p in type.GetProperties(BindingFlags.FlattenHierarchy | BindingFlags.Public | BindingFlags.Instance).Where(x => x.CanWrite && x.GetCustomAttribute<JsonIgnoreAttribute>() == null))
+                {
+                    if (p.GetCustomAttribute<ExampleValueAttribute>() != null)
+                        p.SetValue(c, p.GetCustomAttribute<ExampleValueAttribute>().Value);
+                    else if (p.PropertyType.IsClass && p.PropertyType != typeof (string) && !p.PropertyType.IsArray)
+                        try
+                        {
+                            p.SetValue(c, Remplir(p.PropertyType));
+                        }
+                        catch (Exception)
+                        {
+                        }
+                }
+                return c;
+            }
+            return null;
+        }
+
+        private static object GenerateExamples(Type type, StreamWriter sw, XElement xmlroot, object o = null)
         {
             sw.WriteLine("### Example");
             sw.WriteLine();
+            sw.WriteLine("```json");
+
+            object c = o == null ? Remplir(type) : Remplir(type, new KeyValuePair<Type, object>(o.GetType(), o));
+            
+            sw.WriteLine(JsonConvert.SerializeObject(c, Formatting.Indented));
+            sw.WriteLine("```");
+            sw.WriteLine();
+
+            return c;
         }
     }
 }

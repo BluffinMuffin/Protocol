@@ -108,6 +108,28 @@ BluffinMuffin.Protocol.Lobby.CreateTableCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "CreateTableCommand",
+  "Params": {
+    "TableName": "Anonymous Table",
+    "GameType": 0,
+    "Variant": "Texas Hold'Em",
+    "MinPlayersToStart": 2,
+    "MaxPlayers": 10,
+    "WaitingTimes": {
+      "AfterPlayerAction": 0,
+      "AfterBoardDealed": 0,
+      "AfterPotWon": 0
+    },
+    "MoneyUnit": 10,
+    "Lobby": null,
+    "Blind": null,
+    "Limit": null
+  }
+}
+```
+
 ## CreateTableResponse
 
 ### Command Schema
@@ -225,4 +247,30 @@ BluffinMuffin.Protocol.Lobby.CreateTableCommand
 ```
 
 ### Example
+
+```json
+{
+  "CommandName": "CreateTableResponse",
+  "IdTable": 0,
+  "Command": {
+    "CommandName": "CreateTableCommand",
+    "Params": {
+      "TableName": "Anonymous Table",
+      "GameType": 0,
+      "Variant": "Texas Hold'Em",
+      "MinPlayersToStart": 2,
+      "MaxPlayers": 10,
+      "WaitingTimes": {
+        "AfterPlayerAction": 0,
+        "AfterBoardDealed": 0,
+        "AfterPotWon": 0
+      },
+      "MoneyUnit": 10,
+      "Lobby": null,
+      "Blind": null,
+      "Limit": null
+    }
+  }
+}
+```
 

@@ -21,6 +21,12 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "SupportedRulesCommand"
+}
+```
+
 ## SupportedRulesResponse
 
 ### Command Schema
@@ -154,4 +160,14 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
 ```
 
 ### Example
+
+```json
+{
+  "CommandName": "SupportedRulesResponse",
+  "Rules": [],
+  "Command": {
+    "CommandName": "SupportedRulesCommand"
+  }
+}
+```
 

@@ -36,3 +36,14 @@ BluffinMuffin.Protocol.Game.PlayerWonPotCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "PlayerWonPotCommand",
+  "PlayerPos": 0,
+  "PotId": 0,
+  "Shared": 0,
+  "PlayerMoney": 0,
+  "TableId": 0
+}
+```
+

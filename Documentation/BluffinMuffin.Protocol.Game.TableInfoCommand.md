@@ -257,3 +257,32 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "TableInfoCommand",
+  "Params": {
+    "TableName": "Anonymous Table",
+    "GameType": 0,
+    "Variant": "Texas Hold'Em",
+    "MinPlayersToStart": 2,
+    "MaxPlayers": 10,
+    "WaitingTimes": {
+      "AfterPlayerAction": 0,
+      "AfterBoardDealed": 0,
+      "AfterPotWon": 0
+    },
+    "MoneyUnit": 10,
+    "Lobby": null,
+    "Blind": null,
+    "Limit": null
+  },
+  "TotalPotAmount": 0,
+  "PotsAmount": [],
+  "BoardCardIDs": [],
+  "NbPlayers": 0,
+  "Seats": [],
+  "GameHasStarted": false,
+  "TableId": 0
+}
+```
+

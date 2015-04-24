@@ -61,3 +61,17 @@ BluffinMuffin.Protocol.Game.PlayerTurnEndedCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "PlayerTurnEndedCommand",
+  "PlayerPos": 0,
+  "PlayerBet": 0,
+  "PlayerMoney": 0,
+  "TotalPot": 0,
+  "ActionType": 0,
+  "ActionAmount": 0,
+  "State": 0,
+  "TableId": 0
+}
+```
+

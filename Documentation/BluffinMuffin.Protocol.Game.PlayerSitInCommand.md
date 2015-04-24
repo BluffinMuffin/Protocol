@@ -30,6 +30,15 @@ BluffinMuffin.Protocol.Game.PlayerSitInCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "PlayerSitInCommand",
+  "NoSeat": 0,
+  "MoneyAmount": 0,
+  "TableId": 0
+}
+```
+
 ## PlayerSitInResponse
 
 ### Command Schema
@@ -72,4 +81,18 @@ BluffinMuffin.Protocol.Game.PlayerSitInCommand
 ```
 
 ### Example
+
+```json
+{
+  "CommandName": "PlayerSitInResponse",
+  "NoSeat": 0,
+  "TableId": 0,
+  "Command": {
+    "CommandName": "PlayerSitInCommand",
+    "NoSeat": 0,
+    "MoneyAmount": 0,
+    "TableId": 0
+  }
+}
+```
 

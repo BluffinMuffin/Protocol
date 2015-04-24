@@ -24,6 +24,13 @@ BluffinMuffin.Protocol.Game.PlayerSitOutCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "PlayerSitOutCommand",
+  "TableId": 0
+}
+```
+
 ## PlayerSitOutResponse
 
 ### Command Schema
@@ -60,4 +67,16 @@ BluffinMuffin.Protocol.Game.PlayerSitOutCommand
 ```
 
 ### Example
+
+```json
+{
+  "CommandName": "PlayerSitOutResponse",
+  "Success": false,
+  "TableId": 0,
+  "Command": {
+    "CommandName": "PlayerSitOutCommand",
+    "TableId": 0
+  }
+}
+```
 

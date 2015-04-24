@@ -30,3 +30,12 @@ BluffinMuffin.Protocol.Game.PlayerMoneyChangedCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "PlayerMoneyChangedCommand",
+  "PlayerPos": 0,
+  "PlayerMoney": 0,
+  "TableId": 0
+}
+```
+

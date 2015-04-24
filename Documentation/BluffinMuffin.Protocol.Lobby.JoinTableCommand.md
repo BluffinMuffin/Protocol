@@ -27,6 +27,14 @@ BluffinMuffin.Protocol.Lobby.JoinTableCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "JoinTableCommand",
+  "TableId": 0,
+  "PlayerName": null
+}
+```
+
 ## JoinTableResponse
 
 ### Command Schema
@@ -63,4 +71,16 @@ BluffinMuffin.Protocol.Lobby.JoinTableCommand
 ```
 
 ### Example
+
+```json
+{
+  "CommandName": "JoinTableResponse",
+  "Success": false,
+  "Command": {
+    "CommandName": "JoinTableCommand",
+    "TableId": 0,
+    "PlayerName": null
+  }
+}
+```
 

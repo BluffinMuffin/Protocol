@@ -27,6 +27,14 @@ BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "AuthenticateUserCommand",
+  "Username": null,
+  "Password": null
+}
+```
+
 ## AuthenticateUserResponse
 
 ### Command Schema
@@ -63,4 +71,16 @@ BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserCommand
 ```
 
 ### Example
+
+```json
+{
+  "CommandName": "AuthenticateUserResponse",
+  "Success": false,
+  "Command": {
+    "CommandName": "AuthenticateUserCommand",
+    "Username": null,
+    "Password": null
+  }
+}
+```
 

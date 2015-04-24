@@ -27,6 +27,13 @@ In training mode, you must **identify** yourself. This action puts a unique name
 
 ### Example
 
+```json
+{
+  "CommandName": "IdentifyCommand",
+  "Name": "SpongeBob"
+}
+```
+
 ## IdentifyResponse
 
 ### Command Schema
@@ -62,4 +69,15 @@ In training mode, you must **identify** yourself. This action puts a unique name
 ```
 
 ### Example
+
+```json
+{
+  "CommandName": "IdentifyResponse",
+  "Ok": true,
+  "Command": {
+    "CommandName": "IdentifyCommand",
+    "Name": "SpongeBob"
+  }
+}
+```
 

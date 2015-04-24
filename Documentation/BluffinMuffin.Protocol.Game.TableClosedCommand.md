@@ -24,3 +24,10 @@ BluffinMuffin.Protocol.Game.TableClosedCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "TableClosedCommand",
+  "TableId": 0
+}
+```
+

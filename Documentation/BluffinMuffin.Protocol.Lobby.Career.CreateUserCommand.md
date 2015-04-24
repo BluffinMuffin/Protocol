@@ -33,6 +33,16 @@ BluffinMuffin.Protocol.Lobby.Career.CreateUserCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "CreateUserCommand",
+  "Username": null,
+  "Password": null,
+  "Email": null,
+  "DisplayName": null
+}
+```
+
 ## CreateUserResponse
 
 ### Command Schema
@@ -75,4 +85,18 @@ BluffinMuffin.Protocol.Lobby.Career.CreateUserCommand
 ```
 
 ### Example
+
+```json
+{
+  "CommandName": "CreateUserResponse",
+  "Success": false,
+  "Command": {
+    "CommandName": "CreateUserCommand",
+    "Username": null,
+    "Password": null,
+    "Email": null,
+    "DisplayName": null
+  }
+}
+```
 

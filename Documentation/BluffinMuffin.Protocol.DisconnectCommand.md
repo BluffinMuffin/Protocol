@@ -21,3 +21,9 @@ BluffinMuffin.Protocol.DisconnectCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "DisconnectCommand"
+}
+```
+

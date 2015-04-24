@@ -48,6 +48,13 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "ListTableCommand",
+  "LobbyTypes": null
+}
+```
+
 ## ListTableResponse
 
 ### Command Schema
@@ -222,4 +229,15 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
 ```
 
 ### Example
+
+```json
+{
+  "CommandName": "ListTableResponse",
+  "Tables": [],
+  "Command": {
+    "CommandName": "ListTableCommand",
+    "LobbyTypes": null
+  }
+}
+```
 

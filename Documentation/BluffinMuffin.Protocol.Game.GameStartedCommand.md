@@ -27,3 +27,11 @@ BluffinMuffin.Protocol.Game.GameStartedCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "GameStartedCommand",
+  "NeededBlind": 0,
+  "TableId": 0
+}
+```
+

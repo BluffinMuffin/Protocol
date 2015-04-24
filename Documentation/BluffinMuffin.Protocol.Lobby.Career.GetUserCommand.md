@@ -24,6 +24,13 @@ BluffinMuffin.Protocol.Lobby.Career.GetUserCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "GetUserCommand",
+  "Username": null
+}
+```
+
 ## GetUserResponse
 
 ### Command Schema
@@ -63,4 +70,17 @@ BluffinMuffin.Protocol.Lobby.Career.GetUserCommand
 ```
 
 ### Example
+
+```json
+{
+  "CommandName": "GetUserResponse",
+  "Email": null,
+  "DisplayName": null,
+  "Money": 0.0,
+  "Command": {
+    "CommandName": "GetUserCommand",
+    "Username": null
+  }
+}
+```
 

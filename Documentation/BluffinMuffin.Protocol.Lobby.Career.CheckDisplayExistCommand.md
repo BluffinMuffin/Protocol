@@ -24,6 +24,13 @@ BluffinMuffin.Protocol.Lobby.Career.CheckDisplayExistCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "CheckDisplayExistCommand",
+  "DisplayName": null
+}
+```
+
 ## CheckDisplayExistResponse
 
 ### Command Schema
@@ -57,4 +64,15 @@ BluffinMuffin.Protocol.Lobby.Career.CheckDisplayExistCommand
 ```
 
 ### Example
+
+```json
+{
+  "CommandName": "CheckDisplayExistResponse",
+  "Exist": false,
+  "Command": {
+    "CommandName": "CheckDisplayExistCommand",
+    "DisplayName": null
+  }
+}
+```
 

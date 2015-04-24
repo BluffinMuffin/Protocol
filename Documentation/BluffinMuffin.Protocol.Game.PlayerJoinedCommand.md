@@ -27,3 +27,11 @@ BluffinMuffin.Protocol.Game.PlayerJoinedCommand
 
 ### Example
 
+```json
+{
+  "CommandName": "PlayerJoinedCommand",
+  "PlayerName": null,
+  "TableId": 0
+}
+```
+
