@@ -9,6 +9,9 @@ namespace BluffinMuffin.Protocol.DataTypes
             get { return LobbyTypeEnum.Career; }
         }
 
+        /// <summary>
+        /// The Money unit. Should always be equal to the moneyUnit of the table.
+        /// </summary>
         public int MoneyUnit { get; set; }
         public bool IsMaximumBuyInLimited { get; set; }
 

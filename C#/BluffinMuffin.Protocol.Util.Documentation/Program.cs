@@ -7,7 +7,10 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using BluffinMuffin.Protocol.DataTypes;
 using Com.Ericmas001.Net.Protocol;
+using Com.Ericmas001.Net.Protocol.JSON;
+using Com.Ericmas001.Net.Protocol.Options;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Schema;
@@ -37,15 +40,74 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                 {typeof (void), "void"}
             };
 
+        private static readonly Dictionary<string, string> Summaries = new Dictionary<string, string>();
+
+        public static void LoadDocOfAssembly(Type exampleType)
+        {
+            var xmlroot = XElement.Load(Assembly.GetAssembly(exampleType).Location.Replace(".dll", ".xml"));
+            foreach (XElement classTag in xmlroot.Element("members").Elements("member"))
+            {
+                string name = classTag.Attribute("name").Value;
+                string summary = classTag.Element("summary") == null ? null : classTag.Element("summary").Value;
+                if (!String.IsNullOrEmpty(summary) && !Summaries.ContainsKey(name))
+                    Summaries.Add(name, summary);
+            }
+        }
+
         private static void Main(string[] args)
         {
-            var types = Assembly.GetAssembly(typeof (AbstractBluffinCommand)).GetTypes().Where(t => t.IsClass && !t.IsAbstract && t.IsSubclassOf(typeof (AbstractBluffinCommand)) && !t.GetInterfaces().Contains(typeof (IResponse))).ToArray();
-            var xmlroot = XElement.Load(Assembly.GetAssembly(typeof (AbstractBluffinCommand)).Location.Replace(".dll", ".xml"));
+            LoadDocOfAssembly(typeof(AbstractBluffinCommand));
+            LoadDocOfAssembly(typeof(TupleTable));
+
+            GenereDocForCommands();
+            GenereDocForOptions();
+        }
+
+        private static void GenereDocForOptions()
+        {
+            var types = Assembly.GetAssembly(typeof(TupleTable)).GetTypes().Where(t => t.IsClass && t.IsAbstract && t.GetInterfaces().Select(x => x.Name).Contains(typeof(IOption< >).Name)).ToArray();
+
             foreach (Type t in types)
             {
                 string fullname = t.FullName;
-                var classTag = xmlroot.Element("members").Elements("member").FirstOrDefault(x => x.Attribute("name").Value == ("T:" + fullname));
-                string summary = classTag == null ? fullname : classTag.Element("summary") == null ? fullname : classTag.Element("summary").Value;
+                var name = "T:" + fullname;
+                string summary = Summaries.ContainsKey(name) ? Summaries[name] : fullname;
+                string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"..\..\..\..\Documentation", fullname + ".md");
+                FileInfo info = new FileInfo(path);
+                if(info.Exists)
+                    info.IsReadOnly = false;
+                var sw = new StreamWriter(path);
+                sw.WriteLine("# " + t.Name);
+                foreach (var line in summary.Trim().Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries))
+                {
+                    sw.WriteLine();
+                    sw.WriteLine(line.Replace("]({", "](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/").Replace("})", ".md)").Trim());
+                }
+                sw.WriteLine();
+                GenerateSchema(t, sw);
+
+                var subtypes = Assembly.GetAssembly(t).GetTypes().Where(st => st.IsClass && !st.IsAbstract && st.IsSubclassOf(t)).ToArray();
+                foreach (Type st in subtypes)
+                {
+                    sw.WriteLine("## {0}", st.Name);
+                    sw.WriteLine();
+                    GenerateSchema(st, sw);
+                    GenerateExamples(st, sw);
+                    
+                }
+                sw.Close();
+            }
+        }
+
+        private static void GenereDocForCommands()
+        {
+            var types = Assembly.GetAssembly(typeof(AbstractBluffinCommand)).GetTypes().Where(t => t.IsClass && !t.IsAbstract && t.IsSubclassOf(typeof(AbstractBluffinCommand)) && !t.GetInterfaces().Contains(typeof(IResponse))).ToArray();
+
+            foreach (Type t in types)
+            {
+                string fullname = t.FullName;
+                var name = "T:" + fullname;
+                string summary = Summaries.ContainsKey(name) ? Summaries[name] : fullname;
                 string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"..\..\..\..\Documentation", fullname + ".md");
                 FileInfo info = new FileInfo(path);
                 info.IsReadOnly = false;
@@ -56,7 +118,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                 foreach (var line in summary.Trim().Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries))
                 {
                     sw.WriteLine();
-                    sw.WriteLine(line.Trim());
+                    sw.WriteLine(line.Replace("]({", "](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/").Replace("})", ".md)").Trim());
                 }
                 if (File.Exists(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"..\..\..\..\Documentation\Sequence Diagrams\", fullname + ".png")))
                 {
@@ -66,23 +128,23 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                 sw.WriteLine();
                 sw.WriteLine("## {0}", commandName);
                 sw.WriteLine();
-                GenerateSchema(t, sw, xmlroot);
-                object c = GenerateExamples(t, sw, xmlroot);
-                Type responseTypeIntefaceType = t.GetInterfaces().FirstOrDefault(x => x.Name == typeof (ICommandWithResponse<>).Name);
+                GenerateSchema(t, sw);
+                object c = GenerateExamples(t, sw);
+                Type responseTypeIntefaceType = t.GetInterfaces().FirstOrDefault(x => x.Name == typeof(ICommandWithResponse<>).Name);
                 if (responseTypeIntefaceType != null)
                 {
                     Type rt = responseTypeIntefaceType.GetGenericArguments()[0];
                     string responseName = rt.Name;
                     sw.WriteLine("## {0}", responseName);
                     sw.WriteLine();
-                    GenerateSchema(rt, sw, xmlroot);
-                    GenerateExamples(rt, sw, xmlroot, c);
+                    GenerateSchema(rt, sw);
+                    GenerateExamples(rt, sw, c);
                 }
                 sw.Close();
             }
         }
 
-        private static void GenerateSchema(Type t, StreamWriter sw, XElement xmlroot)
+        private static void GenerateSchema(Type t, StreamWriter sw)
         {
             sw.WriteLine("### Command Schema");
             sw.WriteLine();
@@ -94,14 +156,14 @@ namespace BluffinMuffin.Protocol.Util.Documentation
             writer.WriteValue("Schema for " + t.Name);
             writer.WritePropertyName("type");
             writer.WriteValue(t.FullName);
-            WriteProperties(t, writer, xmlroot);
+            WriteProperties(t, writer);
             writer.WriteEndObject();
             sw.WriteLine();
             sw.WriteLine("```");
             sw.WriteLine();
         }
 
-        private static void WriteProperties(Type type, JsonWriter writer, XElement xmlroot)
+        private static void WriteProperties(Type type, JsonWriter writer)
         {
             writer.WritePropertyName("properties");
             writer.WriteStartObject();
@@ -116,16 +178,13 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                 }
                 else
                 {
-                    var propTag = xmlroot.Element("members").Elements("member").FirstOrDefault(x => x.Attribute("name").Value == ("P:" + type.FullName + "." + p.Name));
-                    if (propTag != null)
+                    var name = "P:" + type.FullName + "." + p.Name;
+                    string summary = Summaries.ContainsKey(name) ? Summaries[name] : String.Empty;
+                    string desc = String.Join(" ", summary.Trim().Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries).Select(x => x.Trim())).Trim();
+                    if (!String.IsNullOrEmpty(desc))
                     {
-                        string summary = propTag == null ? String.Empty : propTag.Element("summary") == null ? String.Empty : propTag.Element("summary").Value;
-                        string desc = String.Join(" ", summary.Trim().Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries).Select(x => x.Trim())).Trim();
-                        if (!String.IsNullOrEmpty(desc))
-                        {
-                            writer.WritePropertyName("description");
-                            writer.WriteValue(desc);
-                        }
+                        writer.WritePropertyName("description");
+                        writer.WriteValue(desc);
                     }
                 }
                 writer.WritePropertyName("type");
@@ -135,16 +194,16 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                 {
                     writer.WriteValue(p.PropertyType.FullName);
                     if(p.PropertyType.IsEnum)
-                        WriteEnum(p.PropertyType, writer, xmlroot);
+                        WriteEnum(p.PropertyType, writer);
                     else
-                        WriteProperties(p.PropertyType, writer, xmlroot);
+                        WriteProperties(p.PropertyType, writer);
                 }
                 writer.WriteEndObject();
             }
             writer.WriteEndObject();
         }
 
-        private static void WriteEnum(Type propertyType, JsonWriter writer, XElement xmlroot)
+        private static void WriteEnum(Type propertyType, JsonWriter writer)
         {
             writer.WritePropertyName("enum");
             writer.WriteStartArray();
@@ -161,23 +220,30 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                 object c = ctor.Invoke(ctorParms.Select(x => x.Value).ToArray());
                 foreach (var p in type.GetProperties(BindingFlags.FlattenHierarchy | BindingFlags.Public | BindingFlags.Instance).Where(x => x.CanWrite && x.GetCustomAttribute<JsonIgnoreAttribute>() == null))
                 {
-                    if (p.GetCustomAttribute<ExampleValueAttribute>() != null)
-                        p.SetValue(c, p.GetCustomAttribute<ExampleValueAttribute>().Value);
-                    else if (p.PropertyType.IsClass && p.PropertyType != typeof (string) && !p.PropertyType.IsArray)
-                        try
+                    try
+                    {
+                        var ex = p.GetCustomAttribute<ExampleValueAttribute>();
+                        if (ex != null)
                         {
+                            if (ex.Value is Type && !(p is Type))
+                                p.SetValue(c, ((Type)ex.Value).GetConstructor(Type.EmptyTypes).Invoke(new object[] { }));
+                            else
+                                p.SetValue(c, p.GetCustomAttribute<ExampleValueAttribute>().Value);
+                        }
+                        else if (p.PropertyType.IsClass && p.PropertyType != typeof (string) && !p.PropertyType.IsArray)
                             p.SetValue(c, Remplir(p.PropertyType));
-                        }
-                        catch (Exception)
-                        {
-                        }
+                    }
+                    catch (Exception e)
+                    {
+
+                    }
                 }
                 return c;
             }
             return null;
         }
 
-        private static object GenerateExamples(Type type, StreamWriter sw, XElement xmlroot, object o = null)
+        private static object GenerateExamples(Type type, StreamWriter sw, object o = null)
         {
             sw.WriteLine("### Example");
             sw.WriteLine();

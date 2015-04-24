@@ -55,15 +55,19 @@ BluffinMuffin.Protocol.Game.SeatUpdatedCommand
               }
             },
             "IsShowingCards": {
+              "description": "true if the player cards are public (ex: during showdown)",
               "type": "bool"
             },
             "MoneyAmnt": {
+              "description": "Current Money Amount of the player (Safe + Bet)",
               "type": "int"
             },
             "MoneyBetAmnt": {
+              "description": "Current Money Amount of the player that he played this round",
               "type": "int"
             },
             "MoneySafeAmnt": {
+              "description": "Current Money Amount of the player that he isn't playing with",
               "type": "int"
             },
             "Name": {

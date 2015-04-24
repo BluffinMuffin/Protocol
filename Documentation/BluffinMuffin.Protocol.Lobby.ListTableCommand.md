@@ -92,13 +92,61 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
             "Params": {
               "type": "BluffinMuffin.Protocol.DataTypes.TableParams",
               "properties": {
+                "GameType": {
+                  "description": "The type of poker",
+                  "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
+                  "enum": [
+                    "Holdem"
+                  ]
+                },
+                "MaxPlayers": {
+                  "description": "The maximum number of players. (Between 2 and 10, and must be >= MinPlayersToStart)",
+                  "type": "int"
+                },
+                "MinPlayersToStart": {
+                  "description": "The minimum seated players needed to start the game. (Between 2 and 10)",
+                  "type": "int"
+                },
+                "MoneyUnit": {
+                  "description": "The unit used by the table. This unit is usually the big blind, the minimum raise, etc.",
+                  "type": "int"
+                },
+                "TableName": {
+                  "description": "The name of the table",
+                  "type": "string"
+                },
+                "Variant": {
+                  "description": "The variant of the GameType",
+                  "type": "string"
+                },
+                "WaitingTimes": {
+                  "description": "The waiting times (At different stage of the game, the server will wait before continuing to making it feel real !)",
+                  "type": "BluffinMuffin.Protocol.DataTypes.ConfigurableWaitingTimes",
+                  "properties": {
+                    "AfterBoardDealed": {
+                      "description": "Amount of miliseconds (ms) to wait after cards are dealed",
+                      "type": "int"
+                    },
+                    "AfterPlayerAction": {
+                      "description": "Amount of miliseconds (ms) to wait after a player do something.",
+                      "type": "int"
+                    },
+                    "AfterPotWon": {
+                      "description": "Amount of miliseconds (ms) to wait after pot is won",
+                      "type": "int"
+                    }
+                  }
+                },
                 "Blind": {
+                  "description": "The type of blinds the table uses (none, blinds, antes) See 'BluffinMuffin.Protocol.DataTypes.BlindOptions' for more details",
                   "type": "BluffinMuffin.Protocol.DataTypes.BlindOptions",
                   "properties": {
                     "MoneyUnit": {
+                      "description": "The Money unit. Should always be equal to the moneyUnit of the table.",
                       "type": "int"
                     },
                     "OptionType": {
+                      "description": "The type of blinds used for the table",
                       "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
                       "enum": [
                         "Antes",
@@ -108,16 +156,12 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
                     }
                   }
                 },
-                "GameType": {
-                  "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
-                  "enum": [
-                    "Holdem"
-                  ]
-                },
                 "Limit": {
+                  "description": "The type of blinds the table uses (NoLimit, PotLimit, FixedLimit) See 'BluffinMuffin.Protocol.DataTypes.LimitOptions' for more details",
                   "type": "BluffinMuffin.Protocol.DataTypes.LimitOptions",
                   "properties": {
                     "OptionType": {
+                      "description": "The type of limit you want to apply on raises",
                       "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
                       "enum": [
                         "FixedLimit",
@@ -128,49 +172,16 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
                   }
                 },
                 "Lobby": {
+                  "description": "The type of table it is (Training ? Career ?) See 'BluffinMuffin.Protocol.DataTypes.LobbyOptions' for more details",
                   "type": "BluffinMuffin.Protocol.DataTypes.LobbyOptions",
                   "properties": {
-                    "MaximumAmountForBuyIn": {
-                      "type": "int"
-                    },
-                    "MinimumAmountForBuyIn": {
-                      "type": "int"
-                    },
                     "OptionType": {
+                      "description": "What type of lobby it is",
                       "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
                       "enum": [
                         "Career",
                         "Training"
                       ]
-                    }
-                  }
-                },
-                "MaxPlayers": {
-                  "type": "int"
-                },
-                "MinPlayersToStart": {
-                  "type": "int"
-                },
-                "MoneyUnit": {
-                  "type": "int"
-                },
-                "TableName": {
-                  "type": "string"
-                },
-                "Variant": {
-                  "type": "string"
-                },
-                "WaitingTimes": {
-                  "type": "BluffinMuffin.Protocol.DataTypes.ConfigurableWaitingTimes",
-                  "properties": {
-                    "AfterBoardDealed": {
-                      "type": "int"
-                    },
-                    "AfterPlayerAction": {
-                      "type": "int"
-                    },
-                    "AfterPotWon": {
-                      "type": "int"
                     }
                   }
                 }

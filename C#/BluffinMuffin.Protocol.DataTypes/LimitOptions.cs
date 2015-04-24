@@ -5,6 +5,9 @@ namespace BluffinMuffin.Protocol.DataTypes
 {
     public abstract class LimitOptions : IOption<LimitTypeEnum>
     {
+        /// <summary>
+        /// The type of limit you want to apply on raises
+        /// </summary>
         public abstract LimitTypeEnum OptionType { get; }
     }
 }

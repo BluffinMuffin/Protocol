@@ -41,7 +41,7 @@ namespace BluffinMuffin.Protocol.DataTypes
         public PlayerStateEnum State { get; set; }
 
         /// <summary>
-        /// Montre-il ses cartes ? Vrai si showdown
+        /// true if the player cards are public (ex: during showdown)
         /// </summary>
         public bool IsShowingCards { get; set; }
 
