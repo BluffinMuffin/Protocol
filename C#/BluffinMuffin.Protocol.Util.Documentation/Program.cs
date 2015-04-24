@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using Com.Ericmas001.Net.Protocol;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Schema;
 
 namespace BluffinMuffin.Protocol.Util.Documentation
@@ -183,8 +184,8 @@ namespace BluffinMuffin.Protocol.Util.Documentation
             sw.WriteLine("```json");
 
             object c = o == null ? Remplir(type) : Remplir(type, new KeyValuePair<Type, object>(o.GetType(), o));
-            
-            sw.WriteLine(JsonConvert.SerializeObject(c, Formatting.Indented));
+
+            sw.WriteLine(JsonConvert.SerializeObject(c, Formatting.Indented, new StringEnumConverter()));
             sw.WriteLine("```");
             sw.WriteLine();
 

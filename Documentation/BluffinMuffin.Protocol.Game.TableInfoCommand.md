@@ -262,7 +262,7 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
   "CommandName": "TableInfoCommand",
   "Params": {
     "TableName": "Anonymous Table",
-    "GameType": 0,
+    "GameType": "Holdem",
     "Variant": "Texas Hold'Em",
     "MinPlayersToStart": 2,
     "MaxPlayers": 10,

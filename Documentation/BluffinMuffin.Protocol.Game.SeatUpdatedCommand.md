@@ -135,19 +135,19 @@ BluffinMuffin.Protocol.Game.SeatUpdatedCommand
       "MoneyBetAmnt": 0,
       "HoleCards": [
         {
-          "Special": 1,
-          "Kind": 0,
-          "Value": 0,
+          "Special": "Null",
+          "Kind": "Club",
+          "Value": "Two",
           "Id": -1
         },
         {
-          "Special": 1,
-          "Kind": 0,
-          "Value": 0,
+          "Special": "Null",
+          "Kind": "Club",
+          "Value": "Two",
           "Id": -1
         }
       ],
-      "State": 0,
+      "State": "Zombie",
       "IsShowingCards": false,
       "MoneyAmnt": 0
     },

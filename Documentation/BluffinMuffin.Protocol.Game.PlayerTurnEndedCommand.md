@@ -68,9 +68,9 @@ BluffinMuffin.Protocol.Game.PlayerTurnEndedCommand
   "PlayerBet": 0,
   "PlayerMoney": 0,
   "TotalPot": 0,
-  "ActionType": 0,
+  "ActionType": "Fold",
   "ActionAmount": 0,
-  "State": 0,
+  "State": "Zombie",
   "TableId": 0
 }
 ```

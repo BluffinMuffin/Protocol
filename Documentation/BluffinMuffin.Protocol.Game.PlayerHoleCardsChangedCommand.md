@@ -56,7 +56,7 @@ BluffinMuffin.Protocol.Game.PlayerHoleCardsChangedCommand
   "CommandName": "PlayerHoleCardsChangedCommand",
   "PlayerPos": 0,
   "CardsId": [],
-  "State": 0,
+  "State": "Zombie",
   "TableId": 0
 }
 ```

@@ -50,7 +50,7 @@ BluffinMuffin.Protocol.Game.BetTurnEndedCommand
 ```json
 {
   "CommandName": "BetTurnEndedCommand",
-  "Round": 0,
+  "Round": "Preflop",
   "PotsAmounts": [],
   "TableId": 0
 }
