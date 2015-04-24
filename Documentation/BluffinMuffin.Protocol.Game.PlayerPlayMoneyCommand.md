@@ -1,0 +1,28 @@
+# Game : PlayerPlayMoney
+
+BluffinMuffin.Protocol.Game.PlayerPlayMoneyCommand
+
+## PlayerPlayMoneyCommand
+
+### Command Schema
+
+```json
+{
+  "title": "Schema for PlayerPlayMoneyCommand",
+  "type": "object",
+  "properties": {
+    "CommandName": {
+      "description": "Always contains 'PlayerPlayMoneyCommand' to distinguish the command from others.",
+      "type": "string"
+    },
+    "Played": {
+      "type": "int"
+    },
+    "TableId": {
+      "type": "int"
+    }
+  }
+}```
+
+### Example
+
