@@ -221,6 +221,14 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                 WriteType(writer, t.GetElementType());
                 writer.WriteEndObject();
             }
+            else if (t.IsGenericType && (t.GetGenericTypeDefinition() == typeof(List<>)))
+            {
+                writer.WriteValue("array");
+                writer.WritePropertyName("items");
+                writer.WriteStartObject();
+                WriteType(writer, t.GetGenericArguments()[0]);
+                writer.WriteEndObject();
+            }
             else if (t.IsPrimitive || t == typeof(string))
                 writer.WriteValue(Aliases[t]);
             else
@@ -282,7 +290,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                                     }
                                     else
                                     {
-                                        lst.Add(exs.Values[0]);
+                                        lst.Add(exs.Values[i][0]);
                                     }
                                 }
                                 p.SetValue(c, array);

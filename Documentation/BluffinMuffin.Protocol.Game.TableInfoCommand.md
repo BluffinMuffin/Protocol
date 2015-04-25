@@ -16,17 +16,9 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
       "type": "string"
     },
     "BoardCardIDs": {
-      "type": "System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
-      "properties": {
-        "Capacity": {
-          "type": "int"
-        },
-        "Count": {
-          "type": "int"
-        },
-        "Item": {
-          "type": "int"
-        }
+      "type": "array",
+      "items": {
+        "type": "int"
       }
     },
     "GameHasStarted": {
@@ -134,129 +126,113 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
       }
     },
     "PotsAmount": {
-      "type": "System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
-      "properties": {
-        "Capacity": {
-          "type": "int"
-        },
-        "Count": {
-          "type": "int"
-        },
-        "Item": {
-          "type": "int"
-        }
+      "type": "array",
+      "items": {
+        "type": "int"
       }
     },
     "Seats": {
-      "type": "System.Collections.Generic.List`1[[BluffinMuffin.Protocol.DataTypes.SeatInfo, BluffinMuffin.Protocol.DataTypes, Version=0.5.0.0, Culture=neutral, PublicKeyToken=null]]",
-      "properties": {
-        "Capacity": {
-          "type": "int"
-        },
-        "Count": {
-          "type": "int"
-        },
-        "Item": {
-          "type": "BluffinMuffin.Protocol.DataTypes.SeatInfo",
-          "properties": {
-            "NoSeat": {
-              "description": "The id of the current seat",
-              "type": "int"
-            },
-            "Player": {
-              "description": "The information of the player sitting in this seat. If null, there is nobody.",
-              "type": "BluffinMuffin.Protocol.DataTypes.PlayerInfo",
-              "properties": {
-                "HoleCards": {
-                  "description": "The cards in the hands of the player",
-                  "type": "array",
-                  "items": {
-                    "type": "Com.Ericmas001.Games.GameCard",
-                    "properties": {
-                      "Kind": {
-                        "type": "Com.Ericmas001.Games.GameCardKind",
-                        "enum": [
-                          "Club",
-                          "Diamond",
-                          "Heart",
-                          "Spade"
-                        ]
-                      },
-                      "Special": {
-                        "type": "Com.Ericmas001.Games.GameCardSpecial",
-                        "enum": [
-                          "Hidden",
-                          "JokerColor",
-                          "JokerDark",
-                          "None",
-                          "Null"
-                        ]
-                      },
-                      "Value": {
-                        "type": "Com.Ericmas001.Games.GameCardValue",
-                        "enum": [
-                          "Ace",
-                          "Eight",
-                          "Five",
-                          "Four",
-                          "Jack",
-                          "King",
-                          "Nine",
-                          "Queen",
-                          "Seven",
-                          "Six",
-                          "Ten",
-                          "Three",
-                          "Two"
-                        ]
-                      }
+      "type": "array",
+      "items": {
+        "type": "BluffinMuffin.Protocol.DataTypes.SeatInfo",
+        "properties": {
+          "NoSeat": {
+            "description": "The id of the current seat",
+            "type": "int"
+          },
+          "Player": {
+            "description": "The information of the player sitting in this seat. If null, there is nobody.",
+            "type": "BluffinMuffin.Protocol.DataTypes.PlayerInfo",
+            "properties": {
+              "HoleCards": {
+                "description": "The cards in the hands of the player",
+                "type": "array",
+                "items": {
+                  "type": "Com.Ericmas001.Games.GameCard",
+                  "properties": {
+                    "Kind": {
+                      "type": "Com.Ericmas001.Games.GameCardKind",
+                      "enum": [
+                        "Club",
+                        "Diamond",
+                        "Heart",
+                        "Spade"
+                      ]
+                    },
+                    "Special": {
+                      "type": "Com.Ericmas001.Games.GameCardSpecial",
+                      "enum": [
+                        "Hidden",
+                        "JokerColor",
+                        "JokerDark",
+                        "None",
+                        "Null"
+                      ]
+                    },
+                    "Value": {
+                      "type": "Com.Ericmas001.Games.GameCardValue",
+                      "enum": [
+                        "Ace",
+                        "Eight",
+                        "Five",
+                        "Four",
+                        "Jack",
+                        "King",
+                        "Nine",
+                        "Queen",
+                        "Seven",
+                        "Six",
+                        "Ten",
+                        "Three",
+                        "Two"
+                      ]
                     }
                   }
-                },
-                "IsShowingCards": {
-                  "description": "true if the player cards are public (ex: during showdown)",
-                  "type": "bool"
-                },
-                "MoneyBetAmnt": {
-                  "description": "Current Money Amount of the player that he played this round",
-                  "type": "int"
-                },
-                "MoneySafeAmnt": {
-                  "description": "Current Money Amount of the player that he isn't playing with",
-                  "type": "int"
-                },
-                "Name": {
-                  "description": "The name of the player",
-                  "type": "string"
-                },
-                "NoSeat": {
-                  "description": "The seat used by the player",
-                  "type": "int"
-                },
-                "State": {
-                  "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
-                  "enum": [
-                    "AllIn",
-                    "Joined",
-                    "Playing",
-                    "SitIn",
-                    "Zombie"
-                  ]
                 }
-              }
-            },
-            "SeatAttributes": {
-              "description": "The attributes of the seat",
-              "type": "array",
-              "items": {
-                "type": "BluffinMuffin.Protocol.DataTypes.Enums.SeatAttributeEnum",
+              },
+              "IsShowingCards": {
+                "description": "true if the player cards are public (ex: during showdown)",
+                "type": "bool"
+              },
+              "MoneyBetAmnt": {
+                "description": "Current Money Amount of the player that he played this round",
+                "type": "int"
+              },
+              "MoneySafeAmnt": {
+                "description": "Current Money Amount of the player that he isn't playing with",
+                "type": "int"
+              },
+              "Name": {
+                "description": "The name of the player",
+                "type": "string"
+              },
+              "NoSeat": {
+                "description": "The seat used by the player",
+                "type": "int"
+              },
+              "State": {
+                "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
                 "enum": [
-                  "BigBlind",
-                  "CurrentPlayer",
-                  "Dealer",
-                  "SmallBlind"
+                  "AllIn",
+                  "Joined",
+                  "Playing",
+                  "SitIn",
+                  "Zombie"
                 ]
               }
+            }
+          },
+          "SeatAttributes": {
+            "description": "The attributes of the seat",
+            "type": "array",
+            "items": {
+              "type": "BluffinMuffin.Protocol.DataTypes.Enums.SeatAttributeEnum",
+              "enum": [
+                "BigBlind",
+                "CurrentPlayer",
+                "Dealer",
+                "SmallBlind"
+              ]
             }
           }
         }

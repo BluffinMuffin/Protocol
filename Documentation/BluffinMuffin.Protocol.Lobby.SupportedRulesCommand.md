@@ -48,117 +48,85 @@ All the supported rules are then sent back to the client.
     },
     "Rules": {
       "description": "All the rules supported by the server",
-      "type": "System.Collections.Generic.List`1[[BluffinMuffin.Protocol.DataTypes.RuleInfo, BluffinMuffin.Protocol.DataTypes, Version=0.5.0.0, Culture=neutral, PublicKeyToken=null]]",
-      "properties": {
-        "Capacity": {
-          "type": "int"
-        },
-        "Count": {
-          "type": "int"
-        },
-        "Item": {
-          "type": "BluffinMuffin.Protocol.DataTypes.RuleInfo",
-          "properties": {
-            "AvailableBlinds": {
-              "description": "Available Blind Options",
-              "type": "System.Collections.Generic.List`1[[BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum, BluffinMuffin.Protocol.DataTypes, Version=0.5.0.0, Culture=neutral, PublicKeyToken=null]]",
-              "properties": {
-                "Capacity": {
-                  "type": "int"
-                },
-                "Count": {
-                  "type": "int"
-                },
-                "Item": {
-                  "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
-                  "enum": [
-                    "Antes",
-                    "Blinds",
-                    "None"
-                  ]
-                }
-              }
-            },
-            "AvailableLimits": {
-              "description": "Avaliable limits",
-              "type": "System.Collections.Generic.List`1[[BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum, BluffinMuffin.Protocol.DataTypes, Version=0.5.0.0, Culture=neutral, PublicKeyToken=null]]",
-              "properties": {
-                "Capacity": {
-                  "type": "int"
-                },
-                "Count": {
-                  "type": "int"
-                },
-                "Item": {
-                  "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
-                  "enum": [
-                    "FixedLimit",
-                    "NoLimit",
-                    "PotLimit"
-                  ]
-                }
-              }
-            },
-            "AvailableLobbys": {
-              "description": "What kind of lobby are offered ?",
-              "type": "System.Collections.Generic.List`1[[BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum, BluffinMuffin.Protocol.DataTypes, Version=0.5.0.0, Culture=neutral, PublicKeyToken=null]]",
-              "properties": {
-                "Capacity": {
-                  "type": "int"
-                },
-                "Count": {
-                  "type": "int"
-                },
-                "Item": {
-                  "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
-                  "enum": [
-                    "QuickMode",
-                    "RegisteredMode"
-                  ]
-                }
-              }
-            },
-            "CanConfigWaitingTime": {
-              "description": "Are waiting times configurable ?? (At different stage of the game, the server will wait before continuing to making it feel real !)",
-              "type": "bool"
-            },
-            "DefaultBlind": {
-              "description": "Default Blind Option",
+      "type": "array",
+      "items": {
+        "type": "BluffinMuffin.Protocol.DataTypes.RuleInfo",
+        "properties": {
+          "AvailableBlinds": {
+            "description": "Available Blind Options",
+            "type": "array",
+            "items": {
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
               "enum": [
                 "Antes",
                 "Blinds",
                 "None"
               ]
-            },
-            "DefaultLimit": {
-              "description": "Default Limit",
+            }
+          },
+          "AvailableLimits": {
+            "description": "Avaliable limits",
+            "type": "array",
+            "items": {
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
               "enum": [
                 "FixedLimit",
                 "NoLimit",
                 "PotLimit"
               ]
-            },
-            "GameType": {
-              "description": "Type of Game",
-              "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
-              "enum": [
-                "Holdem"
-              ]
-            },
-            "MaxPlayers": {
-              "description": "Maximum amount of players that can sit at the table (Must be >= MinPlayers)",
-              "type": "int"
-            },
-            "MinPlayers": {
-              "description": "Minimum amount of sitting player required to start a game",
-              "type": "int"
-            },
-            "Name": {
-              "description": "Name of the Variant",
-              "type": "string"
             }
+          },
+          "AvailableLobbys": {
+            "description": "What kind of lobby are offered ?",
+            "type": "array",
+            "items": {
+              "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
+              "enum": [
+                "QuickMode",
+                "RegisteredMode"
+              ]
+            }
+          },
+          "CanConfigWaitingTime": {
+            "description": "Are waiting times configurable ?? (At different stage of the game, the server will wait before continuing to making it feel real !)",
+            "type": "bool"
+          },
+          "DefaultBlind": {
+            "description": "Default Blind Option",
+            "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
+            "enum": [
+              "Antes",
+              "Blinds",
+              "None"
+            ]
+          },
+          "DefaultLimit": {
+            "description": "Default Limit",
+            "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
+            "enum": [
+              "FixedLimit",
+              "NoLimit",
+              "PotLimit"
+            ]
+          },
+          "GameType": {
+            "description": "Type of Game",
+            "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
+            "enum": [
+              "Holdem"
+            ]
+          },
+          "MaxPlayers": {
+            "description": "Maximum amount of players that can sit at the table (Must be >= MinPlayers)",
+            "type": "int"
+          },
+          "MinPlayers": {
+            "description": "Minimum amount of sitting player required to start a game",
+            "type": "int"
+          },
+          "Name": {
+            "description": "Name of the Variant",
+            "type": "string"
           }
         }
       }
@@ -188,12 +156,21 @@ All the supported rules are then sent back to the client.
       "Name": "Texas Hold'em",
       "MinPlayers": 2,
       "MaxPlayers": 10,
-      "AvailableLimits": null,
+      "AvailableLimits": [
+        "NoLimit"
+      ],
       "DefaultLimit": "NoLimit",
-      "AvailableBlinds": null,
+      "AvailableBlinds": [
+        "Blinds",
+        "Antes",
+        "None"
+      ],
       "DefaultBlind": "Blinds",
       "CanConfigWaitingTime": true,
-      "AvailableLobbys": null
+      "AvailableLobbys": [
+        "QuickMode",
+        "RegisteredMode"
+      ]
     }
   ],
   "Command": {

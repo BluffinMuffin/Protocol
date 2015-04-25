@@ -16,17 +16,9 @@ BluffinMuffin.Protocol.Game.BetTurnEndedCommand
       "type": "string"
     },
     "PotsAmounts": {
-      "type": "System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]",
-      "properties": {
-        "Capacity": {
-          "type": "int"
-        },
-        "Count": {
-          "type": "int"
-        },
-        "Item": {
-          "type": "int"
-        }
+      "type": "array",
+      "items": {
+        "type": "int"
       }
     },
     "Round": {
