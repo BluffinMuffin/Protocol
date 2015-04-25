@@ -8,15 +8,15 @@ The lobby has two modes: ***Quick mode*** and ***Registered mode***. This Sectio
 
    First, in this mode, you must **Identify** yourself. This action puts a unique name to your Tcp Connection for the server. This name will be used as your playername on every table that you will play.
    
- * *(Optional)* **[SupportedRulesCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.md)** 
+ * **[SupportedRulesCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.md)** *(Optional)*
 
    If it's the first time, it's a good idea to ask what are the **Supported Rules** of the current server to know what can and can't be done !
 
- * *(Optional)* **[CreateTableCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.CreateTableCommand.md)** 
+ * **[CreateTableCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.CreateTableCommand.md)** *(Optional)*
 
    If you want to create a new table, you can send a **Create Table** command to the server with all the parameters that you want on your table
 
- * *(Optional)* **[ListTablesCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.ListTablesCommand.md)** 
+ * **[ListTablesCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.ListTablesCommand.md)** *(Optional)*
 
    You can also ask for the **List of Tables** currently open on the server.
 
