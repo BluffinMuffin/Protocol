@@ -58,8 +58,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BluffinMuffin.Protocol.Util
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sequences", "Sequences", "{D22EA46B-64A4-4DAC-9093-6184BC4A498E}"
 	ProjectSection(SolutionItems) = preProject
+		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.CreateTableCommand.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.CreateTableCommand.png
+		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.JoinTableCommand.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.JoinTableCommand.png
+		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.ListTableCommand.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.ListTableCommand.png
 		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.png
 		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.QuickMode.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.QuickMode.png
+		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.png
 		..\Documentation\Sequences\Lobby.vsdx = ..\Documentation\Sequences\Lobby.vsdx
 	EndProjectSection
 EndProject

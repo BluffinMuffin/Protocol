@@ -2,6 +2,8 @@
 
 BluffinMuffin.Protocol.Lobby.JoinTableCommand
 
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.JoinTableCommand.png" alt="Sequence Diagram"></p>
+
 ## JoinTableCommand
 
 ### Command Schema

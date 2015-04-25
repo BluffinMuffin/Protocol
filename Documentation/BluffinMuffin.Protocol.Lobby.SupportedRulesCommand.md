@@ -2,6 +2,8 @@
 
 BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
 
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.png" alt="Sequence Diagram"></p>
+
 ## SupportedRulesCommand
 
 ### Command Schema
