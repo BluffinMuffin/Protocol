@@ -275,9 +275,10 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                                     if (et.IsClass)
                                     {
                                         var types = exs.Values[i].Select(x => x.GetType()).ToArray();
-                                        var ct = et.GetConstructor(types);
-
-                                        lst.Add(ct.Invoke(exs.Values[i]));
+                                        List<KeyValuePair<Type, object>> kvps = new List<KeyValuePair<Type, object>>();
+                                        for(int j = 0; j < exs.Values[0].Length; ++i)
+                                            kvps.Add(new KeyValuePair<Type, object>(types[j],exs.Values[i][j]));
+                                        lst.Add(Remplir(et,kvps.ToArray()));
                                     }
                                     else
                                     {
@@ -299,9 +300,10 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                                     if (et.IsClass)
                                     {
                                         var types = exs.Values[i].Select(x => x.GetType()).ToArray();
-                                        var ct = et.GetConstructor(types);
-
-                                        lst[i] = ct.Invoke(exs.Values[i]);
+                                        List<KeyValuePair<Type, object>> kvps = new List<KeyValuePair<Type, object>>();
+                                        for (int j = 0; j < exs.Values[i].Length; ++j)
+                                            kvps.Add(new KeyValuePair<Type, object>(types[j], exs.Values[i][j]));
+                                        lst[i] = Remplir(et, kvps.ToArray());
                                     }
                                     else
                                     {

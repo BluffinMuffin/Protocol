@@ -1,6 +1,8 @@
 # Lobby : JoinTable
 
-BluffinMuffin.Protocol.Lobby.JoinTableCommand
+To join a table, you have to send a **Join Table ** command with the id of the table you want to join.
+
+The success of the operation will be sent back
 
 <p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.JoinTableCommand.png" alt="Sequence Diagram"></p>
 
@@ -20,9 +22,11 @@ BluffinMuffin.Protocol.Lobby.JoinTableCommand
       "type": "string"
     },
     "PlayerName": {
+      "description": "The name you identified as",
       "type": "string"
     },
     "TableId": {
+      "description": "The id of the table to join",
       "type": "int"
     }
   }
@@ -34,8 +38,8 @@ BluffinMuffin.Protocol.Lobby.JoinTableCommand
 ```json
 {
   "CommandName": "JoinTableCommand",
-  "TableId": 0,
-  "PlayerName": null
+  "TableId": 42,
+  "PlayerName": "SpongeBob"
 }
 ```
 
@@ -53,6 +57,7 @@ BluffinMuffin.Protocol.Lobby.JoinTableCommand
       "type": "string"
     },
     "Success": {
+      "description": "true if the player has joined the table on the server",
       "type": "bool"
     },
     "Command": {
@@ -64,9 +69,11 @@ BluffinMuffin.Protocol.Lobby.JoinTableCommand
           "type": "string"
         },
         "PlayerName": {
+          "description": "The name you identified as",
           "type": "string"
         },
         "TableId": {
+          "description": "The id of the table to join",
           "type": "int"
         }
       }
@@ -83,8 +90,8 @@ BluffinMuffin.Protocol.Lobby.JoinTableCommand
   "Success": false,
   "Command": {
     "CommandName": "JoinTableCommand",
-    "TableId": 0,
-    "PlayerName": null
+    "TableId": 42,
+    "PlayerName": "SpongeBob"
   }
 }
 ```

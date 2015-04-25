@@ -1,6 +1,8 @@
 # Lobby : ListTable
 
-BluffinMuffin.Protocol.Lobby.ListTableCommand
+To list tables, you have to send a **List Table** command with the types of lobbys you are interested in.
+
+The list of active tables will be sent back
 
 <p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.ListTableCommand.png" alt="Sequence Diagram"></p>
 
@@ -20,6 +22,7 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
       "type": "string"
     },
     "LobbyTypes": {
+      "description": "All the different types of lobby we want to see tables of.",
       "type": "array",
       "items": {
         "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
@@ -38,7 +41,10 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
 ```json
 {
   "CommandName": "ListTableCommand",
-  "LobbyTypes": null
+  "LobbyTypes": [
+    "QuickMode",
+    "RegisteredMode"
+  ]
 }
 ```
 
@@ -56,6 +62,7 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
       "type": "string"
     },
     "Tables": {
+      "description": "All the active tables on the server",
       "type": "System.Collections.Generic.List`1[[BluffinMuffin.Protocol.DataTypes.TupleTable, BluffinMuffin.Protocol.DataTypes, Version=0.5.0.0, Culture=neutral, PublicKeyToken=null]]",
       "properties": {
         "Capacity": {
@@ -196,6 +203,7 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
           "type": "string"
         },
         "LobbyTypes": {
+          "description": "All the different types of lobby we want to see tables of.",
           "type": "array",
           "items": {
             "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
@@ -218,15 +226,41 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
   "CommandName": "ListTableResponse",
   "Tables": [
     {
-      "IdTable": 0,
-      "NbPlayers": 0,
-      "PossibleAction": "None",
-      "Params": null
+      "IdTable": 42,
+      "NbPlayers": 6,
+      "PossibleAction": "Join",
+      "Params": {
+        "TableName": "Bikini Bottom",
+        "GameType": "Holdem",
+        "Variant": "Texas Hold'em",
+        "MinPlayersToStart": 2,
+        "MaxPlayers": 10,
+        "WaitingTimes": {
+          "AfterPlayerAction": 500,
+          "AfterBoardDealed": 500,
+          "AfterPotWon": 2500
+        },
+        "MoneyUnit": 10,
+        "Lobby": {
+          "OptionType": "QuickMode",
+          "StartingAmount": 1500
+        },
+        "Blind": {
+          "OptionType": "Blinds",
+          "MoneyUnit": 0
+        },
+        "Limit": {
+          "OptionType": "NoLimit"
+        }
+      }
     }
   ],
   "Command": {
     "CommandName": "ListTableCommand",
-    "LobbyTypes": null
+    "LobbyTypes": [
+      "QuickMode",
+      "RegisteredMode"
+    ]
   }
 }
 ```

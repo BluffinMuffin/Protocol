@@ -1,6 +1,6 @@
 # Lobby : CreateTable
 
-To create a new table, you have to send a **CreateTableCommand** with all the parameters of the poker table.
+To create a new table, you have to send a **Create Table** command with all the parameters of the poker table.
 
 If successful, the id of the table will be received. If not, server will send "-1".
 

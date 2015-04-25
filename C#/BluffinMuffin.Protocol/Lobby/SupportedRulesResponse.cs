@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using BluffinMuffin.Protocol.DataTypes;
+using Com.Ericmas001.Net.Protocol;
 
 namespace BluffinMuffin.Protocol.Lobby
 {
@@ -9,8 +10,9 @@ namespace BluffinMuffin.Protocol.Lobby
     public class SupportedRulesResponse : AbstractBluffinReponse<SupportedRulesCommand>
     {
         /// <summary>
-        /// 
+        /// All the rules supported by the server
         /// </summary>
+        [ExampleValues(1)]
         public List<RuleInfo> Rules { get; set; }
 
         /// <summary>

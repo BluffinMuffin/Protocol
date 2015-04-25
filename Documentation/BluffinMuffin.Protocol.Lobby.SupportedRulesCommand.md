@@ -1,6 +1,8 @@
 # Lobby : SupportedRules
 
-BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
+This should be sent one time, at the beginning, to know what the server can do.
+
+All the supported rules are then sent back to the client.
 
 <p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.png" alt="Sequence Diagram"></p>
 
@@ -45,6 +47,7 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
       "type": "string"
     },
     "Rules": {
+      "description": "All the rules supported by the server",
       "type": "System.Collections.Generic.List`1[[BluffinMuffin.Protocol.DataTypes.RuleInfo, BluffinMuffin.Protocol.DataTypes, Version=0.5.0.0, Culture=neutral, PublicKeyToken=null]]",
       "properties": {
         "Capacity": {
@@ -57,6 +60,7 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
           "type": "BluffinMuffin.Protocol.DataTypes.RuleInfo",
           "properties": {
             "AvailableBlinds": {
+              "description": "Available Blind Options",
               "type": "System.Collections.Generic.List`1[[BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum, BluffinMuffin.Protocol.DataTypes, Version=0.5.0.0, Culture=neutral, PublicKeyToken=null]]",
               "properties": {
                 "Capacity": {
@@ -76,6 +80,7 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
               }
             },
             "AvailableLimits": {
+              "description": "Avaliable limits",
               "type": "System.Collections.Generic.List`1[[BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum, BluffinMuffin.Protocol.DataTypes, Version=0.5.0.0, Culture=neutral, PublicKeyToken=null]]",
               "properties": {
                 "Capacity": {
@@ -95,6 +100,7 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
               }
             },
             "AvailableLobbys": {
+              "description": "What kind of lobby are offered ?",
               "type": "System.Collections.Generic.List`1[[BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum, BluffinMuffin.Protocol.DataTypes, Version=0.5.0.0, Culture=neutral, PublicKeyToken=null]]",
               "properties": {
                 "Capacity": {
@@ -113,9 +119,11 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
               }
             },
             "CanConfigWaitingTime": {
+              "description": "Are waiting times configurable ?? (At different stage of the game, the server will wait before continuing to making it feel real !)",
               "type": "bool"
             },
             "DefaultBlind": {
+              "description": "Default Blind Option",
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
               "enum": [
                 "Antes",
@@ -124,6 +132,7 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
               ]
             },
             "DefaultLimit": {
+              "description": "Default Limit",
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
               "enum": [
                 "FixedLimit",
@@ -132,18 +141,22 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
               ]
             },
             "GameType": {
+              "description": "Type of Game",
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
               "enum": [
                 "Holdem"
               ]
             },
             "MaxPlayers": {
+              "description": "Maximum amount of players that can sit at the table (Must be >= MinPlayers)",
               "type": "int"
             },
             "MinPlayers": {
+              "description": "Minimum amount of sitting player required to start a game",
               "type": "int"
             },
             "Name": {
+              "description": "Name of the Variant",
               "type": "string"
             }
           }
@@ -169,7 +182,20 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
 ```json
 {
   "CommandName": "SupportedRulesResponse",
-  "Rules": [],
+  "Rules": [
+    {
+      "GameType": "Holdem",
+      "Name": "Texas Hold'em",
+      "MinPlayers": 2,
+      "MaxPlayers": 10,
+      "AvailableLimits": null,
+      "DefaultLimit": "NoLimit",
+      "AvailableBlinds": null,
+      "DefaultBlind": "Blinds",
+      "CanConfigWaitingTime": true,
+      "AvailableLobbys": null
+    }
+  ],
   "Command": {
     "CommandName": "SupportedRulesCommand"
   }
