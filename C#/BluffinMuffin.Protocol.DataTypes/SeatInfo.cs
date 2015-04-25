@@ -5,20 +5,35 @@ using Newtonsoft.Json;
 
 namespace BluffinMuffin.Protocol.DataTypes
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class SeatInfo
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public bool IsEmpty { get { return Player == null; } }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public int NoSeat { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
         public PlayerInfo Player { get; set; }
-
+        /// <summary>
+        /// 
+        /// </summary>
         [JsonIgnore]
         public ConcurrentList<SeatAttributeEnum> Attributes
         {
             get;
             set;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public SeatAttributeEnum[] SerializableAttributes
         {
             get
@@ -30,12 +45,17 @@ namespace BluffinMuffin.Protocol.DataTypes
                 value.ToList().ForEach(x => Attributes.Add(x));
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public SeatInfo()
         {
             Attributes = new ConcurrentList<SeatAttributeEnum>();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public SeatInfo Clone()
         {
             if (IsEmpty)

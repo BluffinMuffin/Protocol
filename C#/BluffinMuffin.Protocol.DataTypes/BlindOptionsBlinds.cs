@@ -9,6 +9,9 @@ namespace BluffinMuffin.Protocol.DataTypes
     /// </summary>
     public class BlindOptionsBlinds : BlindOptions
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public override BlindTypeEnum OptionType { get { return BlindTypeEnum.Blinds; } }
 
         /// <summary>

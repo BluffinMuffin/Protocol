@@ -7,6 +7,9 @@ namespace BluffinMuffin.Protocol.DataTypes
     /// </summary>
     public class LobbyOptionsQuickMode : LobbyOptions
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public override LobbyTypeEnum OptionType
         {
             get { return LobbyTypeEnum.QuickMode; }
@@ -25,11 +28,16 @@ namespace BluffinMuffin.Protocol.DataTypes
             StartingAmount = 1500;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public override int MaximumAmountForBuyIn
         {
             get { return StartingAmount; }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public override int MinimumAmountForBuyIn
         {
             get { return StartingAmount; }

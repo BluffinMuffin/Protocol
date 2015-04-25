@@ -8,6 +8,9 @@ namespace BluffinMuffin.Protocol.DataTypes
     /// </summary>
     public class LimitOptionsFixed : LimitOptions
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public override LimitTypeEnum OptionType { get { return LimitTypeEnum.FixedLimit; } }
     }
 }

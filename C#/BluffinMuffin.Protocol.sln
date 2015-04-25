@@ -67,6 +67,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sequences Diagrams", "Seque
 		..\Documentation\Sequence Diagrams\LobbySequences.uxf = ..\Documentation\Sequence Diagrams\LobbySequences.uxf
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Activity Diagrams", "Activity Diagrams", "{63F08F85-1BF1-409D-A04C-143B5B80B66B}"
+	ProjectSection(SolutionItems) = preProject
+		..\Documentation\Activity Diagrams\BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.png = ..\Documentation\Activity Diagrams\BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.png
+		..\Documentation\Activity Diagrams\LobbyActivity.vsdx = ..\Documentation\Activity Diagrams\LobbyActivity.vsdx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -161,5 +167,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D22EA46B-64A4-4DAC-9093-6184BC4A498E} = {E469F8A0-7DB7-48CF-B40A-03BE833DD893}
+		{63F08F85-1BF1-409D-A04C-143B5B80B66B} = {E469F8A0-7DB7-48CF-B40A-03BE833DD893}
 	EndGlobalSection
 EndGlobal

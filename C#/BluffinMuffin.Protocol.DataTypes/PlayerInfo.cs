@@ -57,6 +57,9 @@ namespace BluffinMuffin.Protocol.DataTypes
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public PlayerStateEnum State { get; set; }
 
         /// <summary>
@@ -64,6 +67,9 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// </summary>
         public bool IsShowingCards { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public PlayerInfo()
         {
             Name = "Anonymous Player";
@@ -73,6 +79,11 @@ namespace BluffinMuffin.Protocol.DataTypes
             State = PlayerStateEnum.Zombie;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="money"></param>
         public PlayerInfo(String name, int money)
             : this()
         {
@@ -89,6 +100,10 @@ namespace BluffinMuffin.Protocol.DataTypes
             get { return MoneyBetAmnt + MoneySafeAmnt; }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public PlayerInfo Clone()
         {
             return new PlayerInfo()

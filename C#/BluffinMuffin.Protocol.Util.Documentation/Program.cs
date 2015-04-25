@@ -126,6 +126,11 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                     sw.WriteLine();
                     sw.WriteLine("<p align=center><img src=\"https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequence%20Diagrams/{0}.png\" alt=\"Sequence Diagram\"></p>", fullname);
                 }
+                if (File.Exists(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"..\..\..\..\Documentation\Activity Diagrams\", fullname + ".png")))
+                {
+                    sw.WriteLine();
+                    sw.WriteLine("<p align=center><img src=\"https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Activity%20Diagrams/{0}.png\" alt=\"Activity Diagram\"></p>", fullname);
+                }
                 sw.WriteLine();
                 sw.WriteLine("## {0}", commandName);
                 sw.WriteLine();
@@ -250,7 +255,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                         var exs = p.GetCustomAttribute<ExampleValuesAttribute>();
                         if (ex != null)
                         {
-                            if (ex.Value is Type && !(p is Type))
+                            if (ex.Value is Type)
                                 p.SetValue(c, ((Type)ex.Value).GetConstructor(Type.EmptyTypes).Invoke(new object[] { }));
                             else
                                 p.SetValue(c, p.GetCustomAttribute<ExampleValueAttribute>().Value);
@@ -273,7 +278,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                         else if (p.PropertyType.IsClass && p.PropertyType != typeof(string) && !p.PropertyType.IsArray)
                             p.SetValue(c, Remplir(p.PropertyType));
                     }
-                    catch (Exception e)
+                    catch (Exception)
                     {
 
                     }

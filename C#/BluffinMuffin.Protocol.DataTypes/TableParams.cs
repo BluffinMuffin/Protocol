@@ -4,6 +4,9 @@ using BluffinMuffin.Protocol.DataTypes.Enums;
 
 namespace BluffinMuffin.Protocol.DataTypes
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class TableParams
     {       
         /// <summary>
@@ -69,6 +72,9 @@ namespace BluffinMuffin.Protocol.DataTypes
         [JsonProperty(Order = 100)]
         public LimitOptions Limit { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public TableParams()
         {
             TableName = "Anonymous Table";

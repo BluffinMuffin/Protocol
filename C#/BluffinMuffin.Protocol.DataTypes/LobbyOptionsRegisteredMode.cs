@@ -33,10 +33,16 @@ namespace BluffinMuffin.Protocol.DataTypes
             MoneyUnit = 10;
             IsMaximumBuyInLimited = false;
         }
+        /// <summary>
+        /// 
+        /// </summary>
         public override int MaximumAmountForBuyIn
         {
             get { return IsMaximumBuyInLimited ? 100 * MoneyUnit : int.MaxValue; }
         }
+        /// <summary>
+        /// 
+        /// </summary>
         public override int MinimumAmountForBuyIn
         {
             get { return 20 * MoneyUnit; }
