@@ -16,7 +16,7 @@ The lobby has two modes: ***Quick mode*** and ***Registered mode***. This Sectio
 
    If you want to create a new table, you can send a **Create Table** command to the server with all the parameters that you want on your table
 
- * **[ListTablesCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.ListTablesCommand.md)** *(Optional)*
+ * **[ListTableCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.ListTableCommand.md)** *(Optional)*
 
    You can also ask for the **List of Tables** currently open on the server.
 
