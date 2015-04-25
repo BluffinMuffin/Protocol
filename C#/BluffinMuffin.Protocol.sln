@@ -69,7 +69,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sequences", "Sequences", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Activities", "Activities", "{DA8A9842-8831-44D5-A23F-B20310BF14CE}"
 	ProjectSection(SolutionItems) = preProject
+		..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.CreateTableCommand.png = ..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.CreateTableCommand.png
 		..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.png = ..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.png
+		..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.png = ..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.png
 		..\Documentation\Activities\LobbyActivity.vsdx = ..\Documentation\Activities\LobbyActivity.vsdx
 	EndProjectSection
 EndProject

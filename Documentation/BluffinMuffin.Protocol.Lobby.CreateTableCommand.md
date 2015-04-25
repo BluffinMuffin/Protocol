@@ -14,6 +14,8 @@ More information on ...
 
 <p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.CreateTableCommand.png" alt="Sequence Diagram"></p>
 
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Activities/BluffinMuffin.Protocol.Lobby.CreateTableCommand.png" alt="Activity Diagram"></p>
+
 ## CreateTableCommand
 
 ### Command Schema
