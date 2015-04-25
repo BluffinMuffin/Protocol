@@ -1,8 +1,8 @@
 ﻿using System.Linq;
 using BluffinMuffin.Protocol.DataTypes.Enums;
 using BluffinMuffin.Protocol.Lobby;
-using BluffinMuffin.Protocol.Lobby.Career;
-using BluffinMuffin.Protocol.Lobby.Training;
+using BluffinMuffin.Protocol.Lobby.RegisteredMode;
+using BluffinMuffin.Protocol.Lobby.QuickMode;
 
 namespace BluffinMuffin.Protocol.Tests.DataTypes
 {
@@ -20,7 +20,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static ListTableCommand ListTableCommand()
         {
-            return new ListTableCommand() { LobbyTypes = new[] { LobbyTypeEnum.Career, LobbyTypeEnum.Training } };
+            return new ListTableCommand() { LobbyTypes = new[] { LobbyTypeEnum.RegisteredMode, LobbyTypeEnum.QuickMode } };
         }
 
         public static ListTableResponse ListTableResponse()

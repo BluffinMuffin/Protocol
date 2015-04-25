@@ -1,8 +1,6 @@
-# Lobby Training : Identify
+# Lobby QuickMode : Identify
 
-In training mode, you must **identify** yourself. This action puts a unique name to your Tcp Connection for the server. This name will be used as your playername on every table that you will play.
-
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequence%20Diagrams/BluffinMuffin.Protocol.Lobby.Training.IdentifyCommand.png" alt="Sequence Diagram"></p>
+In Quick mode, you must **identify** yourself. This action puts a unique name to your Tcp Connection for the server. This name will be used as your playername on every table that you will play.
 
 ## IdentifyCommand
 
@@ -11,7 +9,7 @@ In training mode, you must **identify** yourself. This action puts a unique name
 ```json
 {
   "title": "Schema for IdentifyCommand",
-  "type": "BluffinMuffin.Protocol.Lobby.Training.IdentifyCommand",
+  "type": "BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'IdentifyCommand' to distinguish the command from others.",
@@ -41,7 +39,7 @@ In training mode, you must **identify** yourself. This action puts a unique name
 ```json
 {
   "title": "Schema for IdentifyResponse",
-  "type": "BluffinMuffin.Protocol.Lobby.Training.IdentifyResponse",
+  "type": "BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyResponse",
   "properties": {
     "CommandName": {
       "description": "Always contains 'IdentifyResponse' to distinguish the command from others.",
@@ -52,7 +50,7 @@ In training mode, you must **identify** yourself. This action puts a unique name
       "type": "bool"
     },
     "Command": {
-      "type": "BluffinMuffin.Protocol.Lobby.Training.IdentifyCommand",
+      "type": "BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand",
       "properties": {
         "CommandName": {
           "description": "Always contains 'IdentifyCommand' to distinguish the command from others.",

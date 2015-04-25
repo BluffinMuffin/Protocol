@@ -1,4 +1,4 @@
-﻿using BluffinMuffin.Protocol.Lobby.Training;
+﻿using BluffinMuffin.Protocol.Lobby.QuickMode;
 using BluffinMuffin.Protocol.Tests.Helpers;
 using BluffinMuffin.Protocol.Tests.DataTypes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace BluffinMuffin.Protocol.Tests
 {
     [TestClass]
-    public class LobbyTrainingCommandsDecodeTest
+    public class LobbyQuickModeCommandsDecodeTest
     {
 
         [TestMethod]

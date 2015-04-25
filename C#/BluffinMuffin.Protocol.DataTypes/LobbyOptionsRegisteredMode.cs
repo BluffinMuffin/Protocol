@@ -4,13 +4,13 @@ using Com.Ericmas001.Net.Protocol;
 namespace BluffinMuffin.Protocol.DataTypes
 {
     /// <summary>
-    /// The career mode is a mode where a player connects with an account. He then have some money, that he uses throughout different games. When entering a game, he will take some of that money to play, and when he leaves what was left of that money will be given back to him.
+    /// The Registered mode is a mode where a player connects with an account. He then have some money, that he uses throughout different games. When entering a game, he will take some of that money to play, and when he leaves what was left of that money will be given back to him.
     /// </summary>
-    public class LobbyOptionsCareer : LobbyOptions
+    public class LobbyOptionsRegisteredMode : LobbyOptions
     {
         public override LobbyTypeEnum OptionType
         {
-            get { return LobbyTypeEnum.Career; }
+            get { return LobbyTypeEnum.RegisteredMode; }
         }
 
         /// <summary>
@@ -28,7 +28,7 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// <summary>
         /// 
         /// </summary>
-        public LobbyOptionsCareer()
+        public LobbyOptionsRegisteredMode()
         {
             MoneyUnit = 10;
             IsMaximumBuyInLimited = false;

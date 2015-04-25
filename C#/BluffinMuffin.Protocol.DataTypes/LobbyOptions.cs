@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 namespace BluffinMuffin.Protocol.DataTypes
 {
     /// <summary>
-    /// The type of table it is (Training ? Career ?)
+    /// The type of table it is (QuickMode ? RegisteredMode ?)
     /// </summary>
     public abstract class LobbyOptions : IOption<LobbyTypeEnum>
     {

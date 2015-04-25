@@ -1,6 +1,6 @@
-# Lobby Career : CheckUserExist
+# Lobby RegisteredMode : CheckUserExist
 
-BluffinMuffin.Protocol.Lobby.Career.CheckUserExistCommand
+BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand
 
 ## CheckUserExistCommand
 
@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Lobby.Career.CheckUserExistCommand
 ```json
 {
   "title": "Schema for CheckUserExistCommand",
-  "type": "BluffinMuffin.Protocol.Lobby.Career.CheckUserExistCommand",
+  "type": "BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'CheckUserExistCommand' to distinguish the command from others.",
@@ -38,7 +38,7 @@ BluffinMuffin.Protocol.Lobby.Career.CheckUserExistCommand
 ```json
 {
   "title": "Schema for CheckUserExistResponse",
-  "type": "BluffinMuffin.Protocol.Lobby.Career.CheckUserExistResponse",
+  "type": "BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistResponse",
   "properties": {
     "CommandName": {
       "description": "Always contains 'CheckUserExistResponse' to distinguish the command from others.",
@@ -48,7 +48,7 @@ BluffinMuffin.Protocol.Lobby.Career.CheckUserExistCommand
       "type": "bool"
     },
     "Command": {
-      "type": "BluffinMuffin.Protocol.Lobby.Career.CheckUserExistCommand",
+      "type": "BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand",
       "properties": {
         "CommandName": {
           "description": "Always contains 'CheckUserExistCommand' to distinguish the command from others.",

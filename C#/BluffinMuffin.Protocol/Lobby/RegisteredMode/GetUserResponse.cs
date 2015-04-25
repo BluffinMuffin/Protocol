@@ -1,4 +1,4 @@
-﻿namespace BluffinMuffin.Protocol.Lobby.Career
+﻿namespace BluffinMuffin.Protocol.Lobby.RegisteredMode
 {
     public class GetUserResponse : AbstractBluffinReponse<GetUserCommand>
     {

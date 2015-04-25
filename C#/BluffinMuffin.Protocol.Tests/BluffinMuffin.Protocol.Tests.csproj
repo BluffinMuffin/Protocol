@@ -71,9 +71,9 @@
     <Compile Include="GameCommandsDecodeTest.cs" />
     <Compile Include="GeneralCommandsDecodeTest.cs" />
     <Compile Include="Helpers\EncodeDecodeHelper.cs" />
-    <Compile Include="LobbyCareerCommandsDecodeTest.cs" />
+    <Compile Include="LobbyRegisteredModeCommandsDecodeTest.cs" />
     <Compile Include="LobbyCommandsDecodeTest.cs" />
-    <Compile Include="LobbyTrainingCommandsDecodeTest.cs" />
+    <Compile Include="LobbyQuickModeCommandsDecodeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

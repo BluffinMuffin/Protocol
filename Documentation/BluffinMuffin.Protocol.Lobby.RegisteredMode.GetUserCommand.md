@@ -1,6 +1,6 @@
-# Lobby Career : GetUser
+# Lobby RegisteredMode : GetUser
 
-BluffinMuffin.Protocol.Lobby.Career.GetUserCommand
+BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand
 
 ## GetUserCommand
 
@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Lobby.Career.GetUserCommand
 ```json
 {
   "title": "Schema for GetUserCommand",
-  "type": "BluffinMuffin.Protocol.Lobby.Career.GetUserCommand",
+  "type": "BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'GetUserCommand' to distinguish the command from others.",
@@ -38,7 +38,7 @@ BluffinMuffin.Protocol.Lobby.Career.GetUserCommand
 ```json
 {
   "title": "Schema for GetUserResponse",
-  "type": "BluffinMuffin.Protocol.Lobby.Career.GetUserResponse",
+  "type": "BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserResponse",
   "properties": {
     "CommandName": {
       "description": "Always contains 'GetUserResponse' to distinguish the command from others.",
@@ -54,7 +54,7 @@ BluffinMuffin.Protocol.Lobby.Career.GetUserCommand
       "type": "double"
     },
     "Command": {
-      "type": "BluffinMuffin.Protocol.Lobby.Career.GetUserCommand",
+      "type": "BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand",
       "properties": {
         "CommandName": {
           "description": "Always contains 'GetUserCommand' to distinguish the command from others.",

@@ -20,8 +20,8 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
       "items": {
         "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
         "enum": [
-          "Career",
-          "Training"
+          "QuickMode",
+          "RegisteredMode"
         ]
       }
     }
@@ -155,15 +155,15 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
                   }
                 },
                 "Lobby": {
-                  "description": "The type of table it is (Training ? Career ?) See 'BluffinMuffin.Protocol.DataTypes.LobbyOptions' for more details",
+                  "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.LobbyOptions' for more details",
                   "type": "BluffinMuffin.Protocol.DataTypes.LobbyOptions",
                   "properties": {
                     "OptionType": {
                       "description": "What type of lobby it is",
                       "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
                       "enum": [
-                        "Career",
-                        "Training"
+                        "QuickMode",
+                        "RegisteredMode"
                       ]
                     }
                   }
@@ -194,8 +194,8 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
           "items": {
             "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
             "enum": [
-              "Career",
-              "Training"
+              "QuickMode",
+              "RegisteredMode"
             ]
           }
         }

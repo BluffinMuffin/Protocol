@@ -118,15 +118,15 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
           }
         },
         "Lobby": {
-          "description": "The type of table it is (Training ? Career ?) See 'BluffinMuffin.Protocol.DataTypes.LobbyOptions' for more details",
+          "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.LobbyOptions' for more details",
           "type": "BluffinMuffin.Protocol.DataTypes.LobbyOptions",
           "properties": {
             "OptionType": {
               "description": "What type of lobby it is",
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
               "enum": [
-                "Career",
-                "Training"
+                "QuickMode",
+                "RegisteredMode"
               ]
             }
           }
@@ -294,7 +294,7 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
     },
     "MoneyUnit": 10,
     "Lobby": {
-      "OptionType": "Training",
+      "OptionType": "QuickMode",
       "StartingAmount": 1500
     },
     "Blind": {

@@ -102,8 +102,8 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
                 "Item": {
                   "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
                   "enum": [
-                    "Career",
-                    "Training"
+                    "QuickMode",
+                    "RegisteredMode"
                   ]
                 }
               }

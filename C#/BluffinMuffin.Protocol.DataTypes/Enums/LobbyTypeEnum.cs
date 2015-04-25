@@ -2,7 +2,7 @@
 {
     public enum LobbyTypeEnum
     {
-        Training,
-        Career
+        QuickMode,
+        RegisteredMode
     }
 }

@@ -22,7 +22,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
                         AvailableBlinds = new List<BlindTypeEnum>(){BlindTypeEnum.Blinds, BlindTypeEnum.Antes, BlindTypeEnum.None},
                         DefaultBlind = BlindTypeEnum.Blinds,
                         CanConfigWaitingTime = true,
-                        AvailableLobbys = new List<LobbyTypeEnum>(){LobbyTypeEnum.Training, LobbyTypeEnum.Career},
+                        AvailableLobbys = new List<LobbyTypeEnum>(){LobbyTypeEnum.QuickMode, LobbyTypeEnum.RegisteredMode},
                     }
                 };
         }

@@ -1,4 +1,4 @@
-﻿using BluffinMuffin.Protocol.Lobby.Career;
+﻿using BluffinMuffin.Protocol.Lobby.RegisteredMode;
 using BluffinMuffin.Protocol.Tests.Helpers;
 using BluffinMuffin.Protocol.Tests.DataTypes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace BluffinMuffin.Protocol.Tests
 {
     [TestClass]
-    public class LobbyCareerCommandsDecodeTest
+    public class LobbyRegisteredModeCommandsDecodeTest
     {
 
         [TestMethod]

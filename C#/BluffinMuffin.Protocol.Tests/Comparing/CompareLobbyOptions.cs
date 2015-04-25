@@ -11,17 +11,17 @@ namespace BluffinMuffin.Protocol.Tests.Comparing
             Assert.AreEqual(l.MaximumAmountForBuyIn, dl.MaximumAmountForBuyIn);
             Assert.AreEqual(l.MinimumAmountForBuyIn, dl.MinimumAmountForBuyIn);
 
-            if (l.GetType() == typeof (LobbyOptionsCareer))
+            if (l.GetType() == typeof (LobbyOptionsRegisteredMode))
             {
-                var lc = (LobbyOptionsCareer)l;
-                var dlc = (LobbyOptionsCareer)dl;
+                var lc = (LobbyOptionsRegisteredMode)l;
+                var dlc = (LobbyOptionsRegisteredMode)dl;
                 Assert.AreEqual(lc.IsMaximumBuyInLimited, dlc.IsMaximumBuyInLimited);
                 Assert.AreEqual(lc.MoneyUnit, dlc.MoneyUnit);
             }
-            else if (l.GetType() == typeof(LobbyOptionsTraining))
+            else if (l.GetType() == typeof(LobbyOptionsQuickMode))
             {
-                var lt = (LobbyOptionsTraining)l;
-                var dlt = (LobbyOptionsTraining)dl;
+                var lt = (LobbyOptionsQuickMode)l;
+                var dlt = (LobbyOptionsQuickMode)dl;
                 Assert.AreEqual(lt.StartingAmount, dlt.StartingAmount);
             }
         }

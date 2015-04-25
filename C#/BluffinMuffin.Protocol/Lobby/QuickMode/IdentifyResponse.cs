@@ -1,6 +1,6 @@
 ﻿using Com.Ericmas001.Net.Protocol;
 
-namespace BluffinMuffin.Protocol.Lobby.Training
+namespace BluffinMuffin.Protocol.Lobby.QuickMode
 {
     public class IdentifyResponse : AbstractBluffinReponse<IdentifyCommand>
     {

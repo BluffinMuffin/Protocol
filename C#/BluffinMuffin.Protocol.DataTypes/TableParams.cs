@@ -46,9 +46,9 @@ namespace BluffinMuffin.Protocol.DataTypes
         public int MoneyUnit { get; set; }
 
         /// <summary>
-        /// The type of table it is (Training ? Career ?) See 'BluffinMuffin.Protocol.DataTypes.LobbyOptions' for more details
+        /// The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.LobbyOptions' for more details
         /// </summary>
-        [ExampleValue(typeof(LobbyOptionsTraining))]
+        [ExampleValue(typeof(LobbyOptionsQuickMode))]
         [JsonConverter(typeof(OptionJsonConverter<LobbyOptions, LobbyTypeEnum>))]
         [JsonProperty(Order=100)]
         public LobbyOptions Lobby { get; set; }
@@ -78,7 +78,7 @@ namespace BluffinMuffin.Protocol.DataTypes
             MaxPlayers = 10;
             WaitingTimes = new ConfigurableWaitingTimes();
             MoneyUnit = 10;
-            Lobby = new LobbyOptionsTraining();
+            Lobby = new LobbyOptionsQuickMode();
             Blind = new BlindOptionsNone() { MoneyUnit = MoneyUnit };
             Limit = new LimitOptionsPot();
         }

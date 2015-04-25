@@ -75,16 +75,16 @@
     <Compile Include="IResponse.cs" />
     <Compile Include="ICommandWithResponse.cs" />
     <Compile Include="IGameCommand.cs" />
-    <Compile Include="Lobby\Career\AuthenticateUserCommand.cs" />
-    <Compile Include="Lobby\Career\AuthenticateUserResponse.cs" />
-    <Compile Include="Lobby\Career\CheckDisplayExistCommand.cs" />
-    <Compile Include="Lobby\Career\CheckDisplayExistResponse.cs" />
-    <Compile Include="Lobby\Career\CheckUserExistCommand.cs" />
-    <Compile Include="Lobby\Career\CheckUserExistResponse.cs" />
-    <Compile Include="Lobby\Career\CreateUserCommand.cs" />
-    <Compile Include="Lobby\Career\CreateUserResponse.cs" />
-    <Compile Include="Lobby\Career\GetUserCommand.cs" />
-    <Compile Include="Lobby\Career\GetUserResponse.cs" />
+    <Compile Include="Lobby\RegisteredMode\AuthenticateUserCommand.cs" />
+    <Compile Include="Lobby\RegisteredMode\AuthenticateUserResponse.cs" />
+    <Compile Include="Lobby\RegisteredMode\CheckDisplayExistCommand.cs" />
+    <Compile Include="Lobby\RegisteredMode\CheckDisplayExistResponse.cs" />
+    <Compile Include="Lobby\RegisteredMode\CheckUserExistCommand.cs" />
+    <Compile Include="Lobby\RegisteredMode\CheckUserExistResponse.cs" />
+    <Compile Include="Lobby\RegisteredMode\CreateUserCommand.cs" />
+    <Compile Include="Lobby\RegisteredMode\CreateUserResponse.cs" />
+    <Compile Include="Lobby\RegisteredMode\GetUserCommand.cs" />
+    <Compile Include="Lobby\RegisteredMode\GetUserResponse.cs" />
     <Compile Include="Lobby\CreateTableCommand.cs" />
     <Compile Include="Lobby\CreateTableResponse.cs" />
     <Compile Include="Lobby\JoinTableCommand.cs" />
@@ -93,8 +93,8 @@
     <Compile Include="Lobby\ListTableResponse.cs" />
     <Compile Include="Lobby\SupportedRulesCommand.cs" />
     <Compile Include="Lobby\SupportedRulesResponse.cs" />
-    <Compile Include="Lobby\Training\IdentifyCommand.cs" />
-    <Compile Include="Lobby\Training\IdentifyResponse.cs" />
+    <Compile Include="Lobby\QuickMode\IdentifyCommand.cs" />
+    <Compile Include="Lobby\QuickMode\IdentifyResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -40,17 +40,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		..\Documentation\BluffinMuffin.Protocol.Game.SeatUpdatedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.SeatUpdatedCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Game.TableClosedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.TableClosedCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Game.TableInfoCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.TableInfoCommand.md
-		..\Documentation\BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserCommand.md
-		..\Documentation\BluffinMuffin.Protocol.Lobby.Career.CheckDisplayExistCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.Career.CheckDisplayExistCommand.md
-		..\Documentation\BluffinMuffin.Protocol.Lobby.Career.CheckUserExistCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.Career.CheckUserExistCommand.md
-		..\Documentation\BluffinMuffin.Protocol.Lobby.Career.CreateUserCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.Career.CreateUserCommand.md
-		..\Documentation\BluffinMuffin.Protocol.Lobby.Career.GetUserCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.Career.GetUserCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Lobby.CreateTableCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.CreateTableCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Lobby.JoinTableCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.JoinTableCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Lobby.ListTableCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.ListTableCommand.md
+		..\Documentation\BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.md
+		..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand.md
+		..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckDisplayExistCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckDisplayExistCommand.md
+		..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand.md
+		..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand.md
+		..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.md
-		..\Documentation\BluffinMuffin.Protocol.Lobby.Training.IdentifyCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.Training.IdentifyCommand.md
-		..\Documentation\LobbyTraining.md = ..\Documentation\LobbyTraining.md
+		..\Documentation\LobbyQuickMode.md = ..\Documentation\LobbyQuickMode.md
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject

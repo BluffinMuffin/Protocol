@@ -1,6 +1,6 @@
-# Lobby Career : AuthenticateUser
+# Lobby RegisteredMode : AuthenticateUser
 
-BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserCommand
+BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand
 
 ## AuthenticateUserCommand
 
@@ -9,7 +9,7 @@ BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserCommand
 ```json
 {
   "title": "Schema for AuthenticateUserCommand",
-  "type": "BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserCommand",
+  "type": "BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand",
   "properties": {
     "CommandName": {
       "description": "Always contains 'AuthenticateUserCommand' to distinguish the command from others.",
@@ -42,7 +42,7 @@ BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserCommand
 ```json
 {
   "title": "Schema for AuthenticateUserResponse",
-  "type": "BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserResponse",
+  "type": "BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserResponse",
   "properties": {
     "CommandName": {
       "description": "Always contains 'AuthenticateUserResponse' to distinguish the command from others.",
@@ -52,7 +52,7 @@ BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserCommand
       "type": "bool"
     },
     "Command": {
-      "type": "BluffinMuffin.Protocol.Lobby.Career.AuthenticateUserCommand",
+      "type": "BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand",
       "properties": {
         "CommandName": {
           "description": "Always contains 'AuthenticateUserCommand' to distinguish the command from others.",

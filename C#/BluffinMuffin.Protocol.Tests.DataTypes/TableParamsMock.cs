@@ -16,7 +16,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
                 GameType = GameTypeEnum.Holdem,
                 MoneyUnit = 10,
                 Limit = new LimitOptionsNoLimit(),
-                Lobby = new LobbyOptionsTraining()
+                Lobby = new LobbyOptionsQuickMode()
                 {
                     StartingAmount = 1500
                 },
@@ -43,7 +43,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
                 GameType = GameTypeEnum.Holdem,
                 MoneyUnit = 100,
                 Limit = new LimitOptionsPot(),
-                Lobby = new LobbyOptionsCareer()
+                Lobby = new LobbyOptionsRegisteredMode()
                 {
                     MoneyUnit = 100,
                     IsMaximumBuyInLimited = true
@@ -71,7 +71,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
                 GameType = GameTypeEnum.Holdem,
                 MoneyUnit = 1000,
                 Limit = new LimitOptionsFixed(),
-                Lobby = new LobbyOptionsCareer()
+                Lobby = new LobbyOptionsRegisteredMode()
                 {
                     MoneyUnit = 100,
                     IsMaximumBuyInLimited = true
