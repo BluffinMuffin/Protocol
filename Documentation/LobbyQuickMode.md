@@ -4,4 +4,22 @@ The lobby has two modes: ***Quick mode*** and ***Registered mode***. This Sectio
 
 <p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequence%20Diagrams/BluffinMuffin.Protocol.Lobby.QuickMode.png" alt="Sequence Diagram"></p>
 
-First, in this mode, you must **identify** yourself. This action puts a unique name to your Tcp Connection for the server. This name will be used as your playername on every table that you will play. For more information, see the [LobbyQuickMode.Identification](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.md) section.
+ * **[IdentifyCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.md)** 
+
+   First, in this mode, you must **Identify** yourself. This action puts a unique name to your Tcp Connection for the server. This name will be used as your playername on every table that you will play.
+   
+ * *(Optional)* **[SupportedRulesCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.md)** 
+
+   If it's the first time, it's a good idea to ask what are the **Supported Rules** of the current server to know what can and can't be done !
+
+ * *(Optional)* **[CreateTableCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.CreateTableCommand.md)** 
+
+   If you want to create a new table, you can send a **Create Table** command to the server with all the parameters that you want on your table
+
+ * *(Optional)* **[ListTablesCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.ListTablesCommand.md)** 
+
+   You can also ask for the **List of Tables** currently open on the server.
+
+ * **[JoinTableCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.JoinTableCommand.md)** 
+
+   To **Join a Table**, you must specify an ID that you got creating a table or listing tables.
