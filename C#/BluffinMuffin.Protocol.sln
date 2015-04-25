@@ -56,6 +56,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BluffinMuffin.Protocol.Util.Documentation", "BluffinMuffin.Protocol.Util.Documentation\BluffinMuffin.Protocol.Util.Documentation.csproj", "{96EDC864-95CA-4C11-9CE1-1113ECAB93A8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sequences Diagrams", "Sequences Diagrams", "{D22EA46B-64A4-4DAC-9093-6184BC4A498E}"
+	ProjectSection(SolutionItems) = preProject
+		..\Documentation\Sequence Diagrams\BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.png = ..\Documentation\Sequence Diagrams\BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.png
+		..\Documentation\Sequence Diagrams\BluffinMuffin.Protocol.Lobby.QuickMode.png = ..\Documentation\Sequence Diagrams\BluffinMuffin.Protocol.Lobby.QuickMode.png
+		..\Documentation\Sequence Diagrams\LobbySequences.uxf = ..\Documentation\Sequence Diagrams\LobbySequences.uxf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,5 +154,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D22EA46B-64A4-4DAC-9093-6184BC4A498E} = {E469F8A0-7DB7-48CF-B40A-03BE833DD893}
 	EndGlobalSection
 EndGlobal

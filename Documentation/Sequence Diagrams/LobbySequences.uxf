@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.2">
+  <zoom_level>9</zoom_level>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>108</x>
+      <y>18</y>
+      <w>360</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>title: Lobby Quick Mode: Identify
+_Client~c1_|_Server~s1_
+c1-&gt;s1:c1,s1:.  IdentifyCommand  .
+s1-&gt;s1:s1:verify if name already used
+s1-&gt;c1:c1,s1:IdentifyResponse</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.allinone.SequenceDiagram</type>
+    <coordinates>
+      <x>504</x>
+      <y>18</y>
+      <w>261</w>
+      <h>666</h>
+    </coordinates>
+    <panel_attributes>title: Lobby Quick Mode
+_Client~c1_|_Server~s1_
+c1-&gt;s1:c1,s1:.  IdentifyCommand  .
+s1-&gt;s1:s1:
+s1-&gt;c1:c1,s1:IdentifyResponse
+iframe{:Optional
+c1-&gt;s1:c1,s1:.  SupportedRulesCommand  .
+s1-&gt;s1:s1:
+s1-&gt;c1:c1,s1:SupportedRulesResponse
+iframe}
+iframe{:Optional
+c1-&gt;s1:c1,s1:.  CreateTableCommand  .
+s1-&gt;s1:s1:
+s1-&gt;c1:c1,s1:CreateTableResponse
+iframe}
+iframe{:Optional
+c1-&gt;s1:c1,s1:.  ListTableCommand  .
+s1-&gt;s1:s1:
+s1-&gt;c1:c1,s1:ListTableResponse
+iframe}
+c1-&gt;s1:c1,s1:.  JoinTableCommand  .
+s1-&gt;s1:s1:
+s1-&gt;c1:c1,s1:JoinTableResponse</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
