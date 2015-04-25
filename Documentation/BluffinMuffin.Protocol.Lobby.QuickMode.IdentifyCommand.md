@@ -4,6 +4,8 @@ In Quick mode, you must **identify** yourself. This action puts a unique name to
 
 <p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequence%20Diagrams/BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.png" alt="Sequence Diagram"></p>
 
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Activity%20Diagrams/BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.png" alt="Activity Diagram"></p>
+
 ## IdentifyCommand
 
 ### Command Schema
