@@ -2,8 +2,6 @@
 
 BluffinMuffin.Protocol.Lobby.ListTableCommand
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequence%20Diagrams/BluffinMuffin.Protocol.Lobby.ListTableCommand.png" alt="Sequence Diagram"></p>
-
 ## ListTableCommand
 
 ### Command Schema
