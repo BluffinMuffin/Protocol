@@ -1,6 +1,6 @@
 # BlindOptions
 
-BluffinMuffin.Protocol.DataTypes.BlindOptions
+The type of blinds the table uses (none, blinds, antes)
 
 ### Command Schema
 
@@ -28,6 +28,10 @@ BluffinMuffin.Protocol.DataTypes.BlindOptions
 
 ## BlindOptionsAnte
 
+An ante is a forced bet in which all players put an equal amount of money or chips into the pot before the deal begins. Often this is either a single unit (a one-value or the smallest value in play) or some other small amount; a proportion such as a half or a quarter of the minimum bet is also common. An ante paid by every player ensures that a player who folds every round will lose money (though slowly), thus providing all players with an incentive, however small, to play the hand rather than toss it in when the opening bet reaches them.
+
+[More Info](http://en.wikipedia.org/wiki/Betting_in_poker#Ante)
+
 ### Command Schema
 
 ```json
@@ -35,9 +39,6 @@ BluffinMuffin.Protocol.DataTypes.BlindOptions
   "title": "Schema for BlindOptionsAnte",
   "type": "BluffinMuffin.Protocol.DataTypes.BlindOptionsAnte",
   "properties": {
-    "AnteAmount": {
-      "type": "int"
-    },
     "MoneyUnit": {
       "type": "int"
     },
@@ -58,12 +59,15 @@ BluffinMuffin.Protocol.DataTypes.BlindOptions
 ```json
 {
   "OptionType": "Antes",
-  "AnteAmount": 10,
   "MoneyUnit": 10
 }
 ```
 
 ## BlindOptionsBlinds
+
+A blind bet or just blind is a forced bet placed into the pot by one or more players before the deal begins, in a way that simulates bets made during play. The most common use of blinds as a betting structure calls for two blinds: the player after the dealer blinds about half of what would be a normal bet, and the next player blinds what would be a whole bet.
+
+[More Info](http://en.wikipedia.org/wiki/Betting_in_poker#Blinds)
 
 ### Command Schema
 
@@ -72,9 +76,6 @@ BluffinMuffin.Protocol.DataTypes.BlindOptions
   "title": "Schema for BlindOptionsBlinds",
   "type": "BluffinMuffin.Protocol.DataTypes.BlindOptionsBlinds",
   "properties": {
-    "BigBlindAmount": {
-      "type": "int"
-    },
     "MoneyUnit": {
       "type": "int"
     },
@@ -85,9 +86,6 @@ BluffinMuffin.Protocol.DataTypes.BlindOptions
         "Blinds",
         "None"
       ]
-    },
-    "SmallBlindAmount": {
-      "type": "int"
     }
   }
 }
@@ -98,13 +96,13 @@ BluffinMuffin.Protocol.DataTypes.BlindOptions
 ```json
 {
   "OptionType": "Blinds",
-  "BigBlindAmount": 10,
-  "SmallBlindAmount": 5,
   "MoneyUnit": 10
 }
 ```
 
 ## BlindOptionsNone
+
+With no blinds, the preflop round starts as avery other round, with no money on the Table.
 
 ### Command Schema
 

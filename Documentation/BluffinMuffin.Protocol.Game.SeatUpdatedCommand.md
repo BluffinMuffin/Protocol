@@ -28,29 +28,48 @@ BluffinMuffin.Protocol.Game.SeatUpdatedCommand
           "type": "BluffinMuffin.Protocol.DataTypes.PlayerInfo",
           "properties": {
             "HoleCards": {
-              "type": "Com.Ericmas001.Games.GameCard[]",
-              "properties": {
-                "IsFixedSize": {
-                  "type": "bool"
-                },
-                "IsReadOnly": {
-                  "type": "bool"
-                },
-                "IsSynchronized": {
-                  "type": "bool"
-                },
-                "Length": {
-                  "type": "int"
-                },
-                "LongLength": {
-                  "type": "long"
-                },
-                "Rank": {
-                  "type": "int"
-                },
-                "SyncRoot": {
-                  "type": "System.Object",
-                  "properties": {}
+              "description": "The cards in the hands of the player",
+              "type": "array",
+              "items": {
+                "type": "Com.Ericmas001.Games.GameCard",
+                "properties": {
+                  "Kind": {
+                    "type": "Com.Ericmas001.Games.GameCardKind",
+                    "enum": [
+                      "Club",
+                      "Diamond",
+                      "Heart",
+                      "Spade"
+                    ]
+                  },
+                  "Special": {
+                    "type": "Com.Ericmas001.Games.GameCardSpecial",
+                    "enum": [
+                      "Hidden",
+                      "JokerColor",
+                      "JokerDark",
+                      "None",
+                      "Null"
+                    ]
+                  },
+                  "Value": {
+                    "type": "Com.Ericmas001.Games.GameCardValue",
+                    "enum": [
+                      "Ace",
+                      "Eight",
+                      "Five",
+                      "Four",
+                      "Jack",
+                      "King",
+                      "Nine",
+                      "Queen",
+                      "Seven",
+                      "Six",
+                      "Ten",
+                      "Three",
+                      "Two"
+                    ]
+                  }
                 }
               }
             },
@@ -71,9 +90,11 @@ BluffinMuffin.Protocol.Game.SeatUpdatedCommand
               "type": "int"
             },
             "Name": {
+              "description": "The name of the player",
               "type": "string"
             },
             "NoSeat": {
+              "description": "The seat used by the player",
               "type": "int"
             },
             "State": {
@@ -89,30 +110,15 @@ BluffinMuffin.Protocol.Game.SeatUpdatedCommand
           }
         },
         "SerializableAttributes": {
-          "type": "BluffinMuffin.Protocol.DataTypes.Enums.SeatAttributeEnum[]",
-          "properties": {
-            "IsFixedSize": {
-              "type": "bool"
-            },
-            "IsReadOnly": {
-              "type": "bool"
-            },
-            "IsSynchronized": {
-              "type": "bool"
-            },
-            "Length": {
-              "type": "int"
-            },
-            "LongLength": {
-              "type": "long"
-            },
-            "Rank": {
-              "type": "int"
-            },
-            "SyncRoot": {
-              "type": "System.Object",
-              "properties": {}
-            }
+          "type": "array",
+          "items": {
+            "type": "BluffinMuffin.Protocol.DataTypes.Enums.SeatAttributeEnum",
+            "enum": [
+              "BigBlind",
+              "CurrentPlayer",
+              "Dealer",
+              "SmallBlind"
+            ]
           }
         }
       }
@@ -133,27 +139,25 @@ BluffinMuffin.Protocol.Game.SeatUpdatedCommand
     "IsEmpty": false,
     "NoSeat": 0,
     "Player": {
-      "NoSeat": -1,
-      "Name": "Anonymous Player",
-      "MoneySafeAmnt": 0,
-      "MoneyBetAmnt": 0,
+      "NoSeat": 7,
+      "Name": "SpongeBob",
+      "MoneySafeAmnt": 1000,
+      "MoneyBetAmnt": 42,
       "HoleCards": [
         {
-          "Special": "Null",
-          "Kind": "Club",
-          "Value": "Two",
-          "Id": -1
+          "Special": "None",
+          "Kind": "Spade",
+          "Value": "Two"
         },
         {
-          "Special": "Null",
-          "Kind": "Club",
-          "Value": "Two",
-          "Id": -1
+          "Special": "None",
+          "Kind": "Heart",
+          "Value": "Ace"
         }
       ],
       "State": "Zombie",
       "IsShowingCards": false,
-      "MoneyAmnt": 0
+      "MoneyAmnt": 1042
     },
     "SerializableAttributes": []
   },

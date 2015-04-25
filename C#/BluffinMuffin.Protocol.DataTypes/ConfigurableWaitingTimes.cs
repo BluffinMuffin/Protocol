@@ -2,6 +2,9 @@
 
 namespace BluffinMuffin.Protocol.DataTypes
 {
+    /// <summary>
+    /// The waiting times (At different stage of the game, the server will wait before continuing to making it feel real !)
+    /// </summary>
     public class ConfigurableWaitingTimes
     {
         /// <summary>
@@ -20,12 +23,5 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// </summary>
         [ExampleValue(2500)]
         public int AfterPotWon { get; set; }
-
-        public ConfigurableWaitingTimes()
-        {
-            AfterPlayerAction = 0;
-            AfterBoardDealed = 0;
-            AfterPotWon = 0;
-        }
     }
 }

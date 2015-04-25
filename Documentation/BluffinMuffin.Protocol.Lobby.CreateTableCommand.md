@@ -94,7 +94,7 @@ More information on ...
           }
         },
         "Limit": {
-          "description": "The type of blinds the table uses (NoLimit, PotLimit, FixedLimit) See 'BluffinMuffin.Protocol.DataTypes.LimitOptions' for more details",
+          "description": "The type of limit the table uses (NoLimit, PotLimit, FixedLimit) See 'BluffinMuffin.Protocol.DataTypes.LimitOptions' for more details",
           "type": "BluffinMuffin.Protocol.DataTypes.LimitOptions",
           "properties": {
             "OptionType": {
@@ -151,8 +151,6 @@ More information on ...
     },
     "Blind": {
       "OptionType": "Blinds",
-      "BigBlindAmount": 0,
-      "SmallBlindAmount": 0,
       "MoneyUnit": 0
     },
     "Limit": {
@@ -255,7 +253,7 @@ More information on ...
               }
             },
             "Limit": {
-              "description": "The type of blinds the table uses (NoLimit, PotLimit, FixedLimit) See 'BluffinMuffin.Protocol.DataTypes.LimitOptions' for more details",
+              "description": "The type of limit the table uses (NoLimit, PotLimit, FixedLimit) See 'BluffinMuffin.Protocol.DataTypes.LimitOptions' for more details",
               "type": "BluffinMuffin.Protocol.DataTypes.LimitOptions",
               "properties": {
                 "OptionType": {
@@ -317,8 +315,6 @@ More information on ...
       },
       "Blind": {
         "OptionType": "Blinds",
-        "BigBlindAmount": 0,
-        "SmallBlindAmount": 0,
         "MoneyUnit": 0
       },
       "Limit": {

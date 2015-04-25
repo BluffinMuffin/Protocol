@@ -4,6 +4,9 @@ using Newtonsoft.Json;
 
 namespace BluffinMuffin.Protocol.DataTypes
 {
+    /// <summary>
+    /// The type of table it is (Training ? Career ?)
+    /// </summary>
     public abstract class LobbyOptions : IOption<LobbyTypeEnum>
     {
         /// <summary>
@@ -11,8 +14,14 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// </summary>
         public abstract LobbyTypeEnum OptionType { get; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [JsonIgnore]
         public abstract int MinimumAmountForBuyIn { get; }
+        /// <summary>
+        /// 
+        /// </summary>
         [JsonIgnore]
         public abstract int MaximumAmountForBuyIn { get; }
     }

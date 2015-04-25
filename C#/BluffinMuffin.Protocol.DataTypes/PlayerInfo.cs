@@ -3,27 +3,46 @@ using System.Collections.Generic;
 using System.Linq;
 using Com.Ericmas001.Games;
 using BluffinMuffin.Protocol.DataTypes.Enums;
+using Com.Ericmas001.Net.Protocol;
 using Newtonsoft.Json;
 
 namespace BluffinMuffin.Protocol.DataTypes
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class PlayerInfo
     {
         private List<GameCard> m_HoleCards;
 
+        /// <summary>
+        /// The seat used by the player
+        /// </summary>
+        [ExampleValue(7)]
         public int NoSeat { get; set; }
+
+        /// <summary>
+        /// The name of the player
+        /// </summary>
+        [ExampleValue("SpongeBob")]
         public string Name { get; set; }
 
         /// <summary>
         /// Current Money Amount of the player that he isn't playing with
         /// </summary>
+        [ExampleValue(1000)]
         public int MoneySafeAmnt { get; set; }
 
         /// <summary>
         /// Current Money Amount of the player that he played this round
         /// </summary>
+        [ExampleValue(42)]
         public int MoneyBetAmnt { get; set; }
 
+        /// <summary>
+        /// The cards in the hands of the player
+        /// </summary>
+        [ExampleValues(2,GameCardKind.Spade,GameCardValue.Two,GameCardKind.Heart,GameCardValue.Ace)]
         public GameCard[] HoleCards
         {
             get

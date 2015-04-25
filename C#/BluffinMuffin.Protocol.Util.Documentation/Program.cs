@@ -63,6 +63,18 @@ namespace BluffinMuffin.Protocol.Util.Documentation
             GenereDocForOptions();
         }
 
+        private static void WriteSummary(Type t, StreamWriter sw)
+        {
+            string fullname = t.FullName;
+            var name = "T:" + fullname;
+            string summary = Summaries.ContainsKey(name) ? Summaries[name] : t.FullName;
+            foreach (var line in summary.Trim().Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries))
+            {
+                sw.WriteLine();
+                sw.WriteLine(line.Replace("]({", "](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/").Replace("})", ".md)").Trim());
+            }
+        }
+
         private static void GenereDocForOptions()
         {
             var types = Assembly.GetAssembly(typeof(TupleTable)).GetTypes().Where(t => t.IsClass && t.IsAbstract && t.GetInterfaces().Select(x => x.Name).Contains(typeof(IOption< >).Name)).ToArray();
@@ -70,19 +82,13 @@ namespace BluffinMuffin.Protocol.Util.Documentation
             foreach (Type t in types)
             {
                 string fullname = t.FullName;
-                var name = "T:" + fullname;
-                string summary = Summaries.ContainsKey(name) ? Summaries[name] : fullname;
                 string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"..\..\..\..\Documentation", fullname + ".md");
                 FileInfo info = new FileInfo(path);
                 if(info.Exists)
                     info.IsReadOnly = false;
                 var sw = new StreamWriter(path);
                 sw.WriteLine("# " + t.Name);
-                foreach (var line in summary.Trim().Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries))
-                {
-                    sw.WriteLine();
-                    sw.WriteLine(line.Replace("]({", "](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/").Replace("})", ".md)").Trim());
-                }
+                WriteSummary(t, sw);
                 sw.WriteLine();
                 GenerateSchema(t, sw);
 
@@ -90,6 +96,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                 foreach (Type st in subtypes)
                 {
                     sw.WriteLine("## {0}", st.Name);
+                    WriteSummary(st, sw);
                     sw.WriteLine();
                     GenerateSchema(st, sw);
                     GenerateExamples(st, sw);
@@ -106,8 +113,6 @@ namespace BluffinMuffin.Protocol.Util.Documentation
             foreach (Type t in types)
             {
                 string fullname = t.FullName;
-                var name = "T:" + fullname;
-                string summary = Summaries.ContainsKey(name) ? Summaries[name] : fullname;
                 string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"..\..\..\..\Documentation", fullname + ".md");
                 FileInfo info = new FileInfo(path);
                 info.IsReadOnly = false;
@@ -115,11 +120,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                 string commandName = t.Name;
                 string title = "# " + t.Namespace.Replace("BluffinMuffin.Protocol.", "").Replace("BluffinMuffin.Protocol", "General").Replace(".", " ") + " : " + commandName.Replace("Command", "");
                 sw.WriteLine(title);
-                foreach (var line in summary.Trim().Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries))
-                {
-                    sw.WriteLine();
-                    sw.WriteLine(line.Replace("]({", "](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/").Replace("})", ".md)").Trim());
-                }
+                WriteSummary(t, sw);
                 if (File.Exists(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"..\..\..\..\Documentation\Sequence Diagrams\", fullname + ".png")))
                 {
                     sw.WriteLine();
@@ -187,20 +188,33 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                         writer.WriteValue(desc);
                     }
                 }
-                writer.WritePropertyName("type");
-                if (p.PropertyType.IsPrimitive || p.PropertyType == typeof (string))
-                    writer.WriteValue(Aliases[p.PropertyType]);
-                else
-                {
-                    writer.WriteValue(p.PropertyType.FullName);
-                    if(p.PropertyType.IsEnum)
-                        WriteEnum(p.PropertyType, writer);
-                    else
-                        WriteProperties(p.PropertyType, writer);
-                }
+                WriteType(writer,p.PropertyType);
                 writer.WriteEndObject();
             }
             writer.WriteEndObject();
+        }
+
+        private static void WriteType(JsonWriter writer, Type t)
+        {
+            writer.WritePropertyName("type");
+            if (t.IsArray)
+            {
+                writer.WriteValue("array");
+                writer.WritePropertyName("items");
+                writer.WriteStartObject();
+                WriteType(writer, t.GetElementType());
+                writer.WriteEndObject();
+            }
+            else if (t.IsPrimitive || t == typeof(string))
+                writer.WriteValue(Aliases[t]);
+            else
+            {
+                writer.WriteValue(t.FullName);
+                if (t.IsEnum)
+                    WriteEnum(t, writer);
+                else
+                    WriteProperties(t, writer);
+            }
         }
 
         private static void WriteEnum(Type propertyType, JsonWriter writer)
@@ -223,6 +237,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                     try
                     {
                         var ex = p.GetCustomAttribute<ExampleValueAttribute>();
+                        var exs = p.GetCustomAttribute<ExampleValuesAttribute>();
                         if (ex != null)
                         {
                             if (ex.Value is Type && !(p is Type))
@@ -230,7 +245,22 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                             else
                                 p.SetValue(c, p.GetCustomAttribute<ExampleValueAttribute>().Value);
                         }
-                        else if (p.PropertyType.IsClass && p.PropertyType != typeof (string) && !p.PropertyType.IsArray)
+                        else if (exs != null)
+                        {
+                            object array = Activator.CreateInstance(p.PropertyType, new object[] { exs.NbObjects }); // Length 1
+                            object[] lst = (object[])array;
+
+                            for (int i = 0; i < exs.Values.GetLength(0); ++i)
+                            {
+                                var types = exs.Values[i].Select(x => x.GetType()).ToArray();
+                                var et = p.PropertyType.GetElementType();
+                                var ct = et.GetConstructor(types);
+
+                                lst[i] = ct.Invoke(exs.Values[i]);
+                            }
+                            p.SetValue(c, array);
+                        }
+                        else if (p.PropertyType.IsClass && p.PropertyType != typeof(string) && !p.PropertyType.IsArray)
                             p.SetValue(c, Remplir(p.PropertyType));
                     }
                     catch (Exception e)

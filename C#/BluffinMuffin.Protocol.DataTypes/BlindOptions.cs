@@ -4,6 +4,9 @@ using Com.Ericmas001.Net.Protocol.Options;
 
 namespace BluffinMuffin.Protocol.DataTypes
 {
+    /// <summary>
+    /// The type of blinds the table uses (none, blinds, antes) 
+    /// </summary>
     public abstract class BlindOptions : IOption<BlindTypeEnum>
     {
         /// <summary>

@@ -62,7 +62,7 @@ namespace BluffinMuffin.Protocol.DataTypes
         public BlindOptions Blind { get; set; }
 
         /// <summary>
-        /// The type of blinds the table uses (NoLimit, PotLimit, FixedLimit) See 'BluffinMuffin.Protocol.DataTypes.LimitOptions' for more details
+        /// The type of limit the table uses (NoLimit, PotLimit, FixedLimit) See 'BluffinMuffin.Protocol.DataTypes.LimitOptions' for more details
         /// </summary>
         [ExampleValue(typeof(LimitOptionsNoLimit))]
         [JsonConverter(typeof(OptionJsonConverter<LimitOptions, LimitTypeEnum>))]

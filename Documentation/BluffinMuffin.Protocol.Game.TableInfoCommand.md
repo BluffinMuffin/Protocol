@@ -103,7 +103,7 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
           }
         },
         "Limit": {
-          "description": "The type of blinds the table uses (NoLimit, PotLimit, FixedLimit) See 'BluffinMuffin.Protocol.DataTypes.LimitOptions' for more details",
+          "description": "The type of limit the table uses (NoLimit, PotLimit, FixedLimit) See 'BluffinMuffin.Protocol.DataTypes.LimitOptions' for more details",
           "type": "BluffinMuffin.Protocol.DataTypes.LimitOptions",
           "properties": {
             "OptionType": {
@@ -169,29 +169,48 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
               "type": "BluffinMuffin.Protocol.DataTypes.PlayerInfo",
               "properties": {
                 "HoleCards": {
-                  "type": "Com.Ericmas001.Games.GameCard[]",
-                  "properties": {
-                    "IsFixedSize": {
-                      "type": "bool"
-                    },
-                    "IsReadOnly": {
-                      "type": "bool"
-                    },
-                    "IsSynchronized": {
-                      "type": "bool"
-                    },
-                    "Length": {
-                      "type": "int"
-                    },
-                    "LongLength": {
-                      "type": "long"
-                    },
-                    "Rank": {
-                      "type": "int"
-                    },
-                    "SyncRoot": {
-                      "type": "System.Object",
-                      "properties": {}
+                  "description": "The cards in the hands of the player",
+                  "type": "array",
+                  "items": {
+                    "type": "Com.Ericmas001.Games.GameCard",
+                    "properties": {
+                      "Kind": {
+                        "type": "Com.Ericmas001.Games.GameCardKind",
+                        "enum": [
+                          "Club",
+                          "Diamond",
+                          "Heart",
+                          "Spade"
+                        ]
+                      },
+                      "Special": {
+                        "type": "Com.Ericmas001.Games.GameCardSpecial",
+                        "enum": [
+                          "Hidden",
+                          "JokerColor",
+                          "JokerDark",
+                          "None",
+                          "Null"
+                        ]
+                      },
+                      "Value": {
+                        "type": "Com.Ericmas001.Games.GameCardValue",
+                        "enum": [
+                          "Ace",
+                          "Eight",
+                          "Five",
+                          "Four",
+                          "Jack",
+                          "King",
+                          "Nine",
+                          "Queen",
+                          "Seven",
+                          "Six",
+                          "Ten",
+                          "Three",
+                          "Two"
+                        ]
+                      }
                     }
                   }
                 },
@@ -212,9 +231,11 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
                   "type": "int"
                 },
                 "Name": {
+                  "description": "The name of the player",
                   "type": "string"
                 },
                 "NoSeat": {
+                  "description": "The seat used by the player",
                   "type": "int"
                 },
                 "State": {
@@ -230,30 +251,15 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
               }
             },
             "SerializableAttributes": {
-              "type": "BluffinMuffin.Protocol.DataTypes.Enums.SeatAttributeEnum[]",
-              "properties": {
-                "IsFixedSize": {
-                  "type": "bool"
-                },
-                "IsReadOnly": {
-                  "type": "bool"
-                },
-                "IsSynchronized": {
-                  "type": "bool"
-                },
-                "Length": {
-                  "type": "int"
-                },
-                "LongLength": {
-                  "type": "long"
-                },
-                "Rank": {
-                  "type": "int"
-                },
-                "SyncRoot": {
-                  "type": "System.Object",
-                  "properties": {}
-                }
+              "type": "array",
+              "items": {
+                "type": "BluffinMuffin.Protocol.DataTypes.Enums.SeatAttributeEnum",
+                "enum": [
+                  "BigBlind",
+                  "CurrentPlayer",
+                  "Dealer",
+                  "SmallBlind"
+                ]
               }
             }
           }
@@ -293,8 +299,6 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
     },
     "Blind": {
       "OptionType": "Blinds",
-      "BigBlindAmount": 0,
-      "SmallBlindAmount": 0,
       "MoneyUnit": 0
     },
     "Limit": {

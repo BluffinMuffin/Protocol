@@ -16,30 +16,13 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
       "type": "string"
     },
     "LobbyTypes": {
-      "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum[]",
-      "properties": {
-        "IsFixedSize": {
-          "type": "bool"
-        },
-        "IsReadOnly": {
-          "type": "bool"
-        },
-        "IsSynchronized": {
-          "type": "bool"
-        },
-        "Length": {
-          "type": "int"
-        },
-        "LongLength": {
-          "type": "long"
-        },
-        "Rank": {
-          "type": "int"
-        },
-        "SyncRoot": {
-          "type": "System.Object",
-          "properties": {}
-        }
+      "type": "array",
+      "items": {
+        "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
+        "enum": [
+          "Career",
+          "Training"
+        ]
       }
     }
   }
@@ -157,7 +140,7 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
                   }
                 },
                 "Limit": {
-                  "description": "The type of blinds the table uses (NoLimit, PotLimit, FixedLimit) See 'BluffinMuffin.Protocol.DataTypes.LimitOptions' for more details",
+                  "description": "The type of limit the table uses (NoLimit, PotLimit, FixedLimit) See 'BluffinMuffin.Protocol.DataTypes.LimitOptions' for more details",
                   "type": "BluffinMuffin.Protocol.DataTypes.LimitOptions",
                   "properties": {
                     "OptionType": {
@@ -207,30 +190,13 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
           "type": "string"
         },
         "LobbyTypes": {
-          "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum[]",
-          "properties": {
-            "IsFixedSize": {
-              "type": "bool"
-            },
-            "IsReadOnly": {
-              "type": "bool"
-            },
-            "IsSynchronized": {
-              "type": "bool"
-            },
-            "Length": {
-              "type": "int"
-            },
-            "LongLength": {
-              "type": "long"
-            },
-            "Rank": {
-              "type": "int"
-            },
-            "SyncRoot": {
-              "type": "System.Object",
-              "properties": {}
-            }
+          "type": "array",
+          "items": {
+            "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
+            "enum": [
+              "Career",
+              "Training"
+            ]
           }
         }
       }
