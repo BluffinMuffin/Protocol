@@ -60,6 +60,7 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand
       "type": "bool"
     },
     "Command": {
+      "description": "The command who initiated this response",
       "type": "BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand",
       "properties": {
         "CommandName": {

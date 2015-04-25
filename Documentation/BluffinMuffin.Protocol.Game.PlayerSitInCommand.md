@@ -59,6 +59,7 @@ BluffinMuffin.Protocol.Game.PlayerSitInCommand
       "type": "int"
     },
     "Command": {
+      "description": "The command who initiated this response",
       "type": "BluffinMuffin.Protocol.Game.PlayerSitInCommand",
       "properties": {
         "CommandName": {

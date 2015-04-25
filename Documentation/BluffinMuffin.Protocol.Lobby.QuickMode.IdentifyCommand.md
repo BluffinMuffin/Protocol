@@ -52,6 +52,7 @@ In Quick mode, you must **identify** yourself. This action puts a unique name to
       "type": "bool"
     },
     "Command": {
+      "description": "The command who initiated this response",
       "type": "BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand",
       "properties": {
         "CommandName": {

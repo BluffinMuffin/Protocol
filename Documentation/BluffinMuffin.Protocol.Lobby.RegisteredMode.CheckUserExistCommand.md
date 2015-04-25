@@ -48,6 +48,7 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand
       "type": "bool"
     },
     "Command": {
+      "description": "The command who initiated this response",
       "type": "BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand",
       "properties": {
         "CommandName": {

@@ -40,9 +40,11 @@ An ante is a forced bet in which all players put an equal amount of money or chi
   "type": "BluffinMuffin.Protocol.DataTypes.BlindOptionsAnte",
   "properties": {
     "MoneyUnit": {
+      "description": "The Money unit. Should always be equal to the moneyUnit of the table.",
       "type": "int"
     },
     "OptionType": {
+      "description": "The type of blinds used for the table",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
       "enum": [
         "Antes",
@@ -77,9 +79,11 @@ A blind bet or just blind is a forced bet placed into the pot by one or more pla
   "type": "BluffinMuffin.Protocol.DataTypes.BlindOptionsBlinds",
   "properties": {
     "MoneyUnit": {
+      "description": "The Money unit. Should always be equal to the moneyUnit of the table.",
       "type": "int"
     },
     "OptionType": {
+      "description": "The type of blinds used for the table",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
       "enum": [
         "Antes",
@@ -112,9 +116,11 @@ With no blinds, the preflop round starts as avery other round, with no money on 
   "type": "BluffinMuffin.Protocol.DataTypes.BlindOptionsNone",
   "properties": {
     "MoneyUnit": {
+      "description": "The Money unit. Should always be equal to the moneyUnit of the table.",
       "type": "int"
     },
     "OptionType": {
+      "description": "The type of blinds used for the table",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
       "enum": [
         "Antes",

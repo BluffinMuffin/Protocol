@@ -36,6 +36,7 @@ In a game played with a fixed-limit betting structure, a player chooses only whe
   "type": "BluffinMuffin.Protocol.DataTypes.LimitOptionsFixed",
   "properties": {
     "OptionType": {
+      "description": "The type of limit you want to apply on raises",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
       "enum": [
         "FixedLimit",
@@ -69,6 +70,7 @@ A game played with a no-limit betting structure allows each player to raise the 
   "type": "BluffinMuffin.Protocol.DataTypes.LimitOptionsNoLimit",
   "properties": {
     "OptionType": {
+      "description": "The type of limit you want to apply on raises",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
       "enum": [
         "FixedLimit",
@@ -102,6 +104,7 @@ In a pot-limit game no player can raise more than the size of the total pot, whi
   "type": "BluffinMuffin.Protocol.DataTypes.LimitOptionsPot",
   "properties": {
     "OptionType": {
+      "description": "The type of limit you want to apply on raises",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
       "enum": [
         "FixedLimit",

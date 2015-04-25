@@ -180,7 +180,17 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                 else
                 {
                     var name = "P:" + type.FullName + "." + p.Name;
+                    var sType = type;
                     string summary = Summaries.ContainsKey(name) ? Summaries[name] : String.Empty;
+                    while (string.IsNullOrEmpty(summary) && sType.BaseType != null && sType.BaseType != sType)
+                    {
+                        sType = sType.BaseType;
+                        string full = sType.FullName;
+                        if (full.Contains("["))
+                            full = full.Remove(full.IndexOf('['));
+                        name = "P:" + full + "." + p.Name;
+                        summary = Summaries.ContainsKey(name) ? Summaries[name] : String.Empty;
+                    }
                     string desc = String.Join(" ", summary.Trim().Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries).Select(x => x.Trim())).Trim();
                     if (!String.IsNullOrEmpty(desc))
                     {

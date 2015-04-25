@@ -178,6 +178,7 @@ More information on ...
       "type": "int"
     },
     "Command": {
+      "description": "The command who initiated this response",
       "type": "BluffinMuffin.Protocol.Lobby.CreateTableCommand",
       "properties": {
         "CommandName": {

@@ -54,6 +54,7 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand
       "type": "double"
     },
     "Command": {
+      "description": "The command who initiated this response",
       "type": "BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand",
       "properties": {
         "CommandName": {

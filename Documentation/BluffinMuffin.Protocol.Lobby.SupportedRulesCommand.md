@@ -147,6 +147,7 @@ BluffinMuffin.Protocol.Lobby.SupportedRulesCommand
       }
     },
     "Command": {
+      "description": "The command who initiated this response",
       "type": "BluffinMuffin.Protocol.Lobby.SupportedRulesCommand",
       "properties": {
         "CommandName": {

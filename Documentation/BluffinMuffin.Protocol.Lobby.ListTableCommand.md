@@ -183,6 +183,7 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
       }
     },
     "Command": {
+      "description": "The command who initiated this response",
       "type": "BluffinMuffin.Protocol.Lobby.ListTableCommand",
       "properties": {
         "CommandName": {

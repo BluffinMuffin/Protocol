@@ -41,6 +41,7 @@ The Registered mode is a mode where a player connects with an account. He then h
       "type": "int"
     },
     "OptionType": {
+      "description": "What type of lobby it is",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
       "enum": [
         "QuickMode",
@@ -73,6 +74,7 @@ The Quick mode is a mode where the money is given to the player when he enters t
   "type": "BluffinMuffin.Protocol.DataTypes.LobbyOptionsQuickMode",
   "properties": {
     "OptionType": {
+      "description": "What type of lobby it is",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
       "enum": [
         "QuickMode",

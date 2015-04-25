@@ -51,6 +51,7 @@ BluffinMuffin.Protocol.Game.PlayerSitOutCommand
       "type": "int"
     },
     "Command": {
+      "description": "The command who initiated this response",
       "type": "BluffinMuffin.Protocol.Game.PlayerSitOutCommand",
       "properties": {
         "CommandName": {

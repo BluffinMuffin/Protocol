@@ -52,6 +52,7 @@ BluffinMuffin.Protocol.Lobby.JoinTableCommand
       "type": "bool"
     },
     "Command": {
+      "description": "The command who initiated this response",
       "type": "BluffinMuffin.Protocol.Lobby.JoinTableCommand",
       "properties": {
         "CommandName": {
