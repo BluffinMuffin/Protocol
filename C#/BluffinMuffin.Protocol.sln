@@ -64,7 +64,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sequences Diagrams", "Seque
 		..\Documentation\Sequence Diagrams\BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.png = ..\Documentation\Sequence Diagrams\BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.png
 		..\Documentation\Sequence Diagrams\BluffinMuffin.Protocol.Lobby.QuickMode.png = ..\Documentation\Sequence Diagrams\BluffinMuffin.Protocol.Lobby.QuickMode.png
 		..\Documentation\Sequence Diagrams\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.png = ..\Documentation\Sequence Diagrams\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.png
-		..\Documentation\Sequence Diagrams\LobbySequences.uxf = ..\Documentation\Sequence Diagrams\LobbySequences.uxf
+		..\Documentation\Sequence Diagrams\Lobby.vsdx = ..\Documentation\Sequence Diagrams\Lobby.vsdx
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Activity Diagrams", "Activity Diagrams", "{63F08F85-1BF1-409D-A04C-143B5B80B66B}"
