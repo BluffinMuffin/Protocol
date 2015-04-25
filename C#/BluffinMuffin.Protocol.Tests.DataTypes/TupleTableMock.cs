@@ -19,7 +19,6 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
         {
             return new TupleTable()
             {
-                BigBlind = 10,
                 IdTable = 42,
                 NbPlayers = 3,
                 PossibleAction = LobbyActionEnum.Join,
@@ -30,7 +29,6 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
         {
             return new TupleTable()
                 {
-                    BigBlind = 100,
                     IdTable = 420,
                     NbPlayers = 7,
                     PossibleAction = LobbyActionEnum.Leave,
@@ -41,7 +39,6 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
         {
             return new TupleTable()
             {
-                BigBlind = 1000,
                 IdTable = 4200,
                 NbPlayers = 6,
                 PossibleAction = LobbyActionEnum.None,

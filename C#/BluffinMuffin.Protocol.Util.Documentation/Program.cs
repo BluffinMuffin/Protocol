@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -262,18 +263,54 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                         }
                         else if (exs != null)
                         {
-                            object array = Activator.CreateInstance(p.PropertyType, new object[] { exs.NbObjects }); // Length 1
-                            object[] lst = (object[])array;
-
-                            for (int i = 0; i < exs.Values.GetLength(0); ++i)
+                            if (p.PropertyType.IsGenericType && (p.PropertyType.GetGenericTypeDefinition() == typeof (List<>)))
                             {
-                                var types = exs.Values[i].Select(x => x.GetType()).ToArray();
-                                var et = p.PropertyType.GetElementType();
-                                var ct = et.GetConstructor(types);
 
-                                lst[i] = ct.Invoke(exs.Values[i]);
+                                object array = Activator.CreateInstance(p.PropertyType); // Length 1
+                                IList lst = (IList)array;
+
+                                for (int i = 0; i < exs.NbObjects; ++i)
+                                {
+                                    var et = p.PropertyType.GetGenericArguments()[0];
+                                    if (et.IsClass)
+                                    {
+                                        var types = exs.Values[i].Select(x => x.GetType()).ToArray();
+                                        var ct = et.GetConstructor(types);
+
+                                        lst.Add(ct.Invoke(exs.Values[i]));
+                                    }
+                                    else
+                                    {
+                                        lst.Add(exs.Values[0]);
+                                    }
+                                }
+                                p.SetValue(c, array);
+                                
                             }
-                            p.SetValue(c, array);
+                            else
+                            {
+
+                                object array = Activator.CreateInstance(p.PropertyType, new object[] { exs.NbObjects }); // Length 1
+                                IList lst = (IList)array;
+
+                                for (int i = 0; i < exs.NbObjects; ++i)
+                                {
+                                    var et = p.PropertyType.GetElementType();
+                                    if (et.IsClass)
+                                    {
+                                        var types = exs.Values[i].Select(x => x.GetType()).ToArray();
+                                        var ct = et.GetConstructor(types);
+
+                                        lst[i] = ct.Invoke(exs.Values[i]);
+                                    }
+                                    else
+                                    {
+                                        lst[i] = exs.Values[i][0];
+                                    }
+                                }
+                                p.SetValue(c, array);
+                                
+                            }
                         }
                         else if (p.PropertyType.IsClass && p.PropertyType != typeof(string) && !p.PropertyType.IsArray)
                             p.SetValue(c, Remplir(p.PropertyType));

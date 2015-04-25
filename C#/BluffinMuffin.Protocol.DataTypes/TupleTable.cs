@@ -1,5 +1,6 @@
 ﻿using System;
 using BluffinMuffin.Protocol.DataTypes.Enums;
+using Com.Ericmas001.Net.Protocol;
 
 namespace BluffinMuffin.Protocol.DataTypes
 {
@@ -9,23 +10,22 @@ namespace BluffinMuffin.Protocol.DataTypes
     public class TupleTable : IComparable<TupleTable>
     {
         /// <summary>
-        /// 
+        /// The id of the table
         /// </summary>
+        [ExampleValue(42)]
         public int IdTable { get; set; }
         /// <summary>
-        /// 
+        /// The nb of players currently sitting at the table
         /// </summary>
-        public int BigBlind { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
+        [ExampleValue(6)]
         public int NbPlayers { get; set; }
         /// <summary>
-        /// 
+        /// The action available to you for this table (Nothing, Join, Leave)
         /// </summary>
+        [ExampleValue(LobbyActionEnum.Join)]
         public LobbyActionEnum PossibleAction { get; set; }
         /// <summary>
-        /// 
+        /// Parameters of the poker table
         /// </summary>
         public TableParams Params { get; set; }
 

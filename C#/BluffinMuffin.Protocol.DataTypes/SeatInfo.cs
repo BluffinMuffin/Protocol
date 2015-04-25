@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using BluffinMuffin.Protocol.DataTypes.Enums;
 using Com.Ericmas001.Collections;
+using Com.Ericmas001.Net.Protocol;
 using Newtonsoft.Json;
 
 namespace BluffinMuffin.Protocol.DataTypes
@@ -13,13 +14,15 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// <summary>
         /// 
         /// </summary>
+        [JsonIgnore]
         public bool IsEmpty { get { return Player == null; } }
         /// <summary>
-        /// 
+        /// The id of the current seat
         /// </summary>
+        [ExampleValue(7)]
         public int NoSeat { get; set; }
         /// <summary>
-        /// 
+        /// The information of the player sitting in this seat. If null, there is nobody.
         /// </summary>
         public PlayerInfo Player { get; set; }
         /// <summary>
@@ -32,9 +35,10 @@ namespace BluffinMuffin.Protocol.DataTypes
             set;
         }
         /// <summary>
-        /// 
+        /// The attributes of the seat
         /// </summary>
-        public SeatAttributeEnum[] SerializableAttributes
+        [ExampleValues(2, SeatAttributeEnum.CurrentPlayer, SeatAttributeEnum.BigBlind)]
+        public SeatAttributeEnum[] SeatAttributes
         {
             get
             {
@@ -64,7 +68,7 @@ namespace BluffinMuffin.Protocol.DataTypes
             {
                 Player = Player.Clone(),
                 NoSeat = NoSeat,
-                SerializableAttributes = SerializableAttributes,
+                SeatAttributes = SeatAttributes,
             };
         }
     }

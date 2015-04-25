@@ -159,13 +159,12 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
         "Item": {
           "type": "BluffinMuffin.Protocol.DataTypes.SeatInfo",
           "properties": {
-            "IsEmpty": {
-              "type": "bool"
-            },
             "NoSeat": {
+              "description": "The id of the current seat",
               "type": "int"
             },
             "Player": {
+              "description": "The information of the player sitting in this seat. If null, there is nobody.",
               "type": "BluffinMuffin.Protocol.DataTypes.PlayerInfo",
               "properties": {
                 "HoleCards": {
@@ -218,10 +217,6 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
                   "description": "true if the player cards are public (ex: during showdown)",
                   "type": "bool"
                 },
-                "MoneyAmnt": {
-                  "description": "Current Money Amount of the player (Safe + Bet)",
-                  "type": "int"
-                },
                 "MoneyBetAmnt": {
                   "description": "Current Money Amount of the player that he played this round",
                   "type": "int"
@@ -250,7 +245,8 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
                 }
               }
             },
-            "SerializableAttributes": {
+            "SeatAttributes": {
+              "description": "The attributes of the seat",
               "type": "array",
               "items": {
                 "type": "BluffinMuffin.Protocol.DataTypes.Enums.SeatAttributeEnum",

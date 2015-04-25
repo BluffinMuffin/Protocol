@@ -20,7 +20,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
             {
                 NoSeat = 6,
                 Player = PlayerInfoMock.Diego(),
-                SerializableAttributes = new[] { SeatAttributeEnum.Dealer  }
+                SeatAttributes = new[] { SeatAttributeEnum.Dealer  }
             };
         }
         public static SeatInfo SeatSeven()
@@ -29,7 +29,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
             {
                 NoSeat = 7,
                 Player = PlayerInfoMock.Dora(),
-                SerializableAttributes = new[] { SeatAttributeEnum.CurrentPlayer, SeatAttributeEnum.BigBlind }
+                SeatAttributes = new[] { SeatAttributeEnum.CurrentPlayer, SeatAttributeEnum.BigBlind }
             };
         }
     }

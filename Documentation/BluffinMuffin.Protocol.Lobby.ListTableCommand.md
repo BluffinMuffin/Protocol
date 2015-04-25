@@ -67,16 +67,16 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
         "Item": {
           "type": "BluffinMuffin.Protocol.DataTypes.TupleTable",
           "properties": {
-            "BigBlind": {
-              "type": "int"
-            },
             "IdTable": {
+              "description": "The id of the table",
               "type": "int"
             },
             "NbPlayers": {
+              "description": "The nb of players currently sitting at the table",
               "type": "int"
             },
             "Params": {
+              "description": "Parameters of the poker table",
               "type": "BluffinMuffin.Protocol.DataTypes.TableParams",
               "properties": {
                 "GameType": {
@@ -175,6 +175,7 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
               }
             },
             "PossibleAction": {
+              "description": "The action available to you for this table (Nothing, Join, Leave)",
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyActionEnum",
               "enum": [
                 "Join",
@@ -215,7 +216,14 @@ BluffinMuffin.Protocol.Lobby.ListTableCommand
 ```json
 {
   "CommandName": "ListTableResponse",
-  "Tables": [],
+  "Tables": [
+    {
+      "IdTable": 0,
+      "NbPlayers": 0,
+      "PossibleAction": "None",
+      "Params": null
+    }
+  ],
   "Command": {
     "CommandName": "ListTableCommand",
     "LobbyTypes": null

@@ -60,11 +60,13 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// <summary>
         /// 
         /// </summary>
+        [ExampleValue("TODO")]
         public PlayerStateEnum State { get; set; }
 
         /// <summary>
         /// true if the player cards are public (ex: during showdown)
         /// </summary>
+        [ExampleValue("TODO")]
         public bool IsShowingCards { get; set; }
 
         /// <summary>
@@ -95,6 +97,7 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// <summary>
         /// Current Money Amount of the player (Safe + Bet)
         /// </summary>
+        [JsonIgnore]
         public int MoneyAmnt
         {
             get { return MoneyBetAmnt + MoneySafeAmnt; }
