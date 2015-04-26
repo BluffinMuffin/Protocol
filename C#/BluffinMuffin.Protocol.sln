@@ -51,6 +51,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.md
 		..\Documentation\LobbyQuickMode.md = ..\Documentation\LobbyQuickMode.md
+		..\Documentation\LobbyRegisteredMode.md = ..\Documentation\LobbyRegisteredMode.md
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
@@ -63,6 +64,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sequences", "Sequences", "{
 		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.ListTableCommand.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.ListTableCommand.png
 		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.png
 		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.QuickMode.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.QuickMode.png
+		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.RegisteredMode.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.RegisteredMode.png
 		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.png
 		..\Documentation\Sequences\Lobby.vsdx = ..\Documentation\Sequences\Lobby.vsdx
 	EndProjectSection
