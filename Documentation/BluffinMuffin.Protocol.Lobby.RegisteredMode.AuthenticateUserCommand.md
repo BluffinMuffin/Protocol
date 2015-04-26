@@ -1,6 +1,6 @@
 # Lobby RegisteredMode : AuthenticateUser
 
-BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand
+This command will try to authenticate the client against the user database on the server.
 
 <p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand.png" alt="Sequence Diagram"></p>
 
@@ -20,9 +20,11 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand
       "type": "string"
     },
     "Password": {
+      "description": "The password associated with the username",
       "type": "string"
     },
     "Username": {
+      "description": "The username",
       "type": "string"
     }
   }
@@ -34,8 +36,8 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand
 ```json
 {
   "CommandName": "AuthenticateUserCommand",
-  "Username": null,
-  "Password": null
+  "Username": "ericmas001",
+  "Password": "0nc3Up0nAT1m3"
 }
 ```
 
@@ -53,6 +55,7 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand
       "type": "string"
     },
     "Success": {
+      "description": "true if the username existed and the password was correct",
       "type": "bool"
     },
     "Command": {
@@ -64,9 +67,11 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand
           "type": "string"
         },
         "Password": {
+          "description": "The password associated with the username",
           "type": "string"
         },
         "Username": {
+          "description": "The username",
           "type": "string"
         }
       }
@@ -80,11 +85,11 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand
 ```json
 {
   "CommandName": "AuthenticateUserResponse",
-  "Success": false,
+  "Success": true,
   "Command": {
     "CommandName": "AuthenticateUserCommand",
-    "Username": null,
-    "Password": null
+    "Username": "ericmas001",
+    "Password": "0nc3Up0nAT1m3"
   }
 }
 ```

@@ -1,6 +1,6 @@
 # Lobby RegisteredMode : CheckUserExist
 
-BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand
+In the User Creation Process, it's useful to check if the username is already taken. You can then validate the username before actually creating the user. (Username is the name used to connect)
 
 <p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand.png" alt="Sequence Diagram"></p>
 
@@ -20,6 +20,7 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand
       "type": "string"
     },
     "Username": {
+      "description": "The display name you want to check the existance of",
       "type": "string"
     }
   }
@@ -31,7 +32,7 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand
 ```json
 {
   "CommandName": "CheckUserExistCommand",
-  "Username": null
+  "Username": "ericmas001"
 }
 ```
 
@@ -49,6 +50,7 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand
       "type": "string"
     },
     "Exist": {
+      "description": "true if the username exists",
       "type": "bool"
     },
     "Command": {
@@ -60,6 +62,7 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand
           "type": "string"
         },
         "Username": {
+          "description": "The display name you want to check the existance of",
           "type": "string"
         }
       }
@@ -73,10 +76,10 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand
 ```json
 {
   "CommandName": "CheckUserExistResponse",
-  "Exist": false,
+  "Exist": true,
   "Command": {
     "CommandName": "CheckUserExistCommand",
-    "Username": null
+    "Username": "ericmas001"
   }
 }
 ```

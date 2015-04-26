@@ -1,6 +1,6 @@
 # Lobby RegisteredMode : GetUser
 
-BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand
+This command will Get the information about a player. This information should be only for the player itself.
 
 <p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.png" alt="Sequence Diagram"></p>
 
@@ -20,6 +20,7 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand
       "type": "string"
     },
     "Username": {
+      "description": "The username you want to know more about",
       "type": "string"
     }
   }
@@ -31,7 +32,7 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand
 ```json
 {
   "CommandName": "GetUserCommand",
-  "Username": null
+  "Username": "ericmas001"
 }
 ```
 
@@ -49,12 +50,15 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand
       "type": "string"
     },
     "DisplayName": {
+      "description": "The display name of the user",
       "type": "string"
     },
     "Email": {
+      "description": "The email of the user",
       "type": "string"
     },
     "Money": {
+      "description": "The money currently in bank for this user",
       "type": "double"
     },
     "Command": {
@@ -66,6 +70,7 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand
           "type": "string"
         },
         "Username": {
+          "description": "The username you want to know more about",
           "type": "string"
         }
       }
@@ -79,12 +84,12 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand
 ```json
 {
   "CommandName": "GetUserResponse",
-  "Email": null,
-  "DisplayName": null,
-  "Money": 0.0,
+  "Email": "ericmas001@hotmail.com",
+  "DisplayName": "Sponge Bob",
+  "Money": 42000.42,
   "Command": {
     "CommandName": "GetUserCommand",
-    "Username": null
+    "Username": "ericmas001"
   }
 }
 ```

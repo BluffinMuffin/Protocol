@@ -1,6 +1,6 @@
 # Lobby RegisteredMode : CreateUser
 
-BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand
+This commands will create a new user in the database.
 
 <p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand.png" alt="Sequence Diagram"></p>
 
@@ -20,15 +20,19 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand
       "type": "string"
     },
     "DisplayName": {
+      "description": "The display name you want for this user",
       "type": "string"
     },
     "Email": {
+      "description": "An email address to reach this user",
       "type": "string"
     },
     "Password": {
+      "description": "The password you want to use",
       "type": "string"
     },
     "Username": {
+      "description": "The username you want to have",
       "type": "string"
     }
   }
@@ -40,10 +44,10 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand
 ```json
 {
   "CommandName": "CreateUserCommand",
-  "Username": null,
-  "Password": null,
-  "Email": null,
-  "DisplayName": null
+  "Username": "ericmas001",
+  "Password": "0nc3Up0nAT1m3",
+  "Email": "ericmas001@hotmail.com",
+  "DisplayName": "Sponge Bob"
 }
 ```
 
@@ -61,6 +65,7 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand
       "type": "string"
     },
     "Success": {
+      "description": "true if the user was created successfully",
       "type": "bool"
     },
     "Command": {
@@ -72,15 +77,19 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand
           "type": "string"
         },
         "DisplayName": {
+          "description": "The display name you want for this user",
           "type": "string"
         },
         "Email": {
+          "description": "An email address to reach this user",
           "type": "string"
         },
         "Password": {
+          "description": "The password you want to use",
           "type": "string"
         },
         "Username": {
+          "description": "The username you want to have",
           "type": "string"
         }
       }
@@ -94,13 +103,13 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand
 ```json
 {
   "CommandName": "CreateUserResponse",
-  "Success": false,
+  "Success": true,
   "Command": {
     "CommandName": "CreateUserCommand",
-    "Username": null,
-    "Password": null,
-    "Email": null,
-    "DisplayName": null
+    "Username": "ericmas001",
+    "Password": "0nc3Up0nAT1m3",
+    "Email": "ericmas001@hotmail.com",
+    "DisplayName": "Sponge Bob"
   }
 }
 ```

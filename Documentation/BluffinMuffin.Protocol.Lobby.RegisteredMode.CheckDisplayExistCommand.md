@@ -1,6 +1,6 @@
 # Lobby RegisteredMode : CheckDisplayExist
 
-BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckDisplayExistCommand
+In the User Creation Process, it's useful to check if the display name is already taken. You can then validate the display name before actually creating the user. (Display name is the name viewed by other players on the table)
 
 <p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckDisplayExistCommand.png" alt="Sequence Diagram"></p>
 
@@ -20,6 +20,7 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckDisplayExistCommand
       "type": "string"
     },
     "DisplayName": {
+      "description": "The display name you want to check the existance of",
       "type": "string"
     }
   }
@@ -31,7 +32,7 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckDisplayExistCommand
 ```json
 {
   "CommandName": "CheckDisplayExistCommand",
-  "DisplayName": null
+  "DisplayName": "Sponge Bob"
 }
 ```
 
@@ -49,6 +50,7 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckDisplayExistCommand
       "type": "string"
     },
     "Exist": {
+      "description": "true if the display name exists",
       "type": "bool"
     },
     "Command": {
@@ -60,6 +62,7 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckDisplayExistCommand
           "type": "string"
         },
         "DisplayName": {
+          "description": "The display name you want to check the existance of",
           "type": "string"
         }
       }
@@ -73,10 +76,10 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckDisplayExistCommand
 ```json
 {
   "CommandName": "CheckDisplayExistResponse",
-  "Exist": false,
+  "Exist": true,
   "Command": {
     "CommandName": "CheckDisplayExistCommand",
-    "DisplayName": null
+    "DisplayName": "Sponge Bob"
   }
 }
 ```
