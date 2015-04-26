@@ -2,7 +2,11 @@
 Communication Protocol for Poker Game# Lobby QuickMode
 
 ## General Commands
-General commands are for communication everywhere. For example, the "Disconnect" command.
+General commands are for communication everywhere.
+
+ * **[DisconnectCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.DisconnectCommand.md)** 
+
+   This command is sent to inform the other end of the Tcp Connection that the communication should end
 
 ## Lobby Commands
 Lobby commands are for communication about identification, table list, table creations, etc. Everything that is around a poker game, but that isn't directly a poker game.
