@@ -4,6 +4,8 @@ BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand
 
 <p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand.png" alt="Sequence Diagram"></p>
 
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Activities/BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand.png" alt="Activity Diagram"></p>
+
 ## AuthenticateUserCommand
 
 ### Command Schema

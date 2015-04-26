@@ -2,6 +2,10 @@
 
 BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand
 
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand.png" alt="Sequence Diagram"></p>
+
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Activities/BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand.png" alt="Activity Diagram"></p>
+
 ## CreateUserCommand
 
 ### Command Schema
