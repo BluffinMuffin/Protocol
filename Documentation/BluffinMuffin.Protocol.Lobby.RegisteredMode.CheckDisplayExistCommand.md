@@ -2,6 +2,8 @@
 
 BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckDisplayExistCommand
 
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckDisplayExistCommand.png" alt="Sequence Diagram"></p>
+
 ## CheckDisplayExistCommand
 
 ### Command Schema

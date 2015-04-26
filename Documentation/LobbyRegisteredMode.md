@@ -20,7 +20,7 @@ The lobby has two modes: ***Quick mode*** and ***Registered mode***. This Sectio
 
    This command will try to authenticate the client against the user database on the server.
    
-  * **[GetUserCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.md)** *(Optional)* 
+ * **[GetUserCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.md)** *(Optional)* 
 
    This command will Get the information about a player. This information should be only for the player itself.
 

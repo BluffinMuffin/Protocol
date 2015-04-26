@@ -2,6 +2,8 @@
 
 BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand
 
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand.png" alt="Sequence Diagram"></p>
+
 ## CheckUserExistCommand
 
 ### Command Schema
