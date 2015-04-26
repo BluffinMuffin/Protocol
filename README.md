@@ -14,7 +14,7 @@ For more information on this mode, see the [Quick Mode Documentation](https://gi
 
 ### Registered mode
 The Registered mode is a mode where a player connects with an account. He then have some money, that he uses throughout different games. When entering a game, he will take some of that money to play, and when he leaves what was left of that money will be given back to him.
-For more information on this mode, see the [Registered Mode Documentation](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/LobbyQuickMode.md) section.
+For more information on this mode, see the [Registered Mode Documentation](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/LobbyRegisteredMode.md) section.
 
 ## Game Commands
 Game commands are for communication inside a specific table. It's for all the actions on a poker game.
