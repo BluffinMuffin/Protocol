@@ -22,3 +22,4 @@ For more information on this mode, see the [Registered Mode Documentation](https
 
 ## Game Commands
 Game commands are for communication inside a specific table. It's for all the actions on a poker game.
+For more information on these commands, see the [Game Commands Documentation](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Game.md) section.

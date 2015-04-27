@@ -50,6 +50,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.md
+		..\Documentation\Game.md = ..\Documentation\Game.md
 		..\Documentation\LobbyQuickMode.md = ..\Documentation\LobbyQuickMode.md
 		..\Documentation\LobbyRegisteredMode.md = ..\Documentation\LobbyRegisteredMode.md
 		..\README.md = ..\README.md
