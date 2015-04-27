@@ -1,6 +1,8 @@
 # Game : GameEnded
 
-BluffinMuffin.Protocol.Game.GameEndedCommand
+This command is sent at the end of every game.
+
+It's important to understand that a *game* is only one iteration. It's starts with blinds, then preflop, then ends when the pot is won. The next iteration will be a new *game*.
 
 ## GameEndedCommand
 
@@ -16,6 +18,7 @@ BluffinMuffin.Protocol.Game.GameEndedCommand
       "type": "string"
     },
     "TableId": {
+      "description": "The id of the table where this command needs to go",
       "type": "int"
     }
   }
@@ -27,7 +30,7 @@ BluffinMuffin.Protocol.Game.GameEndedCommand
 ```json
 {
   "CommandName": "GameEndedCommand",
-  "TableId": 0
+  "TableId": 42
 }
 ```
 

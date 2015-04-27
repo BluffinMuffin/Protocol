@@ -1,6 +1,6 @@
 # Game : PlayerPlayMoney
 
-BluffinMuffin.Protocol.Game.PlayerPlayMoneyCommand
+The client is telling the server that he plays some money.
 
 ## PlayerPlayMoneyCommand
 
@@ -16,9 +16,11 @@ BluffinMuffin.Protocol.Game.PlayerPlayMoneyCommand
       "type": "string"
     },
     "Played": {
+      "description": "Amount of money played",
       "type": "int"
     },
     "TableId": {
+      "description": "The id of the table where this command needs to go",
       "type": "int"
     }
   }
@@ -30,8 +32,8 @@ BluffinMuffin.Protocol.Game.PlayerPlayMoneyCommand
 ```json
 {
   "CommandName": "PlayerPlayMoneyCommand",
-  "Played": 0,
-  "TableId": 0
+  "Played": 42,
+  "TableId": 42
 }
 ```
 

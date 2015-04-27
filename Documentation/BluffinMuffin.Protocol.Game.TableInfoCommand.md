@@ -1,6 +1,6 @@
 # Game : TableInfo
 
-BluffinMuffin.Protocol.Game.TableInfoCommand
+Sends all the information about the current state of the table, to put everybody on the same page.
 
 ## TableInfoCommand
 
@@ -16,18 +16,22 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
       "type": "string"
     },
     "BoardCardIDs": {
+      "description": "All the card ids currently visible on the board (Preflop: empty, flop: 3 cars, turn: 4 cards, river: 5 cards)",
       "type": "array",
       "items": {
         "type": "int"
       }
     },
     "GameHasStarted": {
+      "description": "Informs the client if the game is currently in the playing state, or not.",
       "type": "bool"
     },
     "NbPlayers": {
+      "description": "The maximum number of players that can play on this table",
       "type": "int"
     },
     "Params": {
+      "description": "Parameters of the poker table",
       "type": "BluffinMuffin.Protocol.DataTypes.TableParams",
       "properties": {
         "GameType": {
@@ -126,12 +130,14 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
       }
     },
     "PotsAmount": {
+      "description": "All the pots on the table. Usually only one, but can have more if some players are all-in.",
       "type": "array",
       "items": {
         "type": "int"
       }
     },
     "Seats": {
+      "description": "The information about every seats around the table",
       "type": "array",
       "items": {
         "type": "BluffinMuffin.Protocol.DataTypes.SeatInfo",
@@ -239,9 +245,11 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
       }
     },
     "TableId": {
+      "description": "The id of the table where this command needs to go",
       "type": "int"
     },
     "TotalPotAmount": {
+      "description": "The total amount of money currently played in this game. This include the money in the center, and the money played in front of each player.",
       "type": "int"
     }
   }
@@ -277,13 +285,20 @@ BluffinMuffin.Protocol.Game.TableInfoCommand
       "OptionType": "NoLimit"
     }
   },
-  "TotalPotAmount": 0,
-  "PotsAmount": [],
-  "BoardCardIDs": [],
-  "NbPlayers": 0,
-  "Seats": [],
-  "GameHasStarted": false,
-  "TableId": 0
+  "TotalPotAmount": 42000,
+  "PotsAmount": [
+    4200,
+    420
+  ],
+  "BoardCardIDs": [
+    21,
+    42,
+    7
+  ],
+  "NbPlayers": 10,
+  "Seats": null,
+  "GameHasStarted": true,
+  "TableId": 42
 }
 ```
 

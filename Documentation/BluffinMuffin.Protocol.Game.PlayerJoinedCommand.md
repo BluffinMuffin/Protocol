@@ -1,6 +1,6 @@
 # Game : PlayerJoined
 
-BluffinMuffin.Protocol.Game.PlayerJoinedCommand
+This command is there to inform players that someone just joined the table. This will be sent before the player sits in. If the player is only there to view, people are still notified of his presence.
 
 ## PlayerJoinedCommand
 
@@ -16,9 +16,11 @@ BluffinMuffin.Protocol.Game.PlayerJoinedCommand
       "type": "string"
     },
     "PlayerName": {
+      "description": "The name of the player that just joined the table.",
       "type": "string"
     },
     "TableId": {
+      "description": "The id of the table where this command needs to go",
       "type": "int"
     }
   }
@@ -31,7 +33,7 @@ BluffinMuffin.Protocol.Game.PlayerJoinedCommand
 {
   "CommandName": "PlayerJoinedCommand",
   "PlayerName": null,
-  "TableId": 0
+  "TableId": 42
 }
 ```
 

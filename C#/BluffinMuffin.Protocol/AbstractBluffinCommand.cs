@@ -7,8 +7,14 @@ using Newtonsoft.Json.Linq;
 
 namespace BluffinMuffin.Protocol
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public abstract class AbstractBluffinCommand : AbstractJsonCommand
     {
+        /// <summary>
+        /// 
+        /// </summary>
         [JsonIgnore]
         public abstract BluffinCommandEnum CommandType { get; }
 

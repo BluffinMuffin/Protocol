@@ -1,6 +1,6 @@
 # Game : PlayerSitOut
 
-BluffinMuffin.Protocol.Game.PlayerSitOutCommand
+The client is telling the server that he wants to sit out
 
 ## PlayerSitOutCommand
 
@@ -16,6 +16,7 @@ BluffinMuffin.Protocol.Game.PlayerSitOutCommand
       "type": "string"
     },
     "TableId": {
+      "description": "The id of the table where this command needs to go",
       "type": "int"
     }
   }
@@ -27,7 +28,7 @@ BluffinMuffin.Protocol.Game.PlayerSitOutCommand
 ```json
 {
   "CommandName": "PlayerSitOutCommand",
-  "TableId": 0
+  "TableId": 42
 }
 ```
 
@@ -45,9 +46,11 @@ BluffinMuffin.Protocol.Game.PlayerSitOutCommand
       "type": "string"
     },
     "Success": {
+      "description": "The success of the sit out. Usually false if the player was not sitting at the table",
       "type": "bool"
     },
     "TableId": {
+      "description": "The id of the table where this command needs to go",
       "type": "int"
     },
     "Command": {
@@ -59,6 +62,7 @@ BluffinMuffin.Protocol.Game.PlayerSitOutCommand
           "type": "string"
         },
         "TableId": {
+          "description": "The id of the table where this command needs to go",
           "type": "int"
         }
       }
@@ -72,11 +76,11 @@ BluffinMuffin.Protocol.Game.PlayerSitOutCommand
 ```json
 {
   "CommandName": "PlayerSitOutResponse",
-  "Success": false,
-  "TableId": 0,
+  "Success": true,
+  "TableId": 42,
   "Command": {
     "CommandName": "PlayerSitOutCommand",
-    "TableId": 0
+    "TableId": 42
   }
 }
 ```

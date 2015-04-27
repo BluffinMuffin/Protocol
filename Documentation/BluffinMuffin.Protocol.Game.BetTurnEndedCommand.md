@@ -1,6 +1,6 @@
 # Game : BetTurnEnded
 
-BluffinMuffin.Protocol.Game.BetTurnEndedCommand
+This command is issued by the server when a betting round is ending. For example, everybody called on the flop. It's the end of the flop. Every client receive this command.
 
 ## BetTurnEndedCommand
 
@@ -16,12 +16,14 @@ BluffinMuffin.Protocol.Game.BetTurnEndedCommand
       "type": "string"
     },
     "PotsAmounts": {
+      "description": "All the pots on the table. Usually only one, but can have more if some players are all-in.",
       "type": "array",
       "items": {
         "type": "int"
       }
     },
     "Round": {
+      "description": "The round that is ending",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.RoundTypeEnum",
       "enum": [
         "Flop",
@@ -31,6 +33,7 @@ BluffinMuffin.Protocol.Game.BetTurnEndedCommand
       ]
     },
     "TableId": {
+      "description": "The id of the table where this command needs to go",
       "type": "int"
     }
   }
@@ -42,9 +45,12 @@ BluffinMuffin.Protocol.Game.BetTurnEndedCommand
 ```json
 {
   "CommandName": "BetTurnEndedCommand",
-  "Round": "Preflop",
-  "PotsAmounts": [],
-  "TableId": 0
+  "Round": "Flop",
+  "PotsAmounts": [
+    4200,
+    420
+  ],
+  "TableId": 42
 }
 ```
 

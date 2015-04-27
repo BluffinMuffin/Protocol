@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace BluffinMuffin.Protocol
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="TResponse"></typeparam>
     public interface ICommandWithResponse<TResponse> where TResponse : IResponse
     {
     }

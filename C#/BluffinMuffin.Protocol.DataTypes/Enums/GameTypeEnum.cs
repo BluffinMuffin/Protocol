@@ -2,6 +2,9 @@
 {
     public enum GameTypeEnum
     {
+        /// <summary>
+        /// Holdem
+        /// </summary>
         Holdem,
     }
 }

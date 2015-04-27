@@ -1,6 +1,6 @@
 # Game : TableClosed
 
-BluffinMuffin.Protocol.Game.TableClosedCommand
+Informs the clients that the table is closed and that there will be no more games on this table.
 
 ## TableClosedCommand
 
@@ -16,6 +16,7 @@ BluffinMuffin.Protocol.Game.TableClosedCommand
       "type": "string"
     },
     "TableId": {
+      "description": "The id of the table where this command needs to go",
       "type": "int"
     }
   }
@@ -27,7 +28,7 @@ BluffinMuffin.Protocol.Game.TableClosedCommand
 ```json
 {
   "CommandName": "TableClosedCommand",
-  "TableId": 0
+  "TableId": 42
 }
 ```
 

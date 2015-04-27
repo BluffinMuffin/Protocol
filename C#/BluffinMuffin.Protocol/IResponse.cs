@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace BluffinMuffin.Protocol
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public interface IResponse
     {
     }

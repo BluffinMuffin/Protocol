@@ -1,7 +1,16 @@
-﻿namespace BluffinMuffin.Protocol.Game
+﻿using Com.Ericmas001.Net.Protocol;
+
+namespace BluffinMuffin.Protocol.Game
 {
+    /// <summary>
+    /// The client is telling the server that he plays some money.
+    /// </summary>
     public class PlayerPlayMoneyCommand : AbstractGameCommand
     {
+        /// <summary>
+        /// Amount of money played
+        /// </summary>
+        [ExampleValue(42)]
         public int Played { get; set; }
     }
 }

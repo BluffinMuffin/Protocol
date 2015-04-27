@@ -1,6 +1,6 @@
 # Game : BetTurnStarted
 
-BluffinMuffin.Protocol.Game.BetTurnStartedCommand
+This command is issued by the server when a betting round is ending. For example, when the 3 first cards are shown, it's the beginning of the flop.
 
 ## BetTurnStartedCommand
 
@@ -16,12 +16,14 @@ BluffinMuffin.Protocol.Game.BetTurnStartedCommand
       "type": "string"
     },
     "CardsId": {
+      "description": "All the card ids currently visible on the board (Preflop: empty, flop: 3 cars, turn: 4 cards, river: 5 cards)",
       "type": "array",
       "items": {
         "type": "int"
       }
     },
     "Round": {
+      "description": "The round that is ending",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.RoundTypeEnum",
       "enum": [
         "Flop",
@@ -31,6 +33,7 @@ BluffinMuffin.Protocol.Game.BetTurnStartedCommand
       ]
     },
     "TableId": {
+      "description": "The id of the table where this command needs to go",
       "type": "int"
     }
   }
@@ -42,9 +45,13 @@ BluffinMuffin.Protocol.Game.BetTurnStartedCommand
 ```json
 {
   "CommandName": "BetTurnStartedCommand",
-  "Round": "Preflop",
-  "CardsId": [],
-  "TableId": 0
+  "Round": "Flop",
+  "CardsId": [
+    21,
+    42,
+    7
+  ],
+  "TableId": 42
 }
 ```
 

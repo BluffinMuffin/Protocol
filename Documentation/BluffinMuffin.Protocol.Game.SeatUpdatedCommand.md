@@ -1,6 +1,6 @@
 # Game : SeatUpdated
 
-BluffinMuffin.Protocol.Game.SeatUpdatedCommand
+Server informs clients that a seat has changed state. Usually sent when player sits-in or sits-out.
 
 ## SeatUpdatedCommand
 
@@ -16,6 +16,7 @@ BluffinMuffin.Protocol.Game.SeatUpdatedCommand
       "type": "string"
     },
     "Seat": {
+      "description": "The seat that has changed state",
       "type": "BluffinMuffin.Protocol.DataTypes.SeatInfo",
       "properties": {
         "NoSeat": {
@@ -120,6 +121,7 @@ BluffinMuffin.Protocol.Game.SeatUpdatedCommand
       }
     },
     "TableId": {
+      "description": "The id of the table where this command needs to go",
       "type": "int"
     }
   }
@@ -158,7 +160,7 @@ BluffinMuffin.Protocol.Game.SeatUpdatedCommand
       "CurrentPlayer"
     ]
   },
-  "TableId": 0
+  "TableId": 42
 }
 ```
 

@@ -1,13 +1,31 @@
 ﻿using System.Collections.Generic;
 using BluffinMuffin.Protocol.DataTypes.Enums;
+using Com.Ericmas001.Net.Protocol;
 
 namespace BluffinMuffin.Protocol.Game
 {
+    /// <summary>
+    /// This command is send by the server to inform everybody that the cards of a player just changed.
+    /// This is used to inform a player of the cards he just got dealed, to inform other players that some cards has been dealt to a player, or to show cards to everybody at showdown.
+    /// </summary>
     public class PlayerHoleCardsChangedCommand : AbstractGameCommand
     {
+        /// <summary>
+        /// The position on the table where is sitting the player with the cards.
+        /// </summary>
+        [ExampleValue(7)]
         public int PlayerPos { get; set; }
+
+        /// <summary>
+        /// The cards currently in the hands of the player
+        /// </summary>
+        [ExampleValues(2, 21, 42)]
         public List<int> CardsId { get; set; }
 
+        /// <summary>
+        /// The state of the player.
+        /// </summary>
+        [ExampleValue(PlayerStateEnum.Playing)]
         public PlayerStateEnum State { get; set; }
     }
 }

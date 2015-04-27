@@ -1,6 +1,6 @@
 # Game : PlayerSitIn
 
-BluffinMuffin.Protocol.Game.PlayerSitInCommand
+The client is telling the server that he wants to sit at a specific seat
 
 ## PlayerSitInCommand
 
@@ -16,12 +16,15 @@ BluffinMuffin.Protocol.Game.PlayerSitInCommand
       "type": "string"
     },
     "MoneyAmount": {
+      "description": "The amount of money the player will be playing with.",
       "type": "int"
     },
     "NoSeat": {
+      "description": "The seat where the player wants to sit.",
       "type": "int"
     },
     "TableId": {
+      "description": "The id of the table where this command needs to go",
       "type": "int"
     }
   }
@@ -33,9 +36,9 @@ BluffinMuffin.Protocol.Game.PlayerSitInCommand
 ```json
 {
   "CommandName": "PlayerSitInCommand",
-  "NoSeat": 0,
-  "MoneyAmount": 0,
-  "TableId": 0
+  "NoSeat": 7,
+  "MoneyAmount": 4200,
+  "TableId": 42
 }
 ```
 
@@ -53,9 +56,11 @@ BluffinMuffin.Protocol.Game.PlayerSitInCommand
       "type": "string"
     },
     "NoSeat": {
+      "description": "The Seat number where the player will sit. It could be different from the one asked if the seat was not available. Wil have -1 if the player is not sitting anywhere.",
       "type": "int"
     },
     "TableId": {
+      "description": "The id of the table where this command needs to go",
       "type": "int"
     },
     "Command": {
@@ -67,12 +72,15 @@ BluffinMuffin.Protocol.Game.PlayerSitInCommand
           "type": "string"
         },
         "MoneyAmount": {
+          "description": "The amount of money the player will be playing with.",
           "type": "int"
         },
         "NoSeat": {
+          "description": "The seat where the player wants to sit.",
           "type": "int"
         },
         "TableId": {
+          "description": "The id of the table where this command needs to go",
           "type": "int"
         }
       }
@@ -86,13 +94,13 @@ BluffinMuffin.Protocol.Game.PlayerSitInCommand
 ```json
 {
   "CommandName": "PlayerSitInResponse",
-  "NoSeat": 0,
-  "TableId": 0,
+  "NoSeat": 7,
+  "TableId": 42,
   "Command": {
     "CommandName": "PlayerSitInCommand",
-    "NoSeat": 0,
-    "MoneyAmount": 0,
-    "TableId": 0
+    "NoSeat": 7,
+    "MoneyAmount": 4200,
+    "TableId": 42
   }
 }
 ```

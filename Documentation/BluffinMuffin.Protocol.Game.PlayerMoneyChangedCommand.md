@@ -1,6 +1,6 @@
 # Game : PlayerMoneyChanged
 
-BluffinMuffin.Protocol.Game.PlayerMoneyChangedCommand
+The server is sharing new information about the money in the pockets of a player.
 
 ## PlayerMoneyChangedCommand
 
@@ -16,12 +16,15 @@ BluffinMuffin.Protocol.Game.PlayerMoneyChangedCommand
       "type": "string"
     },
     "PlayerMoney": {
+      "description": "The unplayed amount of money that the player have.",
       "type": "int"
     },
     "PlayerPos": {
+      "description": "The position on the table where is sitting the player.",
       "type": "int"
     },
     "TableId": {
+      "description": "The id of the table where this command needs to go",
       "type": "int"
     }
   }
@@ -33,9 +36,9 @@ BluffinMuffin.Protocol.Game.PlayerMoneyChangedCommand
 ```json
 {
   "CommandName": "PlayerMoneyChangedCommand",
-  "PlayerPos": 0,
-  "PlayerMoney": 0,
-  "TableId": 0
+  "PlayerPos": 7,
+  "PlayerMoney": 4200,
+  "TableId": 42
 }
 ```
 
