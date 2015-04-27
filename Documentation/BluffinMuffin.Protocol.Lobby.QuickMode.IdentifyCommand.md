@@ -66,7 +66,8 @@ In Quick mode, you must **identify** yourself. This action puts a unique name to
         "InvalidPassword",
         "SeatChanged",
         "NoMoreSeats",
-        "NotAuthenticated"
+        "NotAuthenticated",
+        "WrongLobbyType"
       ]
     },
     "Message": {

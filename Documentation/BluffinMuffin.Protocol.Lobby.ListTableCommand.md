@@ -78,7 +78,8 @@ The list of active tables will be sent back
         "InvalidPassword",
         "SeatChanged",
         "NoMoreSeats",
-        "NotAuthenticated"
+        "NotAuthenticated",
+        "WrongLobbyType"
       ]
     },
     "Message": {

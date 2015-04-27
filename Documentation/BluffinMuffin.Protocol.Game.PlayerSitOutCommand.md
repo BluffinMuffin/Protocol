@@ -62,7 +62,8 @@ The client is telling the server that he wants to sit out
         "InvalidPassword",
         "SeatChanged",
         "NoMoreSeats",
-        "NotAuthenticated"
+        "NotAuthenticated",
+        "WrongLobbyType"
       ]
     },
     "Message": {

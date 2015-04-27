@@ -194,7 +194,8 @@ More information on ...
         "InvalidPassword",
         "SeatChanged",
         "NoMoreSeats",
-        "NotAuthenticated"
+        "NotAuthenticated",
+        "WrongLobbyType"
       ]
     },
     "Message": {

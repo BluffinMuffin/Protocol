@@ -60,5 +60,10 @@ namespace BluffinMuffin.Protocol.Enums
         /// NotAuthenticated
         /// </summary>
         NotAuthenticated,
+
+        /// <summary>
+        /// WrongLobbyType
+        /// </summary>
+        WrongLobbyType,
     }
 }
