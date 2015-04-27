@@ -55,7 +55,12 @@ All the supported rules are then sent back to the client.
       "type": "BluffinMuffin.Protocol.Enums.BluffinMessageId",
       "enum": [
         "None",
-        "SpecificServerMessage"
+        "SpecificServerMessage",
+        "WrongTableState",
+        "NameAlreadyUsed",
+        "UsernameAlreadyUsed",
+        "UsernameNotFound",
+        "InvalidPassword"
       ]
     },
     "Message": {
@@ -74,8 +79,8 @@ All the supported rules are then sent back to the client.
             "items": {
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
               "enum": [
-                "Antes",
                 "Blinds",
+                "Antes",
                 "None"
               ]
             }
@@ -86,8 +91,8 @@ All the supported rules are then sent back to the client.
             "items": {
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
               "enum": [
-                "FixedLimit",
                 "NoLimit",
+                "FixedLimit",
                 "PotLimit"
               ]
             }
@@ -111,8 +116,8 @@ All the supported rules are then sent back to the client.
             "description": "Default Blind Option",
             "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
             "enum": [
-              "Antes",
               "Blinds",
+              "Antes",
               "None"
             ]
           },
@@ -120,8 +125,8 @@ All the supported rules are then sent back to the client.
             "description": "Default Limit",
             "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
             "enum": [
-              "FixedLimit",
               "NoLimit",
+              "FixedLimit",
               "PotLimit"
             ]
           },

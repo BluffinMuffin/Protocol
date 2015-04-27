@@ -91,8 +91,8 @@ Sends all the information about the current state of the table, to put everybody
               "description": "The type of blinds used for the table",
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
               "enum": [
-                "Antes",
                 "Blinds",
+                "Antes",
                 "None"
               ]
             }
@@ -106,8 +106,8 @@ Sends all the information about the current state of the table, to put everybody
               "description": "The type of limit you want to apply on raises",
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
               "enum": [
-                "FixedLimit",
                 "NoLimit",
+                "FixedLimit",
                 "PotLimit"
               ]
             }
@@ -168,29 +168,29 @@ Sends all the information about the current state of the table, to put everybody
                     "Special": {
                       "type": "Com.Ericmas001.Games.GameCardSpecial",
                       "enum": [
+                        "None",
+                        "Null",
                         "Hidden",
                         "JokerColor",
-                        "JokerDark",
-                        "None",
-                        "Null"
+                        "JokerDark"
                       ]
                     },
                     "Value": {
                       "type": "Com.Ericmas001.Games.GameCardValue",
                       "enum": [
-                        "Ace",
-                        "Eight",
-                        "Five",
-                        "Four",
-                        "Jack",
-                        "King",
-                        "Nine",
-                        "Queen",
-                        "Seven",
-                        "Six",
-                        "Ten",
+                        "Two",
                         "Three",
-                        "Two"
+                        "Four",
+                        "Five",
+                        "Six",
+                        "Seven",
+                        "Eight",
+                        "Nine",
+                        "Ten",
+                        "Jack",
+                        "Queen",
+                        "King",
+                        "Ace"
                       ]
                     }
                   }
@@ -219,11 +219,11 @@ Sends all the information about the current state of the table, to put everybody
               "State": {
                 "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
                 "enum": [
-                  "AllIn",
+                  "Zombie",
                   "Joined",
-                  "Playing",
                   "SitIn",
-                  "Zombie"
+                  "AllIn",
+                  "Playing"
                 ]
               }
             }
@@ -234,10 +234,10 @@ Sends all the information about the current state of the table, to put everybody
             "items": {
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.SeatAttributeEnum",
               "enum": [
-                "BigBlind",
-                "CurrentPlayer",
                 "Dealer",
-                "SmallBlind"
+                "SmallBlind",
+                "BigBlind",
+                "CurrentPlayer"
               ]
             }
           }

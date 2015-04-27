@@ -54,7 +54,12 @@ The client is telling the server that he wants to sit out
       "type": "BluffinMuffin.Protocol.Enums.BluffinMessageId",
       "enum": [
         "None",
-        "SpecificServerMessage"
+        "SpecificServerMessage",
+        "WrongTableState",
+        "NameAlreadyUsed",
+        "UsernameAlreadyUsed",
+        "UsernameNotFound",
+        "InvalidPassword"
       ]
     },
     "Message": {

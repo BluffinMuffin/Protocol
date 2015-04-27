@@ -63,7 +63,12 @@ This command will try to authenticate the client against the user database on th
       "type": "BluffinMuffin.Protocol.Enums.BluffinMessageId",
       "enum": [
         "None",
-        "SpecificServerMessage"
+        "SpecificServerMessage",
+        "WrongTableState",
+        "NameAlreadyUsed",
+        "UsernameAlreadyUsed",
+        "UsernameNotFound",
+        "InvalidPassword"
       ]
     },
     "Message": {

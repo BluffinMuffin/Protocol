@@ -58,7 +58,12 @@ In the User Creation Process, it's useful to check if the username is already ta
       "type": "BluffinMuffin.Protocol.Enums.BluffinMessageId",
       "enum": [
         "None",
-        "SpecificServerMessage"
+        "SpecificServerMessage",
+        "WrongTableState",
+        "NameAlreadyUsed",
+        "UsernameAlreadyUsed",
+        "UsernameNotFound",
+        "InvalidPassword"
       ]
     },
     "Message": {

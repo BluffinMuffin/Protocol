@@ -36,11 +36,11 @@ This is used to inform a player of the cards he just got dealed, to inform other
       "description": "The state of the player.",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
       "enum": [
-        "AllIn",
+        "Zombie",
         "Joined",
-        "Playing",
         "SitIn",
-        "Zombie"
+        "AllIn",
+        "Playing"
       ]
     }
   }

@@ -245,7 +245,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
         {
             writer.WritePropertyName("enum");
             writer.WriteStartArray();
-            foreach(var it in Enum.GetNames(propertyType).OrderBy(x => x))
+            foreach(var it in Enum.GetNames(propertyType))
                 writer.WriteValue(it);
             writer.WriteEndArray();
         }

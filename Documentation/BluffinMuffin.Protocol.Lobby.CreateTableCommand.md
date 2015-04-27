@@ -90,8 +90,8 @@ More information on ...
               "description": "The type of blinds used for the table",
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
               "enum": [
-                "Antes",
                 "Blinds",
+                "Antes",
                 "None"
               ]
             }
@@ -105,8 +105,8 @@ More information on ...
               "description": "The type of limit you want to apply on raises",
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
               "enum": [
-                "FixedLimit",
                 "NoLimit",
+                "FixedLimit",
                 "PotLimit"
               ]
             }
@@ -186,7 +186,12 @@ More information on ...
       "type": "BluffinMuffin.Protocol.Enums.BluffinMessageId",
       "enum": [
         "None",
-        "SpecificServerMessage"
+        "SpecificServerMessage",
+        "WrongTableState",
+        "NameAlreadyUsed",
+        "UsernameAlreadyUsed",
+        "UsernameNotFound",
+        "InvalidPassword"
       ]
     },
     "Message": {
@@ -266,8 +271,8 @@ More information on ...
                   "description": "The type of blinds used for the table",
                   "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
                   "enum": [
-                    "Antes",
                     "Blinds",
+                    "Antes",
                     "None"
                   ]
                 }
@@ -281,8 +286,8 @@ More information on ...
                   "description": "The type of limit you want to apply on raises",
                   "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
                   "enum": [
-                    "FixedLimit",
                     "NoLimit",
+                    "FixedLimit",
                     "PotLimit"
                   ]
                 }

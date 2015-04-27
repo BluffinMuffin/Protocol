@@ -17,8 +17,8 @@ The type of blinds the table uses (none, blinds, antes)
       "description": "The type of blinds used for the table",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
       "enum": [
-        "Antes",
         "Blinds",
+        "Antes",
         "None"
       ]
     }
@@ -47,8 +47,8 @@ An ante is a forced bet in which all players put an equal amount of money or chi
       "description": "The type of blinds used for the table",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
       "enum": [
-        "Antes",
         "Blinds",
+        "Antes",
         "None"
       ]
     }
@@ -86,8 +86,8 @@ A blind bet or just blind is a forced bet placed into the pot by one or more pla
       "description": "The type of blinds used for the table",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
       "enum": [
-        "Antes",
         "Blinds",
+        "Antes",
         "None"
       ]
     }
@@ -123,8 +123,8 @@ With no blinds, the preflop round starts as avery other round, with no money on 
       "description": "The type of blinds used for the table",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
       "enum": [
-        "Antes",
         "Blinds",
+        "Antes",
         "None"
       ]
     }

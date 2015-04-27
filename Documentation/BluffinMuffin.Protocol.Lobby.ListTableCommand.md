@@ -70,7 +70,12 @@ The list of active tables will be sent back
       "type": "BluffinMuffin.Protocol.Enums.BluffinMessageId",
       "enum": [
         "None",
-        "SpecificServerMessage"
+        "SpecificServerMessage",
+        "WrongTableState",
+        "NameAlreadyUsed",
+        "UsernameAlreadyUsed",
+        "UsernameNotFound",
+        "InvalidPassword"
       ]
     },
     "Message": {
@@ -152,8 +157,8 @@ The list of active tables will be sent back
                     "description": "The type of blinds used for the table",
                     "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
                     "enum": [
-                      "Antes",
                       "Blinds",
+                      "Antes",
                       "None"
                     ]
                   }
@@ -167,8 +172,8 @@ The list of active tables will be sent back
                     "description": "The type of limit you want to apply on raises",
                     "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
                     "enum": [
-                      "FixedLimit",
                       "NoLimit",
+                      "FixedLimit",
                       "PotLimit"
                     ]
                   }
@@ -194,9 +199,9 @@ The list of active tables will be sent back
             "description": "The action available to you for this table (Nothing, Join, Leave)",
             "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyActionEnum",
             "enum": [
+              "None",
               "Join",
-              "Leave",
-              "None"
+              "Leave"
             ]
           }
         }

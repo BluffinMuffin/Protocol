@@ -49,29 +49,29 @@ Server informs clients that a seat has changed state. Usually sent when player s
                   "Special": {
                     "type": "Com.Ericmas001.Games.GameCardSpecial",
                     "enum": [
+                      "None",
+                      "Null",
                       "Hidden",
                       "JokerColor",
-                      "JokerDark",
-                      "None",
-                      "Null"
+                      "JokerDark"
                     ]
                   },
                   "Value": {
                     "type": "Com.Ericmas001.Games.GameCardValue",
                     "enum": [
-                      "Ace",
-                      "Eight",
-                      "Five",
-                      "Four",
-                      "Jack",
-                      "King",
-                      "Nine",
-                      "Queen",
-                      "Seven",
-                      "Six",
-                      "Ten",
+                      "Two",
                       "Three",
-                      "Two"
+                      "Four",
+                      "Five",
+                      "Six",
+                      "Seven",
+                      "Eight",
+                      "Nine",
+                      "Ten",
+                      "Jack",
+                      "Queen",
+                      "King",
+                      "Ace"
                     ]
                   }
                 }
@@ -100,11 +100,11 @@ Server informs clients that a seat has changed state. Usually sent when player s
             "State": {
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
               "enum": [
-                "AllIn",
+                "Zombie",
                 "Joined",
-                "Playing",
                 "SitIn",
-                "Zombie"
+                "AllIn",
+                "Playing"
               ]
             }
           }
@@ -115,10 +115,10 @@ Server informs clients that a seat has changed state. Usually sent when player s
           "items": {
             "type": "BluffinMuffin.Protocol.DataTypes.Enums.SeatAttributeEnum",
             "enum": [
-              "BigBlind",
-              "CurrentPlayer",
               "Dealer",
-              "SmallBlind"
+              "SmallBlind",
+              "BigBlind",
+              "CurrentPlayer"
             ]
           }
         }

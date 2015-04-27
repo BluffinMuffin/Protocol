@@ -27,13 +27,13 @@ Server informs all the clients that a player has taken action.
       "description": "The type of action that was taken by the player",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameActionEnum",
       "enum": [
-        "Call",
-        "DoNothing",
         "Fold",
-        "PostAnte",
-        "PostBigBlind",
+        "Call",
+        "Raise",
         "PostSmallBlind",
-        "Raise"
+        "PostBigBlind",
+        "PostAnte",
+        "DoNothing"
       ]
     },
     "PlayerBet": {
@@ -52,11 +52,11 @@ Server informs all the clients that a player has taken action.
       "description": "The current state of the player that just played",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
       "enum": [
-        "AllIn",
+        "Zombie",
         "Joined",
-        "Playing",
         "SitIn",
-        "Zombie"
+        "AllIn",
+        "Playing"
       ]
     },
     "TotalPot": {

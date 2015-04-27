@@ -30,10 +30,10 @@ This command is issued by the server when a betting round is ending. For example
       "description": "The round that is ending",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.RoundTypeEnum",
       "enum": [
-        "Flop",
         "Preflop",
-        "River",
-        "Turn"
+        "Flop",
+        "Turn",
+        "River"
       ]
     }
   }

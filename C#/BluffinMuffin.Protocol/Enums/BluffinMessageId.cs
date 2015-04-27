@@ -17,8 +17,33 @@ namespace BluffinMuffin.Protocol.Enums
         None,
 
         /// <summary>
-        /// 
+        /// SpecificServerMessage
         /// </summary>
         SpecificServerMessage,
+
+        /// <summary>
+        /// WrongTableState
+        /// </summary>
+        WrongTableState,
+
+        /// <summary>
+        /// NameAlreadyUsed
+        /// </summary>
+        NameAlreadyUsed,
+
+        /// <summary>
+        /// UsernameAlreadyUsed
+        /// </summary>
+        UsernameAlreadyUsed,
+
+        /// <summary>
+        /// UsernameNotFound
+        /// </summary>
+        UsernameNotFound,
+
+        /// <summary>
+        /// InvalidPassword
+        /// </summary>
+        InvalidPassword,
     }
 }
