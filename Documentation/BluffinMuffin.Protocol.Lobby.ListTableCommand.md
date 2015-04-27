@@ -77,7 +77,8 @@ The list of active tables will be sent back
         "UsernameNotFound",
         "InvalidPassword",
         "SeatChanged",
-        "NoMoreSeats"
+        "NoMoreSeats",
+        "NotAuthenticated"
       ]
     },
     "Message": {

@@ -65,7 +65,8 @@ In the User Creation Process, it's useful to check if the display name is alread
         "UsernameNotFound",
         "InvalidPassword",
         "SeatChanged",
-        "NoMoreSeats"
+        "NoMoreSeats",
+        "NotAuthenticated"
       ]
     },
     "Message": {

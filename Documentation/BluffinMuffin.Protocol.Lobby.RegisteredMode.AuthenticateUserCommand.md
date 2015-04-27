@@ -70,7 +70,8 @@ This command will try to authenticate the client against the user database on th
         "UsernameNotFound",
         "InvalidPassword",
         "SeatChanged",
-        "NoMoreSeats"
+        "NoMoreSeats",
+        "NotAuthenticated"
       ]
     },
     "Message": {

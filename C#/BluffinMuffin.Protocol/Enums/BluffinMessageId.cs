@@ -55,5 +55,10 @@ namespace BluffinMuffin.Protocol.Enums
         /// NoMoreSeats
         /// </summary>
         NoMoreSeats,
+
+        /// <summary>
+        /// NotAuthenticated
+        /// </summary>
+        NotAuthenticated,
     }
 }

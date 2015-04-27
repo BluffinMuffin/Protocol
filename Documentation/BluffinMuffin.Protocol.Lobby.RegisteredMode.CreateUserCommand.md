@@ -80,7 +80,8 @@ This commands will create a new user in the database.
         "UsernameNotFound",
         "InvalidPassword",
         "SeatChanged",
-        "NoMoreSeats"
+        "NoMoreSeats",
+        "NotAuthenticated"
       ]
     },
     "Message": {

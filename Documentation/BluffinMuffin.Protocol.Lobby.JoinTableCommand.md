@@ -67,7 +67,8 @@ The success of the operation will be sent back
         "UsernameNotFound",
         "InvalidPassword",
         "SeatChanged",
-        "NoMoreSeats"
+        "NoMoreSeats",
+        "NotAuthenticated"
       ]
     },
     "Message": {
