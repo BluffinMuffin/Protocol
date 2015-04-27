@@ -15,6 +15,10 @@ Server informs clients that a seat has changed state. Usually sent when player s
       "description": "Always contains 'SeatUpdatedCommand' to distinguish the command from others.",
       "type": "string"
     },
+    "TableId": {
+      "description": "The id of the table where this command needs to go",
+      "type": "int"
+    },
     "Seat": {
       "description": "The seat that has changed state",
       "type": "BluffinMuffin.Protocol.DataTypes.SeatInfo",
@@ -119,10 +123,6 @@ Server informs clients that a seat has changed state. Usually sent when player s
           }
         }
       }
-    },
-    "TableId": {
-      "description": "The id of the table where this command needs to go",
-      "type": "int"
     }
   }
 }
@@ -133,6 +133,7 @@ Server informs clients that a seat has changed state. Usually sent when player s
 ```json
 {
   "CommandName": "SeatUpdatedCommand",
+  "TableId": 42,
   "Seat": {
     "NoSeat": 7,
     "Player": {
@@ -159,8 +160,7 @@ Server informs clients that a seat has changed state. Usually sent when player s
       "BigBlind",
       "CurrentPlayer"
     ]
-  },
-  "TableId": 42
+  }
 }
 ```
 

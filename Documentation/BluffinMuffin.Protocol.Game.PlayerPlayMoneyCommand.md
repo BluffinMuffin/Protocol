@@ -15,12 +15,12 @@ The client is telling the server that he plays some money.
       "description": "Always contains 'PlayerPlayMoneyCommand' to distinguish the command from others.",
       "type": "string"
     },
-    "Played": {
-      "description": "Amount of money played",
-      "type": "int"
-    },
     "TableId": {
       "description": "The id of the table where this command needs to go",
+      "type": "int"
+    },
+    "Played": {
+      "description": "Amount of money played",
       "type": "int"
     }
   }
@@ -32,8 +32,8 @@ The client is telling the server that he plays some money.
 ```json
 {
   "CommandName": "PlayerPlayMoneyCommand",
-  "Played": 42,
-  "TableId": 42
+  "TableId": 42,
+  "Played": 42
 }
 ```
 

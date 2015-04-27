@@ -8,6 +8,9 @@ namespace BluffinMuffin.Protocol.DataTypes
     /// </summary>
     public class LobbyOptionsRegisteredMode : LobbyOptions
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public override LobbyTypeEnum OptionType
         {
             get { return LobbyTypeEnum.RegisteredMode; }

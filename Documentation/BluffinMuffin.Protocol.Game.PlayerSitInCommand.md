@@ -15,16 +15,16 @@ The client is telling the server that he wants to sit at a specific seat
       "description": "Always contains 'PlayerSitInCommand' to distinguish the command from others.",
       "type": "string"
     },
+    "TableId": {
+      "description": "The id of the table where this command needs to go",
+      "type": "int"
+    },
     "MoneyAmount": {
       "description": "The amount of money the player will be playing with.",
       "type": "int"
     },
     "NoSeat": {
       "description": "The seat where the player wants to sit.",
-      "type": "int"
-    },
-    "TableId": {
-      "description": "The id of the table where this command needs to go",
       "type": "int"
     }
   }
@@ -36,9 +36,9 @@ The client is telling the server that he wants to sit at a specific seat
 ```json
 {
   "CommandName": "PlayerSitInCommand",
+  "TableId": 42,
   "NoSeat": 7,
-  "MoneyAmount": 4200,
-  "TableId": 42
+  "MoneyAmount": 4200
 }
 ```
 
@@ -71,16 +71,16 @@ The client is telling the server that he wants to sit at a specific seat
           "description": "Always contains 'PlayerSitInCommand' to distinguish the command from others.",
           "type": "string"
         },
+        "TableId": {
+          "description": "The id of the table where this command needs to go",
+          "type": "int"
+        },
         "MoneyAmount": {
           "description": "The amount of money the player will be playing with.",
           "type": "int"
         },
         "NoSeat": {
           "description": "The seat where the player wants to sit.",
-          "type": "int"
-        },
-        "TableId": {
-          "description": "The id of the table where this command needs to go",
           "type": "int"
         }
       }
@@ -98,9 +98,9 @@ The client is telling the server that he wants to sit at a specific seat
   "TableId": 42,
   "Command": {
     "CommandName": "PlayerSitInCommand",
+    "TableId": 42,
     "NoSeat": 7,
-    "MoneyAmount": 4200,
-    "TableId": 42
+    "MoneyAmount": 4200
   }
 }
 ```

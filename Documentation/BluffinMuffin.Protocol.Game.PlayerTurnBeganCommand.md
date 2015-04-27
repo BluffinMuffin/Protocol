@@ -15,16 +15,16 @@ The server sends this command to indicated that it's time for a specific player 
       "description": "Always contains 'PlayerTurnBeganCommand' to distinguish the command from others.",
       "type": "string"
     },
+    "TableId": {
+      "description": "The id of the table where this command needs to go",
+      "type": "int"
+    },
     "MinimumRaise": {
       "description": "The minimum amount needed to raise. A raise must be at least the size of the largest previous bet or raise of the current betting round.",
       "type": "int"
     },
     "PlayerPos": {
       "description": "The position on the table where is sitting the player that needs to play",
-      "type": "int"
-    },
-    "TableId": {
-      "description": "The id of the table where this command needs to go",
       "type": "int"
     }
   }
@@ -36,9 +36,9 @@ The server sends this command to indicated that it's time for a specific player 
 ```json
 {
   "CommandName": "PlayerTurnBeganCommand",
+  "TableId": 42,
   "PlayerPos": 7,
-  "MinimumRaise": 6,
-  "TableId": 42
+  "MinimumRaise": 6
 }
 ```
 

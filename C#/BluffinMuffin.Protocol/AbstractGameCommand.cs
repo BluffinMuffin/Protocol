@@ -1,4 +1,5 @@
 ﻿using Com.Ericmas001.Net.Protocol;
+using Newtonsoft.Json;
 
 namespace BluffinMuffin.Protocol
 {
@@ -19,6 +20,7 @@ namespace BluffinMuffin.Protocol
         /// The id of the table where this command needs to go
         /// </summary>
         [ExampleValue(42)]
+        [JsonProperty(Order = -42)]
         public int TableId { get; set; }
     }
 }

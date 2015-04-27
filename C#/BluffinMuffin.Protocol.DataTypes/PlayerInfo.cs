@@ -211,6 +211,10 @@ namespace BluffinMuffin.Protocol.DataTypes
             get { return NoSeat >= 0 && MoneySafeAmnt > 0; }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return Name;

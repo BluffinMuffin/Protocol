@@ -15,13 +15,13 @@ This command is there to inform players that someone just joined the table. This
       "description": "Always contains 'PlayerJoinedCommand' to distinguish the command from others.",
       "type": "string"
     },
-    "PlayerName": {
-      "description": "The name of the player that just joined the table.",
-      "type": "string"
-    },
     "TableId": {
       "description": "The id of the table where this command needs to go",
       "type": "int"
+    },
+    "PlayerName": {
+      "description": "The name of the player that just joined the table.",
+      "type": "string"
     }
   }
 }
@@ -32,8 +32,8 @@ This command is there to inform players that someone just joined the table. This
 ```json
 {
   "CommandName": "PlayerJoinedCommand",
-  "PlayerName": null,
-  "TableId": 42
+  "TableId": 42,
+  "PlayerName": null
 }
 ```
 

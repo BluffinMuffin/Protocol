@@ -15,6 +15,10 @@ Server informs all the clients that a player has taken action.
       "description": "Always contains 'PlayerTurnEndedCommand' to distinguish the command from others.",
       "type": "string"
     },
+    "TableId": {
+      "description": "The id of the table where this command needs to go",
+      "type": "int"
+    },
     "ActionAmount": {
       "description": "The amount of money that the player has put for this single action",
       "type": "int"
@@ -55,10 +59,6 @@ Server informs all the clients that a player has taken action.
         "Zombie"
       ]
     },
-    "TableId": {
-      "description": "The id of the table where this command needs to go",
-      "type": "int"
-    },
     "TotalPot": {
       "description": "The total amount of money currently played in this game. This include the money in the center, and the money played in front of each player.",
       "type": "int"
@@ -72,14 +72,14 @@ Server informs all the clients that a player has taken action.
 ```json
 {
   "CommandName": "PlayerTurnEndedCommand",
+  "TableId": 42,
   "PlayerPos": 7,
   "PlayerBet": 420,
   "PlayerMoney": 4200,
   "TotalPot": 42000,
   "ActionType": "Call",
   "ActionAmount": 42,
-  "State": "Playing",
-  "TableId": 42
+  "State": "Playing"
 }
 ```
 

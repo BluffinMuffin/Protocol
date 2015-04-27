@@ -15,6 +15,10 @@ Sends all the information about the current state of the table, to put everybody
       "description": "Always contains 'TableInfoCommand' to distinguish the command from others.",
       "type": "string"
     },
+    "TableId": {
+      "description": "The id of the table where this command needs to go",
+      "type": "int"
+    },
     "BoardCardIDs": {
       "description": "All the card ids currently visible on the board (Preflop: empty, flop: 3 cars, turn: 4 cards, river: 5 cards)",
       "type": "array",
@@ -240,10 +244,6 @@ Sends all the information about the current state of the table, to put everybody
         }
       }
     },
-    "TableId": {
-      "description": "The id of the table where this command needs to go",
-      "type": "int"
-    },
     "TotalPotAmount": {
       "description": "The total amount of money currently played in this game. This include the money in the center, and the money played in front of each player.",
       "type": "int"
@@ -257,6 +257,7 @@ Sends all the information about the current state of the table, to put everybody
 ```json
 {
   "CommandName": "TableInfoCommand",
+  "TableId": 42,
   "Params": {
     "TableName": "Bikini Bottom",
     "GameType": "Holdem",
@@ -292,8 +293,7 @@ Sends all the information about the current state of the table, to put everybody
     7
   ],
   "Seats": null,
-  "GameHasStarted": true,
-  "TableId": 42
+  "GameHasStarted": true
 }
 ```
 

@@ -15,6 +15,10 @@ This command is issued by the server when a betting round is ending. For example
       "description": "Always contains 'BetTurnStartedCommand' to distinguish the command from others.",
       "type": "string"
     },
+    "TableId": {
+      "description": "The id of the table where this command needs to go",
+      "type": "int"
+    },
     "CardsId": {
       "description": "All the card ids currently visible on the board (Preflop: empty, flop: 3 cars, turn: 4 cards, river: 5 cards)",
       "type": "array",
@@ -31,10 +35,6 @@ This command is issued by the server when a betting round is ending. For example
         "River",
         "Turn"
       ]
-    },
-    "TableId": {
-      "description": "The id of the table where this command needs to go",
-      "type": "int"
     }
   }
 }
@@ -45,13 +45,13 @@ This command is issued by the server when a betting round is ending. For example
 ```json
 {
   "CommandName": "BetTurnStartedCommand",
+  "TableId": 42,
   "Round": "Flop",
   "CardsId": [
     21,
     42,
     7
-  ],
-  "TableId": 42
+  ]
 }
 ```
 

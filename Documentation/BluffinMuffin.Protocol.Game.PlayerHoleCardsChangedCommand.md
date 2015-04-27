@@ -17,6 +17,10 @@ This is used to inform a player of the cards he just got dealed, to inform other
       "description": "Always contains 'PlayerHoleCardsChangedCommand' to distinguish the command from others.",
       "type": "string"
     },
+    "TableId": {
+      "description": "The id of the table where this command needs to go",
+      "type": "int"
+    },
     "CardsId": {
       "description": "The cards currently in the hands of the player",
       "type": "array",
@@ -38,10 +42,6 @@ This is used to inform a player of the cards he just got dealed, to inform other
         "SitIn",
         "Zombie"
       ]
-    },
-    "TableId": {
-      "description": "The id of the table where this command needs to go",
-      "type": "int"
     }
   }
 }
@@ -52,13 +52,13 @@ This is used to inform a player of the cards he just got dealed, to inform other
 ```json
 {
   "CommandName": "PlayerHoleCardsChangedCommand",
+  "TableId": 42,
   "PlayerPos": 7,
   "CardsId": [
     21,
     42
   ],
-  "State": "Playing",
-  "TableId": 42
+  "State": "Playing"
 }
 ```
 
