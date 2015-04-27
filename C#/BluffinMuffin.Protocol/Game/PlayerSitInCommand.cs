@@ -1,4 +1,5 @@
-﻿using Com.Ericmas001.Net.Protocol;
+﻿using BluffinMuffin.Protocol.Enums;
+using Com.Ericmas001.Net.Protocol;
 
 namespace BluffinMuffin.Protocol.Game
 {
@@ -22,11 +23,10 @@ namespace BluffinMuffin.Protocol.Game
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="noSeat"></param>
         /// <returns></returns>
-        public PlayerSitInResponse Response(int noSeat)
+        public PlayerSitInResponse Response(bool success, BluffinMessageId msgId, string message)
         {
-            return new PlayerSitInResponse(this) { NoSeat = noSeat };
+            return new PlayerSitInResponse(this) { Success = success, MessageId = msgId, Message = message };
         }
     }
 }

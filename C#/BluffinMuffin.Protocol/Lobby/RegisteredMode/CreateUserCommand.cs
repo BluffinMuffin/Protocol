@@ -1,4 +1,5 @@
-﻿using Com.Ericmas001.Net.Protocol;
+﻿using BluffinMuffin.Protocol.Enums;
+using Com.Ericmas001.Net.Protocol;
 
 namespace BluffinMuffin.Protocol.Lobby.RegisteredMode
 {
@@ -31,11 +32,10 @@ namespace BluffinMuffin.Protocol.Lobby.RegisteredMode
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="success"></param>
         /// <returns></returns>
-        public CreateUserResponse Response(bool success)
+        public CreateUserResponse Response(bool success, BluffinMessageId msgId, string message)
         {
-            return new CreateUserResponse(this) { Success = success };
+            return new CreateUserResponse(this) { Success = success, MessageId = msgId, Message = message };
         }
     }
 }

@@ -15,7 +15,9 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static SupportedRulesResponse SupportedRulesResponse()
         {
-            return SupportedRulesCommand().Response(RuleInfoMock.GetAllRules());
+            var response = SupportedRulesCommand().ResponseSuccess();
+            response.Rules = RuleInfoMock.GetAllRules().ToList();
+            return response;
         }
 
         public static ListTableCommand ListTableCommand()
@@ -25,7 +27,9 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static ListTableResponse ListTableResponse()
         {
-            return ListTableCommand().Response(TupleTableMock.AllTables().ToList());
+            var response = ListTableCommand().ResponseSuccess();
+            response.Tables = TupleTableMock.AllTables().ToList();
+            return response;
         }
 
         public static JoinTableCommand JoinTableCommand()
@@ -35,7 +39,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static JoinTableResponse JoinTableResponse()
         {
-            return JoinTableCommand().Response(true);
+            return JoinTableCommand().ResponseSuccess();
         }
 
         public static CreateTableCommand CreateTableCommand()
@@ -45,7 +49,9 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static CreateTableResponse CreateTableResponse()
         {
-            return CreateTableCommand().Response(42);
+            var response = CreateTableCommand().ResponseSuccess();
+            response.IdTable = 42;
+            return response;
         }
         public static IdentifyCommand IdentifyCommand()
         {
@@ -54,7 +60,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static IdentifyResponse IdentifyResponse()
         {
-            return IdentifyCommand().Response(true);
+            return IdentifyCommand().ResponseSuccess();
         }
         public static AuthenticateUserCommand AuthenticateUserCommand()
         {
@@ -63,7 +69,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static AuthenticateUserResponse AuthenticateUserResponse()
         {
-            return AuthenticateUserCommand().Response(true);
+            return AuthenticateUserCommand().ResponseSuccess();
         }
         public static CheckDisplayExistCommand CheckDisplayExistCommand()
         {
@@ -71,7 +77,9 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
         }
         public static CheckDisplayExistResponse CheckDisplayExistResponse()
         {
-            return CheckDisplayExistCommand().Response(true);
+            var response = CheckDisplayExistCommand().ResponseSuccess();
+            response.Exist = true;
+            return response;
         }
         public static CheckUserExistCommand CheckUserExistCommand()
         {
@@ -79,7 +87,9 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
         }
         public static CheckUserExistResponse CheckUserExistResponse()
         {
-            return CheckUserExistCommand().Response(true);
+            var response = CheckUserExistCommand().ResponseSuccess();
+            response.Exist = true;
+            return response;
         }
         public static CreateUserCommand CreateUserCommand()
         {
@@ -87,7 +97,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
         }
         public static CreateUserResponse CreateUserResponse()
         {
-            return CreateUserCommand().Response(true);
+            return CreateUserCommand().ResponseSuccess();
         }
         public static GetUserCommand GetUserCommand()
         {
@@ -95,7 +105,11 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
         }
         public static GetUserResponse GetUserResponse()
         {
-            return GetUserCommand().Response("Bikini@Bottom.com", "SquarePants", 42);
+            var response = GetUserCommand().ResponseSuccess();
+            response.Email = "Bikini@Bottom.com";
+            response.DisplayName = "SquarePants";
+            response.Money = 42;
+            return response;
         }
     }
 }

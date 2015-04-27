@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using BluffinMuffin.Protocol.DataTypes;
 using BluffinMuffin.Protocol.DataTypes.Enums;
+using BluffinMuffin.Protocol.Enums;
 using Com.Ericmas001.Net.Protocol;
 
 namespace BluffinMuffin.Protocol.Lobby
@@ -20,11 +21,10 @@ namespace BluffinMuffin.Protocol.Lobby
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="tables"></param>
         /// <returns></returns>
-        public ListTableResponse Response(List<TupleTable> tables)
+        public ListTableResponse Response(bool success, BluffinMessageId msgId, string message)
         {
-            return new ListTableResponse(this) { Tables = tables };
+            return new ListTableResponse(this) { Success = success, MessageId = msgId, Message = message };
         }
     }
 }

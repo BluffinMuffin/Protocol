@@ -1,4 +1,5 @@
-﻿using Com.Ericmas001.Net.Protocol;
+﻿using BluffinMuffin.Protocol.Enums;
+using Com.Ericmas001.Net.Protocol;
 
 namespace BluffinMuffin.Protocol.Lobby.QuickMode
 {
@@ -16,11 +17,10 @@ namespace BluffinMuffin.Protocol.Lobby.QuickMode
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="success"></param>
         /// <returns></returns>
-        public IdentifyResponse Response(bool success)
+        public IdentifyResponse Response(bool success, BluffinMessageId msgId, string message)
         {
-            return new IdentifyResponse(this) { Success = success };
+            return new IdentifyResponse(this) { Success = success, MessageId = msgId, Message = message };
         }
     }
 }

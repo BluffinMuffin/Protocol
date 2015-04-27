@@ -1,4 +1,5 @@
-﻿using Com.Ericmas001.Net.Protocol;
+﻿using BluffinMuffin.Protocol.Enums;
+using Com.Ericmas001.Net.Protocol;
 
 namespace BluffinMuffin.Protocol.Lobby
 {
@@ -17,11 +18,10 @@ namespace BluffinMuffin.Protocol.Lobby
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="success"></param>
         /// <returns></returns>
-        public JoinTableResponse Response(bool success)
+        public JoinTableResponse Response(bool success, BluffinMessageId msgId, string message)
         {
-            return new JoinTableResponse(this) { Success = success };
+            return new JoinTableResponse(this) { Success = success, MessageId = msgId, Message = message };
         }
     }
 }

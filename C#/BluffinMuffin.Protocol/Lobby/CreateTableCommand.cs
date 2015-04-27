@@ -1,4 +1,5 @@
 ﻿using BluffinMuffin.Protocol.DataTypes;
+using BluffinMuffin.Protocol.Enums;
 
 namespace BluffinMuffin.Protocol.Lobby
 {
@@ -20,11 +21,10 @@ namespace BluffinMuffin.Protocol.Lobby
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="id"></param>
         /// <returns></returns>
-        public CreateTableResponse Response(int id)
+        public CreateTableResponse Response(bool success, BluffinMessageId msgId, string message)
         {
-            return new CreateTableResponse(this) { IdTable = id };
+            return new CreateTableResponse(this) { Success = success, MessageId = msgId, Message = message };
         }
     }
 }

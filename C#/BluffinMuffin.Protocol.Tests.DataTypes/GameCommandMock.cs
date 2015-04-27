@@ -48,7 +48,9 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static PlayerSitInResponse PlayerSitInResponse()
         {
-            return PlayerSitInCommand().Response(7);
+            var response = PlayerSitInCommand().ResponseSuccess();
+            response.NoSeat = 7;
+            return response;
         }
 
         public static PlayerSitOutCommand PlayerSitOutCommand()
@@ -58,7 +60,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static PlayerSitOutResponse PlayerSitOutResponse()
         {
-            return PlayerSitOutCommand().Response(true);
+            return PlayerSitOutCommand().ResponseSuccess();
         }
 
         public static PlayerTurnBeganCommand PlayerTurnBeganCommand()

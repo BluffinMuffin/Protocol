@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using BluffinMuffin.Protocol.DataTypes;
+using BluffinMuffin.Protocol.Enums;
 
 namespace BluffinMuffin.Protocol.Lobby
 {
@@ -13,11 +14,10 @@ namespace BluffinMuffin.Protocol.Lobby
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="rules"></param>
         /// <returns></returns>
-        public SupportedRulesResponse Response(IEnumerable<RuleInfo> rules)
+        public SupportedRulesResponse Response(bool success, BluffinMessageId msgId, string message)
         {
-            return new SupportedRulesResponse(this) { Rules = rules.ToList() };
+            return new SupportedRulesResponse(this) { Success = success, MessageId = msgId, Message = message };
         }
     }
 }
