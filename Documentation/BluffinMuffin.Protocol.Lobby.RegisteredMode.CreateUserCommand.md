@@ -65,8 +65,20 @@ This commands will create a new user in the database.
       "type": "string"
     },
     "Success": {
-      "description": "true if the user was created successfully",
+      "description": "True if the command was a success",
       "type": "bool"
+    },
+    "MessageId": {
+      "description": "The Id of the message. None if no message",
+      "type": "BluffinMuffin.Protocol.Enums.BluffinMessageId",
+      "enum": [
+        "None",
+        "SpecificServerMessage"
+      ]
+    },
+    "Message": {
+      "description": "The message. Empty if no messages",
+      "type": "string"
     },
     "Command": {
       "description": "The command who initiated this response",
@@ -104,6 +116,8 @@ This commands will create a new user in the database.
 {
   "CommandName": "CreateUserResponse",
   "Success": true,
+  "MessageId": "None",
+  "Message": "",
   "Command": {
     "CommandName": "CreateUserCommand",
     "Username": "ericmas001",

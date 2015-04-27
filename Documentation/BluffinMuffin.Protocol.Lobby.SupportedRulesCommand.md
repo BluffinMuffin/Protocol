@@ -46,6 +46,22 @@ All the supported rules are then sent back to the client.
       "description": "Always contains 'SupportedRulesResponse' to distinguish the command from others.",
       "type": "string"
     },
+    "Success": {
+      "description": "True if the command was a success",
+      "type": "bool"
+    },
+    "MessageId": {
+      "description": "The Id of the message. None if no message",
+      "type": "BluffinMuffin.Protocol.Enums.BluffinMessageId",
+      "enum": [
+        "None",
+        "SpecificServerMessage"
+      ]
+    },
+    "Message": {
+      "description": "The message. Empty if no messages",
+      "type": "string"
+    },
     "Rules": {
       "description": "All the rules supported by the server",
       "type": "array",
@@ -150,6 +166,9 @@ All the supported rules are then sent back to the client.
 ```json
 {
   "CommandName": "SupportedRulesResponse",
+  "Success": true,
+  "MessageId": "None",
+  "Message": "",
   "Rules": [
     {
       "GameType": "Holdem",

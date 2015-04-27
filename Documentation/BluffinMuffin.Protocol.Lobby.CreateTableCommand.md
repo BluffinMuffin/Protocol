@@ -177,6 +177,22 @@ More information on ...
       "description": "Always contains 'CreateTableResponse' to distinguish the command from others.",
       "type": "string"
     },
+    "Success": {
+      "description": "True if the command was a success",
+      "type": "bool"
+    },
+    "MessageId": {
+      "description": "The Id of the message. None if no message",
+      "type": "BluffinMuffin.Protocol.Enums.BluffinMessageId",
+      "enum": [
+        "None",
+        "SpecificServerMessage"
+      ]
+    },
+    "Message": {
+      "description": "The message. Empty if no messages",
+      "type": "string"
+    },
     "IdTable": {
       "description": "The id of the table that was created",
       "type": "int"
@@ -299,6 +315,9 @@ More information on ...
 ```json
 {
   "CommandName": "CreateTableResponse",
+  "Success": true,
+  "MessageId": "None",
+  "Message": "",
   "IdTable": 42,
   "Command": {
     "CommandName": "CreateTableCommand",

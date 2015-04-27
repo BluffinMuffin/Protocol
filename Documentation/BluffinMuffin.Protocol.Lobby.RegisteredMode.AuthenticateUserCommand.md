@@ -55,8 +55,20 @@ This command will try to authenticate the client against the user database on th
       "type": "string"
     },
     "Success": {
-      "description": "true if the username existed and the password was correct",
+      "description": "True if the command was a success",
       "type": "bool"
+    },
+    "MessageId": {
+      "description": "The Id of the message. None if no message",
+      "type": "BluffinMuffin.Protocol.Enums.BluffinMessageId",
+      "enum": [
+        "None",
+        "SpecificServerMessage"
+      ]
+    },
+    "Message": {
+      "description": "The message. Empty if no messages",
+      "type": "string"
     },
     "Command": {
       "description": "The command who initiated this response",
@@ -86,6 +98,8 @@ This command will try to authenticate the client against the user database on th
 {
   "CommandName": "AuthenticateUserResponse",
   "Success": true,
+  "MessageId": "None",
+  "Message": "",
   "Command": {
     "CommandName": "AuthenticateUserCommand",
     "Username": "ericmas001",

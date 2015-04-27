@@ -55,6 +55,22 @@ The client is telling the server that he wants to sit at a specific seat
       "description": "Always contains 'PlayerSitInResponse' to distinguish the command from others.",
       "type": "string"
     },
+    "Success": {
+      "description": "True if the command was a success",
+      "type": "bool"
+    },
+    "MessageId": {
+      "description": "The Id of the message. None if no message",
+      "type": "BluffinMuffin.Protocol.Enums.BluffinMessageId",
+      "enum": [
+        "None",
+        "SpecificServerMessage"
+      ]
+    },
+    "Message": {
+      "description": "The message. Empty if no messages",
+      "type": "string"
+    },
     "NoSeat": {
       "description": "The Seat number where the player will sit. It could be different from the one asked if the seat was not available. Wil have -1 if the player is not sitting anywhere.",
       "type": "int"
@@ -94,6 +110,9 @@ The client is telling the server that he wants to sit at a specific seat
 ```json
 {
   "CommandName": "PlayerSitInResponse",
+  "Success": true,
+  "MessageId": "None",
+  "Message": "",
   "NoSeat": 7,
   "TableId": 42,
   "Command": {

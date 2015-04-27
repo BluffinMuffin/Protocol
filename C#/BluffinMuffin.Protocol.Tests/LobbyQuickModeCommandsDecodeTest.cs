@@ -22,7 +22,7 @@ namespace BluffinMuffin.Protocol.Tests
         {
             var c = LobbyCommandMock.IdentifyResponse();
             var dc = EncodeDecodeHelper.GetDecodedCommand(c);
-            Assert.AreEqual(c.Ok, dc.Ok);
+            Assert.AreEqual(c.Success, dc.Success);
             CompareIdentifyCommand(c.Command, dc.Command);
         }
 

@@ -1,4 +1,6 @@
-﻿namespace BluffinMuffin.Protocol
+﻿using BluffinMuffin.Protocol.Enums;
+
+namespace BluffinMuffin.Protocol
 {
     /// <summary>
     /// This command is sent to inform the other end of the Tcp Connection that the communication should end

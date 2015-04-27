@@ -20,7 +20,7 @@ namespace BluffinMuffin.Protocol.Lobby.QuickMode
         /// <returns></returns>
         public IdentifyResponse Response(bool success)
         {
-            return new IdentifyResponse(this) { Ok = success };
+            return new IdentifyResponse(this) { Success = success };
         }
     }
 }

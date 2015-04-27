@@ -46,8 +46,20 @@ The client is telling the server that he wants to sit out
       "type": "string"
     },
     "Success": {
-      "description": "The success of the sit out. Usually false if the player was not sitting at the table",
+      "description": "True if the command was a success",
       "type": "bool"
+    },
+    "MessageId": {
+      "description": "The Id of the message. None if no message",
+      "type": "BluffinMuffin.Protocol.Enums.BluffinMessageId",
+      "enum": [
+        "None",
+        "SpecificServerMessage"
+      ]
+    },
+    "Message": {
+      "description": "The message. Empty if no messages",
+      "type": "string"
     },
     "TableId": {
       "description": "The id of the table where this command needs to go",
@@ -77,6 +89,8 @@ The client is telling the server that he wants to sit out
 {
   "CommandName": "PlayerSitOutResponse",
   "Success": true,
+  "MessageId": "None",
+  "Message": "",
   "TableId": 42,
   "Command": {
     "CommandName": "PlayerSitOutCommand",

@@ -8,12 +8,6 @@ namespace BluffinMuffin.Protocol.Game
     public class PlayerSitOutResponse : AbstractBluffinReponse<PlayerSitOutCommand>,IGameCommand
     {
         /// <summary>
-        /// The success of the sit out. Usually false if the player was not sitting at the table
-        /// </summary>
-        [ExampleValue(true)]
-        public bool Success { get; set; }
-        
-        /// <summary>
         /// 
         /// </summary>
         /// <param name="command"></param>

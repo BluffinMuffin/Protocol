@@ -1,4 +1,6 @@
-﻿namespace BluffinMuffin.Protocol
+﻿using BluffinMuffin.Protocol.Enums;
+
+namespace BluffinMuffin.Protocol
 {
     /// <summary>
     /// 

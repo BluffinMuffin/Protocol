@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using BluffinMuffin.Protocol.Enums;
+using Com.Ericmas001.Net.Protocol;
+using Newtonsoft.Json;
 
 namespace BluffinMuffin.Protocol
 {
@@ -9,6 +11,25 @@ namespace BluffinMuffin.Protocol
     public abstract class AbstractBluffinReponse<T> : AbstractBluffinCommand, IResponse
         where T : AbstractBluffinCommand
     {
+        /// <summary>
+        /// True if the command was a success
+        /// </summary>
+        [ExampleValue(true)]
+        [JsonProperty(Order = -21)]
+        public bool Success { get; set; }
+        /// <summary>
+        /// The Id of the message. None if no message
+        /// </summary>
+        [ExampleValue(BluffinMessageId.None)]
+        [JsonProperty(Order = -20)]
+        public BluffinMessageId MessageId { get; set; }
+        /// <summary>
+        /// The message. Empty if no messages
+        /// </summary>
+        [ExampleValue("")]
+        [JsonProperty(Order = -19)]
+        public string Message { get; set; }
+
         /// <summary>
         /// The command who initiated this response
         /// </summary>

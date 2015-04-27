@@ -1,4 +1,5 @@
-﻿using Com.Ericmas001.Net.Protocol;
+﻿using BluffinMuffin.Protocol.Enums;
+using Com.Ericmas001.Net.Protocol;
 using Newtonsoft.Json;
 
 namespace BluffinMuffin.Protocol

@@ -8,12 +8,6 @@ namespace BluffinMuffin.Protocol.Lobby.RegisteredMode
     public class CreateUserResponse : AbstractBluffinReponse<CreateUserCommand>
     {
         /// <summary>
-        /// true if the user was created successfully
-        /// </summary>
-        [ExampleValue(true)]
-        public bool Success { get; set; }
-
-        /// <summary>
         /// 
         /// </summary>
         /// <param name="command"></param>

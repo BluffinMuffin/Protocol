@@ -52,8 +52,20 @@ The success of the operation will be sent back
       "type": "string"
     },
     "Success": {
-      "description": "true if the player has joined the table on the server",
+      "description": "True if the command was a success",
       "type": "bool"
+    },
+    "MessageId": {
+      "description": "The Id of the message. None if no message",
+      "type": "BluffinMuffin.Protocol.Enums.BluffinMessageId",
+      "enum": [
+        "None",
+        "SpecificServerMessage"
+      ]
+    },
+    "Message": {
+      "description": "The message. Empty if no messages",
+      "type": "string"
     },
     "Command": {
       "description": "The command who initiated this response",
@@ -78,7 +90,9 @@ The success of the operation will be sent back
 ```json
 {
   "CommandName": "JoinTableResponse",
-  "Success": false,
+  "Success": true,
+  "MessageId": "None",
+  "Message": "",
   "Command": {
     "CommandName": "JoinTableCommand",
     "TableId": 42

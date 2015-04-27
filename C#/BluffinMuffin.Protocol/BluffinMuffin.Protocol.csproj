@@ -52,8 +52,9 @@
     <Compile Include="AbstractBluffinReponse.cs" />
     <Compile Include="AbstractGameCommand.cs" />
     <Compile Include="AbstractLobbyCommand.cs" />
-    <Compile Include="BluffinCommandEnum.cs" />
+    <Compile Include="Enums\BluffinCommandEnum.cs" />
     <Compile Include="DisconnectCommand.cs" />
+    <Compile Include="Enums\BluffinMessageId.cs" />
     <Compile Include="Game\BetTurnEndedCommand.cs" />
     <Compile Include="Game\BetTurnStartedCommand.cs" />
     <Compile Include="Game\GameEndedCommand.cs" />

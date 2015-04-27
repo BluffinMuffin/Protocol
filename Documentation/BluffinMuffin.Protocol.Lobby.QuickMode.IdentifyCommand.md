@@ -49,9 +49,21 @@ In Quick mode, you must **identify** yourself. This action puts a unique name to
       "description": "Always contains 'IdentifyResponse' to distinguish the command from others.",
       "type": "string"
     },
-    "Ok": {
-      "description": "Indicates if the identification was successful",
+    "Success": {
+      "description": "True if the command was a success",
       "type": "bool"
+    },
+    "MessageId": {
+      "description": "The Id of the message. None if no message",
+      "type": "BluffinMuffin.Protocol.Enums.BluffinMessageId",
+      "enum": [
+        "None",
+        "SpecificServerMessage"
+      ]
+    },
+    "Message": {
+      "description": "The message. Empty if no messages",
+      "type": "string"
     },
     "Command": {
       "description": "The command who initiated this response",
@@ -76,7 +88,9 @@ In Quick mode, you must **identify** yourself. This action puts a unique name to
 ```json
 {
   "CommandName": "IdentifyResponse",
-  "Ok": true,
+  "Success": true,
+  "MessageId": "None",
+  "Message": "",
   "Command": {
     "CommandName": "IdentifyCommand",
     "Name": "SpongeBob"

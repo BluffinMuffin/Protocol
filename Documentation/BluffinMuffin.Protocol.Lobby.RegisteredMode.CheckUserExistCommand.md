@@ -49,6 +49,22 @@ In the User Creation Process, it's useful to check if the username is already ta
       "description": "Always contains 'CheckUserExistResponse' to distinguish the command from others.",
       "type": "string"
     },
+    "Success": {
+      "description": "True if the command was a success",
+      "type": "bool"
+    },
+    "MessageId": {
+      "description": "The Id of the message. None if no message",
+      "type": "BluffinMuffin.Protocol.Enums.BluffinMessageId",
+      "enum": [
+        "None",
+        "SpecificServerMessage"
+      ]
+    },
+    "Message": {
+      "description": "The message. Empty if no messages",
+      "type": "string"
+    },
     "Exist": {
       "description": "true if the username exists",
       "type": "bool"
@@ -76,6 +92,9 @@ In the User Creation Process, it's useful to check if the username is already ta
 ```json
 {
   "CommandName": "CheckUserExistResponse",
+  "Success": true,
+  "MessageId": "None",
+  "Message": "",
   "Exist": true,
   "Command": {
     "CommandName": "CheckUserExistCommand",

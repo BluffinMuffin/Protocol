@@ -61,6 +61,22 @@ The list of active tables will be sent back
       "description": "Always contains 'ListTableResponse' to distinguish the command from others.",
       "type": "string"
     },
+    "Success": {
+      "description": "True if the command was a success",
+      "type": "bool"
+    },
+    "MessageId": {
+      "description": "The Id of the message. None if no message",
+      "type": "BluffinMuffin.Protocol.Enums.BluffinMessageId",
+      "enum": [
+        "None",
+        "SpecificServerMessage"
+      ]
+    },
+    "Message": {
+      "description": "The message. Empty if no messages",
+      "type": "string"
+    },
     "Tables": {
       "description": "All the active tables on the server",
       "type": "array",
@@ -216,6 +232,9 @@ The list of active tables will be sent back
 ```json
 {
   "CommandName": "ListTableResponse",
+  "Success": true,
+  "MessageId": "None",
+  "Message": "",
   "Tables": [
     {
       "IdTable": 42,

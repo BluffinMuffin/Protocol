@@ -44,6 +44,22 @@ This command will Get the information about a player. This information should be
       "description": "Always contains 'GetUserResponse' to distinguish the command from others.",
       "type": "string"
     },
+    "Success": {
+      "description": "True if the command was a success",
+      "type": "bool"
+    },
+    "MessageId": {
+      "description": "The Id of the message. None if no message",
+      "type": "BluffinMuffin.Protocol.Enums.BluffinMessageId",
+      "enum": [
+        "None",
+        "SpecificServerMessage"
+      ]
+    },
+    "Message": {
+      "description": "The message. Empty if no messages",
+      "type": "string"
+    },
     "DisplayName": {
       "description": "The display name of the user",
       "type": "string"
@@ -75,6 +91,9 @@ This command will Get the information about a player. This information should be
 ```json
 {
   "CommandName": "GetUserResponse",
+  "Success": true,
+  "MessageId": "None",
+  "Message": "",
   "Email": "ericmas001@hotmail.com",
   "DisplayName": "Sponge Bob",
   "Money": 42000.42,
