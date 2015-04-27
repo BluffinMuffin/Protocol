@@ -70,6 +70,14 @@ namespace BluffinMuffin.Protocol.Tests
         }
 
         [TestMethod]
+        public void LeaveTableCommand()
+        {
+            var c = LobbyCommandMock.LeaveTableCommand();
+            var dc = EncodeDecodeHelper.GetDecodedCommand(c);
+            CompareLeaveTableCommand(c, dc);
+        }
+
+        [TestMethod]
         public void CreateTableCommand()
         {
             var c = LobbyCommandMock.CreateTableCommand();
@@ -98,6 +106,11 @@ namespace BluffinMuffin.Protocol.Tests
         }
 
         private static void CompareJoinTableCommand(JoinTableCommand c, JoinTableCommand dc)
+        {
+            Assert.AreEqual(c.TableId, dc.TableId);
+        }
+
+        private void CompareLeaveTableCommand(LeaveTableCommand c, LeaveTableCommand dc)
         {
             Assert.AreEqual(c.TableId, dc.TableId);
         }

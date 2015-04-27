@@ -76,6 +76,7 @@
     <Compile Include="IResponse.cs" />
     <Compile Include="ICommandWithResponse.cs" />
     <Compile Include="IGameCommand.cs" />
+    <Compile Include="Lobby\LeaveTableCommand.cs" />
     <Compile Include="Lobby\RegisteredMode\AuthenticateUserCommand.cs" />
     <Compile Include="Lobby\RegisteredMode\AuthenticateUserResponse.cs" />
     <Compile Include="Lobby\RegisteredMode\CheckDisplayExistCommand.cs" />

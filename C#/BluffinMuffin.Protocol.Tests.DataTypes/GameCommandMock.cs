@@ -33,7 +33,12 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static PlayerJoinedCommand PlayerJoinedCommand()
         {
-            return new PlayerJoinedCommand() {TableId = 42, PlayerName = "SpongeBob"};
+            return new PlayerJoinedCommand() { TableId = 42, PlayerName = "SpongeBob" };
+        }
+
+        public static PlayerLeftCommand PlayerLeftCommand()
+        {
+            return new PlayerLeftCommand() { TableId = 42, PlayerName = "SpongeBob" };
         }
 
         public static PlayerPlayMoneyCommand PlayerPlayMoneyCommand()

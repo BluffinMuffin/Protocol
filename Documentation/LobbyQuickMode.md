@@ -23,3 +23,7 @@ The lobby has two modes: ***Quick mode*** and ***Registered mode***. This Sectio
  * **[JoinTableCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.JoinTableCommand.md)** 
 
    To **Join a Table**, you must specify an ID that you got creating a table or listing tables.
+
+ * **[LeaveTableCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.LeaveTableCommand.md)** 
+
+   To **Leave a Table**, you must specify an ID of a table that you are in.

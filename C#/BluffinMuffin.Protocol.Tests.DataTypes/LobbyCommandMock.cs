@@ -42,6 +42,11 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
             return JoinTableCommand().ResponseSuccess();
         }
 
+        public static LeaveTableCommand LeaveTableCommand()
+        {
+            return new LeaveTableCommand() { TableId = 42 };
+        }
+
         public static CreateTableCommand CreateTableCommand()
         {
             return new CreateTableCommand() {Params = TableParamsMock.ParamsOne()};
