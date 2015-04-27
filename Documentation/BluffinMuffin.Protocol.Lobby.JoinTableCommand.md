@@ -65,7 +65,9 @@ The success of the operation will be sent back
         "NameAlreadyUsed",
         "UsernameAlreadyUsed",
         "UsernameNotFound",
-        "InvalidPassword"
+        "InvalidPassword",
+        "SeatChanged",
+        "NoMoreSeats"
       ]
     },
     "Message": {

@@ -58,7 +58,9 @@ This command will Get the information about a player. This information should be
         "NameAlreadyUsed",
         "UsernameAlreadyUsed",
         "UsernameNotFound",
-        "InvalidPassword"
+        "InvalidPassword",
+        "SeatChanged",
+        "NoMoreSeats"
       ]
     },
     "Message": {

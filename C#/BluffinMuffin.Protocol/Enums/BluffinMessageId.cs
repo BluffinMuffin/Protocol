@@ -45,5 +45,15 @@ namespace BluffinMuffin.Protocol.Enums
         /// InvalidPassword
         /// </summary>
         InvalidPassword,
+
+        /// <summary>
+        /// SeatChanged
+        /// </summary>
+        SeatChanged,
+
+        /// <summary>
+        /// NoMoreSeats
+        /// </summary>
+        NoMoreSeats,
     }
 }

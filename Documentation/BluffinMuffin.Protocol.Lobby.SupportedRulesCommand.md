@@ -60,7 +60,9 @@ All the supported rules are then sent back to the client.
         "NameAlreadyUsed",
         "UsernameAlreadyUsed",
         "UsernameNotFound",
-        "InvalidPassword"
+        "InvalidPassword",
+        "SeatChanged",
+        "NoMoreSeats"
       ]
     },
     "Message": {

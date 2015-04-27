@@ -63,7 +63,9 @@ In the User Creation Process, it's useful to check if the username is already ta
         "NameAlreadyUsed",
         "UsernameAlreadyUsed",
         "UsernameNotFound",
-        "InvalidPassword"
+        "InvalidPassword",
+        "SeatChanged",
+        "NoMoreSeats"
       ]
     },
     "Message": {

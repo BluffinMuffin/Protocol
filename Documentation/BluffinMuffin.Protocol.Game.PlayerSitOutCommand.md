@@ -59,7 +59,9 @@ The client is telling the server that he wants to sit out
         "NameAlreadyUsed",
         "UsernameAlreadyUsed",
         "UsernameNotFound",
-        "InvalidPassword"
+        "InvalidPassword",
+        "SeatChanged",
+        "NoMoreSeats"
       ]
     },
     "Message": {

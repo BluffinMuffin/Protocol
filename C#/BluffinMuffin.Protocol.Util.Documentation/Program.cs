@@ -116,7 +116,8 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                 string fullname = t.FullName;
                 string path = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"..\..\..\..\Documentation", fullname + ".md");
                 FileInfo info = new FileInfo(path);
-                info.IsReadOnly = false;
+                if (info.Exists)
+                    info.IsReadOnly = false;
                 var sw = new StreamWriter(path);
                 string commandName = t.Name;
                 string title = "# " + t.Namespace.Replace("BluffinMuffin.Protocol.", "").Replace("BluffinMuffin.Protocol", "General").Replace(".", " ") + " : " + commandName.Replace("Command", "");
