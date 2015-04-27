@@ -19,8 +19,8 @@ namespace BluffinMuffin.Protocol.Game
         /// <summary>
         /// The cards currently in the hands of the player
         /// </summary>
-        [ExampleValues(2, 21, 42)]
-        public List<int> CardsId { get; set; }
+        [ExampleValues(2, "4h", "Qs")]
+        public string[] Cards { get; set; }
 
         /// <summary>
         /// The state of the player.

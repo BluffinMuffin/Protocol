@@ -15,9 +15,9 @@ namespace BluffinMuffin.Protocol.Game
         [ExampleValue(RoundTypeEnum.Flop)]
         public RoundTypeEnum Round { get; set; }
         /// <summary>
-        /// All the card ids currently visible on the board (Preflop: empty, flop: 3 cars, turn: 4 cards, river: 5 cards) 
+        /// All the card ids currently visible on the board (Preflop: empty, flop: 3 cards, turn: 4 cards, river: 5 cards) 
         /// </summary>
-        [ExampleValues(3, 21, 42, 7)]
-        public List<int> CardsId { get; set; }
+        [ExampleValues(3, "2s", "Kh", "5d")]
+        public string[] Cards { get; set; }
     }
 }

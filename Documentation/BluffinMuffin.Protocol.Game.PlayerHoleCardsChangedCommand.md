@@ -21,11 +21,11 @@ This is used to inform a player of the cards he just got dealed, to inform other
       "description": "The id of the table where this command needs to go",
       "type": "int"
     },
-    "CardsId": {
+    "Cards": {
       "description": "The cards currently in the hands of the player",
       "type": "array",
       "items": {
-        "type": "int"
+        "type": "string"
       }
     },
     "PlayerPos": {
@@ -54,9 +54,9 @@ This is used to inform a player of the cards he just got dealed, to inform other
   "CommandName": "PlayerHoleCardsChangedCommand",
   "TableId": 42,
   "PlayerPos": 7,
-  "CardsId": [
-    21,
-    42
+  "Cards": [
+    "4h",
+    "Qs"
   ],
   "State": "Playing"
 }

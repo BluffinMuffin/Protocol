@@ -35,46 +35,7 @@ Server informs clients that a seat has changed state. Usually sent when player s
               "description": "The cards in the hands of the player",
               "type": "array",
               "items": {
-                "type": "Com.Ericmas001.Games.GameCard",
-                "properties": {
-                  "Kind": {
-                    "type": "Com.Ericmas001.Games.GameCardKind",
-                    "enum": [
-                      "Club",
-                      "Diamond",
-                      "Heart",
-                      "Spade"
-                    ]
-                  },
-                  "Special": {
-                    "type": "Com.Ericmas001.Games.GameCardSpecial",
-                    "enum": [
-                      "None",
-                      "Null",
-                      "Hidden",
-                      "JokerColor",
-                      "JokerDark"
-                    ]
-                  },
-                  "Value": {
-                    "type": "Com.Ericmas001.Games.GameCardValue",
-                    "enum": [
-                      "Two",
-                      "Three",
-                      "Four",
-                      "Five",
-                      "Six",
-                      "Seven",
-                      "Eight",
-                      "Nine",
-                      "Ten",
-                      "Jack",
-                      "Queen",
-                      "King",
-                      "Ace"
-                    ]
-                  }
-                }
+                "type": "string"
               }
             },
             "IsShowingCards": {
@@ -98,6 +59,7 @@ Server informs clients that a seat has changed state. Usually sent when player s
               "type": "int"
             },
             "State": {
+              "description": "Current state of the player",
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
               "enum": [
                 "Zombie",
@@ -142,18 +104,10 @@ Server informs clients that a seat has changed state. Usually sent when player s
       "MoneySafeAmnt": 1000,
       "MoneyBetAmnt": 42,
       "HoleCards": [
-        {
-          "Special": "None",
-          "Kind": "Spade",
-          "Value": "Two"
-        },
-        {
-          "Special": "None",
-          "Kind": "Heart",
-          "Value": "Ace"
-        }
+        "2s",
+        "Ah"
       ],
-      "State": "Zombie",
+      "State": "Playing",
       "IsShowingCards": false
     },
     "SeatAttributes": [

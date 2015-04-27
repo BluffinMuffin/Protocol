@@ -19,11 +19,11 @@ Sends all the information about the current state of the table, to put everybody
       "description": "The id of the table where this command needs to go",
       "type": "int"
     },
-    "BoardCardIDs": {
+    "BoardCards": {
       "description": "All the card ids currently visible on the board (Preflop: empty, flop: 3 cars, turn: 4 cards, river: 5 cards)",
       "type": "array",
       "items": {
-        "type": "int"
+        "type": "string"
       }
     },
     "GameHasStarted": {
@@ -154,46 +154,7 @@ Sends all the information about the current state of the table, to put everybody
                 "description": "The cards in the hands of the player",
                 "type": "array",
                 "items": {
-                  "type": "Com.Ericmas001.Games.GameCard",
-                  "properties": {
-                    "Kind": {
-                      "type": "Com.Ericmas001.Games.GameCardKind",
-                      "enum": [
-                        "Club",
-                        "Diamond",
-                        "Heart",
-                        "Spade"
-                      ]
-                    },
-                    "Special": {
-                      "type": "Com.Ericmas001.Games.GameCardSpecial",
-                      "enum": [
-                        "None",
-                        "Null",
-                        "Hidden",
-                        "JokerColor",
-                        "JokerDark"
-                      ]
-                    },
-                    "Value": {
-                      "type": "Com.Ericmas001.Games.GameCardValue",
-                      "enum": [
-                        "Two",
-                        "Three",
-                        "Four",
-                        "Five",
-                        "Six",
-                        "Seven",
-                        "Eight",
-                        "Nine",
-                        "Ten",
-                        "Jack",
-                        "Queen",
-                        "King",
-                        "Ace"
-                      ]
-                    }
-                  }
+                  "type": "string"
                 }
               },
               "IsShowingCards": {
@@ -217,6 +178,7 @@ Sends all the information about the current state of the table, to put everybody
                 "type": "int"
               },
               "State": {
+                "description": "Current state of the player",
                 "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
                 "enum": [
                   "Zombie",
@@ -287,10 +249,10 @@ Sends all the information about the current state of the table, to put everybody
     4200,
     420
   ],
-  "BoardCardIDs": [
-    21,
-    42,
-    7
+  "BoardCards": [
+    "2s",
+    "Kh",
+    "5d"
   ],
   "Seats": null,
   "GameHasStarted": true

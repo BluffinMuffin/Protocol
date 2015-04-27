@@ -30,8 +30,8 @@ namespace BluffinMuffin.Protocol.Game
         /// <summary>
         /// All the card ids currently visible on the board (Preflop: empty, flop: 3 cars, turn: 4 cards, river: 5 cards) 
         /// </summary>
-        [ExampleValues(3, 21, 42, 7)]
-        public List<int> BoardCardIDs { get; set; }
+        [ExampleValues(3, "2s", "Kh", "5d")]
+        public string[] BoardCards { get; set; }
 
         /// <summary>
         /// The information about every seats around the table

@@ -41,8 +41,8 @@ namespace BluffinMuffin.Protocol.Tests
             var c = GameCommandMock.BetTurnStartedCommand();
             var dc = GetDecodedCommand(c);
             Assert.AreEqual(c.Round, dc.Round);
-            Assert.AreEqual(c.CardsId.Count, dc.CardsId.Count);
-            Assert.IsFalse(c.CardsId.Except(dc.CardsId).Any());
+            Assert.AreEqual(c.Cards.Length, dc.Cards.Length);
+            Assert.IsFalse(c.Cards.Except(dc.Cards).Any());
         }
         [TestMethod]
         public void GameEndedCommand()
@@ -63,8 +63,8 @@ namespace BluffinMuffin.Protocol.Tests
             var c = GameCommandMock.PlayerHoleCardsChangedCommand();
             var dc = GetDecodedCommand(c);
             Assert.AreEqual(c.PlayerPos, dc.PlayerPos);
-            Assert.AreEqual(c.CardsId.Count, dc.CardsId.Count);
-            Assert.IsFalse(c.CardsId.Except(dc.CardsId).Any());
+            Assert.AreEqual(c.Cards.Length, dc.Cards.Length);
+            Assert.IsFalse(c.Cards.Except(dc.Cards).Any());
             Assert.AreEqual(c.State, dc.State);
         }
         [TestMethod]
@@ -172,8 +172,8 @@ namespace BluffinMuffin.Protocol.Tests
             Assert.AreEqual(c.TotalPotAmount, dc.TotalPotAmount);
             Assert.AreEqual(c.PotsAmount.Count, dc.PotsAmount.Count);
             Assert.IsFalse(c.PotsAmount.Except(dc.PotsAmount).Any());
-            Assert.AreEqual(c.BoardCardIDs.Count, dc.BoardCardIDs.Count);
-            Assert.IsFalse(c.BoardCardIDs.Except(dc.BoardCardIDs).Any());
+            Assert.AreEqual(c.BoardCards.Length, dc.BoardCards.Length);
+            Assert.IsFalse(c.BoardCards.Except(dc.BoardCards).Any());
             Assert.AreEqual(c.Seats.Count, dc.Seats.Count);
             for (int i = 0; i < c.Seats.Count; ++i)
                 CompareSeatInfo.Compare(c.Seats[i], dc.Seats[i]);

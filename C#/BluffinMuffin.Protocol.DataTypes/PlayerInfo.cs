@@ -42,31 +42,31 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// <summary>
         /// The cards in the hands of the player
         /// </summary>
-        [ExampleValues(2,GameCardKind.Spade,GameCardValue.Two,GameCardKind.Heart,GameCardValue.Ace)]
-        public GameCard[] HoleCards
+        [ExampleValues(2,"2s","Ah")]
+        public string[] HoleCards
         {
             get
             {
                 if (m_HoleCards == null || m_HoleCards.Count != 2)
-                    return new[] { GameCard.NoCard, GameCard.NoCard };
-                return m_HoleCards.ToArray();
+                    return new[] { GameCard.NoCard, GameCard.NoCard }.Select(x => x.ToString()).ToArray();
+                return m_HoleCards.Select(x => x.ToString()).ToArray();
             }
             set
             {
-                m_HoleCards = value.ToList();
+                m_HoleCards = value.Select(x => new GameCard(x)).ToList();
             }
         }
 
         /// <summary>
-        /// 
+        /// Current state of the player
         /// </summary>
-        [ExampleValue("TODO")]
+        [ExampleValue(PlayerStateEnum.Playing)]
         public PlayerStateEnum State { get; set; }
 
         /// <summary>
         /// true if the player cards are public (ex: during showdown)
         /// </summary>
-        [ExampleValue("TODO")]
+        [ExampleValue(true)]
         public bool IsShowingCards { get; set; }
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace BluffinMuffin.Protocol.DataTypes
                 Name = Name,
                 MoneyBetAmnt = MoneyBetAmnt,
                 MoneySafeAmnt = MoneySafeAmnt,
-                HoleCards = HoleCards.Select(hc => new GameCard(hc.Id)).ToArray(),
+                HoleCards = new List<string>(HoleCards).ToArray(),
                 IsShowingCards = IsShowingCards,
                 State = State,
             };
@@ -151,11 +151,11 @@ namespace BluffinMuffin.Protocol.DataTypes
         [JsonIgnore]
         public GameCard[] Cards
         {
-            get { return HoleCards.Select(c => (c == null || !(State >= PlayerStateEnum.AllIn)) ? GameCard.NoCard : c).ToArray(); }
+            get { return m_HoleCards.Select(c => (c == null || !(State >= PlayerStateEnum.AllIn)) ? GameCard.NoCard : c).ToArray(); }
             set
             {
                 if (value != null && value.Length == 2)
-                    HoleCards = value;
+                    m_HoleCards = value.ToList();
             }
         }
 

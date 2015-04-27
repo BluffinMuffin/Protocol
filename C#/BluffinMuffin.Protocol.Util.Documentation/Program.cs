@@ -280,8 +280,8 @@ namespace BluffinMuffin.Protocol.Util.Documentation
 
                                 for (int i = 0; i < exs.NbObjects; ++i)
                                 {
-                                    var et = p.PropertyType.GetGenericArguments()[0];
-                                    if (et.IsClass)
+                                    var et = p.PropertyType.GetGenericArguments()[0]; 
+                                    if (et.IsClass && et != typeof(string))
                                     {
                                         var types = exs.Values[i].Select(x => x.GetType()).ToArray();
                                         List<KeyValuePair<Type, object>> kvps = new List<KeyValuePair<Type, object>>();
@@ -306,7 +306,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                                 for (int i = 0; i < exs.NbObjects; ++i)
                                 {
                                     var et = p.PropertyType.GetElementType();
-                                    if (et.IsClass)
+                                    if (et.IsClass && et != typeof(string))
                                     {
                                         var types = exs.Values[i].Select(x => x.GetType()).ToArray();
                                         List<KeyValuePair<Type, object>> kvps = new List<KeyValuePair<Type, object>>();

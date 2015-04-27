@@ -13,7 +13,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static BetTurnStartedCommand BetTurnStartedCommand()
         {
-            return new BetTurnStartedCommand() {TableId = 42, CardsId = new List<int>() {7, 21, 42, 63}, Round = RoundTypeEnum.River};
+            return new BetTurnStartedCommand() {TableId = 42, Cards = new[] {"2s", "5h", "Jd", "Ac"}, Round = RoundTypeEnum.River};
         }
 
         public static GameEndedCommand GameEndedCommand()
@@ -28,7 +28,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static PlayerHoleCardsChangedCommand PlayerHoleCardsChangedCommand()
         {
-            return new PlayerHoleCardsChangedCommand() {TableId = 42, CardsId = new List<int>() {21, 42}, PlayerPos = 7, State = PlayerStateEnum.Playing};
+            return new PlayerHoleCardsChangedCommand() { TableId = 42, Cards = new[] { "2s", "5h" }, PlayerPos = 7, State = PlayerStateEnum.Playing };
         }
 
         public static PlayerJoinedCommand PlayerJoinedCommand()
@@ -95,7 +95,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static TableInfoCommand TableInfoCommand()
         {
-            return new TableInfoCommand() {TableId = 42, Params = TableParamsMock.ParamsOne(), TotalPotAmount = 126, PotsAmount = new List<int>() {5, 10, 15, 20}, BoardCardIDs = new List<int>() {7, 21, 42, 63}, Seats = SeatInfoMock.AllSeats(), GameHasStarted = true};
+            return new TableInfoCommand() { TableId = 42, Params = TableParamsMock.ParamsOne(), TotalPotAmount = 126, PotsAmount = new List<int>() { 5, 10, 15, 20 }, BoardCards = new[] { "2s", "5h", "Jd", "Ac" }, Seats = SeatInfoMock.AllSeats(), GameHasStarted = true };
         }
     }
 }
