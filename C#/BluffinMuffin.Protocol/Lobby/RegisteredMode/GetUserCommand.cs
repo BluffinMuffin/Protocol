@@ -8,12 +8,6 @@ namespace BluffinMuffin.Protocol.Lobby.RegisteredMode
     public class GetUserCommand : AbstractLobbyCommand, ICommandWithResponse<GetUserResponse>
     {
         /// <summary>
-        /// The username you want to know more about
-        /// </summary>
-        [ExampleValue("ericmas001")]
-        public string Username { get; set; }
-
-        /// <summary>
         /// 
         /// </summary>
         /// <param name="mail"></param>

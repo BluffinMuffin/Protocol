@@ -21,10 +21,6 @@ The success of the operation will be sent back
       "description": "Always contains 'JoinTableCommand' to distinguish the command from others.",
       "type": "string"
     },
-    "PlayerName": {
-      "description": "The name you identified as",
-      "type": "string"
-    },
     "TableId": {
       "description": "The id of the table to join",
       "type": "int"
@@ -38,8 +34,7 @@ The success of the operation will be sent back
 ```json
 {
   "CommandName": "JoinTableCommand",
-  "TableId": 42,
-  "PlayerName": "SpongeBob"
+  "TableId": 42
 }
 ```
 
@@ -68,10 +63,6 @@ The success of the operation will be sent back
           "description": "Always contains 'JoinTableCommand' to distinguish the command from others.",
           "type": "string"
         },
-        "PlayerName": {
-          "description": "The name you identified as",
-          "type": "string"
-        },
         "TableId": {
           "description": "The id of the table to join",
           "type": "int"
@@ -90,8 +81,7 @@ The success of the operation will be sent back
   "Success": false,
   "Command": {
     "CommandName": "JoinTableCommand",
-    "TableId": 42,
-    "PlayerName": "SpongeBob"
+    "TableId": 42
   }
 }
 ```

@@ -15,10 +15,6 @@ The server sends this command to indicated that it's time for a specific player 
       "description": "Always contains 'PlayerTurnBeganCommand' to distinguish the command from others.",
       "type": "string"
     },
-    "LastPlayerNoSeat": {
-      "description": "The position on the table where is sitting the player that just played.",
-      "type": "int"
-    },
     "MinimumRaise": {
       "description": "The minimum amount needed to raise. A raise must be at least the size of the largest previous bet or raise of the current betting round.",
       "type": "int"
@@ -41,7 +37,6 @@ The server sends this command to indicated that it's time for a specific player 
 {
   "CommandName": "PlayerTurnBeganCommand",
   "PlayerPos": 7,
-  "LastPlayerNoSeat": 6,
   "MinimumRaise": 6,
   "TableId": 42
 }

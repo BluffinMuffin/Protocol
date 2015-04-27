@@ -13,6 +13,11 @@ namespace BluffinMuffin.Protocol.Lobby.QuickMode
         [ExampleValue("SpongeBob")]
         public string Name { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="success"></param>
+        /// <returns></returns>
         public IdentifyResponse Response(bool success)
         {
             return new IdentifyResponse(this) { Ok = success };

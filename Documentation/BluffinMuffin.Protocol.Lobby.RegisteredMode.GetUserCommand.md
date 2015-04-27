@@ -18,10 +18,6 @@ This command will Get the information about a player. This information should be
     "CommandName": {
       "description": "Always contains 'GetUserCommand' to distinguish the command from others.",
       "type": "string"
-    },
-    "Username": {
-      "description": "The username you want to know more about",
-      "type": "string"
     }
   }
 }
@@ -31,8 +27,7 @@ This command will Get the information about a player. This information should be
 
 ```json
 {
-  "CommandName": "GetUserCommand",
-  "Username": "ericmas001"
+  "CommandName": "GetUserCommand"
 }
 ```
 
@@ -68,10 +63,6 @@ This command will Get the information about a player. This information should be
         "CommandName": {
           "description": "Always contains 'GetUserCommand' to distinguish the command from others.",
           "type": "string"
-        },
-        "Username": {
-          "description": "The username you want to know more about",
-          "type": "string"
         }
       }
     }
@@ -88,8 +79,7 @@ This command will Get the information about a player. This information should be
   "DisplayName": "Sponge Bob",
   "Money": 42000.42,
   "Command": {
-    "CommandName": "GetUserCommand",
-    "Username": "ericmas001"
+    "CommandName": "GetUserCommand"
   }
 }
 ```

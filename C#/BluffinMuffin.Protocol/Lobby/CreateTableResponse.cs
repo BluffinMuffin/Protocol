@@ -2,6 +2,9 @@
 
 namespace BluffinMuffin.Protocol.Lobby
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class CreateTableResponse : AbstractBluffinReponse<CreateTableCommand>
     {
         /// <summary>
@@ -10,6 +13,10 @@ namespace BluffinMuffin.Protocol.Lobby
         [ExampleValue(42)]
         public int IdTable { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="command"></param>
         public CreateTableResponse(CreateTableCommand command)
             : base(command)
         {

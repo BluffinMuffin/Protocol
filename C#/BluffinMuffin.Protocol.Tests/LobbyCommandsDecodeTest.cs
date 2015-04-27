@@ -100,7 +100,6 @@ namespace BluffinMuffin.Protocol.Tests
         private static void CompareJoinTableCommand(JoinTableCommand c, JoinTableCommand dc)
         {
             Assert.AreEqual(c.TableId, dc.TableId);
-            Assert.AreEqual(c.PlayerName, dc.PlayerName);
         }
 
         private static void CompareCreateTableCommand(CreateTableCommand c, CreateTableCommand dc)

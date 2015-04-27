@@ -17,6 +17,11 @@ namespace BluffinMuffin.Protocol.Lobby
         /// </summary>
         public TableParams Params { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public CreateTableResponse Response(int id)
         {
             return new CreateTableResponse(this) { IdTable = id };

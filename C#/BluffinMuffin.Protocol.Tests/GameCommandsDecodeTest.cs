@@ -75,14 +75,6 @@ namespace BluffinMuffin.Protocol.Tests
             Assert.AreEqual(c.PlayerName, dc.PlayerName);
         }
         [TestMethod]
-        public void PlayerMoneyChangedCommand()
-        {
-            var c = GameCommandMock.PlayerMoneyChangedCommand();
-            var dc = GetDecodedCommand(c);
-            Assert.AreEqual(c.PlayerPos, dc.PlayerPos);
-            Assert.AreEqual(c.PlayerMoney, dc.PlayerMoney);
-        }
-        [TestMethod]
         public void PlayerPlayMoneyCommand()
         {
             var c = GameCommandMock.PlayerPlayMoneyCommand();
@@ -126,7 +118,6 @@ namespace BluffinMuffin.Protocol.Tests
             var c = GameCommandMock.PlayerTurnBeganCommand();
             var dc = GetDecodedCommand(c);
             Assert.AreEqual(c.PlayerPos, dc.PlayerPos);
-            Assert.AreEqual(c.LastPlayerNoSeat, dc.LastPlayerNoSeat);
             Assert.AreEqual(c.MinimumRaise, dc.MinimumRaise);
         }
         [TestMethod]
@@ -176,7 +167,6 @@ namespace BluffinMuffin.Protocol.Tests
             Assert.IsFalse(c.PotsAmount.Except(dc.PotsAmount).Any());
             Assert.AreEqual(c.BoardCardIDs.Count, dc.BoardCardIDs.Count);
             Assert.IsFalse(c.BoardCardIDs.Except(dc.BoardCardIDs).Any());
-            Assert.AreEqual(c.NbPlayers, dc.NbPlayers);
             Assert.AreEqual(c.Seats.Count, dc.Seats.Count);
             for (int i = 0; i < c.Seats.Count; ++i)
                 CompareSeatInfo.Compare(c.Seats[i], dc.Seats[i]);

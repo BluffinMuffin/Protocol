@@ -26,10 +26,6 @@ Sends all the information about the current state of the table, to put everybody
       "description": "Informs the client if the game is currently in the playing state, or not.",
       "type": "bool"
     },
-    "NbPlayers": {
-      "description": "The maximum number of players that can play on this table",
-      "type": "int"
-    },
     "Params": {
       "description": "Parameters of the poker table",
       "type": "BluffinMuffin.Protocol.DataTypes.TableParams",
@@ -295,7 +291,6 @@ Sends all the information about the current state of the table, to put everybody
     42,
     7
   ],
-  "NbPlayers": 10,
   "Seats": null,
   "GameHasStarted": true,
   "TableId": 42

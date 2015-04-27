@@ -15,11 +15,10 @@ namespace BluffinMuffin.Protocol.Lobby
         public int TableId { get; set; }
 
         /// <summary>
-        /// The name you identified as
+        /// 
         /// </summary>
-        [ExampleValue("SpongeBob")]
-        public string PlayerName { get; set; }
-
+        /// <param name="success"></param>
+        /// <returns></returns>
         public JoinTableResponse Response(bool success)
         {
             return new JoinTableResponse(this) { Success = success };

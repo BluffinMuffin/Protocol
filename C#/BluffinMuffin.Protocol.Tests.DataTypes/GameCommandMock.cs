@@ -36,11 +36,6 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
             return new PlayerJoinedCommand() {TableId = 42, PlayerName = "SpongeBob"};
         }
 
-        public static PlayerMoneyChangedCommand PlayerMoneyChangedCommand()
-        {
-            return new PlayerMoneyChangedCommand() {TableId = 42, PlayerPos = 7, PlayerMoney = 84};
-        }
-
         public static PlayerPlayMoneyCommand PlayerPlayMoneyCommand()
         {
             return new PlayerPlayMoneyCommand() {TableId = 42, Played = 84};
@@ -68,7 +63,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static PlayerTurnBeganCommand PlayerTurnBeganCommand()
         {
-            return new PlayerTurnBeganCommand() {TableId = 42, PlayerPos = 7, LastPlayerNoSeat = 6, MinimumRaise = 84};
+            return new PlayerTurnBeganCommand() {TableId = 42, PlayerPos = 7, MinimumRaise = 84};
         }
 
         public static PlayerTurnEndedCommand PlayerTurnEndedCommand()
@@ -93,7 +88,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static TableInfoCommand TableInfoCommand()
         {
-            return new TableInfoCommand() {TableId = 42, Params = TableParamsMock.ParamsOne(), TotalPotAmount = 126, PotsAmount = new List<int>() {5, 10, 15, 20}, BoardCardIDs = new List<int>() {7, 21, 42, 63}, NbPlayers = 7, Seats = SeatInfoMock.AllSeats(), GameHasStarted = true};
+            return new TableInfoCommand() {TableId = 42, Params = TableParamsMock.ParamsOne(), TotalPotAmount = 126, PotsAmount = new List<int>() {5, 10, 15, 20}, BoardCardIDs = new List<int>() {7, 21, 42, 63}, Seats = SeatInfoMock.AllSeats(), GameHasStarted = true};
         }
     }
 }

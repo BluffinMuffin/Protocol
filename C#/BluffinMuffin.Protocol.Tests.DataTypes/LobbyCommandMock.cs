@@ -30,7 +30,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static JoinTableCommand JoinTableCommand()
         {
-            return new JoinTableCommand() {TableId = 42, PlayerName = "Table42"};
+            return new JoinTableCommand() {TableId = 42};
         }
 
         public static JoinTableResponse JoinTableResponse()
@@ -91,7 +91,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
         }
         public static GetUserCommand GetUserCommand()
         {
-            return new GetUserCommand() { Username = "SpongeBob"};
+            return new GetUserCommand();
         }
         public static GetUserResponse GetUserResponse()
         {

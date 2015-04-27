@@ -34,12 +34,6 @@ namespace BluffinMuffin.Protocol.Game
         public List<int> BoardCardIDs { get; set; }
 
         /// <summary>
-        /// The maximum number of players that can play on this table
-        /// </summary>
-        [ExampleValue(10)]
-        public int NbPlayers { get; set; }
-
-        /// <summary>
         /// The information about every seats around the table
         /// </summary>
         [ExampleValue(1)]

@@ -2,6 +2,9 @@
 
 namespace BluffinMuffin.Protocol.Lobby.QuickMode
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class IdentifyResponse : AbstractBluffinReponse<IdentifyCommand>
     {
         /// <summary>
@@ -9,7 +12,10 @@ namespace BluffinMuffin.Protocol.Lobby.QuickMode
         /// </summary>
         [ExampleValue(true)]
         public bool Ok { get; set; }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="command"></param>
         public IdentifyResponse(IdentifyCommand command)
             : base(command)
         {
