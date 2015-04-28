@@ -108,7 +108,7 @@ Server informs clients that a seat has changed state. Usually sent when player s
         "Ah"
       ],
       "State": "Playing",
-      "IsShowingCards": false
+      "IsShowingCards": true
     },
     "SeatAttributes": [
       "BigBlind",

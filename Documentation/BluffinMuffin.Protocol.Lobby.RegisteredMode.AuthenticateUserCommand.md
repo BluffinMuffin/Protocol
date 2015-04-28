@@ -72,7 +72,8 @@ This command will try to authenticate the client against the user database on th
         "SeatChanged",
         "NoMoreSeats",
         "NotAuthenticated",
-        "WrongLobbyType"
+        "WrongLobbyType",
+        "NotSupported"
       ]
     },
     "Message": {

@@ -82,7 +82,8 @@ This commands will create a new user in the database.
         "SeatChanged",
         "NoMoreSeats",
         "NotAuthenticated",
-        "WrongLobbyType"
+        "WrongLobbyType",
+        "NotSupported"
       ]
     },
     "Message": {

@@ -195,7 +195,8 @@ More information on ...
         "SeatChanged",
         "NoMoreSeats",
         "NotAuthenticated",
-        "WrongLobbyType"
+        "WrongLobbyType",
+        "NotSupported"
       ]
     },
     "Message": {

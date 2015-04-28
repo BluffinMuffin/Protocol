@@ -12,23 +12,25 @@ namespace BluffinMuffin.Protocol.Tests
     {
 
         [TestMethod]
-        public void SupportedRulesCommand()
+        public void CheckCompatibilityCommand()
         {
-            var c = LobbyCommandMock.SupportedRulesCommand();
+            var c = LobbyCommandMock.CheckCompatibilityCommand();
             var dc = EncodeDecodeHelper.GetDecodedCommand(c);
-            CompareSupportedRulesCommand(c, dc);
+            CompareCheckCompatibilityCommand(c, dc);
         }
 
         [TestMethod]
-        public void SupportedRulesResponse()
+        public void CheckCompatibilityResponse()
         {
-            var c = LobbyCommandMock.SupportedRulesResponse();
+            var c = LobbyCommandMock.CheckCompatibilityResponse();
             var dc = EncodeDecodeHelper.GetDecodedCommand(c);
 
-            Assert.AreEqual(c.Rules.Count, dc.Rules.Count);
-            for (int i = 0; i < c.Rules.Count; ++i)
+            Assert.AreEqual(c.ImplementedProtocolVersion, dc.ImplementedProtocolVersion);
+            Assert.IsFalse(c.SupportedLobbyTypes.Except(dc.SupportedLobbyTypes).Any());
+            Assert.AreEqual(c.Rules.Length, dc.Rules.Length);
+            for (int i = 0; i < c.Rules.Length; ++i)
                 CompareRuleInfo.Compare(c.Rules[i], dc.Rules[i]);
-            CompareSupportedRulesCommand(c.Command, dc.Command);
+            CompareCheckCompatibilityCommand(c.Command, dc.Command);
         }
 
         [TestMethod]
@@ -95,8 +97,9 @@ namespace BluffinMuffin.Protocol.Tests
             CompareCreateTableCommand(c.Command, dc.Command);
         }
 
-        private static void CompareSupportedRulesCommand(SupportedRulesCommand c, SupportedRulesCommand dc)
+        private static void CompareCheckCompatibilityCommand(CheckCompatibilityCommand c, CheckCompatibilityCommand dc)
         {
+            Assert.AreEqual(c.ImplementedProtocolVersion,dc.ImplementedProtocolVersion);
         }
 
         private static void CompareListTableCommand(ListTableCommand c, ListTableCommand dc)

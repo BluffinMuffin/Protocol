@@ -93,8 +93,8 @@
     <Compile Include="Lobby\JoinTableResponse.cs" />
     <Compile Include="Lobby\ListTableCommand.cs" />
     <Compile Include="Lobby\ListTableResponse.cs" />
-    <Compile Include="Lobby\SupportedRulesCommand.cs" />
-    <Compile Include="Lobby\SupportedRulesResponse.cs" />
+    <Compile Include="Lobby\CheckCompatibilityCommand.cs" />
+    <Compile Include="Lobby\CheckCompatibilityResponse.cs" />
     <Compile Include="Lobby\QuickMode\IdentifyCommand.cs" />
     <Compile Include="Lobby\QuickMode\IdentifyResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

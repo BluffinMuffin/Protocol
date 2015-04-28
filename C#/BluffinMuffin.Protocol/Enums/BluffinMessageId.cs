@@ -65,5 +65,10 @@ namespace BluffinMuffin.Protocol.Enums
         /// WrongLobbyType
         /// </summary>
         WrongLobbyType,
+
+        /// <summary>
+        /// NotSupported
+        /// </summary>
+        NotSupported,
     }
 }

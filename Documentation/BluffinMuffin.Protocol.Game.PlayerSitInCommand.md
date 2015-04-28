@@ -73,7 +73,8 @@ The client is telling the server that he wants to sit at a specific seat
         "SeatChanged",
         "NoMoreSeats",
         "NotAuthenticated",
-        "WrongLobbyType"
+        "WrongLobbyType",
+        "NotSupported"
       ]
     },
     "Message": {

@@ -4,13 +4,13 @@ The lobby has two modes: ***Quick mode*** and ***Registered mode***. This Sectio
 
 <p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.QuickMode.png" alt="Sequence Diagram"></p>
 
+ * **[CheckCompatibilityCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.md)** *(Optional)*
+
+   At the beginning, it's a good idea to **Check Compatibility** between client and server !
+
  * **[IdentifyCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.md)** 
 
    First, in this mode, you must **Identify** yourself. This action puts a unique name to your Tcp Connection for the server. This name will be used as your playername on every table that you will play.
-   
- * **[SupportedRulesCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.md)** *(Optional)*
-
-   If it's the first time, it's a good idea to ask what are the **Supported Rules** of the current server to know what can and can't be done !
 
  * **[CreateTableCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.CreateTableCommand.md)** *(Optional)*
 

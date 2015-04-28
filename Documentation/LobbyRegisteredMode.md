@@ -4,6 +4,10 @@ The lobby has two modes: ***Quick mode*** and ***Registered mode***. This Sectio
 
 <p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.RegisteredMode.png" alt="Sequence Diagram"></p>
 
+ * **[CheckCompatibilityCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.md)** *(Optional)*
+
+   At the beginning, it's a good idea to **Check Compatibility** between client and server !
+
  * **[CheckUserExistCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand.md)** *(Optional)* 
 
    In the User Creation Process, it's useful to check if the username is already taken. You can then validate the username before actually creating the user. (Username is the name used to connect)
@@ -23,10 +27,6 @@ The lobby has two modes: ***Quick mode*** and ***Registered mode***. This Sectio
  * **[GetUserCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.md)** *(Optional)* 
 
    This command will Get the information about a player. This information should be only for the player itself.
-
- * **[SupportedRulesCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.md)** *(Optional)*
-
-   If it's the first time, it's a good idea to ask what are the **Supported Rules** of the current server to know what can and can't be done !
 
  * **[CreateTableCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Lobby.CreateTableCommand.md)** *(Optional)*
 

@@ -8,15 +8,20 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 {
     public static class LobbyCommandMock
     {
-        public static SupportedRulesCommand SupportedRulesCommand()
+        public static CheckCompatibilityCommand CheckCompatibilityCommand()
         {
-            return new SupportedRulesCommand();
+            return new CheckCompatibilityCommand()
+            {
+                ImplementedProtocolVersion = "1.0"
+            };
         }
 
-        public static SupportedRulesResponse SupportedRulesResponse()
+        public static CheckCompatibilityResponse CheckCompatibilityResponse()
         {
-            var response = SupportedRulesCommand().ResponseSuccess();
-            response.Rules = RuleInfoMock.GetAllRules().ToList();
+            var response = CheckCompatibilityCommand().ResponseSuccess();
+            response.ImplementedProtocolVersion = "1.0";
+            response.SupportedLobbyTypes = new[] {LobbyTypeEnum.QuickMode, LobbyTypeEnum.RegisteredMode};
+            response.Rules = RuleInfoMock.GetAllRules().ToArray();
             return response;
         }
 

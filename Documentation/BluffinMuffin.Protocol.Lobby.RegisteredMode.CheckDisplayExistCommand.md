@@ -67,7 +67,8 @@ In the User Creation Process, it's useful to check if the display name is alread
         "SeatChanged",
         "NoMoreSeats",
         "NotAuthenticated",
-        "WrongLobbyType"
+        "WrongLobbyType",
+        "NotSupported"
       ]
     },
     "Message": {

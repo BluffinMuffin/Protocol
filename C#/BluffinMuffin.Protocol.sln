@@ -25,6 +25,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		..\Documentation\BluffinMuffin.Protocol.DataTypes.LobbyOptions.md = ..\Documentation\BluffinMuffin.Protocol.DataTypes.LobbyOptions.md
 		..\Documentation\BluffinMuffin.Protocol.DisconnectCommand.md = ..\Documentation\BluffinMuffin.Protocol.DisconnectCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Game.BetTurnEndedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.BetTurnEndedCommand.md
+		..\Documentation\BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Game.BetTurnStartedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.BetTurnStartedCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Game.GameEndedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.GameEndedCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Game.GameStartedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.GameStartedCommand.md
@@ -50,7 +51,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.md
-		..\Documentation\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.md
 		..\Documentation\Game.md = ..\Documentation\Game.md
 		..\Documentation\LobbyQuickMode.md = ..\Documentation\LobbyQuickMode.md
 		..\Documentation\LobbyRegisteredMode.md = ..\Documentation\LobbyRegisteredMode.md
@@ -62,6 +62,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sequences", "Sequences", "{D22EA46B-64A4-4DAC-9093-6184BC4A498E}"
 	ProjectSection(SolutionItems) = preProject
 		..\Documentation\Sequences\BluffinMuffin.Protocol.DisconnectCommand.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.DisconnectCommand.png
+		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.png
 		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.CreateTableCommand.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.CreateTableCommand.png
 		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.JoinTableCommand.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.JoinTableCommand.png
 		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.ListTableCommand.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.ListTableCommand.png
@@ -73,7 +74,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sequences", "Sequences", "{
 		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand.png
 		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.png
 		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.RegisteredMode.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.RegisteredMode.png
-		..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.png = ..\Documentation\Sequences\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.png
 		..\Documentation\Sequences\General.vsdx = ..\Documentation\Sequences\General.vsdx
 		..\Documentation\Sequences\Lobby.vsdx = ..\Documentation\Sequences\Lobby.vsdx
 	EndProjectSection
@@ -81,6 +81,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Activities", "Activities", "{DA8A9842-8831-44D5-A23F-B20310BF14CE}"
 	ProjectSection(SolutionItems) = preProject
 		..\Documentation\Activities\BluffinMuffin.Protocol.DisconnectCommand.png = ..\Documentation\Activities\BluffinMuffin.Protocol.DisconnectCommand.png
+		..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.png = ..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.png
 		..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.CreateTableCommand.png = ..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.CreateTableCommand.png
 		..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.JoinTableCommand.png = ..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.JoinTableCommand.png
 		..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.ListTableCommand.png = ..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.ListTableCommand.png
@@ -90,7 +91,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Activities", "Activities", 
 		..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand.png = ..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckUserExistCommand.png
 		..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand.png = ..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand.png
 		..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.png = ..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.png
-		..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.png = ..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.SupportedRulesCommand.png
 		..\Documentation\Activities\GeneralActivity.vsdx = ..\Documentation\Activities\GeneralActivity.vsdx
 		..\Documentation\Activities\LobbyActivity.vsdx = ..\Documentation\Activities\LobbyActivity.vsdx
 	EndProjectSection

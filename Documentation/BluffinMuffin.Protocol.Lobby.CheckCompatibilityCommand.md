@@ -1,20 +1,28 @@
-# Lobby : SupportedRules
+# Lobby : CheckCompatibility
 
 This should be sent one time, at the beginning, to know what the server can do.
 
-All the supported rules are then sent back to the client.
+The supported version, all the supported lobby types and all the supported rules are then sent back to the client.
 
-## SupportedRulesCommand
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.png" alt="Sequence Diagram"></p>
+
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Activities/BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.png" alt="Activity Diagram"></p>
+
+## CheckCompatibilityCommand
 
 ### Command Schema
 
 ```json
 {
-  "title": "Schema for SupportedRulesCommand",
-  "type": "BluffinMuffin.Protocol.Lobby.SupportedRulesCommand",
+  "title": "Schema for CheckCompatibilityCommand",
+  "type": "BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand",
   "properties": {
     "CommandName": {
-      "description": "Always contains 'SupportedRulesCommand' to distinguish the command from others.",
+      "description": "Always contains 'CheckCompatibilityCommand' to distinguish the command from others.",
+      "type": "string"
+    },
+    "ImplementedProtocolVersion": {
+      "description": "The version of the Implemented Bluffin Protocol by the client",
       "type": "string"
     }
   }
@@ -25,21 +33,22 @@ All the supported rules are then sent back to the client.
 
 ```json
 {
-  "CommandName": "SupportedRulesCommand"
+  "CommandName": "CheckCompatibilityCommand",
+  "ImplementedProtocolVersion": "1.0"
 }
 ```
 
-## SupportedRulesResponse
+## CheckCompatibilityResponse
 
 ### Command Schema
 
 ```json
 {
-  "title": "Schema for SupportedRulesResponse",
-  "type": "BluffinMuffin.Protocol.Lobby.SupportedRulesResponse",
+  "title": "Schema for CheckCompatibilityResponse",
+  "type": "BluffinMuffin.Protocol.Lobby.CheckCompatibilityResponse",
   "properties": {
     "CommandName": {
-      "description": "Always contains 'SupportedRulesResponse' to distinguish the command from others.",
+      "description": "Always contains 'CheckCompatibilityResponse' to distinguish the command from others.",
       "type": "string"
     },
     "Success": {
@@ -60,11 +69,16 @@ All the supported rules are then sent back to the client.
         "SeatChanged",
         "NoMoreSeats",
         "NotAuthenticated",
-        "WrongLobbyType"
+        "WrongLobbyType",
+        "NotSupported"
       ]
     },
     "Message": {
       "description": "The message. Empty if no messages",
+      "type": "string"
+    },
+    "ImplementedProtocolVersion": {
+      "description": "The version of the Implemented Bluffin Protocol by the server",
       "type": "string"
     },
     "Rules": {
@@ -152,12 +166,27 @@ All the supported rules are then sent back to the client.
         }
       }
     },
+    "SupportedLobbyTypes": {
+      "description": "All the rules supported by the server",
+      "type": "array",
+      "items": {
+        "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
+        "enum": [
+          "QuickMode",
+          "RegisteredMode"
+        ]
+      }
+    },
     "Command": {
       "description": "The command who initiated this response",
-      "type": "BluffinMuffin.Protocol.Lobby.SupportedRulesCommand",
+      "type": "BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand",
       "properties": {
         "CommandName": {
-          "description": "Always contains 'SupportedRulesCommand' to distinguish the command from others.",
+          "description": "Always contains 'CheckCompatibilityCommand' to distinguish the command from others.",
+          "type": "string"
+        },
+        "ImplementedProtocolVersion": {
+          "description": "The version of the Implemented Bluffin Protocol by the client",
           "type": "string"
         }
       }
@@ -170,10 +199,15 @@ All the supported rules are then sent back to the client.
 
 ```json
 {
-  "CommandName": "SupportedRulesResponse",
+  "CommandName": "CheckCompatibilityResponse",
   "Success": true,
   "MessageId": "None",
   "Message": "",
+  "ImplementedProtocolVersion": "1.0",
+  "SupportedLobbyTypes": [
+    "QuickMode",
+    "RegisteredMode"
+  ],
   "Rules": [
     {
       "GameType": "Holdem",
@@ -198,7 +232,8 @@ All the supported rules are then sent back to the client.
     }
   ],
   "Command": {
-    "CommandName": "SupportedRulesCommand"
+    "CommandName": "CheckCompatibilityCommand",
+    "ImplementedProtocolVersion": "1.0"
   }
 }
 ```
