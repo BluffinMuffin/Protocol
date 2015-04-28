@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Bluffinmuffin.protocol by Ericmas001</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Bluffinmuffin.protocol</h1>
+        <h2>Communication Protocol for Poker Game</h2>
+        <a href="https://github.com/Ericmas001/BluffinMuffin.Protocol" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="bluffinmuffinprotocol" class="anchor" href="#bluffinmuffinprotocol" aria-hidden="true"><span class="octicon octicon-link"></span></a>BluffinMuffin.Protocol</h1>
+
+<p>Communication Protocol for Poker Game</p>
+
+<h4>
+<a id="current-version-10-2015-04-27" class="anchor" href="#current-version-10-2015-04-27" aria-hidden="true"><span class="octicon octicon-link"></span></a>Current Version: <strong><a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v1.0">1.0</a></strong> (2015-04-27)</h4>
+
+<h2>
+<a id="general-commands" class="anchor" href="#general-commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>General Commands</h2>
+
+<p>General commands are for communication everywhere.</p>
+
+<ul>
+<li>
+<p><strong><a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.DisconnectCommand.md">DisconnectCommand</a></strong> </p>
+
+<p>This command is sent to inform the other end of the Tcp Connection that the communication should end</p>
+</li>
+</ul>
+
+<h2>
+<a id="lobby-commands" class="anchor" href="#lobby-commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>Lobby Commands</h2>
+
+<p>Lobby commands are for communication about identification, table list, table creations, etc. Everything that is around a poker game, but that isn't directly a poker game.
+The lobby has two modes: <strong><em>Quick mode</em></strong> and <strong><em>Registered mode</em></strong>. </p>
+
+<h3>
+<a id="quick-mode" class="anchor" href="#quick-mode" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quick mode</h3>
+
+<p>The Quick mode is a mode where the money is given to the player when he enters the table. For example, If the amount is set to 1500 on Table1, every player will receive 1500$ to play with when they will enter the Table.
+For more information on this mode, see the <a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/LobbyQuickMode.md">Quick Mode Documentation</a> section.</p>
+
+<h3>
+<a id="registered-mode" class="anchor" href="#registered-mode" aria-hidden="true"><span class="octicon octicon-link"></span></a>Registered mode</h3>
+
+<p>The Registered mode is a mode where a player connects with an account. He then have some money, that he uses throughout different games. When entering a game, he will take some of that money to play, and when he leaves what was left of that money will be given back to him.
+For more information on this mode, see the <a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/LobbyRegisteredMode.md">Registered Mode Documentation</a> section.</p>
+
+<h2>
+<a id="game-commands" class="anchor" href="#game-commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>Game Commands</h2>
+
+<p>Game commands are for communication inside a specific table. It's for all the actions on a poker game.
+For more information on these commands, see the <a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Game.md">Game Commands Documentation</a> section.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/Ericmas001/BluffinMuffin.Protocol"></a> is maintained by <a href="https://github.com/Ericmas001">Ericmas001</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-18491855-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
