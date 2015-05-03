@@ -1,7 +1,26 @@
 # BluffinMuffin.Protocol
-Communication Protocol for Poker Game
+
+BluffinMuffin Protocol is a Bi-directional Communication Protocol for Poker Game. It has been proven on TCP using C#, but it not confined to it.
+
+The project will be released using (Semantic Versioning)[http://semver.org] and developped using (Vincent Driessen's Git Model)[http://nvie.com/posts/a-successful-git-branching-model/].
+
+####Project includes
+ * **Documentation that defines the protocol**
+
+   A project that states it implements a version of the protocol is saying that it supports what's in the documentation of this version.
+   
+ * **DLLs for .Net Implementation**
+
+   As an option, if your project is in .Net, the protocol has C# libraries released with each versions of the protocol. Using these DLLs is not a requirement to implement the protocol, but it can save you some time ;)
+    
+####Known Implementations
+ * **[BluffinMuffin.Beta](http://ericmas001.github.io/BluffinMuffin.Beta)** *(Protocol v1.0)*
+
 
 ####Current Version: **[1.0.1](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v1.0.1)** (??)
+
+=====================================================
+=====================================================
 
 ## General Commands
 General commands are for communication everywhere.
