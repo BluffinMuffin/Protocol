@@ -18,6 +18,11 @@ The project will be released using (Semantic Versioning)[http://semver.org] and 
 
 
 ####Current Version: **[1.0.1](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v1.0.1)** (??)
+ * Readme was improved
+ * Changelog page added
+ * Assembly versions has been normalized
+ * *[Full changelog ...](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/CHANGELOG.md)*
+
 
 =====================================================
 =====================================================

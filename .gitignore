@@ -5,3 +5,4 @@
 /C#/*/bin
 /C#/*/obj
 *.~vsdx
+/BluffinMuffin.Protocol.v*.zip
