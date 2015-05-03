@@ -1,7 +1,7 @@
 # BluffinMuffin.Protocol
 Communication Protocol for Poker Game
 
-####Current Version: **[1.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v1.0)** (2015-04-27)
+####Current Version: **[1.0.1](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v1.0.1)** (??)
 
 ## General Commands
 General commands are for communication everywhere.
