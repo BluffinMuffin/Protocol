@@ -17,7 +17,7 @@ The project will be released using (Semantic Versioning)[http://semver.org] and 
  * **[BluffinMuffin.Beta](http://ericmas001.github.io/BluffinMuffin.Beta)** *(Protocol v1.0)*
 
 
-####Current Version: **[1.0.1](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v1.0.1)** (??)
+####Current Version: **[1.0.1](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v1.0.1)** (2015-05-04)
  * Readme was improved
  * Changelog page added
  * Assembly versions has been normalized
