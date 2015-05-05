@@ -6,6 +6,7 @@
  * Readme was improved
  * Changelog page added
  * Assembly versions has been normalized
+ * Diagrams were missing or incorrect (#16)
 
 ### 1.0.0
  * First version of the protocol.
