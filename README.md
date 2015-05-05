@@ -21,6 +21,7 @@ The project will be released using (Semantic Versioning)[http://semver.org] and 
  * Readme was improved
  * Changelog page added
  * Assembly versions has been normalized
+ * Diagrams were missing or incorrect (#16)
  * *[Full changelog ...](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/CHANGELOG.md)*
 
 
