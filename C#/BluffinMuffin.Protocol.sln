@@ -13,7 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BluffinMuffin.Protocol.Test
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", "{344FB8D6-DB1D-4DD4-9C00-359F6D024A06}"
 	ProjectSection(SolutionItems) = preProject
-		References\Com.Ericmas001.Collections.dll = References\Com.Ericmas001.Collections.dll
 		References\Com.Ericmas001.Games.dll = References\Com.Ericmas001.Games.dll
 		References\Com.Ericmas001.Net.Protocol.dll = References\Com.Ericmas001.Net.Protocol.dll
 	EndProjectSection

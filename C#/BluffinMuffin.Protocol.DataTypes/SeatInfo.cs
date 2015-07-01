@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using BluffinMuffin.Protocol.DataTypes.Enums;
-using Com.Ericmas001.Collections;
 using Com.Ericmas001.Net.Protocol;
 using Newtonsoft.Json;
 
@@ -25,36 +24,18 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// The information of the player sitting in this seat. If null, there is nobody.
         /// </summary>
         public PlayerInfo Player { get; set; }
-        /// <summary>
-        /// 
-        /// </summary>
-        [JsonIgnore]
-        public ConcurrentList<SeatAttributeEnum> Attributes
-        {
-            get;
-            set;
-        }
+
         /// <summary>
         /// The attributes of the seat
         /// </summary>
         [ExampleValues(2, SeatAttributeEnum.CurrentPlayer, SeatAttributeEnum.BigBlind)]
-        public SeatAttributeEnum[] SeatAttributes
-        {
-            get
-            {
-                return Attributes.ToArray();
-            }
-            set
-            {
-                value.ToList().ForEach(x => Attributes.Add(x));
-            }
-        }
+        public SeatAttributeEnum[] SeatAttributes { get; set; }
         /// <summary>
         /// 
         /// </summary>
         public SeatInfo()
         {
-            Attributes = new ConcurrentList<SeatAttributeEnum>();
+            SeatAttributes = new SeatAttributeEnum[0];
         }
         /// <summary>
         /// 
