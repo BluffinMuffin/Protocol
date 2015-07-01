@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using BluffinMuffin.Protocol.DataTypes.Attributes;
-using Com.Ericmas001.Games;
 using BluffinMuffin.Protocol.DataTypes.Enums;
 using Newtonsoft.Json;
 
@@ -13,8 +11,6 @@ namespace BluffinMuffin.Protocol.DataTypes
     /// </summary>
     public class PlayerInfo
     {
-        private List<GameCard> m_HoleCards;
-
         /// <summary>
         /// The seat used by the player
         /// </summary>
@@ -43,19 +39,7 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// The cards in the hands of the player
         /// </summary>
         [ExampleValues(2,"2s","Ah")]
-        public string[] HoleCards
-        {
-            get
-            {
-                if (m_HoleCards == null || m_HoleCards.Count != 2)
-                    return new[] { GameCard.NoCard, GameCard.NoCard }.Select(x => x.ToString()).ToArray();
-                return m_HoleCards.Select(x => x.ToString()).ToArray();
-            }
-            set
-            {
-                m_HoleCards = value.Select(x => new GameCard(x)).ToList();
-            }
-        }
+        public string[] HoleCards { get; set; }
 
         /// <summary>
         /// Current state of the player
@@ -143,34 +127,6 @@ namespace BluffinMuffin.Protocol.DataTypes
             MoneySafeAmnt -= amnt;
             MoneyBetAmnt += amnt;
             return true;
-        }
-
-        /// <summary>
-        /// Player Cards as viewed by himself
-        /// </summary>
-        [JsonIgnore]
-        public GameCard[] Cards
-        {
-            get { return m_HoleCards.Select(c => (c == null || !(State >= PlayerStateEnum.AllIn)) ? GameCard.NoCard : c).ToArray(); }
-            set
-            {
-                if (value != null && value.Length == 2)
-                    m_HoleCards = value.ToList();
-            }
-        }
-
-        /// <summary>
-        /// Player Cards as viewed by the other players
-        /// </summary>
-        [JsonIgnore]
-        public GameCard[] RelativeCards
-        {
-            get
-            {
-                if (!IsShowingCards)
-                    return new[] { GameCard.Hidden, GameCard.Hidden };
-                return Cards;
-            }
         }
 
         /// <summary>

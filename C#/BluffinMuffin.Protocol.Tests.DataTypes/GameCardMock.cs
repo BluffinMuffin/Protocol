@@ -1,24 +1,22 @@
-﻿using Com.Ericmas001.Games;
-
-namespace BluffinMuffin.Protocol.Tests.DataTypes
+﻿namespace BluffinMuffin.Protocol.Tests.DataTypes
 {
     public static class GameCardMock
     {
-        public static GameCard AceOfClubs()
+        public static string AceOfClubs()
         {
-            return new GameCard(GameCardKind.Club, GameCardValue.Ace);
+            return "AC";
         }
-        public static GameCard JackOfHearts()
+        public static string JackOfHearts()
         {
-            return new GameCard(GameCardKind.Heart, GameCardValue.Jack);
+            return "JH";
         }
-        public static GameCard TwoOfSpades()
+        public static string TwoOfSpades()
         {
-            return new GameCard(GameCardKind.Spade, GameCardValue.Two);
+            return "2S";
         }
-        public static GameCard TenOfDiamonds()
+        public static string TenOfDiamonds()
         {
-            return new GameCard(GameCardKind.Diamond, GameCardValue.Ten);
+            return "10D";
         }
     }
 }

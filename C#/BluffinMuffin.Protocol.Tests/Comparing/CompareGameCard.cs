@@ -1,5 +1,4 @@
-﻿using Com.Ericmas001.Games;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BluffinMuffin.Protocol.Tests.Comparing
 {
