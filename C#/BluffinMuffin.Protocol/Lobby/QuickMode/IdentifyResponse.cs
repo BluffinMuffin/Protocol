@@ -1,6 +1,4 @@
-﻿using Com.Ericmas001.Net.Protocol;
-
-namespace BluffinMuffin.Protocol.Lobby.QuickMode
+﻿namespace BluffinMuffin.Protocol.Lobby.QuickMode
 {
     /// <summary>
     /// 

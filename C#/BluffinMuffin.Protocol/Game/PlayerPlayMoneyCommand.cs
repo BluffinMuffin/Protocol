@@ -1,4 +1,4 @@
-﻿using Com.Ericmas001.Net.Protocol;
+﻿using BluffinMuffin.Protocol.DataTypes.Attributes;
 
 namespace BluffinMuffin.Protocol.Game
 {

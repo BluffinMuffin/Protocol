@@ -1,5 +1,4 @@
 ﻿using BluffinMuffin.Protocol.DataTypes.Enums;
-using Com.Ericmas001.Net.Protocol.Options;
 using Newtonsoft.Json;
 
 namespace BluffinMuffin.Protocol.DataTypes

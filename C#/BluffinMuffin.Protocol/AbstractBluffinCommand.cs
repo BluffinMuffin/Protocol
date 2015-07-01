@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Reflection;
 using BluffinMuffin.Protocol.Enums;
-using Com.Ericmas001.Net.Protocol.JSON;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 

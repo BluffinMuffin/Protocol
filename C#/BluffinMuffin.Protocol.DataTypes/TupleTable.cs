@@ -1,6 +1,6 @@
 ﻿using System;
+using BluffinMuffin.Protocol.DataTypes.Attributes;
 using BluffinMuffin.Protocol.DataTypes.Enums;
-using Com.Ericmas001.Net.Protocol;
 
 namespace BluffinMuffin.Protocol.DataTypes
 {

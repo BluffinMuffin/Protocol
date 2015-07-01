@@ -31,10 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Com.Ericmas001.Net.Protocol, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\References\Com.Ericmas001.Net.Protocol.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -50,7 +46,9 @@
   <ItemGroup>
     <Compile Include="AbstractBluffinCommand.cs" />
     <Compile Include="AbstractBluffinReponse.cs" />
+    <Compile Include="AbstractCommand.cs" />
     <Compile Include="AbstractGameCommand.cs" />
+    <Compile Include="AbstractJsonCommand.cs" />
     <Compile Include="AbstractLobbyCommand.cs" />
     <Compile Include="Enums\BluffinCommandEnum.cs" />
     <Compile Include="DisconnectCommand.cs" />

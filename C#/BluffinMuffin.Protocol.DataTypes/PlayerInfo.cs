@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BluffinMuffin.Protocol.DataTypes.Attributes;
 using Com.Ericmas001.Games;
 using BluffinMuffin.Protocol.DataTypes.Enums;
-using Com.Ericmas001.Net.Protocol;
 using Newtonsoft.Json;
 
 namespace BluffinMuffin.Protocol.DataTypes

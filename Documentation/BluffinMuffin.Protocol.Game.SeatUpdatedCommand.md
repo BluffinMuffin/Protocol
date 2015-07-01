@@ -111,8 +111,8 @@ Server informs clients that a seat has changed state. Usually sent when player s
       "IsShowingCards": true
     },
     "SeatAttributes": [
-      "BigBlind",
-      "CurrentPlayer"
+      "CurrentPlayer",
+      "BigBlind"
     ]
   }
 }

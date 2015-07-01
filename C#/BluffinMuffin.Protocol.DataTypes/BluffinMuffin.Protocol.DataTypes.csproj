@@ -35,10 +35,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\References\Com.Ericmas001.Games.dll</HintPath>
     </Reference>
-    <Reference Include="Com.Ericmas001.Net.Protocol, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\References\Com.Ericmas001.Net.Protocol.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -52,10 +48,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractCustomJsonConverter.cs" />
+    <Compile Include="Attributes\ExamplesValuesAttribute.cs" />
+    <Compile Include="Attributes\ExampleValueAttribute.cs" />
     <Compile Include="BlindOptions.cs" />
     <Compile Include="BlindOptionsAnte.cs" />
     <Compile Include="BlindOptionsBlinds.cs" />
     <Compile Include="BlindOptionsNone.cs" />
+    <Compile Include="FactoryOption.cs" />
     <Compile Include="ConfigurableWaitingTimes.cs" />
     <Compile Include="Enums\BlindTypeEnum.cs" />
     <Compile Include="Enums\GameActionEnum.cs" />
@@ -67,6 +67,7 @@
     <Compile Include="Enums\PokerHandEnum.cs" />
     <Compile Include="Enums\RoundTypeEnum.cs" />
     <Compile Include="Enums\SeatAttributeEnum.cs" />
+    <Compile Include="IOption.cs" />
     <Compile Include="LimitOptions.cs" />
     <Compile Include="LimitOptionsFixed.cs" />
     <Compile Include="LimitOptionsNoLimit.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="LobbyOptions.cs" />
     <Compile Include="LobbyOptionsRegisteredMode.cs" />
     <Compile Include="LobbyOptionsQuickMode.cs" />
+    <Compile Include="OptionJsonConverter.cs" />
     <Compile Include="PlayerInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RuleInfo.cs" />

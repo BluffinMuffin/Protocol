@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using BluffinMuffin.Protocol.DataTypes;
-using Com.Ericmas001.Net.Protocol;
+using BluffinMuffin.Protocol.DataTypes.Attributes;
 
 namespace BluffinMuffin.Protocol.Lobby
 {

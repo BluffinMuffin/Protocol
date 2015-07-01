@@ -1,6 +1,4 @@
-﻿using Com.Ericmas001.Net.Protocol;
-
-namespace BluffinMuffin.Protocol.Game
+﻿namespace BluffinMuffin.Protocol.Game
 {
     /// <summary>
     /// The response from the server on the SitOutRequest

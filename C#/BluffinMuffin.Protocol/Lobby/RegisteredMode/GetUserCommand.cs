@@ -1,5 +1,4 @@
 ﻿using BluffinMuffin.Protocol.Enums;
-using Com.Ericmas001.Net.Protocol;
 
 namespace BluffinMuffin.Protocol.Lobby.RegisteredMode
 {
