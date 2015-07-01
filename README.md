@@ -18,11 +18,8 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
  * **[BluffinMuffin.Server](http://ericmas001.github.io/BluffinMuffin.Server)** *(Protocol v1.0.1)*
 
 
-####Current Version: **[1.0.1](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v1.0.1)** (2015-05-04)
- * Readme was improved
- * Changelog page added
- * Assembly versions has been normalized
- * Diagrams were missing or incorrect (#16)
+####Current Version: **[1.1.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v1.1.0)** (2015-07-01)
+ * Improving PlayerWonPotCommand with "TotalPotAmount", "WinningCards" and "WinningHand"
  * *[Full changelog ...](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/CHANGELOG.md)*
 
 
