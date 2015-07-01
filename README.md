@@ -24,8 +24,12 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
  * *[Full changelog ...](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/CHANGELOG.md)*
 
 
-=====================================================
-=====================================================
+----
+# Documentation
+----
+
+## Playing Cards
+Playing Cards sended and received with this protocol are always represented with a [normalized string](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/PlayingCard.md).
 
 ## General Commands
 General commands are for communication everywhere.
