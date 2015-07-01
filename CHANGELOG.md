@@ -1,5 +1,10 @@
 # 1.*
 
+## 1.1.*
+
+### [1.1.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v1.0.1) *(2015-05-04)*
+ * Improving PlayerWonPotCommand with "TotalPotAmount", "WinningCards" and "WinningHand"
+
 ## 1.0.*
 
 ### [1.0.1](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v1.0.1) *(2015-05-04)*
