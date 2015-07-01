@@ -1,3 +1,12 @@
+# 2.*
+
+## 2.0.*
+
+### [2.0.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.0.0) *(2015-07-01)*
+ * Getting rid of all the Com.Ericmas001 DLLs for easier implementations
+ * Adding a normalized way to send cards as string
+ * Renaming properties of some commands making them easier to understand at first glance
+
 # 1.*
 
 ## 1.1.*

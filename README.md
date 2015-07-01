@@ -18,9 +18,10 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
  * **[BluffinMuffin.Server](http://ericmas001.github.io/BluffinMuffin.Server)** *(Protocol v1.0.1)*
 
 
-####Current Version: **[1.1.1](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v1.1.1) *(2015-07-01)*
- * "None" was missing but needed in "PokerHandEnum"
- * BluffinMuffin.Protocol.Tests.DataTypes was missing from the package
+####Current Version: [2.0.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.0.0) *(2015-07-01)*
+ * Getting rid of all the Com.Ericmas001 DLLs for easier implementations
+ * Adding a normalized way to send cards as string
+ * Renaming properties of some commands making them easier to understand at first glance
  * *[Full changelog ...](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/CHANGELOG.md)*
 
 
