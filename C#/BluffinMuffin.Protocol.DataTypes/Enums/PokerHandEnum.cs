@@ -7,6 +7,11 @@
     public enum PokerHandEnum
     {
         /// <summary>
+        /// None
+        /// </summary>
+        None,
+
+        /// <summary>
         /// High Card
         /// </summary>
         HighCard,

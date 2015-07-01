@@ -50,6 +50,7 @@ This command is sent after the showdown to inform clients that some money has be
       "description": "The hand that is responsible for winning the pot",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.PokerHandEnum",
       "enum": [
+        "None",
         "HighCard",
         "OnePair",
         "TwoPairs",
