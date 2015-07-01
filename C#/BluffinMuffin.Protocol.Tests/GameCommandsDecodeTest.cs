@@ -55,17 +55,17 @@ namespace BluffinMuffin.Protocol.Tests
         {
             var c = GameCommandMock.GameStartedCommand();
             var dc = GetDecodedCommand(c);
-            Assert.AreEqual(c.NeededBlind, dc.NeededBlind);
+            Assert.AreEqual(c.NeededBlindAmount, dc.NeededBlindAmount);
         }
         [TestMethod]
         public void PlayerHoleCardsChangedCommand()
         {
             var c = GameCommandMock.PlayerHoleCardsChangedCommand();
             var dc = GetDecodedCommand(c);
-            Assert.AreEqual(c.PlayerPos, dc.PlayerPos);
+            Assert.AreEqual(c.NoSeat, dc.NoSeat);
             Assert.AreEqual(c.Cards.Length, dc.Cards.Length);
             Assert.IsFalse(c.Cards.Except(dc.Cards).Any());
-            Assert.AreEqual(c.State, dc.State);
+            Assert.AreEqual(c.PlayerState, dc.PlayerState);
         }
         [TestMethod]
         public void PlayerJoinedCommand()
@@ -86,7 +86,7 @@ namespace BluffinMuffin.Protocol.Tests
         {
             var c = GameCommandMock.PlayerPlayMoneyCommand();
             var dc = GetDecodedCommand(c);
-            Assert.AreEqual(c.Played, dc.Played);
+            Assert.AreEqual(c.AmountPlayed, dc.AmountPlayed);
         }
         [TestMethod]
         public void PlayerSitInCommand()
@@ -124,31 +124,31 @@ namespace BluffinMuffin.Protocol.Tests
         {
             var c = GameCommandMock.PlayerTurnBeganCommand();
             var dc = GetDecodedCommand(c);
-            Assert.AreEqual(c.PlayerPos, dc.PlayerPos);
-            Assert.AreEqual(c.MinimumRaise, dc.MinimumRaise);
+            Assert.AreEqual(c.NoSeat, dc.NoSeat);
+            Assert.AreEqual(c.MinimumRaiseAmount, dc.MinimumRaiseAmount);
         }
         [TestMethod]
         public void PlayerTurnEndedCommand()
         {
             var c = GameCommandMock.PlayerTurnEndedCommand();
             var dc = GetDecodedCommand(c);
-            Assert.AreEqual(c.PlayerPos, dc.PlayerPos);
-            Assert.AreEqual(c.PlayerBet, dc.PlayerBet);
-            Assert.AreEqual(c.PlayerMoney, dc.PlayerMoney);
+            Assert.AreEqual(c.NoSeat, dc.NoSeat);
+            Assert.AreEqual(c.TotalPlayedMoneyAmount, dc.TotalPlayedMoneyAmount);
+            Assert.AreEqual(c.TotalSafeMoneyAmount, dc.TotalSafeMoneyAmount);
             Assert.AreEqual(c.TotalPot, dc.TotalPot);
-            Assert.AreEqual(c.ActionType, dc.ActionType);
-            Assert.AreEqual(c.ActionAmount, dc.ActionAmount);
-            Assert.AreEqual(c.State, dc.State);
+            Assert.AreEqual(c.ActionTakenType, dc.ActionTakenType);
+            Assert.AreEqual(c.ActionTakenAmount, dc.ActionTakenAmount);
+            Assert.AreEqual(c.PlayerState, dc.PlayerState);
         }
         [TestMethod]
         public void PlayerWonPotCommand()
         {
             var c = GameCommandMock.PlayerWonPotCommand();
             var dc = GetDecodedCommand(c);
-            Assert.AreEqual(c.PlayerPos, dc.PlayerPos);
+            Assert.AreEqual(c.NoSeat, dc.NoSeat);
             Assert.AreEqual(c.PotId, dc.PotId);
-            Assert.AreEqual(c.PlayerMoney, dc.PlayerMoney);
-            Assert.AreEqual(c.Shared, dc.Shared);
+            Assert.AreEqual(c.TotalPlayerMoney, dc.TotalPlayerMoney);
+            Assert.AreEqual(c.WonAmount, dc.WonAmount);
             Assert.AreEqual(c.TotalPotAmount, dc.TotalPotAmount);
             Assert.AreEqual(c.WinningHand, dc.WinningHand);
             Assert.AreEqual(c.WinningCards.Length, dc.WinningCards.Length);

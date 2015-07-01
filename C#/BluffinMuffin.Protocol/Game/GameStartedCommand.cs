@@ -12,6 +12,6 @@ namespace BluffinMuffin.Protocol.Game
         /// The amount needed for this player as blinds. If the player doesn't need to put any blinds, he will receive 0
         /// </summary>
         [ExampleValue(10)]
-        public int NeededBlind { get; set; }
+        public int NeededBlindAmount { get; set; }
     }
 }

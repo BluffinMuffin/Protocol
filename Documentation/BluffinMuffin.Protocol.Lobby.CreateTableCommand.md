@@ -80,7 +80,7 @@ More information on ...
         },
         "Blind": {
           "description": "The type of blinds the table uses (none, blinds, antes) See 'BluffinMuffin.Protocol.DataTypes.BlindOptions' for more details",
-          "type": "BluffinMuffin.Protocol.DataTypes.BlindOptions",
+          "type": "BluffinMuffin.Protocol.DataTypes.Options.BlindOptions",
           "properties": {
             "MoneyUnit": {
               "description": "The Money unit. Should always be equal to the moneyUnit of the table.",
@@ -99,7 +99,7 @@ More information on ...
         },
         "Limit": {
           "description": "The type of limit the table uses (NoLimit, PotLimit, FixedLimit) See 'BluffinMuffin.Protocol.DataTypes.LimitOptions' for more details",
-          "type": "BluffinMuffin.Protocol.DataTypes.LimitOptions",
+          "type": "BluffinMuffin.Protocol.DataTypes.Options.LimitOptions",
           "properties": {
             "OptionType": {
               "description": "The type of limit you want to apply on raises",
@@ -114,7 +114,7 @@ More information on ...
         },
         "Lobby": {
           "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.LobbyOptions' for more details",
-          "type": "BluffinMuffin.Protocol.DataTypes.LobbyOptions",
+          "type": "BluffinMuffin.Protocol.DataTypes.Options.LobbyOptions",
           "properties": {
             "OptionType": {
               "description": "What type of lobby it is",
@@ -266,7 +266,7 @@ More information on ...
             },
             "Blind": {
               "description": "The type of blinds the table uses (none, blinds, antes) See 'BluffinMuffin.Protocol.DataTypes.BlindOptions' for more details",
-              "type": "BluffinMuffin.Protocol.DataTypes.BlindOptions",
+              "type": "BluffinMuffin.Protocol.DataTypes.Options.BlindOptions",
               "properties": {
                 "MoneyUnit": {
                   "description": "The Money unit. Should always be equal to the moneyUnit of the table.",
@@ -285,7 +285,7 @@ More information on ...
             },
             "Limit": {
               "description": "The type of limit the table uses (NoLimit, PotLimit, FixedLimit) See 'BluffinMuffin.Protocol.DataTypes.LimitOptions' for more details",
-              "type": "BluffinMuffin.Protocol.DataTypes.LimitOptions",
+              "type": "BluffinMuffin.Protocol.DataTypes.Options.LimitOptions",
               "properties": {
                 "OptionType": {
                   "description": "The type of limit you want to apply on raises",
@@ -300,7 +300,7 @@ More information on ...
             },
             "Lobby": {
               "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.LobbyOptions' for more details",
-              "type": "BluffinMuffin.Protocol.DataTypes.LobbyOptions",
+              "type": "BluffinMuffin.Protocol.DataTypes.Options.LobbyOptions",
               "properties": {
                 "OptionType": {
                   "description": "What type of lobby it is",

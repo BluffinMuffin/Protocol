@@ -22,7 +22,7 @@ The supported version, all the supported lobby types and all the supported rules
       "type": "string"
     },
     "ImplementedProtocolVersion": {
-      "description": "The version of the Implemented Bluffin Protocol by the client",
+      "description": "The version of the Implemented Bluffin Protocol by the client, Represented as \"Major.Minor.Revision\"",
       "type": "string"
     }
   }
@@ -34,7 +34,7 @@ The supported version, all the supported lobby types and all the supported rules
 ```json
 {
   "CommandName": "CheckCompatibilityCommand",
-  "ImplementedProtocolVersion": "1.0"
+  "ImplementedProtocolVersion": "2.0.0"
 }
 ```
 
@@ -78,7 +78,7 @@ The supported version, all the supported lobby types and all the supported rules
       "type": "string"
     },
     "ImplementedProtocolVersion": {
-      "description": "The version of the Implemented Bluffin Protocol by the server",
+      "description": "The version of the Implemented Bluffin Protocol by the client, Represented as \"Major.Minor.Revision\"",
       "type": "string"
     },
     "Rules": {
@@ -186,7 +186,7 @@ The supported version, all the supported lobby types and all the supported rules
           "type": "string"
         },
         "ImplementedProtocolVersion": {
-          "description": "The version of the Implemented Bluffin Protocol by the client",
+          "description": "The version of the Implemented Bluffin Protocol by the client, Represented as \"Major.Minor.Revision\"",
           "type": "string"
         }
       }
@@ -203,7 +203,7 @@ The supported version, all the supported lobby types and all the supported rules
   "Success": true,
   "MessageId": "None",
   "Message": "",
-  "ImplementedProtocolVersion": "1.0",
+  "ImplementedProtocolVersion": "2.0.0",
   "SupportedLobbyTypes": [
     "QuickMode",
     "RegisteredMode"
@@ -233,7 +233,7 @@ The supported version, all the supported lobby types and all the supported rules
   ],
   "Command": {
     "CommandName": "CheckCompatibilityCommand",
-    "ImplementedProtocolVersion": "1.0"
+    "ImplementedProtocolVersion": "2.0.0"
   }
 }
 ```

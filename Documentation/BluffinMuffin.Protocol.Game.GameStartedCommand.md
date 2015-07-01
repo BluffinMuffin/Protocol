@@ -21,7 +21,7 @@ It's important to understand that a *game* is only one iteration. It's starts wi
       "description": "The id of the table where this command needs to go",
       "type": "int"
     },
-    "NeededBlind": {
+    "NeededBlindAmount": {
       "description": "The amount needed for this player as blinds. If the player doesn't need to put any blinds, he will receive 0",
       "type": "int"
     }
@@ -35,7 +35,7 @@ It's important to understand that a *game* is only one iteration. It's starts wi
 {
   "CommandName": "GameStartedCommand",
   "TableId": 42,
-  "NeededBlind": 10
+  "NeededBlindAmount": 10
 }
 ```
 

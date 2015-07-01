@@ -10,9 +10,9 @@ namespace BluffinMuffin.Protocol.Lobby
     public class CheckCompatibilityResponse : AbstractBluffinReponse<CheckCompatibilityCommand>
     {
         /// <summary>
-        /// The version of the Implemented Bluffin Protocol by the server
+        /// The version of the Implemented Bluffin Protocol by the client, Represented as "Major.Minor.Revision"
         /// </summary>
-        [ExampleValue("1.0")]
+        [ExampleValue("2.0.0")]
         public string ImplementedProtocolVersion { get; set; }
 
         /// <summary>

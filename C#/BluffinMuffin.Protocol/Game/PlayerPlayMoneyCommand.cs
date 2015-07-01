@@ -11,6 +11,6 @@ namespace BluffinMuffin.Protocol.Game
         /// Amount of money played
         /// </summary>
         [ExampleValue(42)]
-        public int Played { get; set; }
+        public int AmountPlayed { get; set; }
     }
 }

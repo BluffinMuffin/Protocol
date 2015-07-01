@@ -12,7 +12,7 @@ namespace BluffinMuffin.Protocol.Game
         /// The position on the table where is sitting the player that won something
         /// </summary>
         [ExampleValue(7)]
-        public int PlayerPos { get; set; }
+        public int NoSeat { get; set; }
 
         /// <summary>
         /// The Id of the pot that was won by the player
@@ -24,10 +24,10 @@ namespace BluffinMuffin.Protocol.Game
         /// The amount of money that was won by the player (Could be a fraction of the pot if there was a split.
         /// </summary>
         [ExampleValue(420)]
-        public int Shared { get; set; }
+        public int WonAmount { get; set; }
 
         /// <summary>
-        /// The amount of money that was in the pot. Bigger than "Shared" if the pot was splitted.
+        /// The amount of money that was in the pot. Bigger than "WonAmount" if the pot was splitted.
         /// </summary>
         [ExampleValue(1000)]
         public int TotalPotAmount { get; set; }
@@ -36,7 +36,7 @@ namespace BluffinMuffin.Protocol.Game
         /// The total amount of money in the pockets of the player after winning this money
         /// </summary>
         [ExampleValue(4200)]
-        public int PlayerMoney { get; set; }
+        public int TotalPlayerMoney { get; set; }
 
         /// <summary>
         /// The cards that are responsible for winning the pot

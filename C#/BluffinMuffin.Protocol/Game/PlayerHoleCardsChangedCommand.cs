@@ -13,7 +13,7 @@ namespace BluffinMuffin.Protocol.Game
         /// The position on the table where is sitting the player with the cards.
         /// </summary>
         [ExampleValue(7)]
-        public int PlayerPos { get; set; }
+        public int NoSeat { get; set; }
 
         /// <summary>
         /// The cards currently in the hands of the player
@@ -25,6 +25,6 @@ namespace BluffinMuffin.Protocol.Game
         /// The state of the player.
         /// </summary>
         [ExampleValue(PlayerStateEnum.Playing)]
-        public PlayerStateEnum State { get; set; }
+        public PlayerStateEnum PlayerState { get; set; }
     }
 }

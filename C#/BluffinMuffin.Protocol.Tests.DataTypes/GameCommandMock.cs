@@ -23,12 +23,12 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static GameStartedCommand GameStartedCommand()
         {
-            return new GameStartedCommand() {TableId = 42, NeededBlind = 84};
+            return new GameStartedCommand() {TableId = 42, NeededBlindAmount = 84};
         }
 
         public static PlayerHoleCardsChangedCommand PlayerHoleCardsChangedCommand()
         {
-            return new PlayerHoleCardsChangedCommand() { TableId = 42, Cards = new[] { "2s", "5h" }, PlayerPos = 7, State = PlayerStateEnum.Playing };
+            return new PlayerHoleCardsChangedCommand() { TableId = 42, Cards = new[] { "2s", "5h" }, NoSeat = 7, PlayerState = PlayerStateEnum.Playing };
         }
 
         public static PlayerJoinedCommand PlayerJoinedCommand()
@@ -43,7 +43,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static PlayerPlayMoneyCommand PlayerPlayMoneyCommand()
         {
-            return new PlayerPlayMoneyCommand() {TableId = 42, Played = 84};
+            return new PlayerPlayMoneyCommand() {TableId = 42, AmountPlayed = 84};
         }
 
         public static PlayerSitInCommand PlayerSitInCommand()
@@ -70,17 +70,17 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static PlayerTurnBeganCommand PlayerTurnBeganCommand()
         {
-            return new PlayerTurnBeganCommand() {TableId = 42, PlayerPos = 7, MinimumRaise = 84};
+            return new PlayerTurnBeganCommand() {TableId = 42, NoSeat = 7, MinimumRaiseAmount = 84};
         }
 
         public static PlayerTurnEndedCommand PlayerTurnEndedCommand()
         {
-            return new PlayerTurnEndedCommand() {TableId = 42, PlayerPos = 7, PlayerBet = 21, PlayerMoney = 84, TotalPot = 126, ActionType = GameActionEnum.Raise, ActionAmount = 63, State = PlayerStateEnum.AllIn};
+            return new PlayerTurnEndedCommand() {TableId = 42, NoSeat = 7, TotalPlayedMoneyAmount = 21, TotalSafeMoneyAmount = 84, TotalPot = 126, ActionTakenType = GameActionEnum.Raise, ActionTakenAmount = 63, PlayerState = PlayerStateEnum.AllIn};
         }
 
         public static PlayerWonPotCommand PlayerWonPotCommand()
         {
-            return new PlayerWonPotCommand() { TableId = 42, PlayerPos = 7, Shared = 210, PlayerMoney = 84, TotalPotAmount = 420, PotId = 3, WinningCards = new[] { "5s", "5c", "5d", "Ad", "Ks" }, WinningHand = PokerHandEnum.ThreeOfAKind };
+            return new PlayerWonPotCommand() { TableId = 42, NoSeat = 7, WonAmount = 210, TotalPlayerMoney = 84, TotalPotAmount = 420, PotId = 3, WinningCards = new[] { "5s", "5c", "5d", "Ad", "Ks" }, WinningHand = PokerHandEnum.ThreeOfAKind };
         }
 
         public static SeatUpdatedCommand SeatUpdatedCommand()

@@ -19,7 +19,7 @@ The client is telling the server that he plays some money.
       "description": "The id of the table where this command needs to go",
       "type": "int"
     },
-    "Played": {
+    "AmountPlayed": {
       "description": "Amount of money played",
       "type": "int"
     }
@@ -33,7 +33,7 @@ The client is telling the server that he plays some money.
 {
   "CommandName": "PlayerPlayMoneyCommand",
   "TableId": 42,
-  "Played": 42
+  "AmountPlayed": 42
 }
 ```
 

@@ -12,17 +12,17 @@ namespace BluffinMuffin.Protocol.Game
         /// The position on the table where is sitting the player that needs to play
         /// </summary>
         [ExampleValue(7)]
-        public int PlayerPos { get; set; }
+        public int NoSeat { get; set; }
         /// <summary>
         /// The total amount of money a player have bet since the beginning of the round. 
         /// </summary>
         [ExampleValue(420)]
-        public int PlayerBet { get; set; }
+        public int TotalPlayedMoneyAmount { get; set; }
         /// <summary>
         /// The total amount of money a player have that has not been played.
         /// </summary>
         [ExampleValue(4200)]
-        public int PlayerMoney { get; set; }
+        public int TotalSafeMoneyAmount { get; set; }
         /// <summary>
         /// The total amount of money currently played in this game. This include the money in the center, and the money played in front of each player.
         /// </summary>
@@ -32,16 +32,16 @@ namespace BluffinMuffin.Protocol.Game
         /// The type of action that was taken by the player
         /// </summary>
         [ExampleValue(GameActionEnum.Call)]
-        public GameActionEnum ActionType { get; set; }
+        public GameActionEnum ActionTakenType { get; set; }
         /// <summary>
         /// The amount of money that the player has put for this single action
         /// </summary>
         [ExampleValue(42)]
-        public int ActionAmount { get; set; }
+        public int ActionTakenAmount { get; set; }
         /// <summary>
         /// The current state of the player that just played
         /// </summary>
         [ExampleValue(PlayerStateEnum.Playing)]
-        public PlayerStateEnum State { get; set; }
+        public PlayerStateEnum PlayerState { get; set; }
     }
 }

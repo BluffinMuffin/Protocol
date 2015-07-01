@@ -19,11 +19,7 @@ This command is sent after the showdown to inform clients that some money has be
       "description": "The id of the table where this command needs to go",
       "type": "int"
     },
-    "PlayerMoney": {
-      "description": "The total amount of money in the pockets of the player after winning this money",
-      "type": "int"
-    },
-    "PlayerPos": {
+    "NoSeat": {
       "description": "The position on the table where is sitting the player that won something",
       "type": "int"
     },
@@ -31,12 +27,12 @@ This command is sent after the showdown to inform clients that some money has be
       "description": "The Id of the pot that was won by the player",
       "type": "int"
     },
-    "Shared": {
-      "description": "The amount of money that was won by the player (Could be a fraction of the pot if there was a split.",
+    "TotalPlayerMoney": {
+      "description": "The total amount of money in the pockets of the player after winning this money",
       "type": "int"
     },
     "TotalPotAmount": {
-      "description": "The amount of money that was in the pot. Bigger than \"Shared\" if the pot was splitted.",
+      "description": "The amount of money that was in the pot. Bigger than \"WonAmount\" if the pot was splitted.",
       "type": "int"
     },
     "WinningCards": {
@@ -61,6 +57,10 @@ This command is sent after the showdown to inform clients that some money has be
         "FourOfAKind",
         "StraightFlush"
       ]
+    },
+    "WonAmount": {
+      "description": "The amount of money that was won by the player (Could be a fraction of the pot if there was a split.",
+      "type": "int"
     }
   }
 }
@@ -72,11 +72,11 @@ This command is sent after the showdown to inform clients that some money has be
 {
   "CommandName": "PlayerWonPotCommand",
   "TableId": 42,
-  "PlayerPos": 7,
+  "NoSeat": 7,
   "PotId": 0,
-  "Shared": 420,
+  "WonAmount": 420,
   "TotalPotAmount": 1000,
-  "PlayerMoney": 4200,
+  "TotalPlayerMoney": 4200,
   "WinningCards": [
     "5s",
     "5c",

@@ -28,11 +28,11 @@ This is used to inform a player of the cards he just got dealed, to inform other
         "type": "string"
       }
     },
-    "PlayerPos": {
+    "NoSeat": {
       "description": "The position on the table where is sitting the player with the cards.",
       "type": "int"
     },
-    "State": {
+    "PlayerState": {
       "description": "The state of the player.",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
       "enum": [
@@ -53,12 +53,12 @@ This is used to inform a player of the cards he just got dealed, to inform other
 {
   "CommandName": "PlayerHoleCardsChangedCommand",
   "TableId": 42,
-  "PlayerPos": 7,
+  "NoSeat": 7,
   "Cards": [
     "4h",
     "Qs"
   ],
-  "State": "Playing"
+  "PlayerState": "Playing"
 }
 ```
 

@@ -19,11 +19,11 @@ The server sends this command to indicated that it's time for a specific player 
       "description": "The id of the table where this command needs to go",
       "type": "int"
     },
-    "MinimumRaise": {
+    "MinimumRaiseAmount": {
       "description": "The minimum amount needed to raise. A raise must be at least the size of the largest previous bet or raise of the current betting round.",
       "type": "int"
     },
-    "PlayerPos": {
+    "NoSeat": {
       "description": "The position on the table where is sitting the player that needs to play",
       "type": "int"
     }
@@ -37,8 +37,8 @@ The server sends this command to indicated that it's time for a specific player 
 {
   "CommandName": "PlayerTurnBeganCommand",
   "TableId": 42,
-  "PlayerPos": 7,
-  "MinimumRaise": 6
+  "NoSeat": 7,
+  "MinimumRaiseAmount": 6
 }
 ```
 
