@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace BluffinMuffin.Protocol.DataTypes
+namespace BluffinMuffin.Protocol.DataTypes.Options
 {
     public static class FactoryOption<TOption, TEnum>
         where TOption : IOption<TEnum>

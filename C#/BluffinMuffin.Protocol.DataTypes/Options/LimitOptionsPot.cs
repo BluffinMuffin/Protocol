@@ -1,6 +1,6 @@
 ﻿using BluffinMuffin.Protocol.DataTypes.Enums;
 
-namespace BluffinMuffin.Protocol.DataTypes
+namespace BluffinMuffin.Protocol.DataTypes.Options
 {
     /// <summary>
     /// In a pot-limit game no player can raise more than the size of the total pot, which includes Chips collected from previous betting rounds (Starting pot), Previous action in the current betting round (Trail) and A call from the player making the raise

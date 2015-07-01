@@ -1,5 +1,6 @@
 ﻿using BluffinMuffin.Protocol.DataTypes;
 using BluffinMuffin.Protocol.DataTypes.Enums;
+using BluffinMuffin.Protocol.DataTypes.Options;
 
 namespace BluffinMuffin.Protocol.Tests.DataTypes
 {

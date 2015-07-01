@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace BluffinMuffin.Protocol.DataTypes
+namespace BluffinMuffin.Protocol.DataTypes.Json
 {
     public abstract class AbstractCustomJsonConverter<T> : JsonConverter
     {

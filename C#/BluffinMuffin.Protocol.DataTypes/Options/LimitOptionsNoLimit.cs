@@ -1,6 +1,6 @@
 ﻿using BluffinMuffin.Protocol.DataTypes.Enums;
 
-namespace BluffinMuffin.Protocol.DataTypes
+namespace BluffinMuffin.Protocol.DataTypes.Options
 {
     /// <summary>
     /// A game played with a no-limit betting structure allows each player to raise the bet by any amount up to and including his entire remaining stake at any time. There is generally a minimum opening bet, and raises usually must be at least the amount of the previous raise.

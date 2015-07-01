@@ -1,6 +1,6 @@
 ﻿using BluffinMuffin.Protocol.DataTypes.Enums;
 
-namespace BluffinMuffin.Protocol.DataTypes
+namespace BluffinMuffin.Protocol.DataTypes.Options
 {
     /// <summary>
     /// The type of limit the table uses (NoLimit, PotLimit, FixedLimit)

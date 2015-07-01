@@ -1,7 +1,7 @@
 ﻿using BluffinMuffin.Protocol.DataTypes.Attributes;
 using BluffinMuffin.Protocol.DataTypes.Enums;
 
-namespace BluffinMuffin.Protocol.DataTypes
+namespace BluffinMuffin.Protocol.DataTypes.Options
 {
     /// <summary>
     /// The type of blinds the table uses (none, blinds, antes) 

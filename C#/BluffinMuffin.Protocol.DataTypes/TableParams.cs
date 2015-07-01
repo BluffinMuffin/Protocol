@@ -1,4 +1,6 @@
 ﻿using BluffinMuffin.Protocol.DataTypes.Attributes;
+using BluffinMuffin.Protocol.DataTypes.Json;
+using BluffinMuffin.Protocol.DataTypes.Options;
 using Newtonsoft.Json;
 using BluffinMuffin.Protocol.DataTypes.Enums;
 

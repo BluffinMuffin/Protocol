@@ -44,14 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractCustomJsonConverter.cs" />
+    <Compile Include="Json\AbstractCustomJsonConverter.cs" />
     <Compile Include="Attributes\ExamplesValuesAttribute.cs" />
     <Compile Include="Attributes\ExampleValueAttribute.cs" />
-    <Compile Include="BlindOptions.cs" />
-    <Compile Include="BlindOptionsAnte.cs" />
-    <Compile Include="BlindOptionsBlinds.cs" />
-    <Compile Include="BlindOptionsNone.cs" />
-    <Compile Include="FactoryOption.cs" />
+    <Compile Include="Options\BlindOptions.cs" />
+    <Compile Include="Options\BlindOptionsAnte.cs" />
+    <Compile Include="Options\BlindOptionsBlinds.cs" />
+    <Compile Include="Options\BlindOptionsNone.cs" />
+    <Compile Include="Options\FactoryOption.cs" />
     <Compile Include="ConfigurableWaitingTimes.cs" />
     <Compile Include="Enums\BlindTypeEnum.cs" />
     <Compile Include="Enums\GameActionEnum.cs" />
@@ -63,15 +63,15 @@
     <Compile Include="Enums\PokerHandEnum.cs" />
     <Compile Include="Enums\RoundTypeEnum.cs" />
     <Compile Include="Enums\SeatAttributeEnum.cs" />
-    <Compile Include="IOption.cs" />
-    <Compile Include="LimitOptions.cs" />
-    <Compile Include="LimitOptionsFixed.cs" />
-    <Compile Include="LimitOptionsNoLimit.cs" />
-    <Compile Include="LimitOptionsPot.cs" />
-    <Compile Include="LobbyOptions.cs" />
-    <Compile Include="LobbyOptionsRegisteredMode.cs" />
-    <Compile Include="LobbyOptionsQuickMode.cs" />
-    <Compile Include="OptionJsonConverter.cs" />
+    <Compile Include="Options\IOption.cs" />
+    <Compile Include="Options\LimitOptions.cs" />
+    <Compile Include="Options\LimitOptionsFixed.cs" />
+    <Compile Include="Options\LimitOptionsNoLimit.cs" />
+    <Compile Include="Options\LimitOptionsPot.cs" />
+    <Compile Include="Options\LobbyOptions.cs" />
+    <Compile Include="Options\LobbyOptionsRegisteredMode.cs" />
+    <Compile Include="Options\LobbyOptionsQuickMode.cs" />
+    <Compile Include="Json\OptionJsonConverter.cs" />
     <Compile Include="PlayerInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RuleInfo.cs" />

@@ -1,6 +1,7 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using BluffinMuffin.Protocol.DataTypes.Options;
+using Newtonsoft.Json.Linq;
 
-namespace BluffinMuffin.Protocol.DataTypes
+namespace BluffinMuffin.Protocol.DataTypes.Json
 {
     public class OptionJsonConverter<TOption, TEnum> : AbstractCustomJsonConverter<TOption>
         where TOption : IOption<TEnum>

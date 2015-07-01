@@ -1,7 +1,7 @@
 ﻿using BluffinMuffin.Protocol.DataTypes.Enums;
 using Newtonsoft.Json;
 
-namespace BluffinMuffin.Protocol.DataTypes
+namespace BluffinMuffin.Protocol.DataTypes.Options
 {
     /// <summary>
     /// The type of table it is (QuickMode ? RegisteredMode ?)

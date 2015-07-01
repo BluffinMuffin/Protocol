@@ -1,7 +1,8 @@
 ﻿using BluffinMuffin.Protocol.DataTypes.Enums;
+using BluffinMuffin.Protocol.DataTypes.Options;
 using Newtonsoft.Json;
 
-namespace BluffinMuffin.Protocol.DataTypes
+namespace BluffinMuffin.Protocol.DataTypes.Options
 {
     /// <summary>
     /// A blind bet or just blind is a forced bet placed into the pot by one or more players before the deal begins, in a way that simulates bets made during play. The most common use of blinds as a betting structure calls for two blinds: the player after the dealer blinds about half of what would be a normal bet, and the next player blinds what would be a whole bet.
