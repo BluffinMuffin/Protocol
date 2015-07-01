@@ -14,7 +14,8 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
    As an option, if your project is in .Net, the protocol has C# libraries released with each versions of the protocol. Using these DLLs is not a requirement to implement the protocol, but it can save you some time ;)
     
 ####Known Implementations
- * **[BluffinMuffin.Beta](http://ericmas001.github.io/BluffinMuffin.Beta)** *(Protocol v1.0)*
+ * **[BluffinMuffin.Beta](http://ericmas001.github.io/BluffinMuffin.Beta)** *(Protocol v1.0.0)*
+ * **[BluffinMuffin.Server](http://ericmas001.github.io/BluffinMuffin.Server)** *(Protocol v1.0.1)*
 
 
 ####Current Version: **[1.0.1](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v1.0.1)** (2015-05-04)
