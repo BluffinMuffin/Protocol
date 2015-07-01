@@ -34,6 +34,32 @@ This command is sent after the showdown to inform clients that some money has be
     "Shared": {
       "description": "The amount of money that was won by the player (Could be a fraction of the pot if there was a split.",
       "type": "int"
+    },
+    "TotalPotAmount": {
+      "description": "The amount of money that was in the pot. Bigger than \"Shared\" if the pot was splitted.",
+      "type": "int"
+    },
+    "WinningCards": {
+      "description": "The cards that are responsible for winning the pot",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "WinningHand": {
+      "description": "The hand that is responsible for winning the pot",
+      "type": "BluffinMuffin.Protocol.DataTypes.Enums.PokerHandEnum",
+      "enum": [
+        "HighCard",
+        "OnePair",
+        "TwoPairs",
+        "ThreeOfAKind",
+        "Straight",
+        "Flush",
+        "FullHouse",
+        "FourOfAKind",
+        "StraightFlush"
+      ]
     }
   }
 }
@@ -48,7 +74,16 @@ This command is sent after the showdown to inform clients that some money has be
   "PlayerPos": 7,
   "PotId": 0,
   "Shared": 420,
-  "PlayerMoney": 4200
+  "TotalPotAmount": 1000,
+  "PlayerMoney": 4200,
+  "WinningCards": [
+    "5s",
+    "5c",
+    "5d",
+    "Ad",
+    "Ks"
+  ],
+  "WinningHand": "ThreeOfAKind"
 }
 ```
 

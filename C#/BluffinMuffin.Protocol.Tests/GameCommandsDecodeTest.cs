@@ -149,6 +149,11 @@ namespace BluffinMuffin.Protocol.Tests
             Assert.AreEqual(c.PotId, dc.PotId);
             Assert.AreEqual(c.PlayerMoney, dc.PlayerMoney);
             Assert.AreEqual(c.Shared, dc.Shared);
+            Assert.AreEqual(c.TotalPotAmount, dc.TotalPotAmount);
+            Assert.AreEqual(c.WinningHand, dc.WinningHand);
+            Assert.AreEqual(c.WinningCards.Length, dc.WinningCards.Length);
+            for (int i = 0; i < c.WinningCards.Length; ++i)
+                Assert.AreEqual(c.WinningCards[i], dc.WinningCards[i]);
         }
         [TestMethod]
         public void SeatUpdatedCommand()

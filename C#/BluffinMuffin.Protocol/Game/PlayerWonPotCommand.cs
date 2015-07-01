@@ -1,4 +1,5 @@
-﻿using Com.Ericmas001.Net.Protocol;
+﻿using BluffinMuffin.Protocol.DataTypes.Enums;
+using Com.Ericmas001.Net.Protocol;
 
 namespace BluffinMuffin.Protocol.Game
 {
@@ -26,9 +27,27 @@ namespace BluffinMuffin.Protocol.Game
         public int Shared { get; set; }
 
         /// <summary>
+        /// The amount of money that was in the pot. Bigger than "Shared" if the pot was splitted.
+        /// </summary>
+        [ExampleValue(1000)]
+        public int TotalPotAmount { get; set; }
+
+        /// <summary>
         /// The total amount of money in the pockets of the player after winning this money
         /// </summary>
         [ExampleValue(4200)]
         public int PlayerMoney { get; set; }
+
+        /// <summary>
+        /// The cards that are responsible for winning the pot
+        /// </summary>
+        [ExampleValues(5, "5s", "5c", "5d", "Ad", "Ks")]
+        public string[] WinningCards { get; set; }
+
+        /// <summary>
+        /// The hand that is responsible for winning the pot
+        /// </summary>
+        [ExampleValue(PokerHandEnum.ThreeOfAKind)]
+        public PokerHandEnum WinningHand { get; set; }
     }
 }

@@ -80,7 +80,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static PlayerWonPotCommand PlayerWonPotCommand()
         {
-            return new PlayerWonPotCommand() {TableId = 42, PlayerPos = 7, Shared = 21, PlayerMoney = 84};
+            return new PlayerWonPotCommand() { TableId = 42, PlayerPos = 7, Shared = 210, PlayerMoney = 84, TotalPotAmount = 420, PotId = 3, WinningCards = new[] { "5s", "5c", "5d", "Ad", "Ks" }, WinningHand = PokerHandEnum.ThreeOfAKind };
         }
 
         public static SeatUpdatedCommand SeatUpdatedCommand()
