@@ -44,11 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractBluffinCommand.cs" />
-    <Compile Include="AbstractBluffinReponse.cs" />
     <Compile Include="AbstractCommand.cs" />
+    <Compile Include="AbstractReponse.cs" />
     <Compile Include="AbstractGameCommand.cs" />
-    <Compile Include="AbstractJsonCommand.cs" />
     <Compile Include="AbstractLobbyCommand.cs" />
     <Compile Include="Enums\BluffinCommandEnum.cs" />
     <Compile Include="DisconnectCommand.cs" />

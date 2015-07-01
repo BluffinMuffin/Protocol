@@ -55,7 +55,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
 
         private static void Main(string[] args)
         {
-            LoadDocOfAssembly(typeof(AbstractBluffinCommand));
+            LoadDocOfAssembly(typeof(AbstractCommand));
             LoadDocOfAssembly(typeof(TupleTable));
 
             GenereDocForCommands();
@@ -107,7 +107,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
 
         private static void GenereDocForCommands()
         {
-            var types = Assembly.GetAssembly(typeof(AbstractBluffinCommand)).GetTypes().Where(t => t.IsClass && !t.IsAbstract && t.IsSubclassOf(typeof(AbstractBluffinCommand)) && !t.GetInterfaces().Contains(typeof(IResponse))).ToArray();
+            var types = Assembly.GetAssembly(typeof(AbstractCommand)).GetTypes().Where(t => t.IsClass && !t.IsAbstract && t.IsSubclassOf(typeof(AbstractCommand)) && !t.GetInterfaces().Contains(typeof(IResponse))).ToArray();
 
             foreach (Type t in types)
             {

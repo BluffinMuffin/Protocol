@@ -5,7 +5,7 @@ namespace BluffinMuffin.Protocol
     /// <summary>
     /// 
     /// </summary>
-    public abstract class AbstractLobbyCommand : AbstractBluffinCommand
+    public abstract class AbstractLobbyCommand : AbstractCommand
     {
         /// <summary>
         /// 

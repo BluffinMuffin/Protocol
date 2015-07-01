@@ -7,7 +7,7 @@ namespace BluffinMuffin.Protocol
     /// <summary>
     /// 
     /// </summary>
-    public abstract class AbstractGameCommand : AbstractBluffinCommand, IGameCommand
+    public abstract class AbstractGameCommand : AbstractCommand, IGameCommand
     {
         /// <summary>
         /// 

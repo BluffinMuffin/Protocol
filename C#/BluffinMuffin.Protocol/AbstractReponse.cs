@@ -8,8 +8,8 @@ namespace BluffinMuffin.Protocol
     /// 
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public abstract class AbstractBluffinReponse<T> : AbstractBluffinCommand, IResponse
-        where T : AbstractBluffinCommand
+    public abstract class AbstractBluffinReponse<T> : AbstractCommand, IResponse
+        where T : AbstractCommand
     {
         /// <summary>
         /// True if the command was a success
