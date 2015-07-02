@@ -2,6 +2,9 @@
 
 ## 2.0.*
 
+### [2.0.1](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.0.1) *(2015-07-01)*
+ * Stop crashing when no cards
+
 ### [2.0.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.0.0) *(2015-07-01)*
  * Getting rid of all the Com.Ericmas001 DLLs for easier implementations
  * Adding a normalized way to send cards as string
