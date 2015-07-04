@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EventHandling\PlayerActionEventArgs.cs" />
+    <Compile Include="EventHandling\PlayerInfoEventArgs.cs" />
+    <Compile Include="EventHandling\SeatEventArgs.cs" />
     <Compile Include="Json\AbstractCustomJsonConverter.cs" />
     <Compile Include="Attributes\ExamplesValuesAttribute.cs" />
     <Compile Include="Attributes\ExampleValueAttribute.cs" />
