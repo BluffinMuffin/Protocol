@@ -62,19 +62,21 @@
 <strong><a href="http://ericmas001.github.io/BluffinMuffin.Beta">BluffinMuffin.Beta 0.6.0</a></strong> <em>(Protocol v1.0.0)</em>
 </li>
 <li>
-<strong><a href="http://ericmas001.github.io/BluffinMuffin.Server">BluffinMuffin.Server 0.7.0</a></strong> <em>(Protocol v1.1.1)</em>
+<strong><a href="http://ericmas001.github.io/BluffinMuffin.Server">BluffinMuffin.Server 0.8.0</a></strong> <em>(Protocol v2.1.0)</em>
 </li>
 <li>
-<strong><a href="http://ericmas001.github.io/BluffinMuffin.Server">BluffinMuffin.Client 0.7.0</a></strong> <em>(Protocol v1.1.1)</em>
+<strong><a href="http://ericmas001.github.io/BluffinMuffin.Server">BluffinMuffin.Client 0.8.0</a></strong> <em>(Protocol v2.1.0)</em>
 </li>
 </ul>
 
 <h4>
-<a id="current-version-201-2015-07-01" class="anchor" href="#current-version-201-2015-07-01" aria-hidden="true"><span class="octicon octicon-link"></span></a>Current Version: <a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.0.1">2.0.1</a> <em>(2015-07-01)</em>
+<a id="current-version-210-2015-07-05" class="anchor" href="#current-version-210-2015-07-05" aria-hidden="true"><span class="octicon octicon-link"></span></a>Current Version: <a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.1.0">2.1.0</a> <em>(2015-07-05)</em>
 </h4>
 
 <ul>
-<li>Stop crashing when no cards</li>
+<li>Adding some event handling for easier implementation</li>
+<li>Adding obsolete information to the documentation</li>
+<li>RoundTypeEnum enum and usage is now obsolete.</li>
 <li><em><a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/CHANGELOG.md">Full changelog ...</a></em></li>
 </ul>
 
@@ -89,6 +91,17 @@
 <a id="playing-cards" class="anchor" href="#playing-cards" aria-hidden="true"><span class="octicon octicon-link"></span></a>Playing Cards</h2>
 
 <p>Playing Cards sended and received with this protocol are always represented with a <a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/PlayingCard.md">normalized string</a>.</p>
+
+<h2>
+<a id="obsolete-information" class="anchor" href="#obsolete-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>Obsolete Information</h2>
+
+<p>Obsolete information is information required by the protocol for retro-compatibility, but will disappear in the next major version.
+When implementing a version of the protocol that has an Obsolete information, this is what you should do</p>
+
+<ul>
+<li>Sender should continue to send the obsolete information</li>
+<li>Receiver should stop using the information as soon as possible.</li>
+</ul>
 
 <h2>
 <a id="general-commands" class="anchor" href="#general-commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>General Commands</h2>
