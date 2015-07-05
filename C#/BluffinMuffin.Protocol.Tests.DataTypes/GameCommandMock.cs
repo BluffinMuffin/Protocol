@@ -8,12 +8,12 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
     {
         public static BetTurnEndedCommand BetTurnEndedCommand()
         {
-            return new BetTurnEndedCommand() {TableId = 42, PotsAmounts = new List<int>() {5, 10, 15, 20}, Round = RoundTypeEnum.River};
+            return new BetTurnEndedCommand() {TableId = 42, PotsAmounts = new List<int>() {5, 10, 15, 20}};
         }
 
         public static BetTurnStartedCommand BetTurnStartedCommand()
         {
-            return new BetTurnStartedCommand() {TableId = 42, Cards = new[] {"2s", "5h", "Jd", "Ac"}, Round = RoundTypeEnum.River};
+            return new BetTurnStartedCommand() {TableId = 42, Cards = new[] {"2s", "5h", "Jd", "Ac"}, BettingRoundId = 4};
         }
 
         public static GameEndedCommand GameEndedCommand()

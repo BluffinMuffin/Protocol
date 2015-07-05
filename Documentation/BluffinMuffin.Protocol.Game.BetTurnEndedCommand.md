@@ -27,7 +27,7 @@ This command is issued by the server when a betting round is ending. For example
       }
     },
     "Round": {
-      "description": "The round that is ending",
+      "description": "OBSOLETE: The round that is ending",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.RoundTypeEnum",
       "enum": [
         "Preflop",

@@ -1,4 +1,5 @@
-﻿using BluffinMuffin.Protocol.DataTypes.Attributes;
+﻿using System;
+using BluffinMuffin.Protocol.DataTypes.Attributes;
 using BluffinMuffin.Protocol.DataTypes.Enums;
 
 namespace BluffinMuffin.Protocol.Game
@@ -9,10 +10,16 @@ namespace BluffinMuffin.Protocol.Game
     public class BetTurnStartedCommand : AbstractGameCommand
     {
         /// <summary>
-        /// The round that is ending
+        /// OBSOLETE: The round that is starting
         /// </summary>
         [ExampleValue(RoundTypeEnum.Flop)]
+        [Obsolete("Use BettingRoundId instead")]
         public RoundTypeEnum Round { get; set; }
+        /// <summary>
+        /// The id of the betting round that is starting, starting at 1. For texas hold'em, Preflop=1, Flop=2, Turn=3, River=4
+        /// </summary>
+        [ExampleValue(1)]
+        public int BettingRoundId { get; set; }
         /// <summary>
         /// All the card ids currently visible on the board (Preflop: empty, flop: 3 cards, turn: 4 cards, river: 5 cards) 
         /// </summary>

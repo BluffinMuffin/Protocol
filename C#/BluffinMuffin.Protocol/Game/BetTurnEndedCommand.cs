@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using BluffinMuffin.Protocol.DataTypes.Attributes;
 using BluffinMuffin.Protocol.DataTypes.Enums;
 
@@ -10,9 +11,10 @@ namespace BluffinMuffin.Protocol.Game
     public class BetTurnEndedCommand : AbstractGameCommand
     {
         /// <summary>
-        /// The round that is ending
+        /// OBSOLETE: The round that is ending
         /// </summary>
         [ExampleValue(RoundTypeEnum.Flop)]
+        [Obsolete("This information is totally useless in this command")]
         public RoundTypeEnum Round { get; set; }
 
         /// <summary>

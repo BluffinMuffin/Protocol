@@ -31,7 +31,6 @@ namespace BluffinMuffin.Protocol.Tests
         {
             var c = GameCommandMock.BetTurnEndedCommand();
             var dc = GetDecodedCommand(c);
-            Assert.AreEqual(c.Round, dc.Round);
             Assert.AreEqual(c.PotsAmounts.Count, dc.PotsAmounts.Count);
             Assert.IsFalse(c.PotsAmounts.Except(dc.PotsAmounts).Any());
         }
@@ -40,7 +39,7 @@ namespace BluffinMuffin.Protocol.Tests
         {
             var c = GameCommandMock.BetTurnStartedCommand();
             var dc = GetDecodedCommand(c);
-            Assert.AreEqual(c.Round, dc.Round);
+            Assert.AreEqual(c.BettingRoundId, dc.BettingRoundId);
             Assert.AreEqual(c.Cards.Length, dc.Cards.Length);
             Assert.IsFalse(c.Cards.Except(dc.Cards).Any());
         }
