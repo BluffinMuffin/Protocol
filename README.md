@@ -15,8 +15,8 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
     
 ####Known Implementations
  * **[BluffinMuffin.Beta 0.6.0](http://ericmas001.github.io/BluffinMuffin.Beta)** *(Protocol v1.0.0)*
- * **[BluffinMuffin.Server 0.7.0](http://ericmas001.github.io/BluffinMuffin.Server)** *(Protocol v1.1.1)*
- * **[BluffinMuffin.Client 0.7.0](http://ericmas001.github.io/BluffinMuffin.Server)** *(Protocol v1.1.1)*
+ * **[BluffinMuffin.Server 0.8.0](http://ericmas001.github.io/BluffinMuffin.Server)** *(Protocol v2.1.0)*
+ * **[BluffinMuffin.Client 0.8.0](http://ericmas001.github.io/BluffinMuffin.Server)** *(Protocol v2.1.0)*
 
 
 ####Current Version: [2.1.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.1.0) *(2015-07-05)*
