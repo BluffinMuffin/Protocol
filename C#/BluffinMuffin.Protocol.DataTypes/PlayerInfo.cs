@@ -99,7 +99,7 @@ namespace BluffinMuffin.Protocol.DataTypes
                 Name = Name,
                 MoneyBetAmnt = MoneyBetAmnt,
                 MoneySafeAmnt = MoneySafeAmnt,
-                HoleCards = new List<string>(HoleCards).ToArray(),
+                HoleCards = HoleCards == null ? null : new List<string>(HoleCards).ToArray(),
                 IsShowingCards = IsShowingCards,
                 State = State,
             };

@@ -14,14 +14,13 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
    As an option, if your project is in .Net, the protocol has C# libraries released with each versions of the protocol. Using these DLLs is not a requirement to implement the protocol, but it can save you some time ;)
     
 ####Known Implementations
- * **[BluffinMuffin.Beta](http://ericmas001.github.io/BluffinMuffin.Beta)** *(Protocol v1.0.0)*
- * **[BluffinMuffin.Server](http://ericmas001.github.io/BluffinMuffin.Server)** *(Protocol v1.0.1)*
+ * **[BluffinMuffin.Beta 0.6.0](http://ericmas001.github.io/BluffinMuffin.Beta)** *(Protocol v1.0.0)*
+ * **[BluffinMuffin.Server 0.7.0](http://ericmas001.github.io/BluffinMuffin.Server)** *(Protocol v1.1.1)*
+ * **[BluffinMuffin.Client 0.7.0](http://ericmas001.github.io/BluffinMuffin.Server)** *(Protocol v1.1.1)*
 
 
-####Current Version: [2.0.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.0.0) *(2015-07-01)*
- * Getting rid of all the Com.Ericmas001 DLLs for easier implementations
- * Adding a normalized way to send cards as string
- * Renaming properties of some commands making them easier to understand at first glance
+####Current Version: [2.0.1](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.0.1) *(2015-07-01)*
+ * Stop crashing when no cards
  * *[Full changelog ...](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/CHANGELOG.md)*
 
 
