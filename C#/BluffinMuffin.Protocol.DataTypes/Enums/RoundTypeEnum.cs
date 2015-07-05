@@ -1,9 +1,12 @@
-﻿namespace BluffinMuffin.Protocol.DataTypes.Enums
+﻿using System;
+
+namespace BluffinMuffin.Protocol.DataTypes.Enums
 {
 
     /// <summary>
-    /// 
+    /// OBSOLETE !!!
     /// </summary>
+    [Obsolete]
     public enum RoundTypeEnum
     {
         /// <summary>
