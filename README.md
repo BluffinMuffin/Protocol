@@ -32,6 +32,12 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
 ## Playing Cards
 Playing Cards sended and received with this protocol are always represented with a [normalized string](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/PlayingCard.md).
 
+## Obsolete Information
+Obsolete information is information required by the protocol for retro-compatibility, but will disappear in the next major version.
+When implementing a version of the protocol that has an Obsolete information, this is what you should do
+ * Sender should continue to send the obsolete information
+ * Receiver should stop using the information as soon as possible.
+
 ## General Commands
 General commands are for communication everywhere.
 
