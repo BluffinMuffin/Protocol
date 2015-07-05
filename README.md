@@ -19,8 +19,10 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
  * **[BluffinMuffin.Client 0.7.0](http://ericmas001.github.io/BluffinMuffin.Server)** *(Protocol v1.1.1)*
 
 
-####Current Version: [2.0.1](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.0.1) *(2015-07-01)*
- * Stop crashing when no cards
+####Current Version: [2.1.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.1.0) *(2015-07-05)*
+ * Adding some event handling for easier implementation
+ * Adding obsolete information to the documentation
+ * RoundTypeEnum enum and usage is now obsolete.
  * *[Full changelog ...](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/CHANGELOG.md)*
 
 

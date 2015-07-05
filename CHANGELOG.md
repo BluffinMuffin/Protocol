@@ -1,5 +1,12 @@
 # 2.*
 
+## 2.1.*
+
+### [2.1.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.1.0) *(2015-07-05)*
+ * Adding some event handling for easier implementation
+ * Adding obsolete information to the documentation
+ * RoundTypeEnum enum and usage is now obsolete.
+
 ## 2.0.*
 
 ### [2.0.1](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.0.1) *(2015-07-01)*
