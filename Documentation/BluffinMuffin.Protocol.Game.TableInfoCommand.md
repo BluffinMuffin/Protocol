@@ -254,7 +254,27 @@ Sends all the information about the current state of the table, to put everybody
     "Kh",
     "5d"
   ],
-  "Seats": null,
+  "Seats": [
+    {
+      "NoSeat": 7,
+      "Player": {
+        "NoSeat": 7,
+        "Name": "SpongeBob",
+        "MoneySafeAmnt": 1000,
+        "MoneyBetAmnt": 42,
+        "HoleCards": [
+          "2s",
+          "Ah"
+        ],
+        "State": "Playing",
+        "IsShowingCards": true
+      },
+      "SeatAttributes": [
+        "CurrentPlayer",
+        "BigBlind"
+      ]
+    }
+  ],
   "GameHasStarted": true
 }
 ```

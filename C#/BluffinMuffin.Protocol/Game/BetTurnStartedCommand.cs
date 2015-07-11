@@ -5,7 +5,7 @@ using BluffinMuffin.Protocol.DataTypes.Enums;
 namespace BluffinMuffin.Protocol.Game
 {
     /// <summary>
-    /// This command is issued by the server when a betting round is ending. For example, when the 3 first cards are shown, it's the beginning of the flop.
+    /// This command is issued by the server when a betting round is starting. For example, when the 3 first cards are shown, it's the beginning of the flop.
     /// </summary>
     public class BetTurnStartedCommand : AbstractGameCommand
     {

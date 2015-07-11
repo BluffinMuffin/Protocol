@@ -36,7 +36,7 @@ namespace BluffinMuffin.Protocol.Game
         /// <summary>
         /// The information about every seats around the table
         /// </summary>
-        [ExampleValue(1)]
+        [ExampleValues(1)]
         public List<SeatInfo> Seats { get; set; }
 
         /// <summary>
