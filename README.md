@@ -25,6 +25,7 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
  * Adding the DiscardRoundEndedCommand
  * Adding the PlayerDiscardActionCommand
  * Minor corrections on documentation
+ * *[Full changelog ...](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/CHANGELOG.md)*
 
 
 ----
