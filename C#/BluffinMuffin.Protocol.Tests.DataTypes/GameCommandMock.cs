@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using BluffinMuffin.Protocol.DataTypes;
 using BluffinMuffin.Protocol.DataTypes.Enums;
 using BluffinMuffin.Protocol.Game;
 
@@ -13,7 +14,17 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static BetTurnStartedCommand BetTurnStartedCommand()
         {
-            return new BetTurnStartedCommand() {TableId = 42, Cards = new[] {"2s", "5h", "Jd", "Ac"}, BettingRoundId = 4};
+            return new BetTurnStartedCommand() { TableId = 42, Cards = new[] { "2s", "5h", "Jd", "Ac" }, BettingRoundId = 4 };
+        }
+
+        public static DiscardRoundStartedCommand DiscardRoundStartedCommand()
+        {
+            return new DiscardRoundStartedCommand() { TableId = 42, MinimumCardsToDiscard = 0, MaximumCardsToDiscard = 5 };
+        }
+
+        public static DiscardRoundEndedCommand DiscardRoundEndedCommand()
+        {
+            return new DiscardRoundEndedCommand() { TableId = 42, CardsDiscarded = new[] { new DiscardInfo() { NbCardsDiscarded = 3, NoSeat = 1 }, new DiscardInfo() { NbCardsDiscarded = 2, NoSeat =1 } } };
         }
 
         public static GameEndedCommand GameEndedCommand()
@@ -43,7 +54,12 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static PlayerPlayMoneyCommand PlayerPlayMoneyCommand()
         {
-            return new PlayerPlayMoneyCommand() {TableId = 42, AmountPlayed = 84};
+            return new PlayerPlayMoneyCommand() { TableId = 42, AmountPlayed = 84 };
+        }
+
+        public static PlayerDiscardActionCommand PlayerDiscardActionCommand()
+        {
+            return new PlayerDiscardActionCommand() { TableId = 42, CardsDiscarded = new[] { "2s", "5h" } };
         }
 
         public static PlayerSitInCommand PlayerSitInCommand()

@@ -57,6 +57,7 @@
     <Compile Include="Comparing\CompareLobbyOptions.cs" />
     <Compile Include="Comparing\ComparePlayerInfo.cs" />
     <Compile Include="Comparing\CompareRuleInfo.cs" />
+    <Compile Include="Comparing\CompareDiscardInfo.cs" />
     <Compile Include="Comparing\CompareSeatInfo.cs" />
     <Compile Include="Comparing\CompareTableParams.cs" />
     <Compile Include="Comparing\CompareTupleTable.cs" />

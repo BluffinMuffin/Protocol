@@ -44,6 +44,23 @@ namespace BluffinMuffin.Protocol.Tests
             Assert.IsFalse(c.Cards.Except(dc.Cards).Any());
         }
         [TestMethod]
+        public void DiscardRoundStartedCommand()
+        {
+            var c = GameCommandMock.DiscardRoundStartedCommand();
+            var dc = GetDecodedCommand(c);
+            Assert.AreEqual(c.MaximumCardsToDiscard, dc.MaximumCardsToDiscard);
+            Assert.AreEqual(c.MinimumCardsToDiscard, dc.MinimumCardsToDiscard);
+        }
+        [TestMethod]
+        public void DiscardRoundEndedCommand()
+        {
+            var c = GameCommandMock.DiscardRoundEndedCommand();
+            var dc = GetDecodedCommand(c);
+            Assert.AreEqual(c.CardsDiscarded.Length, dc.CardsDiscarded.Length);
+            for (int i = 0; i < c.CardsDiscarded.Length; ++i)
+                CompareDiscardInfo.Compare(c.CardsDiscarded[i], dc.CardsDiscarded[i]);
+        }
+        [TestMethod]
         public void GameEndedCommand()
         {
             var c = GameCommandMock.GameEndedCommand();
@@ -55,6 +72,14 @@ namespace BluffinMuffin.Protocol.Tests
             var c = GameCommandMock.GameStartedCommand();
             var dc = GetDecodedCommand(c);
             Assert.AreEqual(c.NeededBlindAmount, dc.NeededBlindAmount);
+        }
+        [TestMethod]
+        public void PlayerDiscardActionCommand()
+        {
+            var c = GameCommandMock.PlayerDiscardActionCommand();
+            var dc = GetDecodedCommand(c);
+            Assert.AreEqual(c.CardsDiscarded.Length, dc.CardsDiscarded.Length);
+            Assert.IsFalse(c.CardsDiscarded.Except(dc.CardsDiscarded).Any());
         }
         [TestMethod]
         public void PlayerHoleCardsChangedCommand()
