@@ -4,6 +4,10 @@ These are all the commands that are used during the game. The *Client Commands* 
 
 ## Client Commands
 
+ * **[PlayerDiscardActionCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Game.PlayerDiscardActionCommand.md)** 
+
+   The client is telling the server that he discards some cards.
+
  * **[PlayerPlayMoneyCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Game.PlayerPlayMoneyCommand.md)** 
 
    The client is telling the server that he plays some money.
@@ -24,7 +28,15 @@ These are all the commands that are used during the game. The *Client Commands* 
    
  * **[BetTurnStartedCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Game.BetTurnStartedCommand.md)**
 
-   This command is issued by the server when a betting round is ending. For example, when the 3 first cards are shown, it's the beginning of the flop.
+   This command is issued by the server when a betting round is starting. For example, when the 3 first cards are shown, it's the beginning of the flop.
+
+ * **[DiscardRoundEndedCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Game.DiscardRoundEndedCommand.md)** 
+
+   This command is issued by the server when a discard round is ending, after all players have sent a PlayerDiscardActionCommand that fits the discard round limitations.
+   
+ * **[DiscardRoundStartedCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Game.DiscardRoundStartedCommand.md)**
+
+   This command is issued by the server when a discard round is starting. All Player must send a PlayerDiscardActionCommand that fits the discard round limitations.
 
  * **[GameEndedCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Game.GameEndedCommand.md)**
 
