@@ -1,5 +1,13 @@
 # 2.*
 
+## 2.2.*
+
+### [2.2.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.2.0) *(2015-07-11)*
+ * Adding the DiscardRoundStartedCommand
+ * Adding the DiscardRoundEndedCommand
+ * Adding the PlayerDiscardActionCommand
+ * Minor corrections on documentation
+
 ## 2.1.*
 
 ### [2.1.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.1.0) *(2015-07-05)*
