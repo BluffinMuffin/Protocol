@@ -17,4 +17,3 @@ class HelloWorld:
                 print(root1, root2)
             else:
                 print('error')
-HelloWorld().demo()
