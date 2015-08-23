@@ -4,6 +4,7 @@ __all__ = [
     'enums',
     'game',
     'lobby',
+    'tests',
     'abstract_command',
     'abstract_game_command',
     'abstract_lobby_command',
