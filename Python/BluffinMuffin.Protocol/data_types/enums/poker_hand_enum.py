@@ -18,11 +18,11 @@ class PokerHandEnum(Enum):
     @classmethod
     def parse(cls, str):
         if str == 'None':
-            return PokerHandEnum.Nothing
-        return PokerHandEnum[str]
+            return cls.Nothing
+        return cls[str]
 
     @classmethod
     def to_string(cls, value):
-        if value == PokerHandEnum.Nothing:
+        if value == cls.Nothing:
             return 'None'
         return value.name

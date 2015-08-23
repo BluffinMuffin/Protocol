@@ -1,10 +1,10 @@
-from abstract_command import AbstractCommand
+from abstract_lobby_command import AbstractLobbyCommand
 
 __author__ = 'ericmas001@gmail.com'
 
 
 
-class IdentifyCommand(AbstractCommand):
+class IdentifyCommand(AbstractLobbyCommand):
     def __init__(self, obj):
         super().__init__(obj)
         self.name = obj['Name']

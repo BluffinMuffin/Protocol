@@ -4,7 +4,7 @@ from enums.bluffin_command_enum import BluffinCommandEnum
 __author__ = 'ericmas001@gmail.com'
 
 
+class AbstractLobbyCommand(AbstractCommand):
 
-class DisconnectCommand(AbstractCommand):
     def __init__(self, obj):
-        super().__init__(obj, BluffinCommandEnum.General)
+        super().__init__(obj, BluffinCommandEnum.Lobby)

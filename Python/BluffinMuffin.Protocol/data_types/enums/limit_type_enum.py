@@ -10,7 +10,7 @@ class LimitTypeEnum(Enum):
 
     @classmethod
     def parse(cls, str):
-        return LimitTypeEnum[str]
+        return cls[str]
 
     @classmethod
     def to_string(cls, value):

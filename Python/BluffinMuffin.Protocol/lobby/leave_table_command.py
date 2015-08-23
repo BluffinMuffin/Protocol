@@ -5,10 +5,10 @@ __author__ = 'ericmas001@gmail.com'
 
 
 
-class CreateTableCommand(AbstractLobbyCommand):
+class LeaveTableCommand(AbstractLobbyCommand):
     def __init__(self, obj):
         super().__init__(obj)
-        self.params = TableParams(obj['Params'])
+        self.table_id = obj['TableId']
 
     def __str__( self ):
-        return '{0} ({1})'.format(super().__str__(), self.params)
+        return '{0} ({1})'.format(super().__str__(), self.table_id)

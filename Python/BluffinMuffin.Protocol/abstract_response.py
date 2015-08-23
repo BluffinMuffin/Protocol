@@ -8,7 +8,7 @@ __author__ = 'ericmas001@gmail.com'
 class AbstractResponse(AbstractCommand):
 
     def __init__(self, obj, command):
-        super().__init__(obj)
+        super().__init__(obj, command.command_type)
         self.success = obj['Success']
         self.message_id = BluffinMessageIdEnum.parse(obj['MessageId'])
         self.message = obj['Message']

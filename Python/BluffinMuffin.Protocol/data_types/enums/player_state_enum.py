@@ -12,7 +12,7 @@ class PlayerStateEnum(Enum):
 
     @classmethod
     def parse(cls, str):
-        return PlayerStateEnum[str]
+        return cls[str]
 
     @classmethod
     def to_string(cls, value):

@@ -14,7 +14,7 @@ class GameActionEnum(Enum):
 
     @classmethod
     def parse(cls, str):
-        return GameActionEnum[str]
+        return cls[str]
 
     @classmethod
     def to_string(cls, value):

@@ -19,11 +19,11 @@ class BluffinMessageIdEnum(Enum):
     @classmethod
     def parse(cls, str):
         if str == 'None':
-            return BluffinMessageIdEnum.Nothing
-        return BluffinMessageIdEnum[str]
+            return cls.Nothing
+        return cls[str]
 
     @classmethod
     def to_string(cls, value):
-        if value == BluffinMessageIdEnum.Nothing:
+        if value == cls.Nothing:
             return 'None'
         return value.name

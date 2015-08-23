@@ -11,11 +11,11 @@ class LobbyActionEnum(Enum):
     @classmethod
     def parse(cls, str):
         if str == 'None':
-            return LobbyActionEnum.Nothing
-        return LobbyActionEnum[str]
+            return cls.Nothing
+        return cls[str]
 
     @classmethod
     def to_string(cls, value):
-        if value == LobbyActionEnum.Nothing:
+        if value == cls.Nothing:
             return 'None'
         return value.name

@@ -8,7 +8,7 @@ class GameTypeEnum(Enum):
 
     @classmethod
     def parse(cls, str):
-        return GameTypeEnum[str]
+        return cls[str]
 
     @classmethod
     def to_string(cls, value):

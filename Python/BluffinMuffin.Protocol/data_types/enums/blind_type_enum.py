@@ -11,11 +11,11 @@ class BlindTypeEnum(Enum):
     @classmethod
     def parse(cls, str):
         if str == 'None':
-            return BlindTypeEnum.Nothing
-        return BlindTypeEnum[str]
+            return cls.Nothing
+        return cls[str]
 
     @classmethod
     def to_string(cls, value):
-        if value == BlindTypeEnum.Nothing:
+        if value == cls.Nothing:
             return 'None'
         return value.name

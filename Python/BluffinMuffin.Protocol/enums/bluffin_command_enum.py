@@ -10,8 +10,16 @@ class BluffinCommandEnum(Enum):
 
     @classmethod
     def parse(cls, str):
-        return BluffinCommandEnum[str]
+        return cls[str]
 
     @classmethod
     def to_string(cls, value):
         return value.name
+
+    @classmethod
+    def to_char(cls, value):
+        if value == cls.Game:
+            return 'G'
+        if value == cls.Lobby:
+            return 'L'
+        return 'X'
