@@ -17,8 +17,8 @@ class CommandDecoder:
     def decode(cls, obj):
         prefixes = [
             '',
-            'lobbie',
-            'lobbie.quick_mode'
+            'lobby',
+            'lobby.quick_mode'
         ]
         for p in prefixes:
             res = cls._decode_class(obj,obj['CommandName'],'{0}.{1}'.format(p,re.sub('([a-z0-9])([A-Z])', r'\1_\2', re.sub('(.)([A-Z][a-z]+)', r'\1_\2', obj['CommandName'])).lower()))

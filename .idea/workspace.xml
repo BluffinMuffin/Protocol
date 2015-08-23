@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49a347be-06c4-4150-a6c3-896f1bb59ce2" name="Default" comment="Applying python naming conventions">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/program.py" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\Main.py" afterPath="" />
+    <list default="true" id="49a347be-06c4-4150-a6c3-896f1bb59ce2" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/command_decoder.py" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/command_decoder.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobbie\create_table_command.py" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/lobby/create_table_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobbie\create_table_response.py" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/lobby/create_table_response.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobbie\quick_mode\identify_command.py" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/lobby/quick_mode/identify_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobbie\quick_mode\identify_response.py" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/lobby/quick_mode/identify_response.py" />
     </list>
     <ignored path="BluffinMuffin.Protocol.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -644,7 +647,13 @@
       <option name="project" value="LOCAL" />
       <updated>1440298639581</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Lobby is not renaming :(">
+      <created>1440302484094</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1440302484094</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -655,7 +664,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293348" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982087" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293348" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3293348" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32497275" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -688,7 +697,8 @@
     <MESSAGE value="Supporting DisconnectCommand, IdentifyCommand and IdentifyResponse" />
     <MESSAGE value="Supporting CreateTableCommand and CreateTableResponse" />
     <MESSAGE value="Applying python naming conventions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Applying python naming conventions" />
+    <MESSAGE value="Lobby is not renaming :(" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lobby is not renaming :(" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -843,14 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Python/BluffinMuffin.Protocol/command_decoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Python/BluffinMuffin.Protocol/abstract_command.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -911,6 +913,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/BluffinMuffin.Protocol/command_decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding />
         </state>
       </provider>

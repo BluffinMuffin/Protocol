@@ -1,5 +1,5 @@
 from abstract_response import AbstractResponse
-from lobbie.quick_mode.identify_command import IdentifyCommand
+from lobby.quick_mode.identify_command import IdentifyCommand
 
 __author__ = 'ericmas001@gmail.com'
 
