@@ -9,9 +9,13 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
 
    A project that states it implements a version of the protocol is saying that it supports what's in the documentation of this version.
    
- * **DLLs for .Net Implementation**
+ * **Libraries for Implementation**
 
-   As an option, if your project is in .Net, the protocol has C# libraries released with each versions of the protocol. Using these DLLs is not a requirement to implement the protocol, but it can save you some time ;)
+   As an option, the protocol has libraries released with each versions of the protocol. Using these libraries is not a requirement to implement the protocol, but it can save you some time ;)
+   
+   Libraries currently available in:
+    * .Net (For implementations in C#, VB.Net, etc.)
+    * Python
     
 ####Known Implementations
  * **[BluffinMuffin.Beta 0.6.0](http://ericmas001.github.io/BluffinMuffin.Beta)** *(Protocol v1.0.0)*
@@ -21,6 +25,7 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
  
 
 ###Current Version: [2.2.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.2.0) *(2015-07-11)*
+ * Adding the Python version of the protocol
  * Adding the DiscardRoundStartedCommand
  * Adding the DiscardRoundEndedCommand
  * Adding the PlayerDiscardActionCommand
