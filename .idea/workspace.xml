@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49a347be-06c4-4150-a6c3-896f1bb59ce2" name="Default" comment="Applying python naming conventions">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/enums/blind_type_enum.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/enums/game_action_enum.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/enums/game_type_enum.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/enums/limit_type_enum.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/enums/lobby_action_enum.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/enums/lobby_type_enum.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/enums/player_state_enum.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/enums/poker_hand_enum.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/enums/round_type_enum.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/enums/seat_attribute_enum.py" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\Lobby\QuickMode\IdentifyCommand.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\Lobby\QuickMode\IdentifyResponse.py" afterPath="" />
-      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\AbstractCommand.py" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/abstract_command.py" />
-      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\AbstractResponse.py" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/abstract_response.py" />
-      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\CommandDecoder.py" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/command_decoder.py" />
-      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\DataTypes\BlindOptions.py" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/blind_options.py" />
-      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\DataTypes\ConfigurableWaitingTimes.py" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/configurable_waiting_times.py" />
-      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\DataTypes\LimitOptions.py" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/limit_options.py" />
-      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\DataTypes\LobbyOptions.py" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/lobby_options.py" />
-      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\DataTypes\TableParams.py" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/table_params.py" />
-      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\DisconnectCommand.py" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/disconnect_command.py" />
-      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\Main.py" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/main.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/program.py" />
+      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\Main.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BluffinMuffin.Protocol.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,8 +81,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Python/BluffinMuffin.Protocol/main.py">
+      <file leaf-file-name="program.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Python/BluffinMuffin.Protocol/program.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.20203735">
               <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
@@ -441,7 +422,7 @@
       <recent name="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\Lobby\QuickMode" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Main">
+  <component name="RunManager" selected="Python.program">
     <configuration default="false" name="HelloWorld" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -471,7 +452,24 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="BluffinMuffin.Protocol" />
-      <option name="SCRIPT_NAME" value="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\main.py" />
+      <option name="SCRIPT_NAME" value="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\program.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="program" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="BluffinMuffin.Protocol" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/program.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -598,14 +596,16 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.HelloWorld" />
       <item index="1" class="java.lang.String" itemvalue="Python.Main" />
+      <item index="2" class="java.lang.String" itemvalue="Python.program" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.HelloWorld" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python.program" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Main" />
+        <item index="2" class="java.lang.String" itemvalue="Python.HelloWorld" />
       </list>
     </recent_temporary>
   </component>
@@ -915,7 +915,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Python/BluffinMuffin.Protocol/main.py">
+    <entry file="file://$PROJECT_DIR$/Python/BluffinMuffin.Protocol/program.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20203735">
           <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
