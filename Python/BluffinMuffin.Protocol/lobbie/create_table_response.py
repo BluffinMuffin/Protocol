@@ -1,5 +1,5 @@
 from abstract_response import AbstractResponse
-from lobby.create_table_command import CreateTableCommand
+from lobbie.create_table_command import CreateTableCommand
 
 __author__ = 'ericmas001@gmail.com'
 
