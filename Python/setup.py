@@ -1,10 +1,10 @@
 from distutils.core import setup
 
 setup(
-    name='bluffin_muffin.protocol2',
+    name='bluffin_muffin.protocol',
     version='2.2.0',
     packages=[''],
-    package_dir={'': 'Python/bluffin_muffin.protocol2'},
+    package_dir={'': 'Python/bluffin_muffin.protocol'},
     url='',
     license='',
     author='ericmas001',

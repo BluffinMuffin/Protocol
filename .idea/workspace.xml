@@ -1,7 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49a347be-06c4-4150-a6c3-896f1bb59ce2" name="Default" comment="" />
+    <list default="true" id="49a347be-06c4-4150-a6c3-896f1bb59ce2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/registered_mode/get_user_command.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/tests/program.py" />
+      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\Protocol\tests2\program.py" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\registered_mode\get_user_command.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/setup.py" afterPath="$PROJECT_DIR$/Python/setup.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\abstract_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/abstract_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\abstract_game_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/abstract_game_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\abstract_lobby_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/abstract_lobby_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\abstract_response.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/abstract_response.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\command_decoder.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/command_decoder.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\blind_options.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/blind_options.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\configurable_waiting_times.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/configurable_waiting_times.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\discard_info.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/discard_info.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\enums\blind_type_enum.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/enums/blind_type_enum.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\enums\game_action_enum.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/enums/game_action_enum.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\enums\game_type_enum.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/enums/game_type_enum.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\enums\limit_type_enum.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/enums/limit_type_enum.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\enums\lobby_action_enum.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/enums/lobby_action_enum.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\enums\lobby_type_enum.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/enums/lobby_type_enum.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\enums\player_state_enum.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/enums/player_state_enum.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\enums\poker_hand_enum.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/enums/poker_hand_enum.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\enums\round_type_enum.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/enums/round_type_enum.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\enums\seat_attribute_enum.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/enums/seat_attribute_enum.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\limit_options.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/limit_options.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\lobby_options.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/lobby_options.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\player_info.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/player_info.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\rule_info.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/rule_info.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\seat_info.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/seat_info.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\table_params.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/table_params.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\data_types\tuple_table.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/tuple_table.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\disconnect_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/disconnect_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\enums\bluffin_command_enum.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/enums/bluffin_command_enum.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\enums\bluffin_message_id_enum.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/enums/bluffin_message_id_enum.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\bet_turn_ended_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/bet_turn_ended_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\bet_turn_started_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/bet_turn_started_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\discard_round_ended_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/discard_round_ended_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\discard_round_started_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/discard_round_started_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\game_ended_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/game_ended_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\game_started_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/game_started_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\player_discard_action_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/player_discard_action_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\player_hole_cards_changed_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/player_hole_cards_changed_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\player_joined_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/player_joined_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\player_left_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/player_left_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\player_play_money_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/player_play_money_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\player_sit_in_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/player_sit_in_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\player_sit_in_response.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/player_sit_in_response.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\player_sit_out_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/player_sit_out_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\player_sit_out_response.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/player_sit_out_response.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\player_turn_began_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/player_turn_began_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\player_turn_ended_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/player_turn_ended_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\player_won_pot_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/player_won_pot_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\seat_updated_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/seat_updated_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\table_closed_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/table_closed_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\game\table_info_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/table_info_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\check_compatibility_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/check_compatibility_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\check_compatibility_response.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/check_compatibility_response.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\create_table_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/create_table_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\create_table_response.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/create_table_response.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\join_table_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/join_table_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\join_table_response.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/join_table_response.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\leave_table_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/leave_table_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\list_table_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/list_table_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\list_table_response.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/list_table_response.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\quick_mode\identify_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/quick_mode/identify_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\quick_mode\identify_response.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/quick_mode/identify_response.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\registered_mode\authenticate_user_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/registered_mode/authenticate_user_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\registered_mode\authenticate_user_response.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/registered_mode/authenticate_user_response.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\registered_mode\check_display_exist_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/registered_mode/check_display_exist_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\registered_mode\check_display_exist_response.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/registered_mode/check_display_exist_response.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\registered_mode\check_user_exist_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/registered_mode/check_user_exist_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\registered_mode\check_user_exist_response.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/registered_mode/check_user_exist_response.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\registered_mode\create_user_command.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/registered_mode/create_user_command.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\registered_mode\create_user_response.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/registered_mode/create_user_response.py" />
+      <change type="MOVED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol2\lobby\registered_mode\get_user_response.py" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/protocol/lobby/registered_mode/get_user_response.py" />
+    </list>
     <ignored path="BluffinMuffin.Protocol.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +104,8 @@
               <caret line="23" column="63" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
               <folding>
                 <element signature="e#0#84#0" expanded="true" />
-                <marker date="1440357895002" expanded="true" signature="237:1344" placeholder="..." />
-                <marker date="1440357895002" expanded="true" signature="1021:1344" placeholder="..." />
+                <marker date="1440358285353" expanded="true" signature="237:1344" placeholder="..." />
+                <marker date="1440358285353" expanded="true" signature="1021:1344" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -303,38 +379,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BluffinMuffin.Protocol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BluffinMuffin.Protocol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="C#" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BluffinMuffin.Protocol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BluffinMuffin.Protocol" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="C#" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BluffinMuffin.Protocol" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -657,7 +701,13 @@
       <option name="project" value="LOCAL" />
       <updated>1440358061830</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="moving stuff around">
+      <created>1440358255094</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1440358255094</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1090,8 +1140,8 @@
           <caret line="23" column="63" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
           <folding>
             <element signature="e#0#84#0" expanded="true" />
-            <marker date="1440357895002" expanded="true" signature="237:1344" placeholder="..." />
-            <marker date="1440357895002" expanded="true" signature="1021:1344" placeholder="..." />
+            <marker date="1440358285353" expanded="true" signature="237:1344" placeholder="..." />
+            <marker date="1440358285353" expanded="true" signature="1021:1344" placeholder="..." />
           </folding>
         </state>
       </provider>
