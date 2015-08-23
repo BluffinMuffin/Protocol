@@ -1,82 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49a347be-06c4-4150-a6c3-896f1bb59ce2" name="Default" comment="moving stuff around">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/bluffin_muffin/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/setup.py" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\abstract_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\abstract_game_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\abstract_lobby_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\abstract_response.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\command_decoder.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\blind_options.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\configurable_waiting_times.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\discard_info.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\enums\blind_type_enum.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\enums\game_action_enum.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\enums\game_type_enum.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\enums\limit_type_enum.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\enums\lobby_action_enum.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\enums\lobby_type_enum.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\enums\player_state_enum.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\enums\poker_hand_enum.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\enums\round_type_enum.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\enums\seat_attribute_enum.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\limit_options.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\lobby_options.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\player_info.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\rule_info.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\seat_info.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\table_params.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\data_types\tuple_table.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\disconnect_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\enums\bluffin_command_enum.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\enums\bluffin_message_id_enum.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\bet_turn_ended_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\bet_turn_started_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\discard_round_ended_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\discard_round_started_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\game_ended_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\game_started_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\player_discard_action_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\player_hole_cards_changed_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\player_joined_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\player_left_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\player_play_money_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\player_sit_in_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\player_sit_in_response.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\player_sit_out_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\player_sit_out_response.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\player_turn_began_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\player_turn_ended_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\player_won_pot_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\seat_updated_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\table_closed_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\game\table_info_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\check_compatibility_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\check_compatibility_response.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\create_table_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\create_table_response.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\join_table_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\join_table_response.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\leave_table_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\list_table_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\list_table_response.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\quick_mode\identify_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\quick_mode\identify_response.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\registered_mode\authenticate_user_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\registered_mode\authenticate_user_response.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\registered_mode\check_display_exist_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\registered_mode\check_display_exist_response.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\registered_mode\check_user_exist_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\registered_mode\check_user_exist_response.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\registered_mode\create_user_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\registered_mode\create_user_response.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\registered_mode\get_user_command.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\lobby\registered_mode\get_user_response.py" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programmation\Python\BluffinMuffin.Protocol\Python\BluffinMuffin.Protocol\program.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/BluffinMuffin.Protocol.iml" afterPath="$PROJECT_DIR$/.idea/BluffinMuffin.Protocol.iml" />
+    <list default="true" id="49a347be-06c4-4150-a6c3-896f1bb59ce2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BluffinMuffin.Protocol.iws" />
@@ -716,7 +641,13 @@
       <option name="project" value="LOCAL" />
       <updated>1440356007304</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="moving stuff around">
+      <created>1440358043123</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1440358043123</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
