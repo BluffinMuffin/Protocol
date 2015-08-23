@@ -1,4 +1,4 @@
-from Python.bluffin_muffin.protocol.abstract_response import AbstractResponse
+from protocol import AbstractResponse
 from check_user_exist_command import CheckUserExistCommand
 
 __author__ = 'ericmas001@gmail.com'

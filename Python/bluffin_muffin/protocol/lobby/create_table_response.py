@@ -1,4 +1,4 @@
-from Python.bluffin_muffin.protocol.abstract_response import AbstractResponse
+from protocol import AbstractResponse
 from create_table_command import CreateTableCommand
 
 __author__ = 'ericmas001@gmail.com'

@@ -1,4 +1,4 @@
-from Python.bluffin_muffin.protocol.abstract_response import AbstractResponse
+from protocol import AbstractResponse
 from tuple_table import TupleTable
 from list_table_command import ListTableCommand
 

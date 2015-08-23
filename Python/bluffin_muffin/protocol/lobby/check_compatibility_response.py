@@ -1,4 +1,4 @@
-from Python.bluffin_muffin.protocol.abstract_response import AbstractResponse
+from protocol import AbstractResponse
 from lobby_type_enum import LobbyTypeEnum
 from rule_info import RuleInfo
 from check_compatibility_command import CheckCompatibilityCommand

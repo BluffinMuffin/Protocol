@@ -1,4 +1,4 @@
-from Python.bluffin_muffin.protocol.abstract_command import AbstractCommand
+from protocol import AbstractCommand
 from bluffin_command_enum import BluffinCommandEnum
 
 __author__ = 'ericmas001@gmail.com'

@@ -1,4 +1,4 @@
-from Python.bluffin_muffin.protocol.abstract_game_command import AbstractGameResponse
+from protocol import AbstractGameResponse
 from player_sit_in_command import PlayerSitInCommand
 
 __author__ = 'ericmas001@gmail.com'

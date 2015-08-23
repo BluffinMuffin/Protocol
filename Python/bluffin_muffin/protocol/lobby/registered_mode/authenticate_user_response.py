@@ -1,4 +1,4 @@
-from Python.bluffin_muffin.protocol.abstract_response import AbstractResponse
+from protocol import AbstractResponse
 from authenticate_user_command import AuthenticateUserCommand
 
 __author__ = 'ericmas001@gmail.com'

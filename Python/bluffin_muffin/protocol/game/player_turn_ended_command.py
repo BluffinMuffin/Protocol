@@ -1,4 +1,4 @@
-from Python.bluffin_muffin.protocol.abstract_game_command import AbstractGameCommand
+from protocol import AbstractGameCommand
 from game_action_enum import GameActionEnum
 from player_state_enum import PlayerStateEnum
 

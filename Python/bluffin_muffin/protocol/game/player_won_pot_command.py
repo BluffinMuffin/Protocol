@@ -1,4 +1,4 @@
-from Python.bluffin_muffin.protocol.abstract_game_command import AbstractGameCommand
+from protocol import AbstractGameCommand
 from poker_hand_enum import PokerHandEnum
 
 __author__ = 'ericmas001@gmail.com'

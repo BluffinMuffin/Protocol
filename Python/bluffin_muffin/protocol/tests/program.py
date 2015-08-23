@@ -1,6 +1,6 @@
 import json
 
-from Python.bluffin_muffin.protocol.command_decoder import CommandDecoder
+from protocol import CommandDecoder
 
 __author__ = 'ericmas001@gmail.com'
 

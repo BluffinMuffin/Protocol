@@ -1,4 +1,4 @@
-from Python.bluffin_muffin.protocol.abstract_lobby_command import AbstractLobbyCommand
+from protocol import AbstractLobbyCommand
 from table_params import TableParams
 
 __author__ = 'ericmas001@gmail.com'

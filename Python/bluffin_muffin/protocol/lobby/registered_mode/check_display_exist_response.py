@@ -1,4 +1,4 @@
-from Python.bluffin_muffin.protocol.abstract_response import AbstractResponse
+from protocol import AbstractResponse
 from check_display_exist_command import CheckDisplayExistCommand
 
 __author__ = 'ericmas001@gmail.com'

@@ -1,4 +1,4 @@
-from Python.bluffin_muffin.protocol.abstract_game_command import AbstractGameCommand
+from protocol import AbstractGameCommand
 from seat_info import SeatInfo
 from table_params import TableParams
 
