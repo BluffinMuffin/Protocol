@@ -1,4 +1,4 @@
-from data_types.enums.game_type_enum import GameTypeEnum
+from collections import OrderedDict
 
 __author__ = 'ericmas001@gmail.com'
 
@@ -11,4 +11,15 @@ class ConfigurableWaitingTimes:
         self.after_pot_won = obj['AfterPotWon']
 
     def __str__(self):
-        return '({0},{1},{2})'.format(self.after_player_action,self.after_board_dealed,self.after_pot_won)
+        return '({0},{1},{2})'.format(
+            self.after_player_action,
+            self.after_board_dealed,
+            self.after_pot_won
+        )
+
+    def encode(self):
+        d = OrderedDict()
+        d['AfterPlayerAction'] = self.after_player_action
+        d['AfterBoardDealed'] = self.after_board_dealed
+        d['AfterPotWon'] = self.after_pot_won
+        return d

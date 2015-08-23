@@ -1,6 +1,4 @@
-from data_types.enums.game_type_enum import GameTypeEnum
-from data_types.enums.lobby_action_enum import LobbyActionEnum
-from data_types.table_params import TableParams
+from collections import OrderedDict
 
 __author__ = 'ericmas001@gmail.com'
 
@@ -16,3 +14,9 @@ class DiscardInfo:
             self.no_seat,
             self.nb_cards_discarded
         )
+
+    def encode(self):
+        d = OrderedDict()
+        d['NoSeat'] = self.no_seat
+        d['NbCardsDiscarded'] = self.nb_cards_discarded
+        return d

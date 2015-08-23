@@ -11,4 +11,13 @@ class AuthenticateUserCommand(AbstractLobbyCommand):
         self.password = obj['Password']
 
     def __str__( self ):
-        return '{0} ({1} : {2})'.format(super().__str__(), self.username, self.password)
+        return '{0} ({1} : {2})'.format(
+            super().__str__(),
+            self.username,
+            self.password
+        )
+
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
+        d['Username'] = self.username
+        d['Password'] = self.password

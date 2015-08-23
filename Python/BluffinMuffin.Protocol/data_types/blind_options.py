@@ -1,3 +1,4 @@
+from collections import OrderedDict
 from data_types.enums.blind_type_enum import BlindTypeEnum
 
 __author__ = 'ericmas001@gmail.com'
@@ -11,6 +12,20 @@ class BlindOptions:
 
     def __str__(self):
         return BlindTypeEnum.to_string(self.option_type)
+
+    def _encode_specific(self, d):
+        return None
+
+    def _encode_specific_end(self, d):
+        return None
+
+    def encode(self):
+        d = OrderedDict()
+        d['OptionType'] = BlindTypeEnum.to_string(self.option_type)
+        d['MoneyUnit'] = self.money_unit
+        self._encode_specific(d)
+        self._encode_specific_end(d)
+        return d
 
 class BlindOptionsAnte(BlindOptions):
     def __init__(self, obj):

@@ -10,4 +10,11 @@ class IdentifyCommand(AbstractLobbyCommand):
         self.name = obj['Name']
 
     def __str__( self ):
-        return '{0} ({1})'.format(super().__str__(), self.name)
+        return '{0} ({1})'.format(
+            super().__str__(),
+            self.name
+        )
+
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
+        d['Name'] = self.name

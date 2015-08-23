@@ -1,3 +1,4 @@
+from collections import OrderedDict
 import sys
 from data_types.enums.lobby_type_enum import LobbyTypeEnum
 
@@ -12,12 +13,32 @@ class LobbyOptions:
     def __str__(self):
         return LobbyTypeEnum.to_string(self.option_type)
 
+    def encode(self, d):
+        d['OptionType'] = LobbyTypeEnum.to_string(self.option_type)
+
+    def _encode_specific(self, d):
+        return None
+
+    def _encode_specific_end(self, d):
+        return None
+
+    def encode(self):
+        d = OrderedDict()
+        d['OptionType'] = LobbyTypeEnum.to_string(self.option_type)
+        self._encode_specific(d)
+        self._encode_specific_end(d)
+        return d
+
 class LobbyOptionsQuickMode(LobbyOptions):
     def __init__(self, obj):
         super().__init__(obj)
         self.starting_amount = obj['StartingAmount']
         self.minimum_amount_for_buy_in = self.starting_amount
         self.maximum_amount_for_buy_in = self.starting_amount
+
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
+        d['StartingAmount'] = self.starting_amount
 
 class LobbyOptionsRegisteredMode(LobbyOptions):
     def __init__(self, obj):
@@ -29,6 +50,11 @@ class LobbyOptionsRegisteredMode(LobbyOptions):
             self.maximum_amount_for_buy_in = sys.maxsize
         else:
             self.maximum_amount_for_buy_in = self.money_unit * 100
+
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
+        d['MoneyUnit'] = self.money_unit
+        d['IsMaximumBuyInLimited'] = self.is_maximum_buy_in_limited
 
 
 class LobbyOptionsDecoder():

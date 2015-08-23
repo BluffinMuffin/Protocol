@@ -13,4 +13,17 @@ class CreateUserCommand(AbstractLobbyCommand):
         self.display_name = obj['DisplayName']
 
     def __str__( self ):
-        return '{0} ({1} : {2}, {3}, {4})'.format(super().__str__(), self.username, self.password, self.email, self.display_name)
+        return '{0} ({1} : {2}, {3}, {4})'.format(
+            super().__str__(),
+            self.username,
+            self.password,
+            self.email,
+            self.display_name
+        )
+
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
+        d['Username'] = self.username
+        d['Password'] = self.password
+        d['Email'] = self.email
+        d['DisplayName'] = self.display_name

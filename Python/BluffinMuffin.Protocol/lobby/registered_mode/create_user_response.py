@@ -1,5 +1,4 @@
 from abstract_response import AbstractResponse
-from lobby.registered_mode.authenticate_user_command import AuthenticateUserCommand
 from lobby.registered_mode.create_user_command import CreateUserCommand
 
 __author__ = 'ericmas001@gmail.com'

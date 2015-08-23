@@ -26,3 +26,12 @@ class TableInfoCommand(AbstractGameCommand):
             ', '.join([x.__str__() for x in self.seats]),
             self.game_has_started
         )
+
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
+        d['Params'] = self.params.encode()
+        d['TotalPotAmount'] = self.total_pot_amount
+        d['PotsAmount'] = self.pots_amount
+        d['BoardCards'] = self.board_cards
+        d['Seats'] = [x.encode() for x in self.seats]
+        d['GameHasStarted'] = self.game_has_started

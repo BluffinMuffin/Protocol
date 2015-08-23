@@ -19,3 +19,9 @@ class PlayerHoleCardsChangedCommand(AbstractGameCommand):
             ', '.join(self.cards),
             PlayerStateEnum.to_string(self.player_state)
         )
+
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
+        d['NoSeat'] = self.no_seat
+        d['Cards'] = self.cards
+        d['PlayerState'] = PlayerStateEnum.to_string(self.player_state)

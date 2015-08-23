@@ -11,4 +11,11 @@ class CreateTableResponse(AbstractResponse):
         self.id_table = obj['IdTable']
 
     def __str__( self ):
-        return '{0} => {1}'.format(super().__str__(), self.id_table)
+        return '{0} => {1}'.format(
+            super().__str__(),
+            self.id_table
+        )
+
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
+        d['IdTable'] = self.id_table

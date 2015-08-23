@@ -28,3 +28,13 @@ class PlayerTurnEndedCommand(AbstractGameCommand):
             self.action_taken_amount,
             PlayerStateEnum.to_string(self.player_state)
         )
+
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
+        d['NoSeat'] = self.no_seat
+        d['TotalPlayedMoneyAmount'] = self.total_played_money_amount
+        d['TotalSafeMoneyAmount'] = self.total_safe_money_amount
+        d['TotalPot'] = self.total_pot
+        d['ActionTakenType'] = GameActionEnum.to_string(self.action_taken_type)
+        d['ActionTakenAmount'] = self.action_taken_amount
+        d['PlayerState'] = PlayerStateEnum.to_string(self.player_state)

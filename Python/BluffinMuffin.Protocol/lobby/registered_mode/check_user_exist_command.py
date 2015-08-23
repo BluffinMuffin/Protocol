@@ -10,4 +10,11 @@ class CheckUserExistCommand(AbstractLobbyCommand):
         self.username = obj['Username']
 
     def __str__( self ):
-        return '{0} ({1})'.format(super().__str__(), self.username)
+        return '{0} ({1})'.format(
+            super().__str__(),
+            self.username
+        )
+
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
+        d['Username'] = self.username

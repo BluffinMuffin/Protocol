@@ -1,3 +1,4 @@
+from collections import OrderedDict
 from data_types.blind_options import BlindOptionsDecoder
 from data_types.configurable_waiting_times import ConfigurableWaitingTimes
 from data_types.enums.game_type_enum import GameTypeEnum
@@ -34,3 +35,17 @@ class TableParams:
             self.blind,
             self.limit
         )
+
+    def encode(self):
+        d = OrderedDict()
+        d['TableName'] = self.table_name
+        d['GameType'] = GameTypeEnum.to_string(self.game_type)
+        d['Variant'] = self.variant
+        d['MinPlayersToStart'] = self.min_players_to_start
+        d['MaxPlayers'] = self.max_players
+        d['WaitingTimes'] = self.waiting_times.encode()
+        d['MoneyUnit'] = self.money_unit
+        d['Lobby'] = self.lobby.encode()
+        d['Blind'] = self.blind.encode()
+        d['Limit'] = self.limit.encode()
+        return d

@@ -1,3 +1,4 @@
+from collections import OrderedDict
 from data_types.enums.seat_attribute_enum import SeatAttributeEnum
 from data_types.player_info import PlayerInfo
 
@@ -17,3 +18,10 @@ class SeatInfo:
             self.player,
             ', '.join([SeatAttributeEnum.to_string(x) for x in self.seat_attributes])
         )
+
+    def encode(self):
+        d = OrderedDict()
+        d['NoSeat'] = self.no_seat
+        d['Player'] = self.player.encode()
+        d['SeatAttributes'] = [SeatAttributeEnum.to_string(x) for x in self.seat_attributes]
+        return d

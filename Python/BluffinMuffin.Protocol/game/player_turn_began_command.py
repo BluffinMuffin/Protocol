@@ -11,4 +11,13 @@ class PlayerTurnBeganCommand(AbstractGameCommand):
         self.minimum_raise_amount = obj['MinimumRaiseAmount']
 
     def __str__( self ):
-        return '{0} ({1} {2})'.format(super().__str__(),self.no_seat,self.minimum_raise_amount)
+        return '{0} ({1} {2})'.format(
+            super().__str__(),
+            self.no_seat,
+            self.minimum_raise_amount
+        )
+
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
+        d['NoSeat'] = self.no_seat
+        d['MinimumRaiseAmount'] = self.minimum_raise_amount

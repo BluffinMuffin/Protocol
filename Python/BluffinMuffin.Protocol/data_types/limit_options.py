@@ -1,3 +1,4 @@
+from collections import OrderedDict
 from data_types.enums.limit_type_enum import LimitTypeEnum
 
 __author__ = 'ericmas001@gmail.com'
@@ -10,6 +11,19 @@ class LimitOptions:
 
     def __str__(self):
         return LimitTypeEnum.to_string(self.option_type)
+
+    def _encode_specific(self, d):
+        return None
+
+    def _encode_specific_end(self, d):
+        return None
+
+    def encode(self):
+        d = OrderedDict()
+        d['OptionType'] = LimitTypeEnum.to_string(self.option_type)
+        self._encode_specific(d)
+        self._encode_specific_end(d)
+        return d
 
 class LimitOptionsFixed(LimitOptions):
     def __init__(self, obj):

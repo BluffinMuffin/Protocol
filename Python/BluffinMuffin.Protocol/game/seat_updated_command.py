@@ -15,3 +15,7 @@ class SeatUpdatedCommand(AbstractGameCommand):
             super().__str__(),
             self.seat
         )
+
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
+        d['Seat'] = self.seat.encode()

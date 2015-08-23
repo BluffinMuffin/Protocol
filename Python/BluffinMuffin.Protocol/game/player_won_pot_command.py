@@ -14,7 +14,7 @@ class PlayerWonPotCommand(AbstractGameCommand):
         self.total_pot_amount = obj['TotalPotAmount']
         self.total_player_money = obj['TotalPlayerMoney']
         self.winning_cards = obj['WinningCards']
-        self.winnind_hand = PokerHandEnum.parse(obj['WinningHand'])
+        self.winning_hand = PokerHandEnum.parse(obj['WinningHand'])
 
     def __str__( self ):
         return '{0} ({1}, {2}, {3}, {4}, {5} [{6}] {7})'.format(
@@ -25,5 +25,15 @@ class PlayerWonPotCommand(AbstractGameCommand):
             self.total_pot_amount,
             self.total_player_money,
             ', '.join(self.winning_cards),
-            PokerHandEnum.to_string(self.winnind_hand)
+            PokerHandEnum.to_string(self.winning_hand)
         )
+
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
+        d['NoSeat'] = self.no_seat
+        d['PotId'] = self.pot_id
+        d['WonAmount'] = self.won_amount
+        d['TotalPotAmount'] = self.total_pot_amount
+        d['TotalPlayerMoney'] = self.total_player_money
+        d['WinningCards'] = self.winning_cards
+        d['WinningHand'] = PokerHandEnum.to_string(self.winning_hand)
