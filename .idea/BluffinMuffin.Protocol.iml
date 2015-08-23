@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Python/BluffinMuffin.Protocol" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Python/bluffin_muffin/protocol/data_types/enums" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Python/bluffin_muffin/protocol/data_types" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Python/bluffin_muffin/protocol/enums" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Python/bluffin_muffin/protocol/game" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Python/bluffin_muffin/protocol/lobby" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Python/bluffin_muffin/protocol/lobby/quick_mode" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Python/bluffin_muffin/protocol/lobby/registered_mode" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Python/bluffin_muffin" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Python/bluffin_muffin/protocol" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Python/bluffin_muffin/protocol/tests" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
