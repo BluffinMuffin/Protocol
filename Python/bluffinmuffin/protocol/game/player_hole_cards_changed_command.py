@@ -1,5 +1,5 @@
-from protocol import AbstractGameCommand
-from player_state_enum import PlayerStateEnum
+from bluffinmuffin.protocol.interfaces import AbstractGameCommand
+from bluffinmuffin.protocol.enums import PlayerStateEnum
 
 
 class PlayerHoleCardsChangedCommand(AbstractGameCommand):

@@ -1,6 +1,6 @@
 from collections import OrderedDict
 
-from .enums.player_state_enum import PlayerStateEnum
+from bluffinmuffin.protocol.enums import PlayerStateEnum
 
 
 class PlayerInfo:

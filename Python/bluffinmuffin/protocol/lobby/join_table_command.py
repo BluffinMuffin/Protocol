@@ -1,4 +1,4 @@
-from protocol import AbstractLobbyCommand
+from bluffinmuffin.protocol.interfaces import AbstractLobbyCommand
 
 
 class JoinTableCommand(AbstractLobbyCommand):

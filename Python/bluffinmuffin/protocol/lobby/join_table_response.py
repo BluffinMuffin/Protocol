@@ -1,5 +1,5 @@
-from protocol import AbstractResponse
-from join_table_command import JoinTableCommand
+from bluffinmuffin.protocol.interfaces import AbstractResponse
+from .join_table_command import JoinTableCommand
 
 
 class JoinTableResponse(AbstractResponse):

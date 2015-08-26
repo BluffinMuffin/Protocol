@@ -1,5 +1,5 @@
-from protocol import AbstractGameResponse
-from player_sit_out_command import PlayerSitOutCommand
+from bluffinmuffin.protocol.interfaces import AbstractGameResponse
+from .player_sit_out_command import PlayerSitOutCommand
 
 
 class PlayerSitOutResponse(AbstractGameResponse):

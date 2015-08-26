@@ -1,5 +1,5 @@
-from protocol import AbstractResponse
-from identify_command import IdentifyCommand
+from bluffinmuffin.protocol.interfaces import AbstractResponse
+from .identify_command import IdentifyCommand
 
 
 class IdentifyResponse(AbstractResponse):

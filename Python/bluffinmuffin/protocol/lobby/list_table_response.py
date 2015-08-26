@@ -1,6 +1,6 @@
-from protocol import AbstractResponse
-from tuple_table import TupleTable
-from list_table_command import ListTableCommand
+from bluffinmuffin.protocol.interfaces import AbstractResponse
+from bluffinmuffin.protocol.data_types import TupleTable
+from .list_table_command import ListTableCommand
 
 
 class ListTableResponse(AbstractResponse):

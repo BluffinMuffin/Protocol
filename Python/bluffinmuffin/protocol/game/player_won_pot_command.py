@@ -1,5 +1,5 @@
-from protocol import AbstractGameCommand
-from poker_hand_enum import PokerHandEnum
+from bluffinmuffin.protocol.interfaces import AbstractGameCommand
+from bluffinmuffin.protocol.enums import PokerHandEnum
 
 
 class PlayerWonPotCommand(AbstractGameCommand):

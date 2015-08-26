@@ -1,5 +1,5 @@
-from protocol import AbstractCommand
-from bluffin_command_enum import BluffinCommandEnum
+from .abstract_command import AbstractCommand
+from ..enums.bluffin_command_enum import BluffinCommandEnum
 
 
 class AbstractLobbyCommand(AbstractCommand):

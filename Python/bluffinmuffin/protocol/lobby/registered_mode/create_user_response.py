@@ -1,5 +1,5 @@
-from protocol import AbstractResponse
-from create_user_command import CreateUserCommand
+from bluffinmuffin.protocol.interfaces import AbstractResponse
+from .create_user_command import CreateUserCommand
 
 
 class CreateUserResponse(AbstractResponse):

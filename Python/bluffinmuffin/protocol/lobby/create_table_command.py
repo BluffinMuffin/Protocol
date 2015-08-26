@@ -1,5 +1,5 @@
-from protocol import AbstractLobbyCommand
-from table_params import TableParams
+from bluffinmuffin.protocol.interfaces import AbstractLobbyCommand
+from bluffinmuffin.protocol.data_types import TableParams
 
 
 class CreateTableCommand(AbstractLobbyCommand):

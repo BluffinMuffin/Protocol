@@ -1,6 +1,6 @@
 from collections import OrderedDict
 
-from .enums.limit_type_enum import LimitTypeEnum
+from bluffinmuffin.protocol.enums import LimitTypeEnum
 
 
 class LimitOptions:

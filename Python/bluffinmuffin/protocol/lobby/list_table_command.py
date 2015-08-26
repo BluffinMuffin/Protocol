@@ -1,5 +1,5 @@
-from protocol import AbstractLobbyCommand
-from lobby_type_enum import LobbyTypeEnum
+from bluffinmuffin.protocol.interfaces import AbstractLobbyCommand
+from bluffinmuffin.protocol.enums import LobbyTypeEnum
 
 
 class ListTableCommand(AbstractLobbyCommand):

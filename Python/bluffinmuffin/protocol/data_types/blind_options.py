@@ -1,6 +1,5 @@
 from collections import OrderedDict
-
-from .enums.blind_type_enum import BlindTypeEnum
+from bluffinmuffin.protocol.enums import BlindTypeEnum
 
 
 class BlindOptions:

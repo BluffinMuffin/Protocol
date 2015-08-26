@@ -1,5 +1,5 @@
-from protocol import AbstractCommand
-from bluffin_command_enum import BluffinCommandEnum
+from bluffinmuffin.protocol.interfaces import AbstractCommand
+from bluffinmuffin.protocol.enums import BluffinCommandEnum
 
 
 class DisconnectCommand(AbstractCommand):

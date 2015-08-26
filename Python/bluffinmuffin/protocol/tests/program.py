@@ -1,6 +1,6 @@
 import json
 
-from protocol import CommandDecoder
+from ..command_decoder import CommandDecoder
 
 
 def _print_json(str):
