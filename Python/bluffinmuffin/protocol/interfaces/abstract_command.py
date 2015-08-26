@@ -25,4 +25,4 @@ class AbstractCommand:
         self._encode_specific(d)
         self._encode_specific_end(d)
         #return json.dumps(d, sort_keys=False, indent=4, separators=(',', ': '))
-        return json.dumps(d)
+        return json.dumps(d, sort_keys=False)
