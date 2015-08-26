@@ -1,6 +1,6 @@
-from protocol import AbstractGameCommand
-from seat_info import SeatInfo
-from table_params import TableParams
+from bluffinmuffin.protocol.interfaces import AbstractGameCommand
+from bluffinmuffin.protocol.data_types import SeatInfo
+from bluffinmuffin.protocol.data_types import TableParams
 
 
 class TableInfoCommand(AbstractGameCommand):

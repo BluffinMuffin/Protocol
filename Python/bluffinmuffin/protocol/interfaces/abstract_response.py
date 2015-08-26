@@ -1,7 +1,7 @@
 import json
 
-from abstract_command import AbstractCommand
-from bluffin_message_id_enum import BluffinMessageIdEnum
+from .abstract_command import AbstractCommand
+from ..enums.bluffin_message_id_enum import BluffinMessageIdEnum
 
 
 class AbstractResponse(AbstractCommand):

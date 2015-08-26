@@ -1,5 +1,5 @@
-from protocol import AbstractGameCommand
-from round_type_enum import RoundTypeEnum
+from bluffinmuffin.protocol.interfaces import AbstractGameCommand
+from bluffinmuffin.protocol.enums import RoundTypeEnum
 
 
 class BetTurnStartedCommand(AbstractGameCommand):

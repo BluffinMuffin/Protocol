@@ -1,10 +1,10 @@
 from collections import OrderedDict
 
+from bluffinmuffin.protocol.enums import GameTypeEnum
 from .blind_options import BlindOptionsDecoder
 from .configurable_waiting_times import ConfigurableWaitingTimes
-from game_type_enum import GameTypeEnum
-from data_types.limit_options import LimitOptionsDecoder
-from data_types.lobby_options import LobbyOptionsDecoder
+from .limit_options import LimitOptionsDecoder
+from .lobby_options import LobbyOptionsDecoder
 
 
 class TableParams:

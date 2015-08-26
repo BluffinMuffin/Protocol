@@ -1,7 +1,7 @@
 from collections import OrderedDict
 import sys
 
-from .enums.lobby_type_enum import LobbyTypeEnum
+from bluffinmuffin.protocol.enums import LobbyTypeEnum
 
 
 class LobbyOptions:

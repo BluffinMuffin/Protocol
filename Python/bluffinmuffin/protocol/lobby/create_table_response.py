@@ -1,5 +1,5 @@
-from protocol import AbstractResponse
-from create_table_command import CreateTableCommand
+from bluffinmuffin.protocol.interfaces import AbstractResponse
+from .create_table_command import CreateTableCommand
 
 
 class CreateTableResponse(AbstractResponse):

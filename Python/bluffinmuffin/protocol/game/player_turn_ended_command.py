@@ -1,6 +1,6 @@
-from protocol import AbstractGameCommand
-from game_action_enum import GameActionEnum
-from player_state_enum import PlayerStateEnum
+from bluffinmuffin.protocol.interfaces import AbstractGameCommand
+from bluffinmuffin.protocol.enums import GameActionEnum
+from bluffinmuffin.protocol.enums import PlayerStateEnum
 
 
 class PlayerTurnEndedCommand(AbstractGameCommand):

@@ -1,9 +1,9 @@
 import json
 
-from abstract_command import AbstractCommand
-from abstract_response import AbstractResponse
-from enums.bluffin_command_enum import BluffinCommandEnum
-from bluffin_message_id_enum import BluffinMessageIdEnum
+from .abstract_command import AbstractCommand
+from .abstract_response import AbstractResponse
+from ..enums.bluffin_command_enum import BluffinCommandEnum
+from ..enums.bluffin_message_id_enum import BluffinMessageIdEnum
 
 
 class AbstractGameCommand(AbstractCommand):

@@ -1,7 +1,7 @@
 from collections import OrderedDict
 import json
 
-from bluffin_command_enum import BluffinCommandEnum
+from ..enums.bluffin_command_enum import BluffinCommandEnum
 
 
 class AbstractCommand:
@@ -24,4 +24,5 @@ class AbstractCommand:
         d['CommandName'] = self.command_name
         self._encode_specific(d)
         self._encode_specific_end(d)
-        return json.dumps(d, sort_keys=False, indent=4, separators=(',', ': '))
+        #return json.dumps(d, sort_keys=False, indent=4, separators=(',', ': '))
+        return json.dumps(d)

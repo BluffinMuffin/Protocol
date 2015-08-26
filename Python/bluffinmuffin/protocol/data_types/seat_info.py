@@ -1,6 +1,6 @@
 from collections import OrderedDict
 
-from .enums.seat_attribute_enum import SeatAttributeEnum
+from bluffinmuffin.protocol.enums import SeatAttributeEnum
 from .player_info import PlayerInfo
 
 

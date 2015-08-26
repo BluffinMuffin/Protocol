@@ -1,7 +1,7 @@
 from collections import OrderedDict
 
-from lobby_action_enum import LobbyActionEnum
-from data_types.table_params import TableParams
+from bluffinmuffin.protocol.enums import LobbyActionEnum
+from .table_params import TableParams
 
 
 class TupleTable:

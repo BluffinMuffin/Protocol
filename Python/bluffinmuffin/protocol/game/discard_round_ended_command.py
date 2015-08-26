@@ -1,5 +1,5 @@
-from protocol import AbstractGameCommand
-from discard_info import DiscardInfo
+from bluffinmuffin.protocol.interfaces import AbstractGameCommand
+from bluffinmuffin.protocol.data_types import DiscardInfo
 
 
 class DiscardRoundEndedCommand(AbstractGameCommand):

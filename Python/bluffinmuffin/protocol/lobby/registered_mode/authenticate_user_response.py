@@ -1,5 +1,5 @@
-from protocol import AbstractResponse
-from authenticate_user_command import AuthenticateUserCommand
+from bluffinmuffin.protocol.interfaces import AbstractResponse
+from .authenticate_user_command import AuthenticateUserCommand
 
 
 class AuthenticateUserResponse(AbstractResponse):

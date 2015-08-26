@@ -1,9 +1,9 @@
 from collections import OrderedDict
 
-from .enums.blind_type_enum import BlindTypeEnum
-from .enums.game_type_enum import GameTypeEnum
-from .enums.limit_type_enum import LimitTypeEnum
-from .enums.lobby_type_enum import LobbyTypeEnum
+from bluffinmuffin.protocol.enums import BlindTypeEnum
+from bluffinmuffin.protocol.enums import GameTypeEnum
+from bluffinmuffin.protocol.enums import LimitTypeEnum
+from bluffinmuffin.protocol.enums import LobbyTypeEnum
 
 
 class RuleInfo:

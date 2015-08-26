@@ -1,4 +1,4 @@
-from protocol import AbstractGameCommand
+from bluffinmuffin.protocol.interfaces import AbstractGameCommand
 
 
 class PlayerLeftCommand(AbstractGameCommand):

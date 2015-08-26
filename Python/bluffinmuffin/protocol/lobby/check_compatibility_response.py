@@ -1,7 +1,7 @@
-from protocol import AbstractResponse
-from lobby_type_enum import LobbyTypeEnum
-from rule_info import RuleInfo
-from check_compatibility_command import CheckCompatibilityCommand
+from bluffinmuffin.protocol.interfaces import AbstractResponse
+from bluffinmuffin.protocol.enums import LobbyTypeEnum
+from bluffinmuffin.protocol.data_types import RuleInfo
+from .check_compatibility_command import CheckCompatibilityCommand
 
 
 class CheckCompatibilityResponse(AbstractResponse):
