@@ -1,3 +1,5 @@
+from .info import __version__
+
 from .command_decoder import CommandDecoder
 from .disconnect_command import DisconnectCommand
 
