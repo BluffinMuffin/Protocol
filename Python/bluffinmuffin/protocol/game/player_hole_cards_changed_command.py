@@ -3,6 +3,7 @@ from player_state_enum import PlayerStateEnum
 
 
 class PlayerHoleCardsChangedCommand(AbstractGameCommand):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.no_seat = obj['NoSeat']

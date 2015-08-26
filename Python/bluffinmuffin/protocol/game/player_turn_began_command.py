@@ -2,6 +2,7 @@ from protocol import AbstractGameCommand
 
 
 class PlayerTurnBeganCommand(AbstractGameCommand):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.no_seat = obj['NoSeat']

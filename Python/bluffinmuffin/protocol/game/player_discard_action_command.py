@@ -2,6 +2,7 @@ from protocol import AbstractGameCommand
 
 
 class PlayerDiscardActionCommand(AbstractGameCommand):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.cards_discarded = obj['CardsDiscarded']

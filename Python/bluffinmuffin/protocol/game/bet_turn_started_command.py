@@ -3,6 +3,7 @@ from round_type_enum import RoundTypeEnum
 
 
 class BetTurnStartedCommand(AbstractGameCommand):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.round = RoundTypeEnum.parse(obj['Round'])

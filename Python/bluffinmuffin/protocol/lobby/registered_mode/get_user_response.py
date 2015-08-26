@@ -2,8 +2,8 @@ from protocol import AbstractResponse
 from get_user_command import GetUserCommand
 
 
-
 class GetUserResponse(AbstractResponse):
+
     def __init__(self, obj):
         super().__init__(obj, GetUserCommand(obj['Command']))
         self.email = obj['Email']

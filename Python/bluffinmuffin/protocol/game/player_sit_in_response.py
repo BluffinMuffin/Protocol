@@ -3,6 +3,7 @@ from player_sit_in_command import PlayerSitInCommand
 
 
 class PlayerSitInResponse(AbstractGameResponse):
+
     def __init__(self, obj):
         super().__init__(obj, PlayerSitInCommand(obj['Command']))
         self.no_seat = obj['NoSeat']

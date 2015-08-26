@@ -4,6 +4,7 @@ from .enums.limit_type_enum import LimitTypeEnum
 
 
 class LimitOptions:
+
     def __init__(self, obj):
         self.option_type = LimitTypeEnum.parse(obj['OptionType'])
 
@@ -25,21 +26,25 @@ class LimitOptions:
 
 
 class LimitOptionsFixed(LimitOptions):
+
     def __init__(self, obj):
         super().__init__(obj)
 
 
 class LimitOptionsNoLimit(LimitOptions):
+
     def __init__(self, obj):
         super().__init__(obj)
 
 
 class LimitOptionsPot(LimitOptions):
+
     def __init__(self, obj):
         super().__init__(obj)
 
 
 class LimitOptionsDecoder():
+
     @classmethod
     def decode(cls, obj):
         type = LimitTypeEnum.parse(obj['OptionType'])

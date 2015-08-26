@@ -2,6 +2,7 @@ from protocol import AbstractLobbyCommand
 
 
 class LeaveTableCommand(AbstractLobbyCommand):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.table_id = obj['TableId']

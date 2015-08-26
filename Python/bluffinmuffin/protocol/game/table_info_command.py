@@ -4,6 +4,7 @@ from table_params import TableParams
 
 
 class TableInfoCommand(AbstractGameCommand):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.params = TableParams(obj['Params'])

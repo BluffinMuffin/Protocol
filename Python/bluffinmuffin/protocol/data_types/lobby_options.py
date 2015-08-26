@@ -5,6 +5,7 @@ from .enums.lobby_type_enum import LobbyTypeEnum
 
 
 class LobbyOptions:
+
     def __init__(self, obj):
         self.option_type = LobbyTypeEnum.parse(obj['OptionType'])
 
@@ -26,6 +27,7 @@ class LobbyOptions:
 
 
 class LobbyOptionsQuickMode(LobbyOptions):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.starting_amount = obj['StartingAmount']
@@ -38,6 +40,7 @@ class LobbyOptionsQuickMode(LobbyOptions):
 
 
 class LobbyOptionsRegisteredMode(LobbyOptions):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.money_unit = obj['MoneyUnit']
@@ -55,6 +58,7 @@ class LobbyOptionsRegisteredMode(LobbyOptions):
 
 
 class LobbyOptionsDecoder():
+
     @classmethod
     def decode(cls, obj):
         type = LobbyTypeEnum.parse(obj['OptionType'])

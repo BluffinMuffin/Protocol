@@ -2,6 +2,7 @@ from protocol import AbstractGameCommand
 
 
 class PlayerPlayMoneyCommand(AbstractGameCommand):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.amount_played = obj['AmountPlayed']

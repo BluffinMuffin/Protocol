@@ -3,6 +3,7 @@ from check_user_exist_command import CheckUserExistCommand
 
 
 class CheckUserExistResponse(AbstractResponse):
+
     def __init__(self, obj):
         super().__init__(obj, CheckUserExistCommand(obj['Command']))
         self.exist = obj['Exist']

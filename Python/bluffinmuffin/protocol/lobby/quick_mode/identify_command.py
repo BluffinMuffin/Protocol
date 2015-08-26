@@ -2,6 +2,7 @@ from protocol import AbstractLobbyCommand
 
 
 class IdentifyCommand(AbstractLobbyCommand):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.name = obj['Name']

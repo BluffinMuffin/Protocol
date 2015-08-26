@@ -2,6 +2,7 @@ from protocol import AbstractGameCommand
 
 
 class PlayerLeftCommand(AbstractGameCommand):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.player_name = obj['PlayerName']

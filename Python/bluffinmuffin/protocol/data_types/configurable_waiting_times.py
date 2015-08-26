@@ -2,6 +2,7 @@ from collections import OrderedDict
 
 
 class ConfigurableWaitingTimes:
+
     def __init__(self, obj):
         self.after_player_action = obj['AfterPlayerAction']
         self.after_board_dealed = obj['AfterBoardDealed']

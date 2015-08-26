@@ -2,6 +2,7 @@ from protocol import AbstractGameCommand
 
 
 class GameStartedCommand(AbstractGameCommand):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.needed_blind_amount = obj['NeededBlindAmount']

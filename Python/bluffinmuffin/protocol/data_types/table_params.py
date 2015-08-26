@@ -8,6 +8,7 @@ from data_types.lobby_options import LobbyOptionsDecoder
 
 
 class TableParams:
+
     def __init__(self, obj):
         self.table_name = obj['TableName']
         self.game_type = GameTypeEnum.parse(obj['GameType'])

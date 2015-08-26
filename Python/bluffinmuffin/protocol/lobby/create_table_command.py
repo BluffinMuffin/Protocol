@@ -3,6 +3,7 @@ from table_params import TableParams
 
 
 class CreateTableCommand(AbstractLobbyCommand):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.params = TableParams(obj['Params'])

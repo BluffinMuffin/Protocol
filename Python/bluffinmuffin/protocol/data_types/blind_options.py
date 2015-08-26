@@ -4,6 +4,7 @@ from .enums.blind_type_enum import BlindTypeEnum
 
 
 class BlindOptions:
+
     def __init__(self, obj):
         self.money_unit = obj['MoneyUnit']
         self.option_type = BlindTypeEnum.parse(obj['OptionType'])
@@ -27,6 +28,7 @@ class BlindOptions:
 
 
 class BlindOptionsAnte(BlindOptions):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.ante_amount = self.money_unit
@@ -36,6 +38,7 @@ class BlindOptionsAnte(BlindOptions):
 
 
 class BlindOptionsBlinds(BlindOptions):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.big_blind_amount = self.money_unit
@@ -46,11 +49,13 @@ class BlindOptionsBlinds(BlindOptions):
 
 
 class BlindOptionsNone(BlindOptions):
+
     def __init__(self, obj):
         super().__init__(obj)
 
 
 class BlindOptionsDecoder():
+
     @classmethod
     def decode(cls, obj):
         type = BlindTypeEnum.parse(obj['OptionType'])

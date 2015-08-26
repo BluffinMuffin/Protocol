@@ -2,6 +2,7 @@ from protocol import AbstractLobbyCommand
 
 
 class CheckDisplayExistCommand(AbstractLobbyCommand):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.display_name = obj['DisplayName']

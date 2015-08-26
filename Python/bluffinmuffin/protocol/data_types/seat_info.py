@@ -5,6 +5,7 @@ from .player_info import PlayerInfo
 
 
 class SeatInfo:
+
     def __init__(self, obj):
         self.no_seat = obj['NoSeat']
         self.player = PlayerInfo(obj['Player'])

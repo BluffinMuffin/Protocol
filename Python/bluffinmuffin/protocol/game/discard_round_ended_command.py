@@ -3,6 +3,7 @@ from discard_info import DiscardInfo
 
 
 class DiscardRoundEndedCommand(AbstractGameCommand):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.cards_discarded = [DiscardInfo(x) for x in obj['CardsDiscarded']]

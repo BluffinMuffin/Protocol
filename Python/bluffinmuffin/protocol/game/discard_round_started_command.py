@@ -2,6 +2,7 @@ from protocol import AbstractGameCommand
 
 
 class DiscardRoundStartedCommand(AbstractGameCommand):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.minimum_cards_to_discard = obj['MinimumCardsToDiscard']

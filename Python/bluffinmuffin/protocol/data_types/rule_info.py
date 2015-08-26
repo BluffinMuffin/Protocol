@@ -7,6 +7,7 @@ from .enums.lobby_type_enum import LobbyTypeEnum
 
 
 class RuleInfo:
+
     def __init__(self, obj):
         self.game_type = GameTypeEnum.parse(obj['GameType'])
         self.name = obj['Name']

@@ -4,6 +4,7 @@ from .enums.player_state_enum import PlayerStateEnum
 
 
 class PlayerInfo:
+
     def __init__(self, obj):
         self.no_seat = obj['NoSeat']
         self.name = obj['Name']

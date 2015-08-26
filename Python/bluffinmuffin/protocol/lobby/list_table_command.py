@@ -3,6 +3,7 @@ from lobby_type_enum import LobbyTypeEnum
 
 
 class ListTableCommand(AbstractLobbyCommand):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.lobby_types = [LobbyTypeEnum.parse(x) for x in obj['LobbyTypes']]

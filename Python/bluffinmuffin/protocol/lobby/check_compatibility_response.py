@@ -5,6 +5,7 @@ from check_compatibility_command import CheckCompatibilityCommand
 
 
 class CheckCompatibilityResponse(AbstractResponse):
+
     def __init__(self, obj):
         super().__init__(obj, CheckCompatibilityCommand(obj['Command']))
         self.implemented_protocol_version = obj['ImplementedProtocolVersion']

@@ -4,6 +4,7 @@ from list_table_command import ListTableCommand
 
 
 class ListTableResponse(AbstractResponse):
+
     def __init__(self, obj):
         super().__init__(obj, ListTableCommand(obj['Command']))
         self.tables = [TupleTable(x) for x in obj['Tables']]

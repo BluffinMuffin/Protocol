@@ -3,6 +3,7 @@ from create_table_command import CreateTableCommand
 
 
 class CreateTableResponse(AbstractResponse):
+
     def __init__(self, obj):
         super().__init__(obj, CreateTableCommand(obj['Command']))
         self.id_table = obj['IdTable']

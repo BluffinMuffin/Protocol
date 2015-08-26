@@ -3,6 +3,7 @@ from check_display_exist_command import CheckDisplayExistCommand
 
 
 class CheckDisplayExistResponse(AbstractResponse):
+
     def __init__(self, obj):
         super().__init__(obj, CheckDisplayExistCommand(obj['Command']))
         self.exist = obj['Exist']

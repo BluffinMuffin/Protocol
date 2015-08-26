@@ -3,6 +3,7 @@ from seat_info import SeatInfo
 
 
 class SeatUpdatedCommand(AbstractGameCommand):
+
     def __init__(self, obj):
         super().__init__(obj)
         self.seat = SeatInfo(obj['Seat'])
