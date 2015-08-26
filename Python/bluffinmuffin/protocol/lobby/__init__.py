@@ -1,3 +1,6 @@
+from . import quick_mode
+from . import registered_mode
+
 from .check_compatibility_command import *
 from .check_compatibility_response import *
 from .create_table_command import *
