@@ -33,7 +33,7 @@ This command is there to inform players that someone just **left** the table. (S
 {
   "CommandName": "PlayerLeftCommand",
   "TableId": 42,
-  "PlayerName": null
+  "PlayerName": "SpongeBob"
 }
 ```
 

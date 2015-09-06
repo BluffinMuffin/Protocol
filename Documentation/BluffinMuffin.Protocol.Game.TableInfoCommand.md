@@ -238,7 +238,7 @@ Sends all the information about the current state of the table, to put everybody
     },
     "Blind": {
       "OptionType": "Blinds",
-      "MoneyUnit": 0
+      "MoneyUnit": 10
     },
     "Limit": {
       "OptionType": "NoLimit"

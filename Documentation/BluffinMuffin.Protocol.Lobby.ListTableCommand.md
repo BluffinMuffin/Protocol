@@ -268,7 +268,7 @@ The list of active tables will be sent back
         },
         "Blind": {
           "OptionType": "Blinds",
-          "MoneyUnit": 0
+          "MoneyUnit": 10
         },
         "Limit": {
           "OptionType": "NoLimit"

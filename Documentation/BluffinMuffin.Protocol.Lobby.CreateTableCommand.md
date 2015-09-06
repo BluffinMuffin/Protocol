@@ -155,7 +155,7 @@ More information on ...
     },
     "Blind": {
       "OptionType": "Blinds",
-      "MoneyUnit": 0
+      "MoneyUnit": 10
     },
     "Limit": {
       "OptionType": "NoLimit"
@@ -349,7 +349,7 @@ More information on ...
       },
       "Blind": {
         "OptionType": "Blinds",
-        "MoneyUnit": 0
+        "MoneyUnit": 10
       },
       "Limit": {
         "OptionType": "NoLimit"
