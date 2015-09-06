@@ -19,8 +19,12 @@ The server sends this command to indicated that it's time for a specific player 
       "description": "The id of the table where this command needs to go",
       "type": "int"
     },
+    "AmountNeeded": {
+      "description": "The amount needed to call. It's the minimum to play if you don't want to fold.",
+      "type": "int"
+    },
     "MinimumRaiseAmount": {
-      "description": "The minimum amount needed to raise. A raise must be at least the size of the largest previous bet or raise of the current betting round.",
+      "description": "The minimum amount needed to raise. A raise must be at least the size of the largest previous bet or raise of the current betting round. To raise, the player have to send at least AmountNeeded+MinRaiseAmount.",
       "type": "int"
     },
     "NoSeat": {
@@ -38,7 +42,8 @@ The server sends this command to indicated that it's time for a specific player 
   "CommandName": "PlayerTurnBeganCommand",
   "TableId": 42,
   "NoSeat": 7,
-  "MinimumRaiseAmount": 6
+  "AmountNeeded": 21,
+  "MinimumRaiseAmount": 42
 }
 ```
 
