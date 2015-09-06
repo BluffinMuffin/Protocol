@@ -7,7 +7,7 @@ class CommandDecoder:
     def _decode_class(cls, obj, name, longName):
         try:
             klass = getattr(__import__(longName, globals(), locals(), longName), name)
-            return klass(obj)
+            return klass.decode(obj)
         except ImportError:
             return None
 

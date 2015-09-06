@@ -6,11 +6,11 @@ from ..enums.bluffin_message_id_enum import BluffinMessageIdEnum
 
 class AbstractResponse(AbstractCommand):
 
-    def __init__(self, obj, command):
-        super().__init__(obj, command.command_type)
-        self.success = obj['Success']
-        self.message_id = BluffinMessageIdEnum.parse(obj['MessageId'])
-        self.message = obj['Message']
+    def __init__(self, success, message_id, message, command):
+        super().__init__(command.command_type)
+        self.success = success
+        self.message_id = message_id
+        self.message = message
         self.command = command
 
     def __str__(self):

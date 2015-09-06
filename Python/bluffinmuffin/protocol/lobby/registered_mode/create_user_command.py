@@ -3,12 +3,12 @@ from bluffinmuffin.protocol.interfaces import AbstractLobbyCommand
 
 class CreateUserCommand(AbstractLobbyCommand):
 
-    def __init__(self, obj):
-        super().__init__(obj)
-        self.username = obj['Username']
-        self.password = obj['Password']
-        self.email = obj['Email']
-        self.display_name = obj['DisplayName']
+    def __init__(self, username,password,email,display_name):
+        super().__init__()
+        self.username = username
+        self.password = password
+        self.email = email
+        self.display_name = display_name
 
     def __str__(self):
         return '{0} ({1} : {2}, {3}, {4})'.format(
@@ -25,3 +25,12 @@ class CreateUserCommand(AbstractLobbyCommand):
         d['Password'] = self.password
         d['Email'] = self.email
         d['DisplayName'] = self.display_name
+
+    @classmethod
+    def decode(cls, obj):
+        return cls(
+            obj['Username'],
+            obj['Password'],
+            obj['Email'],
+            obj['DisplayName']
+        )

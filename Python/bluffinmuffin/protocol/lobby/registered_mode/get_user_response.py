@@ -1,14 +1,15 @@
+from bluffinmuffin.protocol.enums import BluffinMessageIdEnum
 from bluffinmuffin.protocol.interfaces import AbstractResponse
 from .get_user_command import GetUserCommand
 
 
 class GetUserResponse(AbstractResponse):
 
-    def __init__(self, obj):
-        super().__init__(obj, GetUserCommand(obj['Command']))
-        self.email = obj['Email']
-        self.display_name = obj['DisplayName']
-        self.money = obj['Money']
+    def __init__(self, success, message_id, message, jsonCommand, email, display_name, money):
+        super().__init__(success, message_id, message, GetUserCommand(jsonCommand))
+        self.email = email
+        self.display_name = display_name
+        self.money = money
 
     def __str__(self):
         return '{0} => ({1}, {2}, {3})'.format(
@@ -23,3 +24,15 @@ class GetUserResponse(AbstractResponse):
         d['Email'] = self.email
         d['DisplayName'] = self.display_name
         d['Money'] = self.money
+
+    @classmethod
+    def decode(cls, obj):
+        return cls(
+            obj['Success'],
+            BluffinMessageIdEnum.parse(obj['MessageId']),
+            obj['Message'],
+            obj['Command'],
+            obj['Email'],
+            obj['DisplayName'],
+            obj['Money']
+        )

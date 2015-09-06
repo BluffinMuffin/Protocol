@@ -1,8 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49a347be-06c4-4150-a6c3-896f1bb59ce2" name="Default" comment="Adding the amount_needed property">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/game/player_turn_began_command.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/game/player_turn_began_command.py" />
+    <list default="true" id="49a347be-06c4-4150-a6c3-896f1bb59ce2" name="Default" comment="Adding the amount_needed property#">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/command_factory.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/datatypes_factory.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/interfaces/abstract_command.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/interfaces/abstract_command.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/interfaces/abstract_game_command.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/interfaces/abstract_game_command.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/interfaces/abstract_lobby_command.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/interfaces/abstract_lobby_command.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/interfaces/abstract_response.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/interfaces/abstract_response.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/authenticate_user_command.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/authenticate_user_command.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/authenticate_user_response.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/authenticate_user_response.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/check_compatibility_command.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/check_compatibility_command.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/check_compatibility_response.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/check_compatibility_response.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/check_display_exist_command.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/check_display_exist_command.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/check_display_exist_response.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/check_display_exist_response.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/check_user_exist_command.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/check_user_exist_command.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/check_user_exist_response.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/check_user_exist_response.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/command_decoder.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/command_decoder.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/create_user_command.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/create_user_command.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/create_user_response.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/create_user_response.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/disconnect_command.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/disconnect_command.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/get_user_command.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/get_user_command.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/get_user_response.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/get_user_response.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/quick_mode/identify_command.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/quick_mode/identify_command.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/quick_mode/identify_response.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/quick_mode/identify_response.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/test_command_decoder.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/test_command_decoder.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -25,21 +46,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="player_turn_began_command.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/game/player_turn_began_command.py">
+      <file leaf-file-name="command_factory.py" pinned="true" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/command_factory.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_command_decoder.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/test_command_decoder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8743719">
-              <caret line="45" column="75" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
+              <caret line="81" column="205" selection-start-line="81" selection-start-column="205" selection-end-line="81" selection-end-column="205" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -47,21 +58,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="command_decoder.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/command_decoder.py">
+      <file leaf-file-name="test_command_decoder.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/test_command_decoder.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+              <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datatypes_factory.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/datatypes_factory.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="disconnect_command.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/disconnect_command.py">
+      <file leaf-file-name="create_user_command.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/create_user_command.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_user_response.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/create_user_response.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding>
                 <element signature="e#0#61#0" expanded="true" />
               </folding>
@@ -69,32 +102,58 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="get_user_command.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/get_user_command.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LICENSE" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LICENSE">
+      <file leaf-file-name="get_user_response.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/get_user_response.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+              <folding>
+                <element signature="e#0#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="check_compatibility_command.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/check_compatibility_command.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="75" selection-start-line="17" selection-start-column="75" selection-end-line="23" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Python/setup.py">
+      <file leaf-file-name="check_compatibility_response.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/check_compatibility_response.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.1105528">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#62#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create_table_command.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/create_table_command.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="e#0#66#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,27 +184,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/configurable_waiting_times.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/discard_info.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/player_info.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/lobby/check_compatibility_response.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/table_params.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/blind_options.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/lobby/create_table_command.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/lobby/create_table_response.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/lobby/join_table_command.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/lobby/leave_table_command.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/lobby/list_table_response.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/tuple_table.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/seat_info.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/lobby/list_table_command.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/game/bet_turn_ended_command.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/program.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/game/bet_turn_started_command.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/game/discard_round_ended_command.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/game/discard_round_started_command.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/game/game_started_command.py" />
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/game/player_discard_action_command.py" />
         <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/game/player_hole_cards_changed_command.py" />
         <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/game/player_joined_command.py" />
         <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/game/player_left_command.py" />
@@ -173,9 +211,30 @@
         <option value="$PROJECT_DIR$/Python/bluffin_muffin/protocol/enums/__init__.py" />
         <option value="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/__init__.py" />
         <option value="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/enums/__init__.py" />
-        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/command_decoder.py" />
         <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/game/player_turn_began_command.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/command_decoder.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/interfaces/abstract_lobby_command.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/interfaces/abstract_game_command.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/interfaces/abstract_command.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/disconnect_command.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/interfaces/abstract_response.py" />
         <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/test_command_decoder.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/get_user_command.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/quick_mode/identify_command.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/quick_mode/identify_response.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/authenticate_user_command.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/authenticate_user_response.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/check_display_exist_command.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/check_display_exist_response.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/check_user_exist_command.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/check_user_exist_response.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/create_user_command.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/create_user_response.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/get_user_response.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/check_compatibility_command.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/check_compatibility_response.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/datatypes_factory.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/command_factory.py" />
       </list>
     </option>
   </component>
@@ -332,7 +391,93 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
+              <option name="myItemId" value="lobby" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluffinMuffin.Protocol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluffinMuffin.Protocol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluffinmuffin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protocol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lobby" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="registered_mode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluffinMuffin.Protocol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluffinMuffin.Protocol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluffinmuffin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protocol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lobby" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="quick_mode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluffinMuffin.Protocol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluffinMuffin.Protocol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluffinmuffin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protocol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interfaces" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -351,11 +496,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffinmuffin\protocol\tests" />
       <recent name="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol\tests" />
       <recent name="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol\lobby" />
       <recent name="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol\lobby\registered_mode" />
       <recent name="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol\lobby\quick_mode" />
-      <recent name="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin\protocol\game" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Programmation\Python\BluffinMuffin.Protocol\Python\bluffin_muffin" />
@@ -627,21 +772,27 @@
       <option name="project" value="LOCAL" />
       <updated>1441567566256</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Adding the amount_needed property">
+      <created>1441567981999</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1441567981999</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1842661" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20696938" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293348" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33225107" sideWeight="0.5021119" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32359308" sideWeight="0.49788806" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5313853" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17965367" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -680,7 +831,8 @@
     <MESSAGE value="moving stuff around" />
     <MESSAGE value="creating __init__.py everywhere" />
     <MESSAGE value="Making command_decoder working again" />
-    <option name="LAST_COMMIT_MESSAGE" value="Making command_decoder working again" />
+    <MESSAGE value="Adding the amount_needed property" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding the amount_needed property" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -688,8 +840,12 @@
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/Python/bluffin_muffin/protocol/game/player_hole_cards_changed_command.py</url>
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/command_factory.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -733,16 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/disconnect_command.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Python/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -751,28 +897,246 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/command_decoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/game/player_turn_began_command.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <marker date="1441567851389" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441567851389" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1441567851389" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/game/bet_turn_ended_command.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/command_decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/interfaces/abstract_game_command.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/disconnect_command.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/interfaces/abstract_response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="56" selection-start-line="31" selection-start-column="56" selection-end-line="31" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/interfaces/abstract_lobby_command.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/interfaces/abstract_command.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/quick_mode/identify_command.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/quick_mode/identify_response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/authenticate_user_command.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/authenticate_user_response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/check_display_exist_command.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/check_display_exist_response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/check_user_exist_command.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/check_user_exist_response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/create_user_command.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/create_user_response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/get_user_command.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/registered_mode/get_user_response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/datatypes_factory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/command_factory.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="81" column="205" selection-start-line="81" selection-start-column="205" selection-end-line="81" selection-end-column="205" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/test_command_decoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8743719">
-          <caret line="45" column="75" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/create_table_command.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/check_compatibility_command.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="75" selection-start-line="17" selection-start-column="75" selection-end-line="23" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/lobby/check_compatibility_response.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1105528">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
           </folding>
         </state>
       </provider>
