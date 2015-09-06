@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49a347be-06c4-4150-a6c3-896f1bb59ce2" name="Default" comment="Making">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/BluffinMuffin.Protocol.iml" afterPath="$PROJECT_DIR$/.idea/BluffinMuffin.Protocol.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/command_decoder.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/command_decoder.py" />
+    <list default="true" id="49a347be-06c4-4150-a6c3-896f1bb59ce2" name="Default" comment="Adding the amount_needed property">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/game/player_turn_began_command.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/game/player_turn_began_command.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/test_command_decoder.py" afterPath="$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/test_command_decoder.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BluffinMuffin.Protocol.iws" />
@@ -29,17 +29,17 @@
         <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/game/player_turn_began_command.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_command_decoder.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test_command_decoder.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/test_command_decoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.8743719">
+              <caret line="45" column="75" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -47,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="command_decoder.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="command_decoder.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/command_decoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39865997">
-              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -125,7 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/lobby_options.py" />
         <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/configurable_waiting_times.py" />
         <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/discard_info.py" />
         <option value="$PROJECT_DIR$/Python/BluffinMuffin.Protocol/data_types/player_info.py" />
@@ -174,8 +173,9 @@
         <option value="$PROJECT_DIR$/Python/bluffin_muffin/protocol/enums/__init__.py" />
         <option value="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/__init__.py" />
         <option value="$PROJECT_DIR$/Python/bluffin_muffin/protocol/data_types/enums/__init__.py" />
-        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/test_command_decoder.py" />
         <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/command_decoder.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/game/player_turn_began_command.py" />
+        <option value="$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/test_command_decoder.py" />
       </list>
     </option>
   </component>
@@ -307,6 +307,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluffinMuffin.Protocol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BluffinMuffin.Protocol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Python" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bluffinmuffin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protocol" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -595,7 +621,13 @@
       <option name="project" value="LOCAL" />
       <updated>1440359406407</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Making command_decoder working again">
+      <created>1441567566256</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1441567566256</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -647,7 +679,8 @@
     <MESSAGE value="Commands have now the encode() method to convert back to json :)" />
     <MESSAGE value="moving stuff around" />
     <MESSAGE value="creating __init__.py everywhere" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating __init__.py everywhere" />
+    <MESSAGE value="Making command_decoder working again" />
+    <option name="LAST_COMMIT_MESSAGE" value="Making command_decoder working again" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -680,14 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/game/player_turn_began_command.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -726,21 +751,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/test_command_decoder.py">
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/command_decoder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/command_decoder.py">
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/game/player_turn_began_command.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39865997">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Python/bluffinmuffin/protocol/tests/test_command_decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8743719">
+          <caret line="45" column="75" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

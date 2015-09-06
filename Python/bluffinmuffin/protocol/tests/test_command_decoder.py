@@ -44,7 +44,7 @@ def test_command_decoder():
     assert_command('{  "CommandName": "PlayerHoleCardsChangedCommand",  "TableId": 42,  "NoSeat": 7,  "Cards": [    "4h",    "Qs"  ],  "PlayerState": "Playing"}')
     assert_command('{  "CommandName": "PlayerJoinedCommand",  "TableId": 42,  "PlayerName": "Sponge Bob"}')
     assert_command('{  "CommandName": "PlayerLeftCommand",  "TableId": 42,  "PlayerName": "Sponge Bob"}')
-    assert_command('{  "CommandName": "PlayerTurnBeganCommand",  "TableId": 42,  "NoSeat": 7,  "MinimumRaiseAmount": 6}')
+    assert_command('{  "CommandName": "PlayerTurnBeganCommand",  "TableId": 42,  "NoSeat": 7, "AmountNeeded":21, "MinimumRaiseAmount": 42}')
     assert_command('{  "CommandName": "PlayerTurnEndedCommand",  "TableId": 42,  "NoSeat": 7,  "TotalPlayedMoneyAmount": 420,  "TotalSafeMoneyAmount": 4200,  "TotalPot": 42000,  "ActionTakenType": "Call",  "ActionTakenAmount": 42,  "PlayerState": "Playing"}')
     assert_command('{  "CommandName": "PlayerWonPotCommand",  "TableId": 42,  "NoSeat": 7,  "PotId": 0,  "WonAmount": 420,  "TotalPotAmount": 1000,  "TotalPlayerMoney": 4200,  "WinningCards": [    "5s",    "5c",    "5d",    "Ad",    "Ks"  ],  "WinningHand": "ThreeOfAKind"}')
     assert_command('{  "CommandName": "SeatUpdatedCommand",  "TableId": 42,  "Seat": {    "NoSeat": 7,    "Player": {      "NoSeat": 7,      "Name": "SpongeBob",      "MoneySafeAmnt": 1000,      "MoneyBetAmnt": 42,      "HoleCards": [        "2s",        "Ah"      ],      "State": "Playing",      "IsShowingCards": true    },    "SeatAttributes": [      "CurrentPlayer",      "BigBlind"    ]  }}')
