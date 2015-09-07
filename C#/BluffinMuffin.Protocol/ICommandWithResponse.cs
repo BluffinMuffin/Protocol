@@ -29,7 +29,7 @@ namespace BluffinMuffin.Protocol
         /// <returns></returns>
         public static TResponse ResponseSuccess<TResponse>(this ICommandWithResponse<TResponse> cmd) where TResponse : IResponse
         {
-            return cmd.Response(true, BluffinMessageId.None, String.Empty);
+            return cmd.Response(true, BluffinMessageId.None, string.Empty);
         }
         /// <summary>
         /// 

@@ -40,7 +40,7 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// 
         /// </summary>
         [JsonIgnore]
-        public string[] Cards => FaceUpCards.Concat(FaceDownCards).ToArray();
+        public string[] Cards => FaceDownCards.Concat(FaceUpCards).ToArray();
 
         /// <summary>
         /// The cards in hand that are currently facing up (visible to other players).
@@ -75,6 +75,8 @@ namespace BluffinMuffin.Protocol.DataTypes
             MoneySafeAmnt = 0;
             MoneyBetAmnt = 0;
             State = PlayerStateEnum.Zombie;
+            FaceUpCards = new string[0];
+            FaceDownCards = new string[0];
         }
 
         /// <summary>
@@ -82,7 +84,7 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// </summary>
         /// <param name="name"></param>
         /// <param name="money"></param>
-        public PlayerInfo(String name, int money)
+        public PlayerInfo(string name, int money)
             : this()
         {
 
@@ -108,8 +110,8 @@ namespace BluffinMuffin.Protocol.DataTypes
                 Name = Name,
                 MoneyBetAmnt = MoneyBetAmnt,
                 MoneySafeAmnt = MoneySafeAmnt,
-                FaceUpCards = FaceUpCards == null ? null : new List<string>(FaceUpCards).ToArray(),
-                FaceDownCards = FaceDownCards == null ? null : new List<string>(FaceDownCards).ToArray(),
+                FaceUpCards = FaceUpCards == null ? new string[0] : new List<string>(FaceUpCards).ToArray(),
+                FaceDownCards = FaceDownCards == null ? new string[0] : new List<string>(FaceDownCards).ToArray(),
                 IsShowingCards = IsShowingCards,
                 State = State,
             };

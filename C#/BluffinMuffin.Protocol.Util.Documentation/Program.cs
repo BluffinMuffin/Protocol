@@ -15,7 +15,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
 {
     internal class Program
     {
-        private static readonly Dictionary<Type, string> Aliases =
+        private static readonly Dictionary<Type, string> m_Aliases =
             new Dictionary<Type, string>()
             {
                 {typeof (byte), "byte"},
@@ -36,7 +36,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                 {typeof (void), "void"}
             };
 
-        private static readonly Dictionary<string, string> Summaries = new Dictionary<string, string>();
+        private static readonly Dictionary<string, string> m_Summaries = new Dictionary<string, string>();
 
         public static void LoadDocOfAssembly(Type exampleType)
         {
@@ -48,8 +48,8 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                     string name = classTag.Attribute("name").Value;
                     var xElement = classTag.Element("summary");
                     string summary = xElement?.Value;
-                    if (!String.IsNullOrEmpty(summary) && !Summaries.ContainsKey(name))
-                        Summaries.Add(name, summary);
+                    if (!string.IsNullOrEmpty(summary) && !m_Summaries.ContainsKey(name))
+                        m_Summaries.Add(name, summary);
                 }
         }
 
@@ -66,7 +66,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
         {
             string fullname = t.FullName;
             var name = "T:" + fullname;
-            string summary = Summaries.ContainsKey(name) ? Summaries[name] : t.FullName;
+            string summary = m_Summaries.ContainsKey(name) ? m_Summaries[name] : t.FullName;
             foreach (var line in summary.Trim().Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries))
             {
                 sw.WriteLine();
@@ -194,7 +194,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                 {
                     var name = "P:" + type.FullName + "." + p.Name;
                     var sType = type;
-                    string summary = Summaries.ContainsKey(name) ? Summaries[name] : String.Empty;
+                    string summary = m_Summaries.ContainsKey(name) ? m_Summaries[name] : string.Empty;
                     while (string.IsNullOrEmpty(summary) && sType.BaseType != null && sType.BaseType != sType)
                     {
                         sType = sType.BaseType;
@@ -202,10 +202,10 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                         if (full.Contains("["))
                             full = full.Remove(full.IndexOf('['));
                         name = "P:" + full + "." + p.Name;
-                        summary = Summaries.ContainsKey(name) ? Summaries[name] : String.Empty;
+                        summary = m_Summaries.ContainsKey(name) ? m_Summaries[name] : string.Empty;
                     }
-                    string desc = String.Join(" ", summary.Trim().Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries).Select(x => x.Trim())).Trim();
-                    if (!String.IsNullOrEmpty(desc))
+                    string desc = string.Join(" ", summary.Trim().Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries).Select(x => x.Trim())).Trim();
+                    if (!string.IsNullOrEmpty(desc))
                     {
                         writer.WritePropertyName("description");
                         writer.WriteValue(desc);
@@ -237,7 +237,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                 writer.WriteEndObject();
             }
             else if (t.IsPrimitive || t == typeof(string))
-                writer.WriteValue(Aliases[t]);
+                writer.WriteValue(m_Aliases[t]);
             else
             {
                 writer.WriteValue(t.FullName);
