@@ -5,8 +5,7 @@ from .list_table_command import ListTableCommand
 
 
 class ListTableResponse(AbstractResponse):
-
-    def __init__(self, success, message_id, message, jsonCommand,tables):
+    def __init__(self, success, message_id, message, jsonCommand, tables):
         super().__init__(success, message_id, message, ListTableCommand.decode(jsonCommand))
         self.tables = tables
 

@@ -2,7 +2,6 @@ from bluffinmuffin.protocol.interfaces import AbstractGameCommand
 
 
 class PlayerPlayMoneyCommand(AbstractGameCommand):
-
     def __init__(self, table_id, amount_played):
         super().__init__(table_id)
         self.amount_played = amount_played

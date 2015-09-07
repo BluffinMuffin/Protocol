@@ -2,7 +2,6 @@ from bluffinmuffin.protocol.interfaces import AbstractGameCommand
 
 
 class PlayerLeftCommand(AbstractGameCommand):
-
     def __init__(self, table_id, player_name):
         super().__init__(table_id)
         self.player_name = player_name

@@ -2,7 +2,6 @@ from bluffinmuffin.protocol.interfaces import AbstractGameCommand
 
 
 class GameStartedCommand(AbstractGameCommand):
-
     def __init__(self, table_id, needed_blind_amount):
         super().__init__(table_id)
         self.needed_blind_amount = needed_blind_amount

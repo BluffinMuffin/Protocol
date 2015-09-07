@@ -4,7 +4,6 @@ from bluffinmuffin.protocol.enums import LimitTypeEnum
 
 
 class LimitOptions:
-
     def __init__(self, option_type):
         self.option_type = option_type
 
@@ -26,7 +25,6 @@ class LimitOptions:
 
 
 class LimitOptionsFixed(LimitOptions):
-
     def __init__(self):
         super().__init__(LimitTypeEnum.FixedLimit)
 
@@ -36,7 +34,6 @@ class LimitOptionsFixed(LimitOptions):
 
 
 class LimitOptionsNoLimit(LimitOptions):
-
     def __init__(self):
         super().__init__(LimitTypeEnum.NoLimit)
 
@@ -46,7 +43,6 @@ class LimitOptionsNoLimit(LimitOptions):
 
 
 class LimitOptionsPot(LimitOptions):
-
     def __init__(self):
         super().__init__(LimitTypeEnum.PotLimit)
 
@@ -56,7 +52,6 @@ class LimitOptionsPot(LimitOptions):
 
 
 class LimitOptionsDecoder():
-
     @classmethod
     def decode(cls, obj):
         type = LimitTypeEnum.parse(obj['OptionType'])

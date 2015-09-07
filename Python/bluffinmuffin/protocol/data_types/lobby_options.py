@@ -5,7 +5,6 @@ from bluffinmuffin.protocol.enums import LobbyTypeEnum
 
 
 class LobbyOptions:
-
     def __init__(self, option_type):
         self.option_type = option_type
 
@@ -27,8 +26,7 @@ class LobbyOptions:
 
 
 class LobbyOptionsQuickMode(LobbyOptions):
-
-    def __init__(self,starting_amount):
+    def __init__(self, starting_amount):
         super().__init__(LobbyTypeEnum.QuickMode)
         self.starting_amount = starting_amount
         self.minimum_amount_for_buy_in = self.starting_amount
@@ -46,8 +44,7 @@ class LobbyOptionsQuickMode(LobbyOptions):
 
 
 class LobbyOptionsRegisteredMode(LobbyOptions):
-
-    def __init__(self,money_unit,is_maximum_buy_in_limited):
+    def __init__(self, money_unit, is_maximum_buy_in_limited):
         super().__init__(LobbyTypeEnum.RegisteredMode)
         self.money_unit = money_unit
         self.is_maximum_buy_in_limited = is_maximum_buy_in_limited
@@ -71,7 +68,6 @@ class LobbyOptionsRegisteredMode(LobbyOptions):
 
 
 class LobbyOptionsDecoder():
-
     @classmethod
     def decode(cls, obj):
         type = LobbyTypeEnum.parse(obj['OptionType'])

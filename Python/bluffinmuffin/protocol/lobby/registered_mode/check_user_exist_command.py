@@ -2,7 +2,6 @@ from bluffinmuffin.protocol.interfaces import AbstractLobbyCommand
 
 
 class CheckUserExistCommand(AbstractLobbyCommand):
-
     def __init__(self, username):
         super().__init__()
         self.username = username

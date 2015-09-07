@@ -2,7 +2,6 @@ from bluffinmuffin.protocol.interfaces import AbstractGameCommand
 
 
 class PlayerTurnBeganCommand(AbstractGameCommand):
-
     def __init__(self, table_id, no_seat, amount_needed, minimum_raise_amount):
         super().__init__(table_id)
         self.no_seat = no_seat

@@ -5,7 +5,6 @@ from .table_params import TableParams
 
 
 class TupleTable:
-
     def __init__(self, id_table, nb_players, possible_action, params):
         self.id_table = id_table
         self.nb_players = nb_players

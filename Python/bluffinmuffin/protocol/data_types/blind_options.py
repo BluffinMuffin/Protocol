@@ -3,8 +3,7 @@ from bluffinmuffin.protocol.enums import BlindTypeEnum
 
 
 class BlindOptions:
-
-    def __init__(self, money_unit,option_type):
+    def __init__(self, money_unit, option_type):
         self.money_unit = money_unit
         self.option_type = option_type
 
@@ -27,9 +26,8 @@ class BlindOptions:
 
 
 class BlindOptionsAnte(BlindOptions):
-
     def __init__(self, money_unit):
-        super().__init__(money_unit,BlindTypeEnum.Antes)
+        super().__init__(money_unit, BlindTypeEnum.Antes)
         self.ante_amount = self.money_unit
 
     def __str__(self):
@@ -43,9 +41,8 @@ class BlindOptionsAnte(BlindOptions):
 
 
 class BlindOptionsBlinds(BlindOptions):
-
     def __init__(self, money_unit):
-        super().__init__(money_unit,BlindTypeEnum.Blinds)
+        super().__init__(money_unit, BlindTypeEnum.Blinds)
         self.big_blind_amount = self.money_unit
         self.small_blind_amount = self.money_unit // 2
 
@@ -60,9 +57,8 @@ class BlindOptionsBlinds(BlindOptions):
 
 
 class BlindOptionsNone(BlindOptions):
-
     def __init__(self, money_unit):
-        super().__init__(money_unit,BlindTypeEnum.Nothing)
+        super().__init__(money_unit, BlindTypeEnum.Nothing)
 
     @classmethod
     def decode(cls, obj):
@@ -72,7 +68,6 @@ class BlindOptionsNone(BlindOptions):
 
 
 class BlindOptionsDecoder():
-
     @classmethod
     def decode(cls, obj):
         type = BlindTypeEnum.parse(obj['OptionType'])

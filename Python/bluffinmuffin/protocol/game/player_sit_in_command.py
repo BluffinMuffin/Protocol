@@ -2,7 +2,6 @@ from bluffinmuffin.protocol.interfaces import AbstractGameCommand
 
 
 class PlayerSitInCommand(AbstractGameCommand):
-
     def __init__(self, table_id, no_seat, money_amount):
         super().__init__(table_id)
         self.no_seat = no_seat

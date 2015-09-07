@@ -4,8 +4,8 @@ from bluffinmuffin.protocol.enums import PlayerStateEnum
 
 
 class PlayerTurnEndedCommand(AbstractGameCommand):
-
-    def __init__(self, table_id, no_seat, total_played_money_amount, total_safe_money_amount, total_pot, action_taken_type, action_taken_amount, player_state):
+    def __init__(self, table_id, no_seat, total_played_money_amount, total_safe_money_amount, total_pot,
+                 action_taken_type, action_taken_amount, player_state):
         super().__init__(table_id)
         self.no_seat = no_seat
         self.total_played_money_amount = total_played_money_amount

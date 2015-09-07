@@ -2,8 +2,7 @@ from bluffinmuffin.protocol.interfaces import AbstractGameCommand
 
 
 class DiscardRoundStartedCommand(AbstractGameCommand):
-
-    def __init__(self, table_id, minimum_cards_to_discard,maximum_cards_to_discard):
+    def __init__(self, table_id, minimum_cards_to_discard, maximum_cards_to_discard):
         super().__init__(table_id)
         self.minimum_cards_to_discard = minimum_cards_to_discard
         self.maximum_cards_to_discard = maximum_cards_to_discard

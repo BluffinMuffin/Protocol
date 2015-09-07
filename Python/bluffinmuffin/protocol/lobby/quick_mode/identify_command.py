@@ -2,7 +2,6 @@ from bluffinmuffin.protocol.interfaces import AbstractLobbyCommand
 
 
 class IdentifyCommand(AbstractLobbyCommand):
-
     def __init__(self, name):
         super().__init__()
         self.name = name
@@ -22,4 +21,3 @@ class IdentifyCommand(AbstractLobbyCommand):
         return cls(
             obj['Name']
         )
-

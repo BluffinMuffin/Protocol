@@ -4,7 +4,6 @@ from .join_table_command import JoinTableCommand
 
 
 class JoinTableResponse(AbstractResponse):
-
     def __init__(self, success, message_id, message, jsonCommand):
         super().__init__(success, message_id, message, JoinTableCommand.decode(jsonCommand))
 

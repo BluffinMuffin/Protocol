@@ -2,7 +2,6 @@ from bluffinmuffin.protocol.interfaces import AbstractLobbyCommand
 
 
 class JoinTableCommand(AbstractLobbyCommand):
-
     def __init__(self, table_id):
         super().__init__()
         self.table_id = table_id
@@ -22,4 +21,3 @@ class JoinTableCommand(AbstractLobbyCommand):
         return cls(
             obj['TableId']
         )
-

@@ -8,8 +8,8 @@ from .lobby_options import LobbyOptionsDecoder
 
 
 class TableParams:
-
-    def __init__(self, table_name, game_type, variant, min_players_to_start, max_players, waiting_times, money_unit, lobby, blind, limit):
+    def __init__(self, table_name, game_type, variant, min_players_to_start, max_players, waiting_times, money_unit,
+                 lobby, blind, limit):
         self.table_name = table_name
         self.game_type = game_type
         self.variant = variant

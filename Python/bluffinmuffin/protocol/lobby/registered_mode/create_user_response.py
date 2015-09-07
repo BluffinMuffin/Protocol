@@ -4,7 +4,6 @@ from .create_user_command import CreateUserCommand
 
 
 class CreateUserResponse(AbstractResponse):
-
     def __init__(self, success, message_id, message, jsonCommand):
         super().__init__(success, message_id, message, CreateUserCommand.decode(jsonCommand))
 

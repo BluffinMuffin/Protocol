@@ -2,7 +2,6 @@ from bluffinmuffin.protocol.interfaces import AbstractLobbyCommand
 
 
 class LeaveTableCommand(AbstractLobbyCommand):
-
     def __init__(self, table_id):
         super().__init__()
         self.table_id = table_id

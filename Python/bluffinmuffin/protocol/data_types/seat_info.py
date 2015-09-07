@@ -5,7 +5,6 @@ from .player_info import PlayerInfo
 
 
 class SeatInfo:
-
     def __init__(self, no_seat, player, seat_attributes):
         self.no_seat = no_seat
         self.player = player

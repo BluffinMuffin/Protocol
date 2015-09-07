@@ -4,7 +4,6 @@ from .player_sit_out_command import PlayerSitOutCommand
 
 
 class PlayerSitOutResponse(AbstractGameResponse):
-
     def __init__(self, table_id, success, message_id, message, jsonCommand):
         super().__init__(table_id, success, message_id, message, PlayerSitOutCommand.decode(jsonCommand))
 

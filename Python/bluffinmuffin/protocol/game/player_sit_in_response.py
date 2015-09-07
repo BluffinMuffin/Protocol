@@ -4,7 +4,6 @@ from .player_sit_in_command import PlayerSitInCommand
 
 
 class PlayerSitInResponse(AbstractGameResponse):
-
     def __init__(self, table_id, success, message_id, message, jsonCommand, no_seat):
         super().__init__(table_id, success, message_id, message, PlayerSitInCommand.decode(jsonCommand))
         self.no_seat = no_seat

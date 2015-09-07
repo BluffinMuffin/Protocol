@@ -2,7 +2,6 @@ from bluffinmuffin.protocol.interfaces import AbstractLobbyCommand
 
 
 class CheckCompatibilityCommand(AbstractLobbyCommand):
-
     def __init__(self, implemented_protocol_version):
         super().__init__()
         self.implemented_protocol_version = implemented_protocol_version

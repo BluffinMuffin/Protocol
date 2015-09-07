@@ -3,7 +3,6 @@ from bluffinmuffin.protocol.data_types import TableParams
 
 
 class CreateTableCommand(AbstractLobbyCommand):
-
     def __init__(self, params):
         super().__init__()
         self.params = params

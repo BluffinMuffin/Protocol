@@ -3,8 +3,8 @@ from bluffinmuffin.protocol.enums import PokerHandEnum
 
 
 class PlayerWonPotCommand(AbstractGameCommand):
-
-    def __init__(self, table_id, no_seat, pot_id, won_amount, total_pot_amount, total_player_money, winning_cards, winning_hand):
+    def __init__(self, table_id, no_seat, pot_id, won_amount, total_pot_amount, total_player_money, winning_cards,
+                 winning_hand):
         super().__init__(table_id)
         self.no_seat = no_seat
         self.pot_id = pot_id

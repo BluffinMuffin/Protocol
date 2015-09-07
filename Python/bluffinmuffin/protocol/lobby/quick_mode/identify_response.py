@@ -4,7 +4,6 @@ from .identify_command import IdentifyCommand
 
 
 class IdentifyResponse(AbstractResponse):
-
     def __init__(self, success, message_id, message, jsonCommand):
         super().__init__(success, message_id, message, IdentifyCommand.decode(jsonCommand))
 

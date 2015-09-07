@@ -4,7 +4,6 @@ from .check_user_exist_command import CheckUserExistCommand
 
 
 class CheckUserExistResponse(AbstractResponse):
-
     def __init__(self, success, message_id, message, jsonCommand, exist):
         super().__init__(success, message_id, message, CheckUserExistCommand.decode(jsonCommand))
         self.exist = exist

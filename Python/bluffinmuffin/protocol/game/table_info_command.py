@@ -4,7 +4,6 @@ from bluffinmuffin.protocol.data_types import TableParams
 
 
 class TableInfoCommand(AbstractGameCommand):
-
     def __init__(self, table_id, params, total_pot_amount, pots_amount, board_cards, seats, game_has_started):
         super().__init__(table_id)
         self.params = params

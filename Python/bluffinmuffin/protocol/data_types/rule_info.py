@@ -7,8 +7,8 @@ from bluffinmuffin.protocol.enums import LobbyTypeEnum
 
 
 class RuleInfo:
-
-    def __init__(self, game_type, name, min_players, max_players, available_limits, default_limit, available_blinds, default_blind, can_config_waiting_time, available_lobbys):
+    def __init__(self, game_type, name, min_players, max_players, available_limits, default_limit, available_blinds,
+                 default_blind, can_config_waiting_time, available_lobbys):
         self.game_type = game_type
         self.name = name
         self.min_players = min_players
@@ -62,4 +62,3 @@ class RuleInfo:
             obj['CanConfigWaitingTime'],
             [LobbyTypeEnum.parse(x) for x in obj['AvailableLobbys']]
         )
-

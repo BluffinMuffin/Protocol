@@ -2,7 +2,6 @@ from bluffinmuffin.protocol.interfaces import AbstractGameCommand
 
 
 class PlayerDiscardActionCommand(AbstractGameCommand):
-
     def __init__(self, table_id, cards_discarded):
         super().__init__(table_id)
         self.cards_discarded = cards_discarded

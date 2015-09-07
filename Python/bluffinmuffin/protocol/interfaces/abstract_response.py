@@ -5,7 +5,6 @@ from ..enums.bluffin_message_id_enum import BluffinMessageIdEnum
 
 
 class AbstractResponse(AbstractCommand):
-
     def __init__(self, success, message_id, message, command):
         super().__init__(command.command_type)
         self.success = success

@@ -3,7 +3,6 @@ from bluffinmuffin.protocol.enums import RoundTypeEnum
 
 
 class BetTurnEndedCommand(AbstractGameCommand):
-
     def __init__(self, table_id, round, pots_amounts):
         super().__init__(table_id)
         self.round = round

@@ -3,7 +3,6 @@ from bluffinmuffin.protocol.enums import LobbyTypeEnum
 
 
 class ListTableCommand(AbstractLobbyCommand):
-
     def __init__(self, lobby_types):
         super().__init__()
         self.lobby_types = lobby_types

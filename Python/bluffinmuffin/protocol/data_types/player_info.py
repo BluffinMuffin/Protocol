@@ -4,7 +4,6 @@ from bluffinmuffin.protocol.enums import PlayerStateEnum
 
 
 class PlayerInfo:
-
     def __init__(self, no_seat, name, money_safe_amount, money_bet_amount, hole_cards, state, is_showing_cards):
         self.no_seat = no_seat
         self.name = name

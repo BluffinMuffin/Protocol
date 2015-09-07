@@ -3,7 +3,6 @@ from bluffinmuffin.protocol.data_types import SeatInfo
 
 
 class SeatUpdatedCommand(AbstractGameCommand):
-
     def __init__(self, table_id, seat):
         super().__init__(table_id)
         self.seat = seat

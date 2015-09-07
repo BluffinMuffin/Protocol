@@ -4,7 +4,6 @@ from .check_display_exist_command import CheckDisplayExistCommand
 
 
 class CheckDisplayExistResponse(AbstractResponse):
-
     def __init__(self, success, message_id, message, jsonCommand, exist):
         super().__init__(success, message_id, message, CheckDisplayExistCommand.decode(jsonCommand))
         self.exist = exist
@@ -24,6 +23,6 @@ class CheckDisplayExistResponse(AbstractResponse):
         return cls(
             obj['Success'],
             BluffinMessageIdEnum.parse(obj['MessageId']),
-            obj['Message'],obj['Command'],
+            obj['Message'], obj['Command'],
             obj['Exist']
         )

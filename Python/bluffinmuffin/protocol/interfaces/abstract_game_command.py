@@ -7,7 +7,6 @@ from ..enums.bluffin_message_id_enum import BluffinMessageIdEnum
 
 
 class AbstractGameCommand(AbstractCommand):
-
     def __init__(self, table_id):
         super().__init__(BluffinCommandEnum.Game)
         self.table_id = table_id
@@ -25,7 +24,6 @@ class AbstractGameCommand(AbstractCommand):
 
 
 class AbstractGameResponse(AbstractResponse):
-
     def __init__(self, table_id, success, message_id, message, command):
         super().__init__(success, message_id, message, command)
         self.table_id = table_id

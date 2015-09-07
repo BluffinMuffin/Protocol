@@ -2,7 +2,6 @@ from bluffinmuffin.protocol.interfaces import AbstractLobbyCommand
 
 
 class CheckDisplayExistCommand(AbstractLobbyCommand):
-
     def __init__(self, display_name):
         super().__init__()
         self.display_name = display_name

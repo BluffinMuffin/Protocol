@@ -2,8 +2,7 @@ from bluffinmuffin.protocol.interfaces import AbstractLobbyCommand
 
 
 class CreateUserCommand(AbstractLobbyCommand):
-
-    def __init__(self, username,password,email,display_name):
+    def __init__(self, username, password, email, display_name):
         super().__init__()
         self.username = username
         self.password = password

@@ -2,8 +2,7 @@ from collections import OrderedDict
 
 
 class DiscardInfo:
-
-    def __init__(self, no_seat,nb_cards_discarded):
+    def __init__(self, no_seat, nb_cards_discarded):
         self.no_seat = no_seat
         self.nb_cards_discarded = nb_cards_discarded
 

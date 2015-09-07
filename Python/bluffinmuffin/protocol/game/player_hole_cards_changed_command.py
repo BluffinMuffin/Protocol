@@ -3,7 +3,6 @@ from bluffinmuffin.protocol.enums import PlayerStateEnum
 
 
 class PlayerHoleCardsChangedCommand(AbstractGameCommand):
-
     def __init__(self, table_id, no_seat, cards, player_state):
         super().__init__(table_id)
         self.no_seat = no_seat
