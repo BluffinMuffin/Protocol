@@ -37,6 +37,8 @@ class PlayerInfo:
 
     @classmethod
     def decode(cls, obj):
+        if obj == None:
+            return None
         return cls(
             obj["NoSeat"],
             obj["Name"],
