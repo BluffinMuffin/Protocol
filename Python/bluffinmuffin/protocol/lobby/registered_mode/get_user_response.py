@@ -6,7 +6,7 @@ from .get_user_command import GetUserCommand
 class GetUserResponse(AbstractResponse):
 
     def __init__(self, success, message_id, message, jsonCommand, email, display_name, money):
-        super().__init__(success, message_id, message, GetUserCommand(jsonCommand))
+        super().__init__(success, message_id, message, GetUserCommand.decode(jsonCommand))
         self.email = email
         self.display_name = display_name
         self.money = money

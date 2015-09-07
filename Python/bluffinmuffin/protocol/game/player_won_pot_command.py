@@ -4,15 +4,15 @@ from bluffinmuffin.protocol.enums import PokerHandEnum
 
 class PlayerWonPotCommand(AbstractGameCommand):
 
-    def __init__(self, obj):
-        super().__init__(obj)
-        self.no_seat = obj['NoSeat']
-        self.pot_id = obj['PotId']
-        self.won_amount = obj['WonAmount']
-        self.total_pot_amount = obj['TotalPotAmount']
-        self.total_player_money = obj['TotalPlayerMoney']
-        self.winning_cards = obj['WinningCards']
-        self.winning_hand = PokerHandEnum.parse(obj['WinningHand'])
+    def __init__(self, table_id, no_seat, pot_id, won_amount, total_pot_amount, total_player_money, winning_cards, winning_hand):
+        super().__init__(table_id)
+        self.no_seat = no_seat
+        self.pot_id = pot_id
+        self.won_amount = won_amount
+        self.total_pot_amount = total_pot_amount
+        self.total_player_money = total_player_money
+        self.winning_cards = winning_cards
+        self.winning_hand = winning_hand
 
     def __str__(self):
         return '{0} ({1}, {2}, {3}, {4}, {5} [{6}] {7})'.format(
@@ -35,3 +35,16 @@ class PlayerWonPotCommand(AbstractGameCommand):
         d['TotalPlayerMoney'] = self.total_player_money
         d['WinningCards'] = self.winning_cards
         d['WinningHand'] = PokerHandEnum.to_string(self.winning_hand)
+
+    @classmethod
+    def decode(cls, obj):
+        return cls(
+            obj["TableId"],
+            obj["NoSeat"],
+            obj["PotId"],
+            obj["WonAmount"],
+            obj["TotalPotAmount"],
+            obj["TotalPlayerMoney"],
+            obj["WinningCards"],
+            PokerHandEnum.parse(obj['WinningHand'])
+        )

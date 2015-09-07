@@ -5,15 +5,15 @@ from bluffinmuffin.protocol.enums import PlayerStateEnum
 
 class PlayerTurnEndedCommand(AbstractGameCommand):
 
-    def __init__(self, obj):
-        super().__init__(obj)
-        self.no_seat = obj['NoSeat']
-        self.total_played_money_amount = obj['TotalPlayedMoneyAmount']
-        self.total_safe_money_amount = obj['TotalSafeMoneyAmount']
-        self.total_pot = obj['TotalPot']
-        self.action_taken_type = GameActionEnum.parse(obj['ActionTakenType'])
-        self.action_taken_amount = obj['ActionTakenAmount']
-        self.player_state = PlayerStateEnum.parse(obj['PlayerState'])
+    def __init__(self, table_id, no_seat, total_played_money_amount, total_safe_money_amount, total_pot, action_taken_type, action_taken_amount, player_state):
+        super().__init__(table_id)
+        self.no_seat = no_seat
+        self.total_played_money_amount = total_played_money_amount
+        self.total_safe_money_amount = total_safe_money_amount
+        self.total_pot = total_pot
+        self.action_taken_type = action_taken_type
+        self.action_taken_amount = action_taken_amount
+        self.player_state = player_state
 
     def __str__(self):
         return '{0} ({1} {2}/{3} {4} {5}:{6} {7})'.format(
@@ -36,3 +36,16 @@ class PlayerTurnEndedCommand(AbstractGameCommand):
         d['ActionTakenType'] = GameActionEnum.to_string(self.action_taken_type)
         d['ActionTakenAmount'] = self.action_taken_amount
         d['PlayerState'] = PlayerStateEnum.to_string(self.player_state)
+
+    @classmethod
+    def decode(cls, obj):
+        return cls(
+            obj["TableId"],
+            obj["NoSeat"],
+            obj["TotalPlayedMoneyAmount"],
+            obj["TotalSafeMoneyAmount"],
+            obj["TotalPot"],
+            GameActionEnum.parse(obj['ActionTakenType']),
+            obj["ActionTakenAmount"],
+            PlayerStateEnum.parse(obj['PlayerState'])
+        )

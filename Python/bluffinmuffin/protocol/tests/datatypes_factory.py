@@ -6,3 +6,9 @@ def table_params_obj():
 
 def tuple_table_obj():
     return None
+
+def discard_info_obj():
+    return None
+
+def seat_info_obj():
+    return None

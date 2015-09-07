@@ -64,7 +64,7 @@ def test_player_sit_out_command():
     assert_command( player_sit_out_response_json(),player_sit_out_response_obj())
 
 def test_bet_turn_ended_command():
-    assert_command( bet_turn_ended_command_obj(),bet_turn_ended_command_obj())
+    assert_command( bet_turn_ended_command_json(),bet_turn_ended_command_obj())
 
 def test_bet_turn_started_command():
     assert_command( bet_turn_started_command_json(),bet_turn_started_command_obj())

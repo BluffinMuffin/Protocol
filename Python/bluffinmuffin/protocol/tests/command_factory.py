@@ -139,130 +139,130 @@ def get_user_response_json():
     return '{  "CommandName": "GetUserResponse",  "Success": true,  "MessageId": "None",  "Message": "",  "Email": "ericmas001@hotmail.com",  "DisplayName": "Sponge Bob",  "Money": 42000.42,  "Command": {    "CommandName": "GetUserCommand"  }}'
 
 def get_user_response_obj():
-    return GetUserResponse(True,BluffinMessageIdEnum.Nothing,'',json.loads(create_user_command_obj().encode()),"ericmas001@hotmail.com","Sponge Bob",42000.42)
+    return GetUserResponse(True,BluffinMessageIdEnum.Nothing,'',json.loads(get_user_command_obj().encode()),"ericmas001@hotmail.com","Sponge Bob",42000.42)
 
 def bet_turn_ended_command_json():
     return '{  "CommandName": "BetTurnEndedCommand",  "TableId": 42,  "Round": "Flop",  "PotsAmounts": [    4200,    420  ]}'
 
 def bet_turn_ended_command_obj():
-    return None
+    return BetTurnEndedCommand(42,RoundTypeEnum.Flop,[4200, 420])
 
 def bet_turn_started_command_json():
     return '{  "CommandName": "BetTurnStartedCommand",  "TableId": 42,  "Round": "Flop",  "BettingRoundId": 1,  "Cards": [    "2s",    "Kh",    "5d"  ]}'
 
 def bet_turn_started_command_obj():
-    return None
+    return BetTurnStartedCommand(42,RoundTypeEnum.Flop,1,["2s", "Kh", "5d"])
 
 def discard_round_ended_command_json():
     return '{  "CommandName": "DiscardRoundEndedCommand",  "TableId": 42,  "CardsDiscarded": [    {      "NoSeat": 7,      "NbCardsDiscarded": 3    }  ]}'
 
 def discard_round_ended_command_obj():
-    return None
+    return DiscardRoundEndedCommand(42,[discard_info_obj()])
 
 def discard_round_started_command_json():
     return '{  "CommandName": "DiscardRoundStartedCommand",  "TableId": 42,  "MinimumCardsToDiscard": 0,  "MaximumCardsToDiscard": 5}'
 
 def discard_round_started_command_obj():
-    return None
+    return DiscardRoundStartedCommand(42,0,5)
 
 def game_ended_command_json():
     return '{  "CommandName": "GameEndedCommand",  "TableId": 42}'
 
 def game_ended_command_obj():
-    return None
+    return GameEndedCommand(42)
 
 def game_started_command_json():
     return '{  "CommandName": "GameStartedCommand",  "TableId": 42,  "NeededBlindAmount": 10}'
 
 def game_started_command_obj():
-    return None
+    return GameStartedCommand(42,10)
 
 def player_hole_cards_changed_command_json():
     return '{  "CommandName": "PlayerHoleCardsChangedCommand",  "TableId": 42,  "NoSeat": 7,  "Cards": [    "4h",    "Qs"  ],  "PlayerState": "Playing"}'
 
 def player_hole_cards_changed_command_obj():
-    return None
+    return PlayerHoleCardsChangedCommand(42,7,["4h","Qs"],PlayerStateEnum.Playing)
 
 def player_joined_command_json():
     return '{  "CommandName": "PlayerJoinedCommand",  "TableId": 42,  "PlayerName": "Sponge Bob"}'
 
 def player_joined_command_obj():
-    return None
+    return PlayerJoinedCommand(42,"Sponge Bob")
 
 def player_left_command_json():
     return '{  "CommandName": "PlayerLeftCommand",  "TableId": 42,  "PlayerName": "Sponge Bob"}'
 
 def player_left_command_obj():
-    return None
+    return PlayerLeftCommand(42,"Sponge Bob")
 
 def player_turn_began_command_json():
     return '{  "CommandName": "PlayerTurnBeganCommand",  "TableId": 42,  "NoSeat": 7, "AmountNeeded":21, "MinimumRaiseAmount": 42}'
 
 def player_turn_began_command_obj():
-    return None
+    return PlayerTurnBeganCommand(42,7,21,42)
 
 def player_turn_ended_command_json():
     return '{  "CommandName": "PlayerTurnEndedCommand",  "TableId": 42,  "NoSeat": 7,  "TotalPlayedMoneyAmount": 420,  "TotalSafeMoneyAmount": 4200,  "TotalPot": 42000,  "ActionTakenType": "Call",  "ActionTakenAmount": 42,  "PlayerState": "Playing"}'
 
 def player_turn_ended_command_obj():
-    return None
+    return PlayerTurnEndedCommand(42,7,420,4200,42000,GameActionEnum.Call,42,PlayerStateEnum.Playing)
 
 def player_won_pot_command_json():
     return '{  "CommandName": "PlayerWonPotCommand",  "TableId": 42,  "NoSeat": 7,  "PotId": 0,  "WonAmount": 420,  "TotalPotAmount": 1000,  "TotalPlayerMoney": 4200,  "WinningCards": [    "5s",    "5c",    "5d",    "Ad",    "Ks"  ],  "WinningHand": "ThreeOfAKind"}'
 
 def player_won_pot_command_obj():
-    return None
+    return PlayerWonPotCommand(42,7,0,420,1000,4200,[ "5s", "5c", "5d", "Ad", "Ks"],PokerHandEnum.ThreeOfAKind)
 
 def seat_updated_command_json():
     return '{  "CommandName": "SeatUpdatedCommand",  "TableId": 42,  "Seat": {    "NoSeat": 7,    "Player": {      "NoSeat": 7,      "Name": "SpongeBob",      "MoneySafeAmnt": 1000,      "MoneyBetAmnt": 42,      "HoleCards": [        "2s",        "Ah"      ],      "State": "Playing",      "IsShowingCards": true    },    "SeatAttributes": [      "CurrentPlayer",      "BigBlind"    ]  }}'
 
 def seat_updated_command_obj():
-    return None
+    return SeatUpdatedCommand(42,seat_info_obj())
 
 def table_closed_command_json():
     return '{  "CommandName": "TableClosedCommand",  "TableId": 42}'
 
 def table_closed_command_obj():
-    return None
+    return TableClosedCommand(42)
 
 def table_info_command_json():
     return '{  "CommandName": "TableInfoCommand",  "TableId": 42,  "Params": {    "TableName": "Bikini Bottom",    "GameType": "Holdem",    "Variant": "Texas Hold\'em",    "MinPlayersToStart": 2,    "MaxPlayers": 10,    "WaitingTimes": {      "AfterPlayerAction": 500,      "AfterBoardDealed": 500,      "AfterPotWon": 2500    },    "MoneyUnit": 10,    "Lobby": {      "OptionType": "QuickMode",      "StartingAmount": 1500    },    "Blind": {      "OptionType": "Blinds",      "MoneyUnit": 0    },    "Limit": {      "OptionType": "NoLimit"    }  },  "TotalPotAmount": 42000,  "PotsAmount": [    4200,    420  ],  "BoardCards": [    "2s",    "Kh",    "5d"  ],  "Seats": [    {      "NoSeat": 7,      "Player": {        "NoSeat": 7,        "Name": "SpongeBob",        "MoneySafeAmnt": 1000,        "MoneyBetAmnt": 42,        "HoleCards": [          "2s",          "Ah"        ],        "State": "Playing",        "IsShowingCards": true      },      "SeatAttributes": [        "CurrentPlayer",        "BigBlind"      ]    }  ],  "GameHasStarted": true}'
 
 def table_info_command_obj():
-    return None
+    return TableInfoCommand(42,table_params_obj(),42000,[4200, 420],["2s", "Kh", "5d"],[seat_info_obj()],True)
 
 def player_discard_action_command_json():
     return '{  "CommandName": "PlayerDiscardActionCommand",  "TableId": 42,  "CardsDiscarded": [    "2s",    "7c",    "Kh"  ]}'
 
 def player_discard_action_command_obj():
-    return None
+    return PlayerDiscardActionCommand(42,["2s", "7c", "Kh"])
 
 def player_play_money_command_json():
     return '{  "CommandName": "PlayerPlayMoneyCommand",  "TableId": 42,  "AmountPlayed": 42}'
 
 def player_play_money_command_obj():
-    return None
+    return PlayerPlayMoneyCommand(42,42)
 
 def player_sit_in_command_json():
     return '{  "CommandName": "PlayerSitInCommand",  "TableId": 42,  "NoSeat": 7,  "MoneyAmount": 4200}'
 
 def player_sit_in_command_obj():
-    return None
+    return PlayerSitInCommand(42,7,4200)
 
 def player_sit_in_response_json():
     return '{  "CommandName": "PlayerSitInResponse",  "Success": true,  "MessageId": "None",  "Message": "",  "NoSeat": 7,  "TableId": 42,  "Command": {    "CommandName": "PlayerSitInCommand",    "TableId": 42,    "NoSeat": 7,    "MoneyAmount": 4200  }}'
 
 def player_sit_in_response_obj():
-    return None
+    return PlayerSitInResponse(42,True,BluffinMessageIdEnum.Nothing,'',json.loads(player_sit_in_command_obj().encode()),7)
 
 def player_sit_out_command_json():
     return '{  "CommandName": "PlayerSitOutCommand",  "TableId": 42}'
 
 def player_sit_out_command_obj():
-    return None
+    return PlayerSitOutCommand(42)
 
 def player_sit_out_response_json():
     return '{  "CommandName": "PlayerSitOutResponse",  "Success": true,  "MessageId": "None",  "Message": "",  "TableId": 42,  "Command": {    "CommandName": "PlayerSitOutCommand",    "TableId": 42  }}'
 
 def player_sit_out_response_obj():
-    return None
+    return PlayerSitOutResponse(42,True,BluffinMessageIdEnum.Nothing,'',json.loads(player_sit_out_command_obj().encode()))

@@ -8,6 +8,7 @@ class ListTableResponse(AbstractResponse):
 
     def __init__(self, success, message_id, message, jsonCommand,tables):
         super().__init__(success, message_id, message, ListTableCommand.decode(jsonCommand))
+        self.tables = tables
 
     def __str__(self):
         return '{0} => ({1})'.format(

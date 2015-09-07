@@ -26,9 +26,9 @@ class AbstractGameCommand(AbstractCommand):
 
 class AbstractGameResponse(AbstractResponse):
 
-    def __init__(self, obj, command):
-        super().__init__(obj, command)
-        self.table_id = obj['TableId']
+    def __init__(self, table_id, success, message_id, message, command):
+        super().__init__(success, message_id, message, command)
+        self.table_id = table_id
 
     def __str__(self):
         return '[{0}:{1}] {2} ({3}: {4} - {5} [{6}])'.format(
