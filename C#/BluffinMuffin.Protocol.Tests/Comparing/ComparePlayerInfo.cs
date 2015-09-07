@@ -7,9 +7,9 @@ namespace BluffinMuffin.Protocol.Tests.Comparing
     {
         public static void Compare(PlayerInfo p, PlayerInfo dp)
         {
-            Assert.AreEqual(p.VisibleCards.Length, dp.VisibleCards.Length);
-            for(int i = 0; i < p.VisibleCards.Length; ++i)
-                CompareGameCard.Compare(p.VisibleCards[i],dp.VisibleCards[i]);
+            Assert.AreEqual(p.Cards.Length, dp.Cards.Length);
+            for(int i = 0; i < p.Cards.Length; ++i)
+                CompareGameCard.Compare(p.Cards[i],dp.Cards[i]);
 
             Assert.AreEqual(p.State, dp.State);
             Assert.AreEqual(p.NoSeat, dp.NoSeat);

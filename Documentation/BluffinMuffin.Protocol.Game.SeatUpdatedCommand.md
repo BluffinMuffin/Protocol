@@ -31,6 +31,13 @@ Server informs clients that a seat has changed state. Usually sent when player s
           "description": "The information of the player sitting in this seat. If null, there is nobody.",
           "type": "BluffinMuffin.Protocol.DataTypes.PlayerInfo",
           "properties": {
+            "Cards": {
+              "description": "The visible cards in the hands of the player. Server-side, all cards are visible, but client-side some could be hidden to other players.",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
             "MoneyBetAmnt": {
               "description": "Current Money Amount of the player that he played this round",
               "type": "int"
@@ -61,13 +68,6 @@ Server informs clients that a seat has changed state. Usually sent when player s
                 "AllIn",
                 "Playing"
               ]
-            },
-            "VisibleCards": {
-              "description": "The visible cards in the hands of the player",
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
             }
           }
         },
@@ -103,7 +103,7 @@ Server informs clients that a seat has changed state. Usually sent when player s
       "Name": "SpongeBob",
       "MoneySafeAmnt": 1000,
       "MoneyBetAmnt": 42,
-      "VisibleCards": [
+      "Cards": [
         "2s",
         "Ah"
       ],

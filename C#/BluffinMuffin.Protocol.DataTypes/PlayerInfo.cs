@@ -36,10 +36,10 @@ namespace BluffinMuffin.Protocol.DataTypes
         public int MoneyBetAmnt { get; set; }
 
         /// <summary>
-        /// The visible cards in the hands of the player
+        /// The visible cards in the hands of the player. Server-side, all cards are visible, but client-side some could be hidden to other players.
         /// </summary>
         [ExampleValues(2,"2s","Ah")]
-        public string[] VisibleCards { get; set; }
+        public string[] Cards { get; set; }
 
         /// <summary>
         /// How many cards in the hand of the player that are invisible
@@ -101,7 +101,7 @@ namespace BluffinMuffin.Protocol.DataTypes
                 Name = Name,
                 MoneyBetAmnt = MoneyBetAmnt,
                 MoneySafeAmnt = MoneySafeAmnt,
-                VisibleCards = VisibleCards == null ? null : new List<string>(VisibleCards).ToArray(),
+                Cards = Cards == null ? null : new List<string>(Cards).ToArray(),
                 IsShowingCards = IsShowingCards,
                 State = State,
                 NbHiddenCards = NbHiddenCards,
