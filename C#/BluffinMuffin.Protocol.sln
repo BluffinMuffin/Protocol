@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BluffinMuffin.Protocol.DataTypes", "BluffinMuffin.Protocol.DataTypes\BluffinMuffin.Protocol.DataTypes.csproj", "{C66657B1-E75D-49D4-854B-A71069DAF9A5}"
 EndProject
@@ -20,12 +20,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		..\Documentation\BluffinMuffin.Protocol.DataTypes.LobbyOptions.md = ..\Documentation\BluffinMuffin.Protocol.DataTypes.LobbyOptions.md
 		..\Documentation\BluffinMuffin.Protocol.DisconnectCommand.md = ..\Documentation\BluffinMuffin.Protocol.DisconnectCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Game.BetTurnEndedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.BetTurnEndedCommand.md
-		..\Documentation\BluffinMuffin.Protocol.Game.PlayerDiscardActionCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.PlayerDiscardActionCommand.md
+		..\Documentation\BluffinMuffin.Protocol.Game.BetTurnStartedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.BetTurnStartedCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Game.DiscardRoundEndedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.DiscardRoundEndedCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Game.DiscardRoundStartedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.DiscardRoundStartedCommand.md
-		..\Documentation\BluffinMuffin.Protocol.Game.BetTurnStartedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.BetTurnStartedCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Game.GameEndedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.GameEndedCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Game.GameStartedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.GameStartedCommand.md
+		..\Documentation\BluffinMuffin.Protocol.Game.PlayerDiscardActionCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.PlayerDiscardActionCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Game.PlayerHoleCardsChangedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.PlayerHoleCardsChangedCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Game.PlayerJoinedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.PlayerJoinedCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Game.PlayerLeftCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.PlayerLeftCommand.md

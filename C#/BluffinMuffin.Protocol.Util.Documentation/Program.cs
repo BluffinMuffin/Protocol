@@ -265,7 +265,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                         if (ex != null)
                         {
                             if (ex.Value is Type)
-                                p.SetValue(c, ((Type)ex.Value).GetConstructor(Type.EmptyTypes).Invoke(new object[] { }));
+                                p.SetValue(c, Remplir((Type)ex.Value));
                             else
                                 p.SetValue(c, p.GetCustomAttribute<ExampleValueAttribute>().Value);
                         }

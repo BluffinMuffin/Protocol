@@ -3,12 +3,11 @@ from bluffinmuffin.protocol.enums import PlayerStateEnum
 
 
 class PlayerHoleCardsChangedCommand(AbstractGameCommand):
-
-    def __init__(self, obj):
-        super().__init__(obj)
-        self.no_seat = obj['NoSeat']
-        self.cards = obj['Cards']
-        self.player_state = PlayerStateEnum.parse(obj['PlayerState'])
+    def __init__(self, table_id, no_seat, cards, player_state):
+        super().__init__(table_id)
+        self.no_seat = no_seat
+        self.cards = cards
+        self.player_state = player_state
 
     def __str__(self):
         return '{0} ({1} [{2}] {3})'.format(
@@ -23,3 +22,12 @@ class PlayerHoleCardsChangedCommand(AbstractGameCommand):
         d['NoSeat'] = self.no_seat
         d['Cards'] = self.cards
         d['PlayerState'] = PlayerStateEnum.to_string(self.player_state)
+
+    @classmethod
+    def decode(cls, obj):
+        return cls(
+            obj["TableId"],
+            obj['NoSeat'],
+            obj['Cards'],
+            PlayerStateEnum.parse(obj['PlayerState'])
+        )

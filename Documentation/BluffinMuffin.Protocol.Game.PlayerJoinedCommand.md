@@ -33,7 +33,7 @@ This command is there to inform players that someone just joined the table. This
 {
   "CommandName": "PlayerJoinedCommand",
   "TableId": 42,
-  "PlayerName": null
+  "PlayerName": "SpongeBob"
 }
 ```
 

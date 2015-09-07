@@ -4,9 +4,8 @@ from bluffinmuffin.protocol.enums import LimitTypeEnum
 
 
 class LimitOptions:
-
-    def __init__(self, obj):
-        self.option_type = LimitTypeEnum.parse(obj['OptionType'])
+    def __init__(self, option_type):
+        self.option_type = option_type
 
     def __str__(self):
         return LimitTypeEnum.to_string(self.option_type)
@@ -26,32 +25,40 @@ class LimitOptions:
 
 
 class LimitOptionsFixed(LimitOptions):
+    def __init__(self):
+        super().__init__(LimitTypeEnum.FixedLimit)
 
-    def __init__(self, obj):
-        super().__init__(obj)
+    @classmethod
+    def decode(cls, obj):
+        return cls()
 
 
 class LimitOptionsNoLimit(LimitOptions):
+    def __init__(self):
+        super().__init__(LimitTypeEnum.NoLimit)
 
-    def __init__(self, obj):
-        super().__init__(obj)
+    @classmethod
+    def decode(cls, obj):
+        return cls()
 
 
 class LimitOptionsPot(LimitOptions):
+    def __init__(self):
+        super().__init__(LimitTypeEnum.PotLimit)
 
-    def __init__(self, obj):
-        super().__init__(obj)
+    @classmethod
+    def decode(cls, obj):
+        return cls()
 
 
 class LimitOptionsDecoder():
-
     @classmethod
     def decode(cls, obj):
         type = LimitTypeEnum.parse(obj['OptionType'])
         if type == LimitTypeEnum.FixedLimit:
-            return LimitOptionsFixed(obj)
+            return LimitOptionsFixed.decode(obj)
         if type == LimitTypeEnum.NoLimit:
-            return LimitOptionsNoLimit(obj)
+            return LimitOptionsNoLimit.decode(obj)
         if type == LimitTypeEnum.PotLimit:
-            return LimitOptionsPot(obj)
+            return LimitOptionsPot.decode(obj)
         return None

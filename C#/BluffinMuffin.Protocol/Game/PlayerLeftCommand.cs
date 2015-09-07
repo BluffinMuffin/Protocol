@@ -1,4 +1,6 @@
-﻿namespace BluffinMuffin.Protocol.Game
+﻿using BluffinMuffin.Protocol.DataTypes.Attributes;
+
+namespace BluffinMuffin.Protocol.Game
 {
     /// <summary>
     /// This command is there to inform players that someone just **left** the table. (Sitting out doesn't mean leaving) 
@@ -8,6 +10,7 @@
         /// <summary>
         /// The name of the player that just left the table.
         /// </summary>
+        [ExampleValue("SpongeBob")]
         public string PlayerName { get; set; }
     }
 }

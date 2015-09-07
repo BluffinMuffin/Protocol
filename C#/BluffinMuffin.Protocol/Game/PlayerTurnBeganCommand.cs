@@ -14,9 +14,15 @@ namespace BluffinMuffin.Protocol.Game
         public int NoSeat { get; set; }
 
         /// <summary>
-        /// The minimum amount needed to raise. A raise must be at least the size of the largest previous bet or raise of the current betting round.
+        /// The amount needed to call. It's the minimum to play if you don't want to fold.
         /// </summary>
-        [ExampleValue(6)]
+        [ExampleValue(21)]
+        public int AmountNeeded { get; set; }
+
+        /// <summary>
+        /// The minimum amount needed to raise. A raise must be at least the size of the largest previous bet or raise of the current betting round. To raise, the player have to send at least AmountNeeded+MinRaiseAmount.
+        /// </summary>
+        [ExampleValue(42)]
         public int MinimumRaiseAmount { get; set; }
     }
 }

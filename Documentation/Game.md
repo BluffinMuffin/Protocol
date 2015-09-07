@@ -57,10 +57,6 @@ These are all the commands that are used during the game. The *Client Commands* 
  * **[PlayerLeftCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Game.PlayerLeftCommand.md)**
 
    This command is there to inform players that someone just **left** the table. (Sitting out doesn't mean leaving)
-
- * **[PlayerMoneyChangedCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Game.PlayerMoneyChangedCommand.md)** 
-
-   The server is sharing new information about the money in the pockets of a player.
    
  * **[PlayerTurnBeganCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Game.PlayerTurnBeganCommand.md)**
 

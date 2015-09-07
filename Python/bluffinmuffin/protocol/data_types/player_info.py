@@ -4,15 +4,14 @@ from bluffinmuffin.protocol.enums import PlayerStateEnum
 
 
 class PlayerInfo:
-
-    def __init__(self, obj):
-        self.no_seat = obj['NoSeat']
-        self.name = obj['Name']
-        self.money_safe_amount = obj['MoneySafeAmnt']
-        self.money_bet_amount = obj['MoneyBetAmnt']
-        self.hole_cards = obj['HoleCards']
-        self.state = PlayerStateEnum.parse(obj['State'])
-        self.is_showing_cards = obj['IsShowingCards']
+    def __init__(self, no_seat, name, money_safe_amount, money_bet_amount, hole_cards, state, is_showing_cards):
+        self.no_seat = no_seat
+        self.name = name
+        self.money_safe_amount = money_safe_amount
+        self.money_bet_amount = money_bet_amount
+        self.hole_cards = hole_cards
+        self.state = state
+        self.is_showing_cards = is_showing_cards
 
     def __str__(self):
         return '{0}:{1} {2}/{3} [{4}] {5}'.format(
@@ -35,3 +34,15 @@ class PlayerInfo:
         d['State'] = PlayerStateEnum.to_string(self.state)
         d['IsShowingCards'] = self.is_showing_cards
         return d
+
+    @classmethod
+    def decode(cls, obj):
+        return cls(
+            obj["NoSeat"],
+            obj["Name"],
+            obj["MoneySafeAmnt"],
+            obj["MoneyBetAmnt"],
+            obj["HoleCards"],
+            PlayerStateEnum.parse(obj['State']),
+            obj['IsShowingCards']
+        )
