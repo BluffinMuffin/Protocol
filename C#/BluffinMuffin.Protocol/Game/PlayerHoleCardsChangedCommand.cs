@@ -16,10 +16,16 @@ namespace BluffinMuffin.Protocol.Game
         public int NoSeat { get; set; }
 
         /// <summary>
-        /// The cards currently in the hands of the player
+        /// The visible cards currently in the hands of the player
         /// </summary>
         [ExampleValues(2, "4h", "Qs")]
         public string[] Cards { get; set; }
+
+        /// <summary>
+        /// How many cards in the hand of the player that are invisible
+        /// </summary>
+        [ExampleValue(3)]
+        public int NbHiddenCards { get; set; }
 
         /// <summary>
         /// The state of the player.

@@ -22,11 +22,15 @@ This is used to inform a player of the cards he just got dealed, to inform other
       "type": "int"
     },
     "Cards": {
-      "description": "The cards currently in the hands of the player",
+      "description": "The visible cards currently in the hands of the player",
       "type": "array",
       "items": {
         "type": "string"
       }
+    },
+    "NbHiddenCards": {
+      "description": "How many cards in the hand of the player that are invisible",
+      "type": "int"
     },
     "NoSeat": {
       "description": "The position on the table where is sitting the player with the cards.",
@@ -58,6 +62,7 @@ This is used to inform a player of the cards he just got dealed, to inform other
     "4h",
     "Qs"
   ],
+  "NbHiddenCards": 3,
   "PlayerState": "Playing"
 }
 ```
