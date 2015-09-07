@@ -55,3 +55,6 @@ def player_info_obj():
 
 def seat_info_obj():
     return SeatInfo(7, player_info_obj(), [SeatAttributeEnum.CurrentPlayer, SeatAttributeEnum.BigBlind])
+
+def empty_seat_info_obj():
+    return SeatInfo(8, None, [SeatAttributeEnum.SmallBlind])
