@@ -9,17 +9,17 @@ from .lobby_options import LobbyOptionsDecoder
 
 class TableParams:
 
-    def __init__(self, obj):
-        self.table_name = obj['TableName']
-        self.game_type = GameTypeEnum.parse(obj['GameType'])
-        self.variant = obj['Variant']
-        self.min_players_to_start = obj['MinPlayersToStart']
-        self.max_players = obj['MaxPlayers']
-        self.waiting_times = ConfigurableWaitingTimes(obj['WaitingTimes'])
-        self.money_unit = obj['MoneyUnit']
-        self.lobby = LobbyOptionsDecoder.decode(obj['Lobby'])
-        self.blind = BlindOptionsDecoder.decode(obj['Blind'])
-        self.limit = LimitOptionsDecoder.decode(obj['Limit'])
+    def __init__(self, table_name, game_type, variant, min_players_to_start, max_players, waiting_times, money_unit, lobby, blind, limit):
+        self.table_name = table_name
+        self.game_type = game_type
+        self.variant = variant
+        self.min_players_to_start = min_players_to_start
+        self.max_players = max_players
+        self.waiting_times = waiting_times
+        self.money_unit = money_unit
+        self.lobby = lobby
+        self.blind = blind
+        self.limit = limit
 
     def __str__(self):
         return '"{0}", {1}, "{2}", {3}/{4}, {5}, {6}, {7}, {8}, {9}'.format(
@@ -48,3 +48,18 @@ class TableParams:
         d['Blind'] = self.blind.encode()
         d['Limit'] = self.limit.encode()
         return d
+
+    @classmethod
+    def decode(cls, obj):
+        return cls(
+            obj["TableName"],
+            GameTypeEnum.parse(obj['GameType']),
+            obj["Variant"],
+            obj["MinPlayersToStart"],
+            obj["MaxPlayers"],
+            ConfigurableWaitingTimes.decode(obj['WaitingTimes']),
+            obj["MoneyUnit"],
+            LobbyOptionsDecoder.decode(obj['Lobby']),
+            BlindOptionsDecoder.decode(obj['Blind']),
+            LimitOptionsDecoder.decode(obj['Limit'])
+        )

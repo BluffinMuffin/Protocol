@@ -22,5 +22,5 @@ class DiscardRoundEndedCommand(AbstractGameCommand):
     def decode(cls, obj):
         return cls(
             obj["TableId"],
-            [DiscardInfo(x) for x in obj['CardsDiscarded']]
+            [DiscardInfo.decode(x) for x in obj['CardsDiscarded']]
         )

@@ -22,5 +22,5 @@ class SeatUpdatedCommand(AbstractGameCommand):
     def decode(cls, obj):
         return cls(
             obj["TableId"],
-            SeatInfo(obj['Seat'])
+            SeatInfo.decode(obj['Seat'])
         )

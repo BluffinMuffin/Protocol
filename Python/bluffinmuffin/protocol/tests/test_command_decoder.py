@@ -115,4 +115,5 @@ def test_player_play_money_command():
     assert_command( player_play_money_command_json(),player_play_money_command_obj())
 
 if __name__ == "__main__":
+    assert_equal.__self__.maxDiff = None
     run_module_suite()

@@ -8,17 +8,17 @@ from bluffinmuffin.protocol.enums import LobbyTypeEnum
 
 class RuleInfo:
 
-    def __init__(self, obj):
-        self.game_type = GameTypeEnum.parse(obj['GameType'])
-        self.name = obj['Name']
-        self.min_players = obj['MinPlayers']
-        self.max_players = obj['MaxPlayers']
-        self.available_limits = [LimitTypeEnum.parse(x) for x in obj['AvailableLimits']]
-        self.default_limit = LimitTypeEnum.parse(obj['DefaultLimit'])
-        self.available_blinds = [BlindTypeEnum.parse(x) for x in obj['AvailableBlinds']]
-        self.default_blind = BlindTypeEnum.parse(obj['DefaultBlind'])
-        self.can_config_waiting_time = obj['CanConfigWaitingTime']
-        self.available_lobbys = [LobbyTypeEnum.parse(x) for x in obj['AvailableLobbys']]
+    def __init__(self, game_type, name, min_players, max_players, available_limits, default_limit, available_blinds, default_blind, can_config_waiting_time, available_lobbys):
+        self.game_type = game_type
+        self.name = name
+        self.min_players = min_players
+        self.max_players = max_players
+        self.available_limits = available_limits
+        self.default_limit = default_limit
+        self.available_blinds = available_blinds
+        self.default_blind = default_blind
+        self.can_config_waiting_time = can_config_waiting_time
+        self.available_lobbys = available_lobbys
 
     def __str__(self):
         return '"{0}", {1}, {2}/{3}, ({5}: {4}), ({7}: {6}), {8}, ({9})'.format(
@@ -47,3 +47,19 @@ class RuleInfo:
         d['CanConfigWaitingTime'] = self.can_config_waiting_time
         d['AvailableLobbys'] = [LobbyTypeEnum.to_string(x) for x in self.available_lobbys]
         return d
+
+    @classmethod
+    def decode(cls, obj):
+        return cls(
+            GameTypeEnum.parse(obj['GameType']),
+            obj['Name'],
+            obj["MinPlayers"],
+            obj["MaxPlayers"],
+            [LimitTypeEnum.parse(x) for x in obj['AvailableLimits']],
+            LimitTypeEnum.parse(obj['DefaultLimit']),
+            [BlindTypeEnum.parse(x) for x in obj['AvailableBlinds']],
+            BlindTypeEnum.parse(obj['DefaultBlind']),
+            obj['CanConfigWaitingTime'],
+            [LobbyTypeEnum.parse(x) for x in obj['AvailableLobbys']]
+        )
+

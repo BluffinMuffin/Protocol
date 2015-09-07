@@ -27,5 +27,5 @@ class ListTableResponse(AbstractResponse):
             BluffinMessageIdEnum.parse(obj['MessageId']),
             obj['Message'],
             obj['Command'],
-            [TupleTable(x) for x in obj['Tables']]
+            [TupleTable.decode(x) for x in obj['Tables']]
         )

@@ -21,5 +21,5 @@ class CreateTableCommand(AbstractLobbyCommand):
     @classmethod
     def decode(cls, obj):
         return cls(
-            TableParams(obj['Params'])
+            TableParams.decode(obj['Params'])
         )

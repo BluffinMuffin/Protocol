@@ -38,10 +38,10 @@ class TableInfoCommand(AbstractGameCommand):
     def decode(cls, obj):
         return cls(
             obj["TableId"],
-            TableParams(obj['Params']),
+            TableParams.decode(obj['Params']),
             obj["TotalPotAmount"],
             obj["PotsAmount"],
             obj["BoardCards"],
-            [SeatInfo(x) for x in obj['Seats']],
+            [SeatInfo.decode(x) for x in obj['Seats']],
             obj['GameHasStarted']
         )

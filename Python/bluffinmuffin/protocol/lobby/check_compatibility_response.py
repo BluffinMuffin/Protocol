@@ -7,7 +7,7 @@ from .check_compatibility_command import CheckCompatibilityCommand
 class CheckCompatibilityResponse(AbstractResponse):
 
     def __init__(self, success, message_id, message, jsonCommand, implemented_protocol_version, supported_lobby_types, rules):
-        super().__init__(success, message_id, message, CheckCompatibilityCommand(jsonCommand))
+        super().__init__(success, message_id, message, CheckCompatibilityCommand.decode(jsonCommand))
         self.implemented_protocol_version = implemented_protocol_version
         self.supported_lobby_types = supported_lobby_types
         self.rules = rules
@@ -35,5 +35,5 @@ class CheckCompatibilityResponse(AbstractResponse):
             obj['Command'],
             obj['ImplementedProtocolVersion'],
             [LobbyTypeEnum.parse(x) for x in obj['SupportedLobbyTypes']],
-            [RuleInfo(x) for x in obj['Rules']]
+            [RuleInfo.decode(x) for x in obj['Rules']]
         )
