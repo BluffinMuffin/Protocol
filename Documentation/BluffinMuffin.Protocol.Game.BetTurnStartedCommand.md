@@ -29,16 +29,6 @@ This command is issued by the server when a betting round is starting. For examp
       "items": {
         "type": "string"
       }
-    },
-    "Round": {
-      "description": "OBSOLETE: The round that is starting",
-      "type": "BluffinMuffin.Protocol.DataTypes.Enums.RoundTypeEnum",
-      "enum": [
-        "Preflop",
-        "Flop",
-        "Turn",
-        "River"
-      ]
     }
   }
 }
@@ -50,7 +40,6 @@ This command is issued by the server when a betting round is starting. For examp
 {
   "CommandName": "BetTurnStartedCommand",
   "TableId": 42,
-  "Round": "Flop",
   "BettingRoundId": 1,
   "Cards": [
     "2s",

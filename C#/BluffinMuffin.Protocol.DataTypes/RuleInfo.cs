@@ -12,7 +12,7 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// <summary>
         /// Type of Game
         /// </summary>
-        [ExampleValue(GameTypeEnum.Holdem)]
+        [ExampleValue(GameTypeEnum.CommunityCardsPoker)]
         public GameTypeEnum GameType { get; set; }
         /// <summary>
         /// Name of the Variant

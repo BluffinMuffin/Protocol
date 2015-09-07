@@ -14,7 +14,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
                     new RuleInfo()
                     {
                         Name = "Texas Hold'em",
-                        GameType = GameTypeEnum.Holdem,
+                        GameType = GameTypeEnum.CommunityCardsPoker,
                         MinPlayers = 2,
                         MaxPlayers = 10,
                         AvailableLimits = new List<LimitTypeEnum>(){LimitTypeEnum.NoLimit/*,LimitTypeEnum.FixedLimit,LimitTypeEnum.PotLimit*/ },

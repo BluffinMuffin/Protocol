@@ -14,7 +14,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
                 {
                     MoneyUnit = 10
                 },
-                GameType = GameTypeEnum.Holdem,
+                GameType = GameTypeEnum.CommunityCardsPoker,
                 MoneyUnit = 10,
                 Limit = new LimitOptionsNoLimit(),
                 Lobby = new LobbyOptionsQuickMode()
@@ -41,7 +41,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
                 {
                     MoneyUnit = 100
                 },
-                GameType = GameTypeEnum.Holdem,
+                GameType = GameTypeEnum.CommunityCardsPoker,
                 MoneyUnit = 100,
                 Limit = new LimitOptionsPot(),
                 Lobby = new LobbyOptionsRegisteredMode()
@@ -69,7 +69,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
                 {
                     MoneyUnit = 100
                 },
-                GameType = GameTypeEnum.Holdem,
+                GameType = GameTypeEnum.CommunityCardsPoker,
                 MoneyUnit = 1000,
                 Limit = new LimitOptionsFixed(),
                 Lobby = new LobbyOptionsRegisteredMode()

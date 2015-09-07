@@ -11,13 +11,6 @@ namespace BluffinMuffin.Protocol.Game
     public class BetTurnEndedCommand : AbstractGameCommand
     {
         /// <summary>
-        /// OBSOLETE: The round that is ending
-        /// </summary>
-        [ExampleValue(RoundTypeEnum.Flop)]
-        [Obsolete("This information is totally useless in this command")]
-        public RoundTypeEnum Round { get; set; }
-
-        /// <summary>
         /// All the pots on the table. Usually only one, but can have more if some players are all-in.
         /// </summary>
         [ExampleValues(2, 4200, 420)]

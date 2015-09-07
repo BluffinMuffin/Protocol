@@ -10,12 +10,6 @@ namespace BluffinMuffin.Protocol.Game
     public class BetTurnStartedCommand : AbstractGameCommand
     {
         /// <summary>
-        /// OBSOLETE: The round that is starting
-        /// </summary>
-        [ExampleValue(RoundTypeEnum.Flop)]
-        [Obsolete("Use BettingRoundId instead")]
-        public RoundTypeEnum Round { get; set; }
-        /// <summary>
         /// The id of the betting round that is starting, starting at 1. For texas hold'em, Preflop=1, Flop=2, Turn=3, River=4
         /// </summary>
         [ExampleValue(1)]

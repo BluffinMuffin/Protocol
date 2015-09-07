@@ -109,7 +109,9 @@ The list of active tables will be sent back
                 "description": "The type of poker",
                 "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
                 "enum": [
-                  "Holdem"
+                  "DrawPoker",
+                  "StudPoker",
+                  "CommunityCardsPoker"
                 ]
               },
               "MaxPlayers": {
@@ -252,7 +254,7 @@ The list of active tables will be sent back
       "PossibleAction": "Join",
       "Params": {
         "TableName": "Bikini Bottom",
-        "GameType": "Holdem",
+        "GameType": "CommunityCardsPoker",
         "Variant": "Texas Hold'em",
         "MinPlayersToStart": 2,
         "MaxPlayers": 10,

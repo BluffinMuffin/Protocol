@@ -20,7 +20,7 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// <summary>
         /// The type of poker
         /// </summary>
-        [ExampleValue(GameTypeEnum.Holdem)]
+        [ExampleValue(GameTypeEnum.CommunityCardsPoker)]
         public GameTypeEnum GameType { get; set; }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace BluffinMuffin.Protocol.DataTypes
         public TableParams()
         {
             TableName = "Anonymous Table";
-            GameType = GameTypeEnum.Holdem;
+            GameType = GameTypeEnum.CommunityCardsPoker;
             Variant = "Texas Hold'Em";
             MinPlayersToStart = 2;
             MaxPlayers = 10;

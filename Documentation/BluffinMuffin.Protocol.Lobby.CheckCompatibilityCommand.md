@@ -148,7 +148,9 @@ The supported version, all the supported lobby types and all the supported rules
             "description": "Type of Game",
             "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
             "enum": [
-              "Holdem"
+              "DrawPoker",
+              "StudPoker",
+              "CommunityCardsPoker"
             ]
           },
           "MaxPlayers": {
@@ -210,7 +212,7 @@ The supported version, all the supported lobby types and all the supported rules
   ],
   "Rules": [
     {
-      "GameType": "Holdem",
+      "GameType": "CommunityCardsPoker",
       "Name": "Texas Hold'em",
       "MinPlayers": 2,
       "MaxPlayers": 10,

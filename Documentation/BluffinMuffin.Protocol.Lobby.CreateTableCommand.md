@@ -37,7 +37,9 @@ More information on ...
           "description": "The type of poker",
           "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
           "enum": [
-            "Holdem"
+            "DrawPoker",
+            "StudPoker",
+            "CommunityCardsPoker"
           ]
         },
         "MaxPlayers": {
@@ -139,7 +141,7 @@ More information on ...
   "CommandName": "CreateTableCommand",
   "Params": {
     "TableName": "Bikini Bottom",
-    "GameType": "Holdem",
+    "GameType": "CommunityCardsPoker",
     "Variant": "Texas Hold'em",
     "MinPlayersToStart": 2,
     "MaxPlayers": 10,
@@ -223,7 +225,9 @@ More information on ...
               "description": "The type of poker",
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
               "enum": [
-                "Holdem"
+                "DrawPoker",
+                "StudPoker",
+                "CommunityCardsPoker"
               ]
             },
             "MaxPlayers": {
@@ -333,7 +337,7 @@ More information on ...
     "CommandName": "CreateTableCommand",
     "Params": {
       "TableName": "Bikini Bottom",
-      "GameType": "Holdem",
+      "GameType": "CommunityCardsPoker",
       "Variant": "Texas Hold'em",
       "MinPlayersToStart": 2,
       "MaxPlayers": 10,

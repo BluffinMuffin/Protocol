@@ -64,7 +64,6 @@
     <Compile Include="Enums\LobbyTypeEnum.cs" />
     <Compile Include="Enums\PlayerStateEnum.cs" />
     <Compile Include="Enums\PokerHandEnum.cs" />
-    <Compile Include="Enums\RoundTypeEnum.cs" />
     <Compile Include="Enums\SeatAttributeEnum.cs" />
     <Compile Include="Options\IOption.cs" />
     <Compile Include="Options\LimitOptions.cs" />
