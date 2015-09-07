@@ -2,10 +2,9 @@ from bluffinmuffin.protocol.interfaces import AbstractGameCommand
 
 
 class PlayerJoinedCommand(AbstractGameCommand):
-
-    def __init__(self, obj):
-        super().__init__(obj)
-        self.player_name = obj['PlayerName']
+    def __init__(self, table_id, player_name):
+        super().__init__(table_id)
+        self.player_name = player_name
 
     def __str__(self):
         return '{0} ({1})'.format(
@@ -16,3 +15,10 @@ class PlayerJoinedCommand(AbstractGameCommand):
     def _encode_specific(self, d):
         super()._encode_specific(d)
         d['PlayerName'] = self.player_name
+
+    @classmethod
+    def decode(cls, obj):
+        return cls(
+            obj["TableId"],
+            obj['PlayerName']
+        )

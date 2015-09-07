@@ -13,8 +13,9 @@
       <sourceFolder url="file://$MODULE_DIR$/Python/bluffin_muffin" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Python/bluffin_muffin/protocol" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Python/bluffin_muffin/protocol/tests" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Python" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.4.3 (C:\Python34\python.exe)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

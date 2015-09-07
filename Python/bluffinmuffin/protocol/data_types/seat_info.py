@@ -5,11 +5,10 @@ from .player_info import PlayerInfo
 
 
 class SeatInfo:
-
-    def __init__(self, obj):
-        self.no_seat = obj['NoSeat']
-        self.player = PlayerInfo(obj['Player'])
-        self.seat_attributes = [SeatAttributeEnum.parse(x) for x in obj['SeatAttributes']]
+    def __init__(self, no_seat, player, seat_attributes):
+        self.no_seat = no_seat
+        self.player = player
+        self.seat_attributes = seat_attributes
 
     def __str__(self):
         return '{0} ({1}) [{2}]'.format(
@@ -24,3 +23,11 @@ class SeatInfo:
         d['Player'] = self.player.encode()
         d['SeatAttributes'] = [SeatAttributeEnum.to_string(x) for x in self.seat_attributes]
         return d
+
+    @classmethod
+    def decode(cls, obj):
+        return cls(
+            obj["NoSeat"],
+            PlayerInfo.decode(obj['Player']),
+            [SeatAttributeEnum.parse(x) for x in obj['SeatAttributes']]
+        )
