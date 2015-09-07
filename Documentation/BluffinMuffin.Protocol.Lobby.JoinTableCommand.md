@@ -210,8 +210,15 @@ The success of the operation will be sent back
             "description": "The information of the player sitting in this seat. If null, there is nobody.",
             "type": "BluffinMuffin.Protocol.DataTypes.PlayerInfo",
             "properties": {
-              "Cards": {
-                "description": "The visible cards in the hands of the player. Server-side, all cards are visible, but client-side some could be hidden to other players.",
+              "FaceDownCards": {
+                "description": "The cards in hand that are currently facing down (hidden to other players).",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "FaceUpCards": {
+                "description": "The cards in hand that are currently facing up (visible to other players).",
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -228,10 +235,6 @@ The success of the operation will be sent back
               "Name": {
                 "description": "The name of the player",
                 "type": "string"
-              },
-              "NbHiddenCards": {
-                "description": "How many cards in the hand of the player that are invisible",
-                "type": "int"
               },
               "NoSeat": {
                 "description": "The seat used by the player",
@@ -338,11 +341,14 @@ The success of the operation will be sent back
         "Name": "SpongeBob",
         "MoneySafeAmnt": 1000,
         "MoneyBetAmnt": 42,
-        "Cards": [
+        "FaceUpCards": [
           "2s",
           "Ah"
         ],
-        "NbHiddenCards": 3,
+        "FaceDownCards": [
+          "??",
+          "??"
+        ],
         "State": "Playing"
       },
       "SeatAttributes": [

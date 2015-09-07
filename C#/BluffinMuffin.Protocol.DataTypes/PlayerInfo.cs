@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using BluffinMuffin.Protocol.DataTypes.Attributes;
 using BluffinMuffin.Protocol.DataTypes.Enums;
 using Newtonsoft.Json;
@@ -36,16 +37,22 @@ namespace BluffinMuffin.Protocol.DataTypes
         public int MoneyBetAmnt { get; set; }
 
         /// <summary>
-        /// The visible cards in the hands of the player. Server-side, all cards are visible, but client-side some could be hidden to other players.
+        /// 
         /// </summary>
-        [ExampleValues(2,"2s","Ah")]
-        public string[] Cards { get; set; }
+        [JsonIgnore]
+        public string[] Cards => FaceUpCards.Concat(FaceDownCards).ToArray();
 
         /// <summary>
-        /// How many cards in the hand of the player that are invisible
+        /// The cards in hand that are currently facing up (visible to other players).
         /// </summary>
-        [ExampleValue(3)]
-        public int NbHiddenCards { get; set; }
+        [ExampleValues(2, "2s", "Ah")]
+        public string[] FaceUpCards { get; set; }
+
+        /// <summary>
+        /// The cards in hand that are currently facing down (hidden to other players).
+        /// </summary>
+        [ExampleValues(2, "??", "??")]
+        public string[] FaceDownCards { get; set; }
 
         /// <summary>
         /// Current state of the player
@@ -101,10 +108,10 @@ namespace BluffinMuffin.Protocol.DataTypes
                 Name = Name,
                 MoneyBetAmnt = MoneyBetAmnt,
                 MoneySafeAmnt = MoneySafeAmnt,
-                Cards = Cards == null ? null : new List<string>(Cards).ToArray(),
+                FaceUpCards = FaceUpCards == null ? null : new List<string>(FaceUpCards).ToArray(),
+                FaceDownCards = FaceDownCards == null ? null : new List<string>(FaceDownCards).ToArray(),
                 IsShowingCards = IsShowingCards,
                 State = State,
-                NbHiddenCards = NbHiddenCards,
             };
         }
 

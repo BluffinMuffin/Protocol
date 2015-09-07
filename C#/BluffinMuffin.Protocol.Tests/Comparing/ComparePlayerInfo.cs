@@ -14,7 +14,6 @@ namespace BluffinMuffin.Protocol.Tests.Comparing
             Assert.AreEqual(p.State, dp.State);
             Assert.AreEqual(p.NoSeat, dp.NoSeat);
             Assert.AreEqual(p.Name, dp.Name);
-            Assert.AreEqual(p.NbHiddenCards, dp.NbHiddenCards);
             Assert.AreEqual(p.MoneyBetAmnt, dp.MoneyBetAmnt);
             Assert.AreEqual(p.MoneySafeAmnt, dp.MoneySafeAmnt);
         }
