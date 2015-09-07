@@ -19,18 +19,15 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
     
 ####Known Implementations
  * **[BluffinMuffin.Beta 0.6.0](http://ericmas001.github.io/BluffinMuffin.Beta)** *(Protocol v1.0.0)*
- * **[BluffinMuffin.Server 0.9.0](http://ericmas001.github.io/BluffinMuffin.Server)** *(Protocol v2.1.0)*
+ * **[BluffinMuffin.Server 0.10.0](http://ericmas001.github.io/BluffinMuffin.Server)** *(Protocol v2.3.0)*
  * **[BluffinMuffin.Client 0.9.0](http://ericmas001.github.io/BluffinMuffin.Client)** *(Protocol v2.1.0)*
  * **[BluffinMuffin.AIClient](https://github.com/mgermain/BluffinMuffin.AIClient)** *(Protocol v2.2.0)*
 
  
 
-###Current Version: [2.3.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.3.0) *(2015-09-06)*
- * Adding the Python version of the protocol
- * Adding the DiscardRoundStartedCommand
- * Adding the DiscardRoundEndedCommand
- * Adding the PlayerDiscardActionCommand
- * Minor corrections on documentation
+###Current Version: [2.3.1](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.3.1) *(2015-09-07)*
+ * Python correction to handle empty seats
+ * Python correction to handle amount_needed not sended by the server on player_turn_began
  * *[Full changelog ...](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/CHANGELOG.md)*
 
 

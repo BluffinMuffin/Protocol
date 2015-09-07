@@ -20,7 +20,10 @@ class SeatInfo:
     def encode(self):
         d = OrderedDict()
         d['NoSeat'] = self.no_seat
-        d['Player'] = self.player.encode()
+        if self.player == None:
+            d['Player'] = None
+        else:
+            d['Player'] = self.player.encode()
         d['SeatAttributes'] = [SeatAttributeEnum.to_string(x) for x in self.seat_attributes]
         return d
 

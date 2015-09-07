@@ -2,6 +2,10 @@
 
 ## 2.3.*
 
+### [2.3.1](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.3.1) *(2015-09-07)*
+ * Python correction to handle empty seats
+ * Python correction to handle amount_needed not sended by the server on player_turn_began
+
 ### [2.3.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.3.0) *(2015-09-06)*
  * Correction in documentations (#22)
  * Adding "AmountNeeded" to the PlayerTurnBeganCommand (#29)
