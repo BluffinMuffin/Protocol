@@ -1,6 +1,4 @@
-﻿using System;
-using BluffinMuffin.Protocol.DataTypes.Attributes;
-using BluffinMuffin.Protocol.DataTypes.Enums;
+﻿using BluffinMuffin.Protocol.DataTypes.Attributes;
 
 namespace BluffinMuffin.Protocol.Game
 {

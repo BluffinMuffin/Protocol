@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using BluffinMuffin.Protocol.DataTypes.Attributes;
-using BluffinMuffin.Protocol.DataTypes.Enums;
 
 namespace BluffinMuffin.Protocol.Game
 {

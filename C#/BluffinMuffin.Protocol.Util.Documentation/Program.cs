@@ -4,16 +4,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Linq;
 using BluffinMuffin.Protocol.DataTypes;
 using BluffinMuffin.Protocol.DataTypes.Attributes;
 using BluffinMuffin.Protocol.DataTypes.Options;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Schema;
 
 namespace BluffinMuffin.Protocol.Util.Documentation
 {
