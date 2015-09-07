@@ -21,16 +21,19 @@ This is used to inform a player of the cards he just got dealed, to inform other
       "description": "The id of the table where this command needs to go",
       "type": "int"
     },
-    "Cards": {
-      "description": "The visible cards currently in the hands of the player",
+    "FaceDownCards": {
+      "description": "The cards in hand that are currently facing down (hidden to other players).",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
-    "NbHiddenCards": {
-      "description": "How many cards in the hand of the player that are invisible",
-      "type": "int"
+    "FaceUpCards": {
+      "description": "The cards in hand that are currently facing up (visible to other players).",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "NoSeat": {
       "description": "The position on the table where is sitting the player with the cards.",
@@ -58,11 +61,14 @@ This is used to inform a player of the cards he just got dealed, to inform other
   "CommandName": "PlayerHoleCardsChangedCommand",
   "TableId": 42,
   "NoSeat": 7,
-  "Cards": [
-    "4h",
-    "Qs"
+  "FaceUpCards": [
+    "2s",
+    "Ah"
   ],
-  "NbHiddenCards": 3,
+  "FaceDownCards": [
+    "??",
+    "??"
+  ],
   "PlayerState": "Playing"
 }
 ```
