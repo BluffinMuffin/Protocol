@@ -4,9 +4,9 @@ from bluffinmuffin.protocol.enums import LobbyTypeEnum
 
 class ListTableCommand(AbstractLobbyCommand):
 
-    def __init__(self, obj):
-        super().__init__(obj)
-        self.lobby_types = [LobbyTypeEnum.parse(x) for x in obj['LobbyTypes']]
+    def __init__(self, lobby_types):
+        super().__init__()
+        self.lobby_types = lobby_types
 
     def __str__(self):
         return '{0} ({1})'.format(
@@ -17,3 +17,9 @@ class ListTableCommand(AbstractLobbyCommand):
     def _encode_specific(self, d):
         super()._encode_specific(d)
         d['LobbyTypes'] = [LobbyTypeEnum.to_string(x) for x in self.lobby_types]
+
+    @classmethod
+    def decode(cls, obj):
+        return cls(
+            [LobbyTypeEnum.parse(x) for x in obj['LobbyTypes']]
+        )

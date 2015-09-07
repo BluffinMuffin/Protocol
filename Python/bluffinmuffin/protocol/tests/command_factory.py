@@ -31,43 +31,43 @@ def create_table_command_json():
     return '{  "CommandName": "CreateTableCommand",  "Params": {    "TableName": "Bikini Bottom",    "GameType": "Holdem",    "Variant": "Texas Hold\'em",    "MinPlayersToStart": 2,    "MaxPlayers": 10,    "WaitingTimes": {      "AfterPlayerAction": 500,      "AfterBoardDealed": 500,      "AfterPotWon": 2500    },    "MoneyUnit": 10,    "Lobby": {      "OptionType": "QuickMode",      "StartingAmount": 1500    },    "Blind": {      "OptionType": "Blinds",      "MoneyUnit": 10    },    "Limit": {      "OptionType": "NoLimit"    }  }}'
 
 def create_table_command_obj():
-    return None
+    return CreateTableCommand(table_params_obj())
 
 def create_table_response_json():
     return '{  "CommandName": "CreateTableResponse",  "Success": true,  "MessageId": "None",  "Message": "",  "IdTable": 42,  "Command": {    "CommandName": "CreateTableCommand",    "Params": {      "TableName": "Bikini Bottom",      "GameType": "Holdem",      "Variant": "Texas Hold\'em",      "MinPlayersToStart": 2,      "MaxPlayers": 10,      "WaitingTimes": {        "AfterPlayerAction": 500,        "AfterBoardDealed": 500,        "AfterPotWon": 2500      },      "MoneyUnit": 10,      "Lobby": {        "OptionType": "QuickMode",        "StartingAmount": 1500      },      "Blind": {        "OptionType": "Blinds",        "MoneyUnit": 0      },      "Limit": {        "OptionType": "NoLimit"      }    }  }}'
 
 def create_table_response_obj():
-    return None
+    return CreateTableResponse(True,BluffinMessageIdEnum.Nothing,'',json.loads(create_table_command_obj().encode()),42)
 
 def join_table_command_json():
     return '{  "CommandName": "JoinTableCommand",  "TableId": 42}'
 
 def join_table_command_obj():
-    return None
+    return JoinTableCommand(42)
 
 def join_table_response_json():
     return '{  "CommandName": "JoinTableResponse",  "Success": true,  "MessageId": "None",  "Message": "",  "Command": {    "CommandName": "JoinTableCommand",    "TableId": 42  }}'
 
 def join_table_response_obj():
-    return None
+    return JoinTableResponse(True,BluffinMessageIdEnum.Nothing,'',json.loads(join_table_command_obj().encode()))
 
 def leave_table_command_json():
     return '{  "CommandName": "LeaveTableCommand",  "TableId": 42}'
 
 def leave_table_command_obj():
-    return None
+    return LeaveTableCommand(42)
 
 def list_table_command_json():
     return '{  "CommandName": "ListTableCommand",  "LobbyTypes": [    "QuickMode",    "RegisteredMode"  ]}'
 
 def list_table_command_obj():
-    return None
+    return ListTableCommand([LobbyTypeEnum.QuickMode,LobbyTypeEnum.RegisteredMode])
 
 def list_table_response_json():
     return '{  "CommandName": "ListTableResponse",  "Success": true,  "MessageId": "None",  "Message": "",  "Tables": [    {      "IdTable": 42,      "NbPlayers": 6,      "PossibleAction": "Join",      "Params": {        "TableName": "Bikini Bottom",        "GameType": "Holdem",        "Variant": "Texas Hold\'em",        "MinPlayersToStart": 2,        "MaxPlayers": 10,        "WaitingTimes": {          "AfterPlayerAction": 500,          "AfterBoardDealed": 500,          "AfterPotWon": 2500        },        "MoneyUnit": 10,        "Lobby": {          "OptionType": "QuickMode",          "StartingAmount": 1500        },        "Blind": {          "OptionType": "Antes",          "MoneyUnit": 10        },        "Limit": {          "OptionType": "NoLimit"        }      }    },    {      "IdTable": 84,      "NbPlayers": 3,      "PossibleAction": "Leave",      "Params": {        "TableName": "Pokemon World",        "GameType": "Holdem",        "Variant": "Texas Hold\'em",        "MinPlayersToStart": 2,        "MaxPlayers": 10,        "WaitingTimes": {          "AfterPlayerAction": 500,          "AfterBoardDealed": 500,          "AfterPotWon": 2500        },        "MoneyUnit": 10,        "Lobby": {          "OptionType": "QuickMode",          "StartingAmount": 1500        },        "Blind": {          "OptionType": "Blinds",          "MoneyUnit": 10        },        "Limit": {          "OptionType": "NoLimit"        }      }    }  ],  "Command": {    "CommandName": "ListTableCommand",    "LobbyTypes": [      "QuickMode",      "RegisteredMode"    ]  }}'
 
 def list_table_response_obj():
-    return None
+    return ListTableResponse(True,BluffinMessageIdEnum.Nothing,'',json.loads(list_table_command_obj().encode()),[tuple_table_obj()])
 
 def check_compatibility_command_json():
     return '{  "CommandName": "CheckCompatibilityCommand",  "ImplementedProtocolVersion": "2.0.0"}'
@@ -79,7 +79,7 @@ def check_compatibility_response_json():
     return '{  "CommandName": "CheckCompatibilityResponse",  "Success": true,  "MessageId": "None",  "Message": "",  "ImplementedProtocolVersion": "2.0.0",  "SupportedLobbyTypes": [    "QuickMode",    "RegisteredMode"  ],  "Rules": [    {      "GameType": "Holdem",      "Name": "Texas Hold\'em",      "MinPlayers": 2,      "MaxPlayers": 10,      "AvailableLimits": [        "NoLimit"      ],      "DefaultLimit": "NoLimit",      "AvailableBlinds": [        "Blinds",        "Antes",        "None"      ],      "DefaultBlind": "Blinds",      "CanConfigWaitingTime": true,      "AvailableLobbys": [        "QuickMode",        "RegisteredMode"      ]    }  ],  "Command": {    "CommandName": "CheckCompatibilityCommand",    "ImplementedProtocolVersion": "2.0.0"  }}'
 
 def check_compatibility_response_obj():
-    return CheckCompatibilityResponse(True,BluffinMessageIdEnum.Nothing,'',json.loads(check_compatibility_command_obj().encode()),"2.0.0",[LobbyTypeEnum.QuickMode,LobbyTypeEnum.RegisteredMode],[rule_info()])
+    return CheckCompatibilityResponse(True,BluffinMessageIdEnum.Nothing,'',json.loads(check_compatibility_command_obj().encode()),"2.0.0",[LobbyTypeEnum.QuickMode,LobbyTypeEnum.RegisteredMode],[rule_info_obj()])
 
 def authenticate_user_command_json():
     return '{  "CommandName": "AuthenticateUserCommand",  "Username": "ericmas001",  "Password": "0nc3Up0nAT1m3"}'
