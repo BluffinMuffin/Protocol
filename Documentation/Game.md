@@ -77,7 +77,3 @@ These are all the commands that are used during the game. The *Client Commands* 
  * **[TableClosedCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Game.TableClosedCommand.md)**
 
    Informs the clients that the table is closed and that there will be no more games on this table.
-
- * **[TableInfoCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Game.TableInfoCommand.md)**
-
-   Sends all the information about the current state of the table, to put everybody on the same page.

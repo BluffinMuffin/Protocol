@@ -69,6 +69,16 @@ namespace BluffinMuffin.Protocol.Tests
 
             Assert.AreEqual(c.Success, dc.Success);
             CompareJoinTableCommand(c.Command, dc.Command);
+            CompareTableParams.Compare(c.Params, dc.Params);
+            Assert.AreEqual(c.TotalPotAmount, dc.TotalPotAmount);
+            Assert.AreEqual(c.PotsAmount.Count, dc.PotsAmount.Count);
+            Assert.IsFalse(c.PotsAmount.Except(dc.PotsAmount).Any());
+            Assert.AreEqual(c.BoardCards.Length, dc.BoardCards.Length);
+            Assert.IsFalse(c.BoardCards.Except(dc.BoardCards).Any());
+            Assert.AreEqual(c.Seats.Count, dc.Seats.Count);
+            for (int i = 0; i < c.Seats.Count; ++i)
+                CompareSeatInfo.Compare(c.Seats[i], dc.Seats[i]);
+            Assert.AreEqual(c.GameHasStarted, dc.GameHasStarted);
         }
 
         [TestMethod]

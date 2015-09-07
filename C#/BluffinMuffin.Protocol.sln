@@ -37,7 +37,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		..\Documentation\BluffinMuffin.Protocol.Game.PlayerWonPotCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.PlayerWonPotCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Game.SeatUpdatedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.SeatUpdatedCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Game.TableClosedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.TableClosedCommand.md
-		..\Documentation\BluffinMuffin.Protocol.Game.TableInfoCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.TableInfoCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Lobby.CreateTableCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.CreateTableCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Lobby.JoinTableCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.JoinTableCommand.md

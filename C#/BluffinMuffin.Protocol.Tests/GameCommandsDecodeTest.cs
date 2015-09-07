@@ -72,6 +72,9 @@ namespace BluffinMuffin.Protocol.Tests
             var c = GameCommandMock.GameStartedCommand();
             var dc = GetDecodedCommand(c);
             Assert.AreEqual(c.NeededBlindAmount, dc.NeededBlindAmount);
+            Assert.AreEqual(c.Seats.Count, dc.Seats.Count);
+            for (int i = 0; i < c.Seats.Count; ++i)
+                CompareSeatInfo.Compare(c.Seats[i], dc.Seats[i]);
         }
         [TestMethod]
         public void PlayerDiscardActionCommand()
@@ -191,22 +194,6 @@ namespace BluffinMuffin.Protocol.Tests
         {
             var c = GameCommandMock.TableClosedCommand();
             var dc = GetDecodedCommand(c);
-        }
-        [TestMethod]
-        public void TableInfoCommand()
-        {
-            var c = GameCommandMock.TableInfoCommand();
-            var dc = GetDecodedCommand(c);
-            CompareTableParams.Compare(c.Params, dc.Params);
-            Assert.AreEqual(c.TotalPotAmount, dc.TotalPotAmount);
-            Assert.AreEqual(c.PotsAmount.Count, dc.PotsAmount.Count);
-            Assert.IsFalse(c.PotsAmount.Except(dc.PotsAmount).Any());
-            Assert.AreEqual(c.BoardCards.Length, dc.BoardCards.Length);
-            Assert.IsFalse(c.BoardCards.Except(dc.BoardCards).Any());
-            Assert.AreEqual(c.Seats.Count, dc.Seats.Count);
-            for (int i = 0; i < c.Seats.Count; ++i)
-                CompareSeatInfo.Compare(c.Seats[i], dc.Seats[i]);
-            Assert.AreEqual(c.GameHasStarted, dc.GameHasStarted);
         }
 
         private static void ComparePlayerSitInCommand(PlayerSitInCommand c, PlayerSitInCommand dc)

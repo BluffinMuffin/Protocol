@@ -71,7 +71,6 @@
     <Compile Include="Game\PlayerWonPotCommand.cs" />
     <Compile Include="Game\SeatUpdatedCommand.cs" />
     <Compile Include="Game\TableClosedCommand.cs" />
-    <Compile Include="Game\TableInfoCommand.cs" />
     <Compile Include="IResponse.cs" />
     <Compile Include="ICommandWithResponse.cs" />
     <Compile Include="IGameCommand.cs" />

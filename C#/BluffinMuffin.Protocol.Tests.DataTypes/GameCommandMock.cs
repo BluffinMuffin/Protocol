@@ -34,7 +34,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static GameStartedCommand GameStartedCommand()
         {
-            return new GameStartedCommand() {TableId = 42, NeededBlindAmount = 84};
+            return new GameStartedCommand() {TableId = 42, NeededBlindAmount = 84, Seats = SeatInfoMock.AllSeats()};
         }
 
         public static PlayerHoleCardsChangedCommand PlayerHoleCardsChangedCommand()
@@ -107,11 +107,6 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
         public static TableClosedCommand TableClosedCommand()
         {
             return new TableClosedCommand() {TableId = 42};
-        }
-
-        public static TableInfoCommand TableInfoCommand()
-        {
-            return new TableInfoCommand() { TableId = 42, Params = TableParamsMock.ParamsOne(), TotalPotAmount = 126, PotsAmount = new List<int>() { 5, 10, 15, 20 }, BoardCards = new[] { "2s", "5h", "Jd", "Ac" }, Seats = SeatInfoMock.AllSeats(), GameHasStarted = true };
         }
     }
 }
