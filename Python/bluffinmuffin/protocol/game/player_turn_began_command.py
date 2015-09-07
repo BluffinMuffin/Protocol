@@ -27,6 +27,6 @@ class PlayerTurnBeganCommand(AbstractGameCommand):
         return cls(
             obj["TableId"],
             obj["NoSeat"],
-            obj["AmountNeeded"],
+            obj["AmountNeeded"] if "AmountNeeded" in obj else -1,
             obj['MinimumRaiseAmount']
         )
