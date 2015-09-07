@@ -92,8 +92,10 @@ namespace BluffinMuffin.Protocol.Tests
             var c = GameCommandMock.PlayerHoleCardsChangedCommand();
             var dc = GetDecodedCommand(c);
             Assert.AreEqual(c.NoSeat, dc.NoSeat);
-            Assert.AreEqual(c.Cards.Length, dc.Cards.Length);
-            Assert.IsFalse(c.Cards.Except(dc.Cards).Any());
+            Assert.AreEqual(c.FaceDownCards.Length, dc.FaceDownCards.Length);
+            Assert.IsFalse(c.FaceDownCards.Except(dc.FaceDownCards).Any());
+            Assert.AreEqual(c.FaceUpCards.Length, dc.FaceUpCards.Length);
+            Assert.IsFalse(c.FaceUpCards.Except(dc.FaceUpCards).Any());
             Assert.AreEqual(c.PlayerState, dc.PlayerState);
         }
         [TestMethod]

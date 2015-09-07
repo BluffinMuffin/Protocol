@@ -61,11 +61,6 @@ namespace BluffinMuffin.Protocol.DataTypes
         public PlayerStateEnum State { get; set; }
 
         /// <summary>
-        /// true if the player cards are public (ex: during showdown)
-        /// </summary>
-        [JsonIgnore]
-        public bool IsShowingCards { get; set; }
-        /// <summary>
         /// 
         /// </summary>
         public PlayerInfo()
@@ -112,7 +107,6 @@ namespace BluffinMuffin.Protocol.DataTypes
                 MoneySafeAmnt = MoneySafeAmnt,
                 FaceUpCards = FaceUpCards == null ? new string[0] : new List<string>(FaceUpCards).ToArray(),
                 FaceDownCards = FaceDownCards == null ? new string[0] : new List<string>(FaceDownCards).ToArray(),
-                IsShowingCards = IsShowingCards,
                 State = State,
             };
         }

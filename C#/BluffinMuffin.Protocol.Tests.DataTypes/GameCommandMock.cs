@@ -39,7 +39,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static PlayerHoleCardsChangedCommand PlayerHoleCardsChangedCommand()
         {
-            return new PlayerHoleCardsChangedCommand() { TableId = 42, Cards = new[] { "2s", "5h" }, NoSeat = 7, PlayerState = PlayerStateEnum.Playing };
+            return new PlayerHoleCardsChangedCommand() { TableId = 42, FaceUpCards = new[] { "2s", "5h" }, FaceDownCards = new[] { "??", "??" }, NoSeat = 7, PlayerState = PlayerStateEnum.Playing };
         }
 
         public static PlayerJoinedCommand PlayerJoinedCommand()
