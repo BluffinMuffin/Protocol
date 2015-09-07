@@ -36,10 +36,16 @@ namespace BluffinMuffin.Protocol.DataTypes
         public int MoneyBetAmnt { get; set; }
 
         /// <summary>
-        /// The cards in the hands of the player
+        /// The visible cards in the hands of the player
         /// </summary>
         [ExampleValues(2,"2s","Ah")]
-        public string[] HoleCards { get; set; }
+        public string[] VisibleCards { get; set; }
+
+        /// <summary>
+        /// How many cards in the hand of the player that are invisible
+        /// </summary>
+        [ExampleValue(3)]
+        public int NbHiddenCards { get; set; }
 
         /// <summary>
         /// Current state of the player
@@ -50,9 +56,8 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// <summary>
         /// true if the player cards are public (ex: during showdown)
         /// </summary>
-        [ExampleValue(true)]
+        [JsonIgnore]
         public bool IsShowingCards { get; set; }
-
         /// <summary>
         /// 
         /// </summary>
@@ -96,9 +101,10 @@ namespace BluffinMuffin.Protocol.DataTypes
                 Name = Name,
                 MoneyBetAmnt = MoneyBetAmnt,
                 MoneySafeAmnt = MoneySafeAmnt,
-                HoleCards = HoleCards == null ? null : new List<string>(HoleCards).ToArray(),
+                VisibleCards = VisibleCards == null ? null : new List<string>(VisibleCards).ToArray(),
                 IsShowingCards = IsShowingCards,
                 State = State,
+                NbHiddenCards = NbHiddenCards,
             };
         }
 

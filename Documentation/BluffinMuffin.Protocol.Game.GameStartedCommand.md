@@ -39,17 +39,6 @@ It's important to understand that a *game* is only one iteration. It's starts wi
             "description": "The information of the player sitting in this seat. If null, there is nobody.",
             "type": "BluffinMuffin.Protocol.DataTypes.PlayerInfo",
             "properties": {
-              "HoleCards": {
-                "description": "The cards in the hands of the player",
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "IsShowingCards": {
-                "description": "true if the player cards are public (ex: during showdown)",
-                "type": "bool"
-              },
               "MoneyBetAmnt": {
                 "description": "Current Money Amount of the player that he played this round",
                 "type": "int"
@@ -61,6 +50,10 @@ It's important to understand that a *game* is only one iteration. It's starts wi
               "Name": {
                 "description": "The name of the player",
                 "type": "string"
+              },
+              "NbHiddenCards": {
+                "description": "How many cards in the hand of the player that are invisible",
+                "type": "int"
               },
               "NoSeat": {
                 "description": "The seat used by the player",
@@ -76,6 +69,13 @@ It's important to understand that a *game* is only one iteration. It's starts wi
                   "AllIn",
                   "Playing"
                 ]
+              },
+              "VisibleCards": {
+                "description": "The visible cards in the hands of the player",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
               }
             }
           },
@@ -114,12 +114,12 @@ It's important to understand that a *game* is only one iteration. It's starts wi
         "Name": "SpongeBob",
         "MoneySafeAmnt": 1000,
         "MoneyBetAmnt": 42,
-        "HoleCards": [
+        "VisibleCards": [
           "2s",
           "Ah"
         ],
-        "State": "Playing",
-        "IsShowingCards": true
+        "NbHiddenCards": 3,
+        "State": "Playing"
       },
       "SeatAttributes": [
         "CurrentPlayer",
