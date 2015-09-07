@@ -25,12 +25,9 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
 
  
 
-###Current Version: [2.3.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.3.0) *(2015-09-06)*
- * Correction in documentations (#22)
- * Adding "AmountNeeded" to the PlayerTurnBeganCommand (#29)
- * Python commands now accept data in __init__. Decoding json is now done with decode(obj)
- * Python tests now compare json with object
- * Python tests are now splitted in multiple tests, not juste one big ugly test
+###Current Version: [2.3.1](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.3.1) *(2015-09-07)*
+ * Python correction to handle empty seats
+ * Python correction to handle amount_needed not sended by the server on player_turn_began
  * *[Full changelog ...](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/CHANGELOG.md)*
 
 
