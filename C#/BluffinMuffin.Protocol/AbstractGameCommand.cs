@@ -12,10 +12,7 @@ namespace BluffinMuffin.Protocol
         /// <summary>
         /// 
         /// </summary>
-        public override BluffinCommandEnum CommandType
-        {
-            get { return BluffinCommandEnum.Game; }
-        }
+        public override BluffinCommandEnum CommandType => BluffinCommandEnum.Game;
 
         /// <summary>
         /// The id of the table where this command needs to go

@@ -65,7 +65,9 @@ namespace BluffinMuffin.Protocol.Tests
         {
             var c = GameCommandMock.GameEndedCommand();
             var dc = GetDecodedCommand(c);
+            Assert.AreEqual(c.CommandName, dc.CommandName);
         }
+
         [TestMethod]
         public void GameStartedCommand()
         {
@@ -194,6 +196,7 @@ namespace BluffinMuffin.Protocol.Tests
         {
             var c = GameCommandMock.TableClosedCommand();
             var dc = GetDecodedCommand(c);
+            Assert.AreEqual(c.CommandName, dc.CommandName);
         }
 
         private static void ComparePlayerSitInCommand(PlayerSitInCommand c, PlayerSitInCommand dc)
@@ -203,6 +206,7 @@ namespace BluffinMuffin.Protocol.Tests
         }
         private static void ComparePlayerSitOutCommand(PlayerSitOutCommand c, PlayerSitOutCommand dc)
         {
+            Assert.AreEqual(c.CommandName, dc.CommandName);
         }
     }
 }

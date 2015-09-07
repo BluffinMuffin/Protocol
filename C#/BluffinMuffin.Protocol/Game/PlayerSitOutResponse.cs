@@ -17,9 +17,6 @@
         /// <summary>
         /// The id of the table where this command needs to go
         /// </summary>
-        public int TableId
-        {
-            get { return Command.TableId; }
-        }
+        public int TableId => Command.TableId;
     }
 }

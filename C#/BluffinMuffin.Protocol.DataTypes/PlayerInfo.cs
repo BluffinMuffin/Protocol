@@ -82,10 +82,7 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// Current Money Amount of the player (Safe + Bet)
         /// </summary>
         [JsonIgnore]
-        public int MoneyAmnt
-        {
-            get { return MoneyBetAmnt + MoneySafeAmnt; }
-        }
+        public int MoneyAmnt => MoneyBetAmnt + MoneySafeAmnt;
 
         /// <summary>
         /// 
@@ -134,38 +131,26 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// If set to true, IsAllIn must be false
         /// </summary>
         [JsonIgnore]
-        public bool IsPlaying
-        {
-            get { return State == PlayerStateEnum.Playing; }
-        }
+        public bool IsPlaying => State == PlayerStateEnum.Playing;
 
         /// <summary>
         /// Is the player AllIn ?
         /// If set to true, IsPlaying must be false
         /// </summary>
         [JsonIgnore]
-        public bool IsAllIn
-        {
-            get { return State == PlayerStateEnum.AllIn; }
-        }
+        public bool IsAllIn => State == PlayerStateEnum.AllIn;
 
         /// <summary>
         /// A player who was playing but disconnected is a Zombie. He will remain in place and put blinds / check / fold
         /// </summary>
         [JsonIgnore]
-        public bool IsZombie
-        {
-            get { return State == PlayerStateEnum.Zombie; }
-        }
+        public bool IsZombie => State == PlayerStateEnum.Zombie;
 
         /// <summary>
         /// A player who can play has money and is seated !
         /// </summary>
         [JsonIgnore]
-        public bool CanPlay
-        {
-            get { return NoSeat >= 0 && MoneySafeAmnt > 0; }
-        }
+        public bool CanPlay => NoSeat >= 0 && MoneySafeAmnt > 0;
 
         /// <summary>
         /// 

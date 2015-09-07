@@ -19,7 +19,7 @@ namespace BluffinMuffin.Protocol
         /// </summary>
         [JsonProperty(Order = -100)]
         [ExampleValue("{CommandName}")]
-        public string CommandName { get { return GetType().Name; } }
+        public string CommandName => GetType().Name;
 
         /// <summary>
         /// 
@@ -35,7 +35,7 @@ namespace BluffinMuffin.Protocol
             JObject jObj = JsonConvert.DeserializeObject<dynamic>(data);
             var commandName = jObj["CommandName"].Value<String>();
             Type commType = Assembly.GetAssembly(typeof(AbstractCommand)).GetTypes().Single(t => t.IsClass && !t.IsAbstract && t.IsSubclassOf(typeof(AbstractCommand)) && t.Name == commandName);
-            MethodInfo method = typeof(JsonConvert).GetMethods().First(m => m.Name == "DeserializeObject" && m.IsGenericMethod).MakeGenericMethod(new[] { commType });
+            MethodInfo method = typeof(JsonConvert).GetMethods().First(m => m.Name == "DeserializeObject" && m.IsGenericMethod).MakeGenericMethod(commType);
             return (AbstractCommand)method.Invoke(null, new object[] { data });
         }
 

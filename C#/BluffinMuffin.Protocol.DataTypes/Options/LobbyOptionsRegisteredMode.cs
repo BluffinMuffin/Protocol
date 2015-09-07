@@ -11,10 +11,7 @@ namespace BluffinMuffin.Protocol.DataTypes.Options
         /// <summary>
         /// 
         /// </summary>
-        public override LobbyTypeEnum OptionType
-        {
-            get { return LobbyTypeEnum.RegisteredMode; }
-        }
+        public override LobbyTypeEnum OptionType => LobbyTypeEnum.RegisteredMode;
 
         /// <summary>
         /// The Money unit. Should always be equal to the moneyUnit of the table.
@@ -39,16 +36,11 @@ namespace BluffinMuffin.Protocol.DataTypes.Options
         /// <summary>
         /// 
         /// </summary>
-        public override int MaximumAmountForBuyIn
-        {
-            get { return IsMaximumBuyInLimited ? 100 * MoneyUnit : int.MaxValue; }
-        }
+        public override int MaximumAmountForBuyIn => IsMaximumBuyInLimited ? 100 * MoneyUnit : int.MaxValue;
+
         /// <summary>
         /// 
         /// </summary>
-        public override int MinimumAmountForBuyIn
-        {
-            get { return 20 * MoneyUnit; }
-        }
+        public override int MinimumAmountForBuyIn => 20 * MoneyUnit;
     }
 }

@@ -12,12 +12,12 @@ namespace BluffinMuffin.Protocol.DataTypes.Options
         /// <summary>
         /// 
         /// </summary>
-        public override BlindTypeEnum OptionType { get { return BlindTypeEnum.Antes; } }
+        public override BlindTypeEnum OptionType => BlindTypeEnum.Antes;
 
         /// <summary>
         /// 
         /// </summary>
         [JsonIgnore]
-        public int AnteAmount { get { return MoneyUnit; } }
+        public int AnteAmount => MoneyUnit;
     }
 }

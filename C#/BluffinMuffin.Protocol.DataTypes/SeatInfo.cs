@@ -13,7 +13,8 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// 
         /// </summary>
         [JsonIgnore]
-        public bool IsEmpty { get { return Player == null; } }
+        public bool IsEmpty => Player == null;
+
         /// <summary>
         /// The id of the current seat
         /// </summary>

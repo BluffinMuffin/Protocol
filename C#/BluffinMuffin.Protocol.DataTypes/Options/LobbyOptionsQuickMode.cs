@@ -10,10 +10,7 @@ namespace BluffinMuffin.Protocol.DataTypes.Options
         /// <summary>
         /// 
         /// </summary>
-        public override LobbyTypeEnum OptionType
-        {
-            get { return LobbyTypeEnum.QuickMode; }
-        }
+        public override LobbyTypeEnum OptionType => LobbyTypeEnum.QuickMode;
 
         /// <summary>
         /// The amount of money that will be given to every player that sits in.
@@ -31,16 +28,11 @@ namespace BluffinMuffin.Protocol.DataTypes.Options
         /// <summary>
         /// 
         /// </summary>
-        public override int MaximumAmountForBuyIn
-        {
-            get { return StartingAmount; }
-        }
+        public override int MaximumAmountForBuyIn => StartingAmount;
+
         /// <summary>
         /// 
         /// </summary>
-        public override int MinimumAmountForBuyIn
-        {
-            get { return StartingAmount; }
-        }
+        public override int MinimumAmountForBuyIn => StartingAmount;
     }
 }

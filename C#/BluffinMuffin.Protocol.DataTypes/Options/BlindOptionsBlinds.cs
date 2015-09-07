@@ -12,17 +12,18 @@ namespace BluffinMuffin.Protocol.DataTypes.Options
         /// <summary>
         /// 
         /// </summary>
-        public override BlindTypeEnum OptionType { get { return BlindTypeEnum.Blinds; } }
+        public override BlindTypeEnum OptionType => BlindTypeEnum.Blinds;
 
         /// <summary>
         /// 
         /// </summary>
         [JsonIgnore]
-        public int BigBlindAmount { get { return MoneyUnit; } }
+        public int BigBlindAmount => MoneyUnit;
+
         /// <summary>
         /// 
         /// </summary>
         [JsonIgnore]
-        public int SmallBlindAmount { get { return MoneyUnit / 2; } }
+        public int SmallBlindAmount => MoneyUnit / 2;
     }
 }

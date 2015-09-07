@@ -19,7 +19,7 @@ namespace BluffinMuffin.Protocol
     /// <summary>
     /// 
     /// </summary>
-    public static class ICommandWithResponseOptionalExtensions
+    public static class ExtensionsICommandWithResponse
     {
         /// <summary>
         /// 

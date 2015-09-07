@@ -2,11 +2,25 @@
 
 namespace BluffinMuffin.Protocol.DataTypes.Attributes
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class ExampleValuesAttribute : Attribute
     {
-        public int NbObjects { get; private set; }
-        public object[][] Values { get; private set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int NbObjects { get; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public object[][] Values { get; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nbObjects"></param>
+        /// <param name="values"></param>
         public ExampleValuesAttribute(int nbObjects, params object[] values)
         {
             NbObjects = nbObjects;
