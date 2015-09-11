@@ -45,7 +45,7 @@
     <Compile Include="LobbyCommandMock.cs" />
     <Compile Include="PlayerInfoMock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RuleInfoMock.cs" />
+    <Compile Include="GameInfoMock.cs" />
     <Compile Include="SeatInfoMock.cs" />
     <Compile Include="TableParamsMock.cs" />
     <Compile Include="TupleTableMock.cs" />

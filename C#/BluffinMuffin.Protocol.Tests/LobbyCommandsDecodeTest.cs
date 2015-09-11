@@ -27,9 +27,9 @@ namespace BluffinMuffin.Protocol.Tests
 
             Assert.AreEqual(c.ImplementedProtocolVersion, dc.ImplementedProtocolVersion);
             Assert.IsFalse(c.SupportedLobbyTypes.Except(dc.SupportedLobbyTypes).Any());
-            Assert.AreEqual(c.Rules.Length, dc.Rules.Length);
-            for (int i = 0; i < c.Rules.Length; ++i)
-                CompareRuleInfo.Compare(c.Rules[i], dc.Rules[i]);
+            Assert.AreEqual(c.AvailableGames.Length, dc.AvailableGames.Length);
+            for (int i = 0; i < c.AvailableGames.Length; ++i)
+                CompareGameInfo.Compare(c.AvailableGames[i], dc.AvailableGames[i]);
             CompareCheckCompatibilityCommand(c.Command, dc.Command);
         }
 

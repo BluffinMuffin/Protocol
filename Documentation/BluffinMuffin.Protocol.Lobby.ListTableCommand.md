@@ -109,9 +109,9 @@ The list of active tables will be sent back
                 "description": "The type of poker",
                 "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
                 "enum": [
-                  "DrawPoker",
+                  "CommunityCardsPoker",
                   "StudPoker",
-                  "CommunityCardsPoker"
+                  "DrawPoker"
                 ]
               },
               "MaxPlayers": {

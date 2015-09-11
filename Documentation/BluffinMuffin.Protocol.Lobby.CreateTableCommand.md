@@ -37,9 +37,9 @@ More information on ...
           "description": "The type of poker",
           "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
           "enum": [
-            "DrawPoker",
+            "CommunityCardsPoker",
             "StudPoker",
-            "CommunityCardsPoker"
+            "DrawPoker"
           ]
         },
         "MaxPlayers": {
@@ -225,9 +225,9 @@ More information on ...
               "description": "The type of poker",
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
               "enum": [
-                "DrawPoker",
+                "CommunityCardsPoker",
                 "StudPoker",
-                "CommunityCardsPoker"
+                "DrawPoker"
               ]
             },
             "MaxPlayers": {

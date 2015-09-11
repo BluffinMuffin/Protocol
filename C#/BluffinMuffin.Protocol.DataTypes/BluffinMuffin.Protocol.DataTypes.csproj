@@ -44,9 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\GameTypeAttribute.cs" />
+    <Compile Include="Enums\GameSubTypeEnum.cs" />
     <Compile Include="EventHandling\PlayerActionEventArgs.cs" />
     <Compile Include="EventHandling\PlayerInfoEventArgs.cs" />
     <Compile Include="EventHandling\SeatEventArgs.cs" />
+    <Compile Include="GameInfo.cs" />
     <Compile Include="Json\AbstractCustomJsonConverter.cs" />
     <Compile Include="Attributes\ExamplesValuesAttribute.cs" />
     <Compile Include="Attributes\ExampleValueAttribute.cs" />
@@ -76,7 +79,6 @@
     <Compile Include="Json\OptionJsonConverter.cs" />
     <Compile Include="PlayerInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RuleInfo.cs" />
     <Compile Include="DiscardInfo.cs" />
     <Compile Include="SeatInfo.cs" />
     <Compile Include="TableParams.cs" />

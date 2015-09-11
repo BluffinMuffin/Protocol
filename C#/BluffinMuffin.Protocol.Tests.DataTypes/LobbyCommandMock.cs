@@ -22,7 +22,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
             var response = CheckCompatibilityCommand().ResponseSuccess();
             response.ImplementedProtocolVersion = "1.0";
             response.SupportedLobbyTypes = new[] {LobbyTypeEnum.QuickMode, LobbyTypeEnum.RegisteredMode};
-            response.Rules = RuleInfoMock.GetAllRules().ToArray();
+            response.AvailableGames = GameInfoMock.GetAllGames().ToArray();
             return response;
         }
 
