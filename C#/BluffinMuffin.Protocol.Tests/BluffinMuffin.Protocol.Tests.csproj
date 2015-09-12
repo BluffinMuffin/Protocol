@@ -50,10 +50,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Comparing\CompareBlindOptions.cs" />
     <Compile Include="Comparing\CompareConfigurableWaitingTimes.cs" />
     <Compile Include="Comparing\CompareGameCard.cs" />
-    <Compile Include="Comparing\CompareLimitOptions.cs" />
+    <Compile Include="Comparing\CompareGameTypeOptions.cs" />
     <Compile Include="Comparing\CompareLobbyOptions.cs" />
     <Compile Include="Comparing\ComparePlayerInfo.cs" />
     <Compile Include="Comparing\CompareGameInfo.cs" />

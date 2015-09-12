@@ -53,10 +53,6 @@
     <Compile Include="Json\AbstractCustomJsonConverter.cs" />
     <Compile Include="Attributes\ExamplesValuesAttribute.cs" />
     <Compile Include="Attributes\ExampleValueAttribute.cs" />
-    <Compile Include="Options\BlindOptions.cs" />
-    <Compile Include="Options\BlindOptionsAnte.cs" />
-    <Compile Include="Options\BlindOptionsBlinds.cs" />
-    <Compile Include="Options\BlindOptionsNone.cs" />
     <Compile Include="Options\FactoryOption.cs" />
     <Compile Include="ConfigurableWaitingTimes.cs" />
     <Compile Include="Enums\BlindTypeEnum.cs" />
@@ -69,10 +65,10 @@
     <Compile Include="Enums\PokerHandEnum.cs" />
     <Compile Include="Enums\SeatAttributeEnum.cs" />
     <Compile Include="Options\IOption.cs" />
-    <Compile Include="Options\LimitOptions.cs" />
-    <Compile Include="Options\LimitOptionsFixed.cs" />
-    <Compile Include="Options\LimitOptionsNoLimit.cs" />
-    <Compile Include="Options\LimitOptionsPot.cs" />
+    <Compile Include="Options\GameTypeOptions.cs" />
+    <Compile Include="Options\GameTypeOptionsCommunity.cs" />
+    <Compile Include="Options\GameTypeOptionsStud.cs" />
+    <Compile Include="Options\GameTypeOptionsDraw.cs" />
     <Compile Include="Options\LobbyOptions.cs" />
     <Compile Include="Options\LobbyOptionsRegisteredMode.cs" />
     <Compile Include="Options\LobbyOptionsQuickMode.cs" />

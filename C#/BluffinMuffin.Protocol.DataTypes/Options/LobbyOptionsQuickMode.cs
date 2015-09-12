@@ -24,15 +24,5 @@ namespace BluffinMuffin.Protocol.DataTypes.Options
         {
             StartingAmount = 1500;
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public override int MaximumAmountForBuyIn => StartingAmount;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public override int MinimumAmountForBuyIn => StartingAmount;
     }
 }

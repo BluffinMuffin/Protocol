@@ -18,77 +18,84 @@ namespace BluffinMuffin.Protocol.DataTypes
         public string TableName { get; set; }
 
         /// <summary>
-        /// The type of poker
-        /// </summary>
-        [ExampleValue(GameTypeEnum.CommunityCardsPoker)]
-        public GameTypeEnum GameType { get; set; }
-
-        /// <summary>
         /// The variant of the GameType
         /// </summary>
-        [ExampleValue("Texas Hold'em")]
-        public string Variant { get; set; }
+        [ExampleValue(GameSubTypeEnum.TexasHoldem)]
+        public GameSubTypeEnum Variant { get; set; }
 
         /// <summary>
         /// The minimum seated players needed to start the game. (Between 2 and 10)
         /// </summary>
         [ExampleValue(2)]
         public int MinPlayersToStart { get; set; }
+
         /// <summary>
-        /// The maximum number of players. (Between 2 and 10, and must be >= MinPlayersToStart)
+        /// The maximum number of players. (Between 2 and MaxPlayers of the GameInfo, and must be >= MinPlayersToStart)
         /// </summary>
         [ExampleValue(10)]
         public int MaxPlayers { get; set; }
+
         /// <summary>
         /// The waiting times (At different stage of the game, the server will wait before continuing to making it feel real !)
         /// </summary>
         public ConfigurableWaitingTimes WaitingTimes { get; set; }
 
         /// <summary>
-        /// The unit used by the table. This unit is usually the big blind, the minimum raise, etc.
+        /// The size of the table. It represents the small bet and the big blind. Big bet will be double the GameSize, small blind is half the GameSize, and Ante is 1/10 the GameSize
         /// </summary>
         [ExampleValue(10)]
-        public int MoneyUnit { get; set; }
+        public int GameSize { get; set; }
 
+        /// <summary>
+        /// Some more parameters. Those parameters are specific to a server and are free-format. Generally, this field would be blank.
+        /// </summary>
+        [ExampleValue("")]
+        public string Arguments { get; set; }
+
+        /// <summary>
+        /// The type of blinds the table uses (none, blinds, antes)
+        /// </summary>
+        [ExampleValue(BlindTypeEnum.Blinds)]
+        public BlindTypeEnum Blind { get; set; }
+
+        /// <summary>
+        /// The type of limit the table uses (NoLimit, PotLimit, FixedLimit)
+        /// </summary>
+        [ExampleValue(LimitTypeEnum.NoLimit)]
+        public LimitTypeEnum Limit { get; set; }
+        
         /// <summary>
         /// The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.LobbyOptions' for more details
         /// </summary>
+        [ExampleValue(typeof(GameTypeOptionsCommunity))]
+        [JsonConverter(typeof(OptionJsonConverter<GameTypeOptions, GameTypeEnum>))]
+        [JsonProperty(Order = 100)]
+        public GameTypeOptions Options { get; set; }
+
+        /// <summary>
+        /// The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.GameTypeOptions' for more details
+        /// </summary>
         [ExampleValue(typeof(LobbyOptionsQuickMode))]
         [JsonConverter(typeof(OptionJsonConverter<LobbyOptions, LobbyTypeEnum>))]
-        [JsonProperty(Order=100)]
+        [JsonProperty(Order = 100)]
         public LobbyOptions Lobby { get; set; }
-
-        /// <summary>
-        /// The type of blinds the table uses (none, blinds, antes) See 'BluffinMuffin.Protocol.DataTypes.BlindOptions' for more details
-        /// </summary>
-        [ExampleValue(typeof(BlindOptionsBlinds))]
-        [JsonConverter(typeof(OptionJsonConverter<BlindOptions, BlindTypeEnum>))]
-        [JsonProperty(Order = 100)]
-        public BlindOptions Blind { get; set; }
-
-        /// <summary>
-        /// The type of limit the table uses (NoLimit, PotLimit, FixedLimit) See 'BluffinMuffin.Protocol.DataTypes.LimitOptions' for more details
-        /// </summary>
-        [ExampleValue(typeof(LimitOptionsNoLimit))]
-        [JsonConverter(typeof(OptionJsonConverter<LimitOptions, LimitTypeEnum>))]
-        [JsonProperty(Order = 100)]
-        public LimitOptions Limit { get; set; }
 
         /// <summary>
         /// 
         /// </summary>
         public TableParams()
         {
+            Arguments = string.Empty;
             TableName = "Anonymous Table";
-            GameType = GameTypeEnum.CommunityCardsPoker;
-            Variant = "Texas Hold'Em";
+            Variant = GameSubTypeEnum.TexasHoldem;
             MinPlayersToStart = 2;
             MaxPlayers = 10;
             WaitingTimes = new ConfigurableWaitingTimes();
-            MoneyUnit = 10;
+            GameSize = 10;
             Lobby = new LobbyOptionsQuickMode();
-            Blind = new BlindOptionsNone() { MoneyUnit = MoneyUnit };
-            Limit = new LimitOptionsPot();
+            Blind = BlindTypeEnum.Blinds;
+            Limit = LimitTypeEnum.NoLimit;
+            Options = new GameTypeOptionsCommunity();
         }
     }
 }

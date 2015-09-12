@@ -15,9 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{E469F8A0-7DB7-48CF-B40A-03BE833DD893}"
 	ProjectSection(SolutionItems) = preProject
-		..\Documentation\BluffinMuffin.Protocol.DataTypes.BlindOptions.md = ..\Documentation\BluffinMuffin.Protocol.DataTypes.BlindOptions.md
-		..\Documentation\BluffinMuffin.Protocol.DataTypes.LimitOptions.md = ..\Documentation\BluffinMuffin.Protocol.DataTypes.LimitOptions.md
 		..\Documentation\BluffinMuffin.Protocol.DataTypes.LobbyOptions.md = ..\Documentation\BluffinMuffin.Protocol.DataTypes.LobbyOptions.md
+		..\Documentation\BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptions.md = ..\Documentation\BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptions.md
 		..\Documentation\BluffinMuffin.Protocol.DisconnectCommand.md = ..\Documentation\BluffinMuffin.Protocol.DisconnectCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Game.BetTurnEndedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.BetTurnEndedCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Game.BetTurnStartedCommand.md = ..\Documentation\BluffinMuffin.Protocol.Game.BetTurnStartedCommand.md

@@ -14,12 +14,6 @@ namespace BluffinMuffin.Protocol.DataTypes.Options
         public override LobbyTypeEnum OptionType => LobbyTypeEnum.RegisteredMode;
 
         /// <summary>
-        /// The Money unit. Should always be equal to the moneyUnit of the table.
-        /// </summary>
-        [ExampleValue(10)]
-        public int MoneyUnit { get; set; }
-
-        /// <summary>
         /// If Limited, the maximum buy-in will be 100*MoneyUnit. If not, a player can sit with all his money if he wants.
         /// </summary>
         [ExampleValue(true)]
@@ -30,17 +24,7 @@ namespace BluffinMuffin.Protocol.DataTypes.Options
         /// </summary>
         public LobbyOptionsRegisteredMode()
         {
-            MoneyUnit = 10;
             IsMaximumBuyInLimited = false;
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        public override int MaximumAmountForBuyIn => IsMaximumBuyInLimited ? 100 * MoneyUnit : int.MaxValue;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public override int MinimumAmountForBuyIn => 20 * MoneyUnit;
     }
 }

@@ -12,16 +12,5 @@ namespace BluffinMuffin.Protocol.DataTypes.Options
         /// What type of lobby it is
         /// </summary>
         public abstract LobbyTypeEnum OptionType { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [JsonIgnore]
-        public abstract int MinimumAmountForBuyIn { get; }
-        /// <summary>
-        /// 
-        /// </summary>
-        [JsonIgnore]
-        public abstract int MaximumAmountForBuyIn { get; }
     }
 }

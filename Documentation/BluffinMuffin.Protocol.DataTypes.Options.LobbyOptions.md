@@ -36,10 +36,6 @@ The Registered mode is a mode where a player connects with an account. He then h
       "description": "If Limited, the maximum buy-in will be 100*MoneyUnit. If not, a player can sit with all his money if he wants.",
       "type": "bool"
     },
-    "MoneyUnit": {
-      "description": "The Money unit. Should always be equal to the moneyUnit of the table.",
-      "type": "int"
-    },
     "OptionType": {
       "description": "What type of lobby it is",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
@@ -57,7 +53,6 @@ The Registered mode is a mode where a player connects with an account. He then h
 ```json
 {
   "OptionType": "RegisteredMode",
-  "MoneyUnit": 10,
   "IsMaximumBuyInLimited": true
 }
 ```
