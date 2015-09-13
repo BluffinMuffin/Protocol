@@ -58,6 +58,20 @@ namespace BluffinMuffin.Protocol.DataTypes.Enums
         IrishPoker,
 
         /// <summary>
+        /// Community Cards Poker (Hold'Em) : Spanish Poker
+        /// </summary>
+        [GameType(GameTypeEnum.CommunityCardsPoker)]
+        [Description("Spanish Poker")]
+        SpanishPoker,
+
+        /// <summary>
+        /// Community Cards Poker (Hold'Em) : Manila Poker
+        /// </summary>
+        [GameType(GameTypeEnum.CommunityCardsPoker)]
+        [Description("Manila Poker")]
+        ManilaPoker,
+
+        /// <summary>
         /// Stud Poker : Five Cards Stud
         /// </summary>
         [GameType(GameTypeEnum.StudPoker)]

@@ -141,6 +141,8 @@ The success of the operation will be sent back
             "LazyPineapple",
             "ThreeCardsHoldem",
             "IrishPoker",
+            "SpanishPoker",
+            "ManilaPoker",
             "FiveCardsStud",
             "SevenCardsStud",
             "FiveCardsDraw"

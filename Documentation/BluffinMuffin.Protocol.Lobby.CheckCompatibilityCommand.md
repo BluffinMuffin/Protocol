@@ -120,6 +120,8 @@ The supported version, all the supported lobby types and all the supported rules
                 "LazyPineapple",
                 "ThreeCardsHoldem",
                 "IrishPoker",
+                "SpanishPoker",
+                "ManilaPoker",
                 "FiveCardsStud",
                 "SevenCardsStud",
                 "FiveCardsDraw"

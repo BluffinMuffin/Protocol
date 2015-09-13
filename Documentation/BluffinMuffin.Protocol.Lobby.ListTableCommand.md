@@ -154,6 +154,8 @@ The list of active tables will be sent back
                   "LazyPineapple",
                   "ThreeCardsHoldem",
                   "IrishPoker",
+                  "SpanishPoker",
+                  "ManilaPoker",
                   "FiveCardsStud",
                   "SevenCardsStud",
                   "FiveCardsDraw"

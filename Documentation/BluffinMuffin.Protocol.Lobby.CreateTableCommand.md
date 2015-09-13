@@ -80,6 +80,8 @@ More information on ...
             "LazyPineapple",
             "ThreeCardsHoldem",
             "IrishPoker",
+            "SpanishPoker",
+            "ManilaPoker",
             "FiveCardsStud",
             "SevenCardsStud",
             "FiveCardsDraw"
@@ -272,6 +274,8 @@ More information on ...
                 "LazyPineapple",
                 "ThreeCardsHoldem",
                 "IrishPoker",
+                "SpanishPoker",
+                "ManilaPoker",
                 "FiveCardsStud",
                 "SevenCardsStud",
                 "FiveCardsDraw"
