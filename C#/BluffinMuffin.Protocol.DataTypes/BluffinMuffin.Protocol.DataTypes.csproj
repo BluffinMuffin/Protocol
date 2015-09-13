@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\GameTypeAttribute.cs" />
+    <Compile Include="Enums\BuyInParameterEnum.cs" />
     <Compile Include="Enums\GameSubTypeEnum.cs" />
     <Compile Include="EventHandling\PlayerActionEventArgs.cs" />
     <Compile Include="EventHandling\PlayerInfoEventArgs.cs" />
