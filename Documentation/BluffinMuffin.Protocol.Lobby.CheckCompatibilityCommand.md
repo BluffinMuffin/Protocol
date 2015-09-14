@@ -66,6 +66,7 @@ The supported version, all the supported lobby types and all the supported rules
         "UsernameAlreadyUsed",
         "UsernameNotFound",
         "InvalidPassword",
+        "InvalidEmail",
         "SeatChanged",
         "NoMoreSeats",
         "NotAuthenticated",

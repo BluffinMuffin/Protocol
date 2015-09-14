@@ -64,6 +64,7 @@ In the User Creation Process, it's useful to check if the display name is alread
         "UsernameAlreadyUsed",
         "UsernameNotFound",
         "InvalidPassword",
+        "InvalidEmail",
         "SeatChanged",
         "NoMoreSeats",
         "NotAuthenticated",

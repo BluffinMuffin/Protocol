@@ -64,6 +64,7 @@ In the User Creation Process, it's useful to check if the username is already ta
         "UsernameAlreadyUsed",
         "UsernameNotFound",
         "InvalidPassword",
+        "InvalidEmail",
         "SeatChanged",
         "NoMoreSeats",
         "NotAuthenticated",
