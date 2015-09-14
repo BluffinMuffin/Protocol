@@ -83,7 +83,8 @@ Server informs clients that a seat has changed state. Usually sent when player s
               "Dealer",
               "SmallBlind",
               "BigBlind",
-              "CurrentPlayer"
+              "CurrentPlayer",
+              "FirstTalker"
             ]
           }
         }

@@ -23,6 +23,10 @@ The server sends this command to indicated that it's time for a specific player 
       "description": "The amount needed to call. It's the minimum to play if you don't want to fold.",
       "type": "int"
     },
+    "CanFold": {
+      "description": "Usually True. Indicates if the player have the option to Fold. It's false when it's the bring-in.",
+      "type": "int"
+    },
     "MinimumRaiseAmount": {
       "description": "The minimum amount needed to raise. A raise must be at least the size of the largest previous bet or raise of the current betting round. To raise, the player have to send at least AmountNeeded+MinRaiseAmount.",
       "type": "int"
@@ -43,6 +47,7 @@ The server sends this command to indicated that it's time for a specific player 
   "TableId": 42,
   "NoSeat": 7,
   "AmountNeeded": 21,
+  "CanFold": 0,
   "MinimumRaiseAmount": 42
 }
 ```

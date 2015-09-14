@@ -157,6 +157,8 @@ namespace BluffinMuffin.Protocol.Tests
             var dc = GetDecodedCommand(c);
             Assert.AreEqual(c.NoSeat, dc.NoSeat);
             Assert.AreEqual(c.MinimumRaiseAmount, dc.MinimumRaiseAmount);
+            Assert.AreEqual(c.AmountNeeded, dc.AmountNeeded);
+            Assert.AreEqual(c.CanFold, dc.CanFold);
         }
         [TestMethod]
         public void PlayerTurnEndedCommand()

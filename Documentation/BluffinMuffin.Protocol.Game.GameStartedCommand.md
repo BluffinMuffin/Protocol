@@ -91,7 +91,8 @@ It's important to understand that a *game* is only one iteration. It's starts wi
                 "Dealer",
                 "SmallBlind",
                 "BigBlind",
-                "CurrentPlayer"
+                "CurrentPlayer",
+                "FirstTalker"
               ]
             }
           }

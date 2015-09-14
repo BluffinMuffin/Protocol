@@ -36,6 +36,11 @@
         PostAnte,
 
         /// <summary>
+        /// PostBringIn
+        /// </summary>
+        PostBringIn,
+
+        /// <summary>
         /// DoNothing
         /// </summary>
         DoNothing

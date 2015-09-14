@@ -271,7 +271,8 @@ The success of the operation will be sent back
                 "Dealer",
                 "SmallBlind",
                 "BigBlind",
-                "CurrentPlayer"
+                "CurrentPlayer",
+                "FirstTalker"
               ]
             }
           }

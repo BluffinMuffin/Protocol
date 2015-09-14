@@ -20,6 +20,12 @@ namespace BluffinMuffin.Protocol.Game
         public int AmountNeeded { get; set; }
 
         /// <summary>
+        /// Usually True. Indicates if the player have the option to Fold. It's false when it's the bring-in.
+        /// </summary>
+        [ExampleValue(true)]
+        public int CanFold { get; set; }
+
+        /// <summary>
         /// The minimum amount needed to raise. A raise must be at least the size of the largest previous bet or raise of the current betting round. To raise, the player have to send at least AmountNeeded+MinRaiseAmount.
         /// </summary>
         [ExampleValue(42)]
