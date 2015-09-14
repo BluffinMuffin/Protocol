@@ -6,9 +6,9 @@ If successful, the id of the table will be received. If not, server will send "-
 
 More information on ...
 
-* [LobbyOptions](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.DataTypes.LobbyOptions.md)
+* [LobbyOptions](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.DataTypes.Options.LobbyOptions.md)
 
-* [GameTypeOptions](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.DataTypes.GameTypeOptions.md)
+* [GameTypeOptions](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptions.md)
 
 <p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.CreateTableCommand.png" alt="Sequence Diagram"></p>
 
@@ -106,7 +106,7 @@ More information on ...
           }
         },
         "Lobby": {
-          "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.GameTypeOptions' for more details",
+          "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptions' for more details",
           "type": "BluffinMuffin.Protocol.DataTypes.Options.LobbyOptions",
           "properties": {
             "OptionType": {
@@ -120,7 +120,7 @@ More information on ...
           }
         },
         "Options": {
-          "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.LobbyOptions' for more details",
+          "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.Options.LobbyOptions' for more details",
           "type": "BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptions",
           "properties": {
             "OptionType": {
@@ -301,7 +301,7 @@ More information on ...
               }
             },
             "Lobby": {
-              "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.GameTypeOptions' for more details",
+              "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptions' for more details",
               "type": "BluffinMuffin.Protocol.DataTypes.Options.LobbyOptions",
               "properties": {
                 "OptionType": {
@@ -315,7 +315,7 @@ More information on ...
               }
             },
             "Options": {
-              "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.LobbyOptions' for more details",
+              "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.Options.LobbyOptions' for more details",
               "type": "BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptions",
               "properties": {
                 "OptionType": {

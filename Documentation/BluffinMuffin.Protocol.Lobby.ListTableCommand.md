@@ -181,7 +181,7 @@ The list of active tables will be sent back
                 }
               },
               "Lobby": {
-                "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.GameTypeOptions' for more details",
+                "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptions' for more details",
                 "type": "BluffinMuffin.Protocol.DataTypes.Options.LobbyOptions",
                 "properties": {
                   "OptionType": {
@@ -195,7 +195,7 @@ The list of active tables will be sent back
                 }
               },
               "Options": {
-                "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.LobbyOptions' for more details",
+                "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.Options.LobbyOptions' for more details",
                 "type": "BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptions",
                 "properties": {
                   "OptionType": {

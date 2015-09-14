@@ -63,9 +63,9 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// </summary>
         [ExampleValue(LimitTypeEnum.NoLimit)]
         public LimitTypeEnum Limit { get; set; }
-        
+
         /// <summary>
-        /// The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.LobbyOptions' for more details
+        /// The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.Options.LobbyOptions' for more details
         /// </summary>
         [ExampleValue(typeof(GameTypeOptionsCommunity))]
         [JsonConverter(typeof(OptionJsonConverter<GameTypeOptions, GameTypeEnum>))]
@@ -73,7 +73,7 @@ namespace BluffinMuffin.Protocol.DataTypes
         public GameTypeOptions Options { get; set; }
 
         /// <summary>
-        /// The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.GameTypeOptions' for more details
+        /// The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptions' for more details
         /// </summary>
         [ExampleValue(typeof(LobbyOptionsQuickMode))]
         [JsonConverter(typeof(OptionJsonConverter<LobbyOptions, LobbyTypeEnum>))]
