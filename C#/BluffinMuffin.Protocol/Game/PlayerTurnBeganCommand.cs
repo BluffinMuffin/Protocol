@@ -26,9 +26,15 @@ namespace BluffinMuffin.Protocol.Game
         public int CanFold { get; set; }
 
         /// <summary>
-        /// The minimum amount needed to raise. A raise must be at least the size of the largest previous bet or raise of the current betting round. To raise, the player have to send at least AmountNeeded+MinRaiseAmount.
+        /// The minimum amount needed to raise. A raise must be at least the size of the largest previous bet or raise of the current betting round. To raise, the player have to send at least AmountNeeded+MinimumRaiseAmount.
         /// </summary>
         [ExampleValue(42)]
         public int MinimumRaiseAmount { get; set; }
+
+        /// <summary>
+        /// The maximum amount somebody can raise. Total, the player can put AmountNeeded+MaximumRaiseAmount. When No Maximum, this is set to int.MaxValue
+        /// </summary>
+        [ExampleValue(4200)]
+        public int MaximumRaiseAmount { get; set; }
     }
 }

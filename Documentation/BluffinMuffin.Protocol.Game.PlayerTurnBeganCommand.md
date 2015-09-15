@@ -27,8 +27,12 @@ The server sends this command to indicated that it's time for a specific player 
       "description": "Usually True. Indicates if the player have the option to Fold. It's false when it's the bring-in.",
       "type": "int"
     },
+    "MaximumRaiseAmount": {
+      "description": "The maximum amount somebody can raise. Total, the player can put AmountNeeded+MaximumRaiseAmount. When No Maximum, this is set to int.MaxValue",
+      "type": "int"
+    },
     "MinimumRaiseAmount": {
-      "description": "The minimum amount needed to raise. A raise must be at least the size of the largest previous bet or raise of the current betting round. To raise, the player have to send at least AmountNeeded+MinRaiseAmount.",
+      "description": "The minimum amount needed to raise. A raise must be at least the size of the largest previous bet or raise of the current betting round. To raise, the player have to send at least AmountNeeded+MinimumRaiseAmount.",
       "type": "int"
     },
     "NoSeat": {
@@ -48,7 +52,8 @@ The server sends this command to indicated that it's time for a specific player 
   "NoSeat": 7,
   "AmountNeeded": 21,
   "CanFold": 0,
-  "MinimumRaiseAmount": 42
+  "MinimumRaiseAmount": 42,
+  "MaximumRaiseAmount": 4200
 }
 ```
 

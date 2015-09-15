@@ -86,7 +86,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static PlayerTurnBeganCommand PlayerTurnBeganCommand()
         {
-            return new PlayerTurnBeganCommand() {TableId = 42, NoSeat = 7, MinimumRaiseAmount = 84};
+            return new PlayerTurnBeganCommand() {TableId = 42, NoSeat = 7, MinimumRaiseAmount = 84, MaximumRaiseAmount = 4200};
         }
 
         public static PlayerTurnEndedCommand PlayerTurnEndedCommand()
