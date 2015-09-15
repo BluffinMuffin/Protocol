@@ -14,7 +14,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static BetTurnStartedCommand BetTurnStartedCommand()
         {
-            return new BetTurnStartedCommand() { TableId = 42, Cards = new[] { "2s", "5h", "Jd", "Ac" }, BettingRoundId = 4 };
+            return new BetTurnStartedCommand() { TableId = 42, Cards = new[] { "2s", "5h", "Jd", "Ac" }, BettingRoundId = 4, Seats = SeatInfoMock.AllSeats() };
         }
 
         public static DiscardRoundStartedCommand DiscardRoundStartedCommand()

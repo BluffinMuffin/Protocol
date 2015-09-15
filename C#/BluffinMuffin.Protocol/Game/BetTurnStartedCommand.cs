@@ -1,4 +1,6 @@
-﻿using BluffinMuffin.Protocol.DataTypes.Attributes;
+﻿using System.Collections.Generic;
+using BluffinMuffin.Protocol.DataTypes;
+using BluffinMuffin.Protocol.DataTypes.Attributes;
 
 namespace BluffinMuffin.Protocol.Game
 {
@@ -17,5 +19,11 @@ namespace BluffinMuffin.Protocol.Game
         /// </summary>
         [ExampleValues(3, "2s", "Kh", "5d")]
         public string[] Cards { get; set; }
+
+        /// <summary>
+        /// The information about every seats around the table
+        /// </summary>
+        [ExampleValues(1)]
+        public List<SeatInfo> Seats { get; set; }
     }
 }

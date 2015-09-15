@@ -42,6 +42,9 @@ namespace BluffinMuffin.Protocol.Tests
             Assert.AreEqual(c.BettingRoundId, dc.BettingRoundId);
             Assert.AreEqual(c.Cards.Length, dc.Cards.Length);
             Assert.IsFalse(c.Cards.Except(dc.Cards).Any());
+            Assert.AreEqual(c.Seats.Count, dc.Seats.Count);
+            for (int i = 0; i < c.Seats.Count; ++i)
+                CompareSeatInfo.Compare(c.Seats[i], dc.Seats[i]);
         }
         [TestMethod]
         public void DiscardRoundStartedCommand()
