@@ -25,7 +25,7 @@ The server sends this command to indicated that it's time for a specific player 
     },
     "CanFold": {
       "description": "Usually True. Indicates if the player have the option to Fold. It's false when it's the bring-in.",
-      "type": "int"
+      "type": "bool"
     },
     "MaximumRaiseAmount": {
       "description": "The maximum amount somebody can raise. Total, the player can put AmountNeeded+MaximumRaiseAmount. When No Maximum, this is set to int.MaxValue",
@@ -51,7 +51,7 @@ The server sends this command to indicated that it's time for a specific player 
   "TableId": 42,
   "NoSeat": 7,
   "AmountNeeded": 21,
-  "CanFold": 0,
+  "CanFold": true,
   "MinimumRaiseAmount": 42,
   "MaximumRaiseAmount": 4200
 }
