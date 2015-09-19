@@ -2,6 +2,10 @@
 
 This command is there to inform players of something. This is for additionnal information, ignoring this message should not change anything to the game.
 
+More information on ...
+
+* [GameMessageOption](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.DataTypes.Options.GameMessageOption.md)
+
 ## GameMessageCommand
 
 ### Command Schema

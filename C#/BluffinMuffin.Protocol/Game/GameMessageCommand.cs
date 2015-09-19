@@ -8,6 +8,8 @@ namespace BluffinMuffin.Protocol.Game
 {
     /// <summary>
     /// This command is there to inform players of something. This is for additionnal information, ignoring this message should not change anything to the game.
+    /// More information on ...
+    ///  * [GameMessageOption]({BluffinMuffin.Protocol.DataTypes.Options.GameMessageOption})
     /// </summary>
     public class GameMessageCommand : AbstractGameCommand
     {
