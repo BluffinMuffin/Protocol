@@ -1,11 +1,13 @@
 from enum import Enum
 
 
-class RoundTypeEnum(Enum):
-    Preflop = 0
-    Flop = 1
-    Turn = 2
-    River = 3
+class GameMessageEnum(Enum):
+    GeneralInformation = 0
+    RaisingCapped = 1
+    StudBringIn = 2
+    StudHighestHand = 3
+    PlayerJoined = 4
+    PlayerLeft = 5
 
     @classmethod
     def parse(cls, str):

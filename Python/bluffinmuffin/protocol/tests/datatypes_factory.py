@@ -2,7 +2,7 @@ from bluffinmuffin.protocol.data_types import *
 
 
 def rule_info_obj():
-    return RuleInfo(GameTypeEnum.Holdem, "Texas Hold'em", 2, 10, [LimitTypeEnum.NoLimit], LimitTypeEnum.NoLimit,
+    return RuleInfo(GameTypeEnum.CommunityCardsPoker, "Texas Hold'em", 2, 10, [LimitTypeEnum.NoLimit], LimitTypeEnum.NoLimit,
                     [BlindTypeEnum.Blinds, BlindTypeEnum.Antes, BlindTypeEnum.Nothing], BlindTypeEnum.Blinds, True,
                     [LobbyTypeEnum.QuickMode, LobbyTypeEnum.RegisteredMode])
 
@@ -24,12 +24,12 @@ def configurable_waiting_times_obj():
 
 
 def table_params1_obj():
-    return TableParams("Bikini Bottom", GameTypeEnum.Holdem, "Texas Hold'em", 2, 10, configurable_waiting_times_obj(),
+    return TableParams("Bikini Bottom", GameTypeEnum.CommunityCardsPoker, "Texas Hold'em", 2, 10, configurable_waiting_times_obj(),
                        10, lobby_option_obj(), blind_option_obj(), limit_option_obj())
 
 
 def table_params2_obj():
-    return TableParams("Pokemon World", GameTypeEnum.Holdem, "Texas Hold'em", 2, 10, configurable_waiting_times_obj(),
+    return TableParams("Pokemon World", GameTypeEnum.CommunityCardsPoker, "Texas Hold'em", 2, 10, configurable_waiting_times_obj(),
                        10, lobby_option_obj(), antes_option_obj(), limit_option_obj())
 
 
