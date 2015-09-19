@@ -20,8 +20,8 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
 ####Known Implementations
  * **[BluffinMuffin.Beta 0.6.0](http://ericmas001.github.io/BluffinMuffin.Beta)** *(Protocol v1.0.0)*
  * **[BluffinMuffin.Server 0.10.0](http://ericmas001.github.io/BluffinMuffin.Server)** *(Protocol v2.3.0)*
- * **[BluffinMuffin.Client 0.9.0](http://ericmas001.github.io/BluffinMuffin.Client)** *(Protocol v2.1.0)*
- * **[BluffinMuffin.AIClient](https://github.com/mgermain/BluffinMuffin.AIClient)** *(Protocol v2.2.0)*
+ * **[BluffinMuffin.Client 0.10.0](http://ericmas001.github.io/BluffinMuffin.Client)** *(Protocol v2.3.0)*
+ * **[BluffinMuffin.AIClient](https://github.com/mgermain/BluffinMuffin.AIClient)** *(Protocol v2.3.1)*
 
  
 
