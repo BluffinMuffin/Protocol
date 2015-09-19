@@ -58,8 +58,7 @@
     <Compile Include="Game\GameEndedCommand.cs" />
     <Compile Include="Game\GameStartedCommand.cs" />
     <Compile Include="Game\PlayerHoleCardsChangedCommand.cs" />
-    <Compile Include="Game\PlayerLeftCommand.cs" />
-    <Compile Include="Game\PlayerJoinedCommand.cs" />
+    <Compile Include="Game\GameMessageCommand.cs" />
     <Compile Include="Game\PlayerDiscardActionCommand.cs" />
     <Compile Include="Game\PlayerPlayMoneyCommand.cs" />
     <Compile Include="Game\PlayerSitInCommand.cs" />

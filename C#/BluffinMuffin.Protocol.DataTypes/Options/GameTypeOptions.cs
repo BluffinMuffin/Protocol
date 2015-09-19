@@ -3,12 +3,12 @@
 namespace BluffinMuffin.Protocol.DataTypes.Options
 {
     /// <summary>
-    /// The type of limit the table uses (NoLimit, PotLimit, FixedLimit)
+    /// The type of game the table uses (Community, Draw, Stud)
     /// </summary>
     public abstract class GameTypeOptions : IOption<GameTypeEnum>
     {
         /// <summary>
-        /// The type of limit you want to apply on raises
+        /// The type of game you want to play
         /// </summary>
         public abstract GameTypeEnum OptionType { get; }
     }

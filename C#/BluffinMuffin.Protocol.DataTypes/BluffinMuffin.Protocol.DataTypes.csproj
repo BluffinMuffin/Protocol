@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Attributes\GameTypeAttribute.cs" />
     <Compile Include="Enums\BuyInParameterEnum.cs" />
+    <Compile Include="Enums\GameMessageEnum.cs" />
     <Compile Include="Enums\GameSubTypeEnum.cs" />
     <Compile Include="EventHandling\PlayerActionEventArgs.cs" />
     <Compile Include="EventHandling\PlayerInfoEventArgs.cs" />
@@ -65,6 +66,13 @@
     <Compile Include="Enums\PlayerStateEnum.cs" />
     <Compile Include="Enums\PokerHandEnum.cs" />
     <Compile Include="Enums\SeatAttributeEnum.cs" />
+    <Compile Include="Options\GameMessageOption.cs" />
+    <Compile Include="Options\GameMessageOptionPlayerLeft.cs" />
+    <Compile Include="Options\GameMessageOptionPlayerJoined.cs" />
+    <Compile Include="Options\GameMessageOptionStudHighestHand.cs" />
+    <Compile Include="Options\GameMessageOptionStudBringIn.cs" />
+    <Compile Include="Options\GameMessageOptionRaisingCapped.cs" />
+    <Compile Include="Options\GameMessageOptionGeneralInformation.cs" />
     <Compile Include="Options\IOption.cs" />
     <Compile Include="Options\GameTypeOptions.cs" />
     <Compile Include="Options\GameTypeOptionsCommunity.cs" />

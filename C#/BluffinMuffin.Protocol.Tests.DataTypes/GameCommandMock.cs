@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using BluffinMuffin.Protocol.DataTypes;
 using BluffinMuffin.Protocol.DataTypes.Enums;
+using BluffinMuffin.Protocol.DataTypes.Options;
 using BluffinMuffin.Protocol.Game;
 
 namespace BluffinMuffin.Protocol.Tests.DataTypes
@@ -42,14 +43,34 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
             return new PlayerHoleCardsChangedCommand() { TableId = 42, FaceUpCards = new[] { "2s", "5h" }, FaceDownCards = new[] { "??", "??" }, NoSeat = 7, PlayerState = PlayerStateEnum.Playing };
         }
 
-        public static PlayerJoinedCommand PlayerJoinedCommand()
+        public static GameMessageCommand GameMessageCommandPlayerJoined()
         {
-            return new PlayerJoinedCommand() { TableId = 42, PlayerName = "SpongeBob" };
+            return new GameMessageCommand { TableId = 42, Info = new GameMessageOptionPlayerJoined { PlayerName = "SpongeBob" } };
         }
 
-        public static PlayerLeftCommand PlayerLeftCommand()
+        public static GameMessageCommand GameMessageCommandPlayerLeft()
         {
-            return new PlayerLeftCommand() { TableId = 42, PlayerName = "SpongeBob" };
+            return new GameMessageCommand { TableId = 42, Info = new GameMessageOptionPlayerLeft { PlayerName = "SpongeBob" } };
+        }
+
+        public static GameMessageCommand GameMessageCommandStudBringIn()
+        {
+            return new GameMessageCommand { TableId = 42, Info = new GameMessageOptionsStudBringIn {Cards = new[] { "2s", "5h" }, LowestHand = PokerHandEnum.HighCard, PlayerName = "SpongeBob"} };
+        }
+
+        public static GameMessageCommand GameMessageCommandStudHighestHand()
+        {
+            return new GameMessageCommand { TableId = 42, Info = new GameMessageOptionsStudHighestHand { Cards = new[] { "2s", "5h" }, HighestHand = PokerHandEnum.HighCard, PlayerName = "SpongeBob" } };
+        }
+
+        public static GameMessageCommand GameMessageCommandRaisingCapped()
+        {
+            return new GameMessageCommand { TableId = 42, Info = new GameMessageOptionsRaisingCapped() };
+        }
+
+        public static GameMessageCommand GameMessageCommandGeneralInformation()
+        {
+            return new GameMessageCommand { TableId = 42, Info = new GameMessageOptionGeneralInformation {Message="This is an important message from the server !!!"} };
         }
 
         public static PlayerPlayMoneyCommand PlayerPlayMoneyCommand()

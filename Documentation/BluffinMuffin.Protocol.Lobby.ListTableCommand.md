@@ -199,7 +199,7 @@ The list of active tables will be sent back
                 "type": "BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptions",
                 "properties": {
                   "OptionType": {
-                    "description": "The type of limit you want to apply on raises",
+                    "description": "The type of game you want to play",
                     "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
                     "enum": [
                       "CommunityCardsPoker",

@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using BluffinMuffin.Protocol.DataTypes.Options;
 using BluffinMuffin.Protocol.Game;
 using BluffinMuffin.Protocol.Tests.Comparing;
 using BluffinMuffin.Protocol.Tests.Helpers;
@@ -102,18 +103,91 @@ namespace BluffinMuffin.Protocol.Tests
             Assert.AreEqual(c.PlayerState, dc.PlayerState);
         }
         [TestMethod]
-        public void PlayerJoinedCommand()
+        public void GameMessageCommandPlayerJoined()
         {
-            var c = GameCommandMock.PlayerJoinedCommand();
+            var c = GameCommandMock.GameMessageCommandPlayerJoined();
             var dc = GetDecodedCommand(c);
-            Assert.AreEqual(c.PlayerName, dc.PlayerName);
+            Assert.AreEqual(c.Message, dc.Message);
+            Assert.AreEqual(c.Info.OptionType, dc.Info.OptionType);
+
+            var ci = (GameMessageOptionPlayerJoined)c.Info;
+            var dci = (GameMessageOptionPlayerJoined)dc.Info;
+
+            Assert.AreEqual(ci.PlayerName, dci.PlayerName);
         }
         [TestMethod]
-        public void PlayerLeftCommand()
+        public void GameMessageCommandPlayerLeft()
         {
-            var c = GameCommandMock.PlayerLeftCommand();
+            var c = GameCommandMock.GameMessageCommandPlayerLeft();
             var dc = GetDecodedCommand(c);
-            Assert.AreEqual(c.PlayerName, dc.PlayerName);
+            Assert.AreEqual(c.Message, dc.Message);
+
+            var ci = (GameMessageOptionPlayerLeft)c.Info;
+            var dci = (GameMessageOptionPlayerLeft)dc.Info;
+
+            Assert.AreEqual(ci.OptionType, dci.OptionType);
+            Assert.AreEqual(ci.PlayerName, dci.PlayerName);
+        }
+        [TestMethod]
+        public void GameMessageCommandGeneralInformation()
+        {
+            var c = GameCommandMock.GameMessageCommandGeneralInformation();
+            var dc = GetDecodedCommand(c);
+            Assert.AreEqual(c.Message, dc.Message);
+
+            var ci = (GameMessageOptionGeneralInformation)c.Info;
+            var dci = (GameMessageOptionGeneralInformation)dc.Info;
+
+            Assert.AreEqual(ci.OptionType, dci.OptionType);
+            Assert.AreEqual(ci.Message, dci.Message);
+        }
+        [TestMethod]
+        public void GameMessageCommandRaisingCapped()
+        {
+            var c = GameCommandMock.GameMessageCommandRaisingCapped();
+            var dc = GetDecodedCommand(c);
+            Assert.AreEqual(c.Message, dc.Message);
+
+            var ci = (GameMessageOptionsRaisingCapped)c.Info;
+            var dci = (GameMessageOptionsRaisingCapped)dc.Info;
+
+            Assert.AreEqual(ci.OptionType, dci.OptionType);
+        }
+        [TestMethod]
+        public void GameMessageCommandStudBringIn()
+        {
+            var c = GameCommandMock.GameMessageCommandStudBringIn();
+            var dc = GetDecodedCommand(c);
+            Assert.AreEqual(c.Message, dc.Message);
+            Assert.AreEqual(c.Info.OptionType, dc.Info.OptionType);
+
+            var ci = (GameMessageOptionsStudBringIn)c.Info;
+            var dci = (GameMessageOptionsStudBringIn)dc.Info;
+
+            Assert.AreEqual(ci.OptionType, dci.OptionType);
+            Assert.AreEqual(ci.PlayerName, dci.PlayerName);
+            Assert.AreEqual(ci.LowestHand, dci.LowestHand);
+            Assert.AreEqual(ci.Cards.Length, dci.Cards.Length);
+            for (int i = 0; i < ci.Cards.Length; ++i)
+                Assert.AreEqual(ci.Cards[i], dci.Cards[i]);
+        }
+        [TestMethod]
+        public void GameMessageCommandStudHighestHand()
+        {
+            var c = GameCommandMock.GameMessageCommandStudHighestHand();
+            var dc = GetDecodedCommand(c);
+            Assert.AreEqual(c.Message, dc.Message);
+            Assert.AreEqual(c.Info.OptionType, dc.Info.OptionType);
+
+            var ci = (GameMessageOptionsStudHighestHand)c.Info;
+            var dci = (GameMessageOptionsStudHighestHand)dc.Info;
+
+            Assert.AreEqual(ci.OptionType, dci.OptionType);
+            Assert.AreEqual(ci.PlayerName, dci.PlayerName);
+            Assert.AreEqual(ci.HighestHand, dci.HighestHand);
+            Assert.AreEqual(ci.Cards.Length, dci.Cards.Length);
+            for (int i = 0; i < ci.Cards.Length; ++i)
+                Assert.AreEqual(ci.Cards[i], dci.Cards[i]);
         }
         [TestMethod]
         public void PlayerPlayMoneyCommand()

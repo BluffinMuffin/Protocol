@@ -1,6 +1,6 @@
 # GameTypeOptions
 
-The type of limit the table uses (NoLimit, PotLimit, FixedLimit)
+The type of game the table uses (Community, Draw, Stud)
 
 ### Command Schema
 
@@ -10,7 +10,7 @@ The type of limit the table uses (NoLimit, PotLimit, FixedLimit)
   "type": "BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptions",
   "properties": {
     "OptionType": {
-      "description": "The type of limit you want to apply on raises",
+      "description": "The type of game you want to play",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
       "enum": [
         "CommunityCardsPoker",
@@ -34,7 +34,7 @@ BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptionsCommunity
   "type": "BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptionsCommunity",
   "properties": {
     "OptionType": {
-      "description": "The type of limit you want to apply on raises",
+      "description": "The type of game you want to play",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
       "enum": [
         "CommunityCardsPoker",
@@ -66,7 +66,7 @@ BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptionsStud
   "type": "BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptionsStud",
   "properties": {
     "OptionType": {
-      "description": "The type of limit you want to apply on raises",
+      "description": "The type of game you want to play",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
       "enum": [
         "CommunityCardsPoker",
@@ -98,7 +98,7 @@ BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptionsDraw
   "type": "BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptionsDraw",
   "properties": {
     "OptionType": {
-      "description": "The type of limit you want to apply on raises",
+      "description": "The type of game you want to play",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
       "enum": [
         "CommunityCardsPoker",
