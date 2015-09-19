@@ -6,7 +6,7 @@ from bluffinmuffin.protocol.enums import LimitTypeEnum
 from bluffinmuffin.protocol.enums import GameSubTypeEnum
 
 
-class RuleInfo:
+class GameInfo:
     def __init__(self, game_type, available_variants, available_limits, available_blinds, min_players, max_players):
         self.game_type = game_type
         self.available_variants = available_variants

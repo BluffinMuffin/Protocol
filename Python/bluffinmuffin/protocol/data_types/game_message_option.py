@@ -4,14 +4,12 @@ from bluffinmuffin.protocol.enums import PokerHandEnum
 
 
 class GameMessageOption:
-    def __init__(self, option_type, message):
+    def __init__(self, option_type):
         self.option_type = option_type
-        self.message = message
 
     def __str__(self):
         return '{0}:{1}'.format(
-            GameMessageEnum.to_string(self.option_type),
-            self.message
+            GameMessageEnum.to_string(self.option_type)
         )
 
     def _encode_specific(self, d):
@@ -23,7 +21,6 @@ class GameMessageOption:
     def encode(self):
         d = OrderedDict()
         d['OptionType'] = GameMessageEnum.to_string(self.option_type)
-        d['Message'] = self.message
         self._encode_specific(d)
         self._encode_specific_end(d)
         return d
@@ -31,7 +28,8 @@ class GameMessageOption:
 
 class GameMessageOptionGeneralInformation(GameMessageOption):
     def __init__(self, message):
-        super().__init__(GameMessageEnum.GeneralInformation,message)
+        super().__init__(GameMessageEnum.GeneralInformation)
+        self.message = message
 
     def __str__(self):
         return super().__str__()
@@ -44,8 +42,8 @@ class GameMessageOptionGeneralInformation(GameMessageOption):
 
 
 class GameMessageOptionPlayerJoined(GameMessageOption):
-    def __init__(self, message, player_name):
-        super().__init__(GameMessageEnum.PlayerJoined,message)
+    def __init__(self, player_name):
+        super().__init__(GameMessageEnum.PlayerJoined)
         self.player_name = player_name
 
     def __str__(self):
@@ -54,14 +52,13 @@ class GameMessageOptionPlayerJoined(GameMessageOption):
     @classmethod
     def decode(cls, obj):
         return cls(
-            obj['Message'],
             obj['PlayerName']
         )
 
 
 class GameMessageOptionPlayerLeft(GameMessageOption):
-    def __init__(self, message, player_name):
-        super().__init__(GameMessageEnum.PlayerLeft,message)
+    def __init__(self, player_name):
+        super().__init__(GameMessageEnum.PlayerLeft)
         self.player_name = player_name
 
     def __str__(self):
@@ -70,28 +67,25 @@ class GameMessageOptionPlayerLeft(GameMessageOption):
     @classmethod
     def decode(cls, obj):
         return cls(
-            obj['Message'],
             obj['PlayerName']
         )
 
 
 class GameMessageOptionsRaisingCapped(GameMessageOption):
-    def __init__(self, message):
-        super().__init__(GameMessageEnum.RaisingCapped,message)
+    def __init__(self):
+        super().__init__(GameMessageEnum.RaisingCapped)
 
     def __str__(self):
         return super().__str__()
 
     @classmethod
     def decode(cls, obj):
-        return cls(
-            obj['Message']
-        )
+        return cls()
 
 
 class GameMessageOptionsStudBringIn(GameMessageOption):
-    def __init__(self, message, player_name, lowest_hand, cards):
-        super().__init__(GameMessageEnum.StudBringIn,message)
+    def __init__(self, player_name, lowest_hand, cards):
+        super().__init__(GameMessageEnum.StudBringIn)
         self.player_name = player_name
         self.lowest_hand = lowest_hand
         self.cards = cards
@@ -102,7 +96,6 @@ class GameMessageOptionsStudBringIn(GameMessageOption):
     @classmethod
     def decode(cls, obj):
         return cls(
-            obj['Message'],
             obj['PlayerName'],
             PokerHandEnum.parse(obj['LowestHand']),
             obj['Cards']
@@ -110,8 +103,8 @@ class GameMessageOptionsStudBringIn(GameMessageOption):
 
 
 class GameMessageOptionsStudHighestHand(GameMessageOption):
-    def __init__(self, message, player_name, highest_hand, cards):
-        super().__init__(GameMessageEnum.StudHighestHand,message)
+    def __init__(self, player_name, highest_hand, cards):
+        super().__init__(GameMessageEnum.StudHighestHand)
         self.player_name = player_name
         self.highest_hand = highest_hand
         self.cards = cards
@@ -122,7 +115,6 @@ class GameMessageOptionsStudHighestHand(GameMessageOption):
     @classmethod
     def decode(cls, obj):
         return cls(
-            obj['Message'],
             obj['PlayerName'],
             PokerHandEnum.parse(obj['HighestHand']),
             obj['Cards']
