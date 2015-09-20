@@ -2,7 +2,7 @@
 
 ## 3.0.*
 
-### [3.0.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v3.0.0) *(2015-09-??)*
+### [3.0.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v3.0.0) *(2015-09-20)*
  * GameTypeEnum now contrains Community, Stud & Draw
  * RoundTypeEnum is no more supported
  * TableInfoCommand is now useless since JoinTableResponse, GameStarted and BetTurnStartedCommand command now have more information. TableInfoCommand have been removed. 
