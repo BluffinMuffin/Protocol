@@ -1,12 +1,10 @@
 from enum import Enum
 
 
-class SeatAttributeEnum(Enum):
-    Dealer = 0
-    SmallBlind = 1
-    BigBlind = 2
-    CurrentPlayer = 3
-    FirstTalker = 4
+class BuyInParameterEnum(Enum):
+    FixedAmount = 0
+    Multiplicator = 1
+    Unlimited = 2
 
     @classmethod
     def parse(cls, str):
