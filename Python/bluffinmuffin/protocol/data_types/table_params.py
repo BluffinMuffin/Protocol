@@ -1,65 +1,71 @@
 from collections import OrderedDict
 
-from bluffinmuffin.protocol.enums import GameTypeEnum
-from .blind_options import BlindOptionsDecoder
+from bluffinmuffin.protocol.enums import GameSubTypeEnum
+from bluffinmuffin.protocol.enums import BlindTypeEnum
+from bluffinmuffin.protocol.enums import LimitTypeEnum
 from .configurable_waiting_times import ConfigurableWaitingTimes
-from .limit_options import LimitOptionsDecoder
 from .lobby_options import LobbyOptionsDecoder
+from .game_type_options import GameTypeOptionsDecoder
 
 
 class TableParams:
-    def __init__(self, table_name, game_type, variant, min_players_to_start, max_players, waiting_times, money_unit,
-                 lobby, blind, limit):
+    def __init__(self, table_name, variant, min_players_to_start, max_players, waiting_times, game_size,
+                 lobby, blind, limit, arguments, options):
         self.table_name = table_name
-        self.game_type = game_type
         self.variant = variant
         self.min_players_to_start = min_players_to_start
         self.max_players = max_players
         self.waiting_times = waiting_times
-        self.money_unit = money_unit
+        self.game_size = game_size
+        self.arguments = arguments
         self.lobby = lobby
         self.blind = blind
         self.limit = limit
+        self.arguments = arguments
+        self.options = options
 
     def __str__(self):
-        return '"{0}", {1}, "{2}", {3}/{4}, {5}, {6}, {7}, {8}, {9}'.format(
+        return '"{0}", {1}, {2}/{3}, {5}, {6}, {7}, {8}, {9}, {10}'.format(
             self.table_name,
-            GameTypeEnum.to_string(self.game_type),
-            self.variant,
+            GameSubTypeEnum.to_string(self.variant),
             self.min_players_to_start,
             self.max_players,
             self.waiting_times,
-            self.money_unit,
+            self.game_size,
+            self.arguments,
             self.lobby,
-            self.blind,
-            self.limit
+            BlindTypeEnum.to_string(self.blind),
+            LimitTypeEnum.to_string(self.limit),
+            self.options
         )
 
     def encode(self):
         d = OrderedDict()
         d['TableName'] = self.table_name
-        d['GameType'] = GameTypeEnum.to_string(self.game_type)
-        d['Variant'] = self.variant
+        d['Variant'] = GameSubTypeEnum.to_string(self.variant)
         d['MinPlayersToStart'] = self.min_players_to_start
         d['MaxPlayers'] = self.max_players
         d['WaitingTimes'] = self.waiting_times.encode()
-        d['MoneyUnit'] = self.money_unit
+        d['GameSize'] = self.game_size
         d['Lobby'] = self.lobby.encode()
-        d['Blind'] = self.blind.encode()
-        d['Limit'] = self.limit.encode()
+        d['Blind'] = BlindTypeEnum.to_string(self.blind)
+        d['Limit'] = LimitTypeEnum.to_string(self.limit)
+        d['Arguments'] = self.arguments
+        d['Options'] = self.options.encode()
         return d
 
     @classmethod
     def decode(cls, obj):
         return cls(
             obj["TableName"],
-            GameTypeEnum.parse(obj['GameType']),
-            obj["Variant"],
+            GameSubTypeEnum.parse(obj['Variant']),
             obj["MinPlayersToStart"],
             obj["MaxPlayers"],
             ConfigurableWaitingTimes.decode(obj['WaitingTimes']),
-            obj["MoneyUnit"],
+            obj["GameSize"],
             LobbyOptionsDecoder.decode(obj['Lobby']),
-            BlindOptionsDecoder.decode(obj['Blind']),
-            LimitOptionsDecoder.decode(obj['Limit'])
+            BlindTypeEnum.parse(obj['Blind']),
+            LimitTypeEnum.parse(obj['Limit']),
+            obj["Arguments"],
+            GameTypeOptionsDecoder.decode(obj['Options']),
         )

@@ -4,6 +4,10 @@ using Newtonsoft.Json.Linq;
 
 namespace BluffinMuffin.Protocol.DataTypes.Json
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public abstract class AbstractCustomJsonConverter<T> : JsonConverter
     {
         public override bool CanConvert(Type objectType)
@@ -25,6 +29,11 @@ namespace BluffinMuffin.Protocol.DataTypes.Json
             serializer.Serialize(writer, value);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="jObject"></param>
+        /// <returns></returns>
         public abstract T ObtainCustomObject(JObject jObject);
     }
 }

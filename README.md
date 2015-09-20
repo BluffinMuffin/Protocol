@@ -25,9 +25,18 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
 
  
 
-###Current Version: [2.3.1](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.3.1) *(2015-09-07)*
- * Python correction to handle empty seats
- * Python correction to handle amount_needed not sended by the server on player_turn_began
+###Current Version: [3.0.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v3.0.0) *(2015-09-20)*
+ * GameTypeEnum now contrains Community, Stud & Draw
+ * RoundTypeEnum is no more supported
+ * TableInfoCommand is now useless since JoinTableResponse, GameStarted and BetTurnStartedCommand command now have more information. TableInfoCommand have been removed. 
+ * Cards in the hand of the player are now represented by FaceUpCards and FaceDownCards. PlayerInfo datatype and PlayerHoleCardsChangedCommand have been modified accordingly.
+ * CheckCompatibilityResponse now have an AvailableGames field instead of SupportedRules. GameInfo replaces RuleInfo.
+ * Available poker variants that can be implemented by the server are now listed in GameSubTypeEnum
+ * CreateTableCommand has been simplified
+ * Enhancement Issue #18: Validate email on registering
+ * Better support of Stud Poker
+ * PlayerTurnBeganCommand now have more information
+ * PlayerJoinedCommand and PlayerLeftCommand are replaced with GameMessageCommand.
  * *[Full changelog ...](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/CHANGELOG.md)*
 
 

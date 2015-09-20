@@ -38,7 +38,9 @@ Sends all the information about the current state of the table, to put everybody
           "description": "The type of poker",
           "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
           "enum": [
-            "Holdem"
+            "DrawPoker",
+            "StudPoker",
+            "CommunityCardsPoker"
           ]
         },
         "MaxPlayers": {
@@ -222,7 +224,7 @@ Sends all the information about the current state of the table, to put everybody
   "TableId": 42,
   "Params": {
     "TableName": "Bikini Bottom",
-    "GameType": "Holdem",
+    "GameType": "CommunityCardsPoker",
     "Variant": "Texas Hold'em",
     "MinPlayersToStart": 2,
     "MaxPlayers": 10,

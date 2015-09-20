@@ -116,6 +116,7 @@ namespace BluffinMuffin.Protocol.Tests
 
         private void CompareGetUserCommand(GetUserCommand c, GetUserCommand dc)
         {
+            Assert.AreEqual(c.CommandName, dc.CommandName);
         }
     }
 }

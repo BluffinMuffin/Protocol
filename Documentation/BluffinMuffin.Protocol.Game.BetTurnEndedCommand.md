@@ -25,16 +25,6 @@ This command is issued by the server when a betting round is ending. For example
       "items": {
         "type": "int"
       }
-    },
-    "Round": {
-      "description": "OBSOLETE: The round that is ending",
-      "type": "BluffinMuffin.Protocol.DataTypes.Enums.RoundTypeEnum",
-      "enum": [
-        "Preflop",
-        "Flop",
-        "Turn",
-        "River"
-      ]
     }
   }
 }
@@ -46,7 +36,6 @@ This command is issued by the server when a betting round is ending. For example
 {
   "CommandName": "BetTurnEndedCommand",
   "TableId": 42,
-  "Round": "Flop",
   "PotsAmounts": [
     4200,
     420

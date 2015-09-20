@@ -2,14 +2,23 @@
 
 namespace BluffinMuffin.Protocol.DataTypes.EventHandling
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class PlayerInfoEventArgs : EventArgs
     {
-        private readonly PlayerInfo m_Player;
-        public PlayerInfo Player { get { return m_Player; } }
+        /// <summary>
+        /// 
+        /// </summary>
+        public PlayerInfo Player { get; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="p"></param>
         public PlayerInfoEventArgs(PlayerInfo p)
         {
-            m_Player = p;
+            Player = p;
         }
     }
 }

@@ -9,10 +9,12 @@ class BluffinMessageIdEnum(Enum):
     UsernameAlreadyUsed = 4
     UsernameNotFound = 5
     InvalidPassword = 6
-    SeatChanged = 7
-    NotAuthenticated = 8
-    WrongLobbyType = 9
-    NotSupported = 10
+    InvalidEmail = 7
+    SeatChanged = 8
+    NoMoreSeats = 9
+    NotAuthenticated = 10
+    WrongLobbyType = 11
+    NotSupported = 12
 
     @classmethod
     def parse(cls, str):

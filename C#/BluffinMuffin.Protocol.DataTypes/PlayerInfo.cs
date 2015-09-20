@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using BluffinMuffin.Protocol.DataTypes.Attributes;
 using BluffinMuffin.Protocol.DataTypes.Enums;
 using Newtonsoft.Json;
@@ -36,22 +37,28 @@ namespace BluffinMuffin.Protocol.DataTypes
         public int MoneyBetAmnt { get; set; }
 
         /// <summary>
-        /// The cards in the hands of the player
+        /// 
         /// </summary>
-        [ExampleValues(2,"2s","Ah")]
-        public string[] HoleCards { get; set; }
+        [JsonIgnore]
+        public string[] Cards => FaceDownCards.Concat(FaceUpCards).ToArray();
+
+        /// <summary>
+        /// The cards in hand that are currently facing up (visible to other players).
+        /// </summary>
+        [ExampleValues(2, "2s", "Ah")]
+        public string[] FaceUpCards { get; set; }
+
+        /// <summary>
+        /// The cards in hand that are currently facing down (hidden to other players).
+        /// </summary>
+        [ExampleValues(2, "??", "??")]
+        public string[] FaceDownCards { get; set; }
 
         /// <summary>
         /// Current state of the player
         /// </summary>
         [ExampleValue(PlayerStateEnum.Playing)]
         public PlayerStateEnum State { get; set; }
-
-        /// <summary>
-        /// true if the player cards are public (ex: during showdown)
-        /// </summary>
-        [ExampleValue(true)]
-        public bool IsShowingCards { get; set; }
 
         /// <summary>
         /// 
@@ -63,6 +70,8 @@ namespace BluffinMuffin.Protocol.DataTypes
             MoneySafeAmnt = 0;
             MoneyBetAmnt = 0;
             State = PlayerStateEnum.Zombie;
+            FaceUpCards = new string[0];
+            FaceDownCards = new string[0];
         }
 
         /// <summary>
@@ -70,7 +79,7 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// </summary>
         /// <param name="name"></param>
         /// <param name="money"></param>
-        public PlayerInfo(String name, int money)
+        public PlayerInfo(string name, int money)
             : this()
         {
 
@@ -82,10 +91,7 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// Current Money Amount of the player (Safe + Bet)
         /// </summary>
         [JsonIgnore]
-        public int MoneyAmnt
-        {
-            get { return MoneyBetAmnt + MoneySafeAmnt; }
-        }
+        public int MoneyAmnt => MoneyBetAmnt + MoneySafeAmnt;
 
         /// <summary>
         /// 
@@ -99,8 +105,8 @@ namespace BluffinMuffin.Protocol.DataTypes
                 Name = Name,
                 MoneyBetAmnt = MoneyBetAmnt,
                 MoneySafeAmnt = MoneySafeAmnt,
-                HoleCards = HoleCards == null ? null : new List<string>(HoleCards).ToArray(),
-                IsShowingCards = IsShowingCards,
+                FaceUpCards = FaceUpCards == null ? new string[0] : new List<string>(FaceUpCards).ToArray(),
+                FaceDownCards = FaceDownCards == null ? new string[0] : new List<string>(FaceDownCards).ToArray(),
                 State = State,
             };
         }
@@ -134,38 +140,26 @@ namespace BluffinMuffin.Protocol.DataTypes
         /// If set to true, IsAllIn must be false
         /// </summary>
         [JsonIgnore]
-        public bool IsPlaying
-        {
-            get { return State == PlayerStateEnum.Playing; }
-        }
+        public bool IsPlaying => State == PlayerStateEnum.Playing;
 
         /// <summary>
         /// Is the player AllIn ?
         /// If set to true, IsPlaying must be false
         /// </summary>
         [JsonIgnore]
-        public bool IsAllIn
-        {
-            get { return State == PlayerStateEnum.AllIn; }
-        }
+        public bool IsAllIn => State == PlayerStateEnum.AllIn;
 
         /// <summary>
         /// A player who was playing but disconnected is a Zombie. He will remain in place and put blinds / check / fold
         /// </summary>
         [JsonIgnore]
-        public bool IsZombie
-        {
-            get { return State == PlayerStateEnum.Zombie; }
-        }
+        public bool IsZombie => State == PlayerStateEnum.Zombie;
 
         /// <summary>
         /// A player who can play has money and is seated !
         /// </summary>
         [JsonIgnore]
-        public bool CanPlay
-        {
-            get { return NoSeat >= 0 && MoneySafeAmnt > 0; }
-        }
+        public bool CanPlay => NoSeat >= 0 && MoneySafeAmnt > 0;
 
         /// <summary>
         /// 

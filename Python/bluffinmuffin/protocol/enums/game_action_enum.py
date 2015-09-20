@@ -8,7 +8,8 @@ class GameActionEnum(Enum):
     PostSmallBlind = 3
     PostBigBlind = 4
     PostAnte = 5
-    DoNothing = 6
+    PostBringIn = 6
+    DoNothing = 7
 
     @classmethod
     def parse(cls, str):

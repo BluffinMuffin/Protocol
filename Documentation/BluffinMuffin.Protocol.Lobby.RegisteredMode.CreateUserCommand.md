@@ -79,6 +79,7 @@ This commands will create a new user in the database.
         "UsernameAlreadyUsed",
         "UsernameNotFound",
         "InvalidPassword",
+        "InvalidEmail",
         "SeatChanged",
         "NoMoreSeats",
         "NotAuthenticated",

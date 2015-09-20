@@ -76,6 +76,7 @@ The list of active tables will be sent back
         "UsernameAlreadyUsed",
         "UsernameNotFound",
         "InvalidPassword",
+        "InvalidEmail",
         "SeatChanged",
         "NoMoreSeats",
         "NotAuthenticated",
@@ -105,23 +106,38 @@ The list of active tables will be sent back
             "description": "Parameters of the poker table",
             "type": "BluffinMuffin.Protocol.DataTypes.TableParams",
             "properties": {
-              "GameType": {
-                "description": "The type of poker",
-                "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
+              "Arguments": {
+                "description": "Some more parameters. Those parameters are specific to a server and are free-format. Generally, this field would be blank.",
+                "type": "string"
+              },
+              "Blind": {
+                "description": "The type of blinds the table uses (none, blinds, antes)",
+                "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
                 "enum": [
-                  "Holdem"
+                  "Blinds",
+                  "Antes",
+                  "None"
+                ]
+              },
+              "GameSize": {
+                "description": "The size of the table. It represents the small bet and the big blind. Big bet will be double the GameSize, small blind is half the GameSize, and Ante is 1/10 the GameSize",
+                "type": "int"
+              },
+              "Limit": {
+                "description": "The type of limit the table uses (NoLimit, PotLimit, FixedLimit)",
+                "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
+                "enum": [
+                  "NoLimit",
+                  "FixedLimit",
+                  "PotLimit"
                 ]
               },
               "MaxPlayers": {
-                "description": "The maximum number of players. (Between 2 and 10, and must be >= MinPlayersToStart)",
+                "description": "The maximum number of players. (Between 2 and MaxPlayers of the GameInfo, and must be >= MinPlayersToStart)",
                 "type": "int"
               },
               "MinPlayersToStart": {
                 "description": "The minimum seated players needed to start the game. (Between 2 and 10)",
-                "type": "int"
-              },
-              "MoneyUnit": {
-                "description": "The unit used by the table. This unit is usually the big blind, the minimum raise, etc.",
                 "type": "int"
               },
               "TableName": {
@@ -130,7 +146,21 @@ The list of active tables will be sent back
               },
               "Variant": {
                 "description": "The variant of the GameType",
-                "type": "string"
+                "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameSubTypeEnum",
+                "enum": [
+                  "TexasHoldem",
+                  "OmahaHoldem",
+                  "Pineapple",
+                  "CrazyPineapple",
+                  "LazyPineapple",
+                  "ThreeCardsHoldem",
+                  "IrishPoker",
+                  "SpanishPoker",
+                  "ManilaPoker",
+                  "FiveCardsStud",
+                  "SevenCardsStud",
+                  "FiveCardsDraw"
+                ]
               },
               "WaitingTimes": {
                 "description": "The waiting times (At different stage of the game, the server will wait before continuing to making it feel real !)",
@@ -150,42 +180,8 @@ The list of active tables will be sent back
                   }
                 }
               },
-              "Blind": {
-                "description": "The type of blinds the table uses (none, blinds, antes) See 'BluffinMuffin.Protocol.DataTypes.BlindOptions' for more details",
-                "type": "BluffinMuffin.Protocol.DataTypes.Options.BlindOptions",
-                "properties": {
-                  "MoneyUnit": {
-                    "description": "The Money unit. Should always be equal to the moneyUnit of the table.",
-                    "type": "int"
-                  },
-                  "OptionType": {
-                    "description": "The type of blinds used for the table",
-                    "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
-                    "enum": [
-                      "Blinds",
-                      "Antes",
-                      "None"
-                    ]
-                  }
-                }
-              },
-              "Limit": {
-                "description": "The type of limit the table uses (NoLimit, PotLimit, FixedLimit) See 'BluffinMuffin.Protocol.DataTypes.LimitOptions' for more details",
-                "type": "BluffinMuffin.Protocol.DataTypes.Options.LimitOptions",
-                "properties": {
-                  "OptionType": {
-                    "description": "The type of limit you want to apply on raises",
-                    "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
-                    "enum": [
-                      "NoLimit",
-                      "FixedLimit",
-                      "PotLimit"
-                    ]
-                  }
-                }
-              },
               "Lobby": {
-                "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.LobbyOptions' for more details",
+                "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptions' for more details",
                 "type": "BluffinMuffin.Protocol.DataTypes.Options.LobbyOptions",
                 "properties": {
                   "OptionType": {
@@ -194,6 +190,21 @@ The list of active tables will be sent back
                     "enum": [
                       "QuickMode",
                       "RegisteredMode"
+                    ]
+                  }
+                }
+              },
+              "Options": {
+                "description": "The type of table it is (QuickMode ? RegisteredMode ?) See 'BluffinMuffin.Protocol.DataTypes.Options.LobbyOptions' for more details",
+                "type": "BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptions",
+                "properties": {
+                  "OptionType": {
+                    "description": "The type of game you want to play",
+                    "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
+                    "enum": [
+                      "CommunityCardsPoker",
+                      "StudPoker",
+                      "DrawPoker"
                     ]
                   }
                 }
@@ -252,8 +263,7 @@ The list of active tables will be sent back
       "PossibleAction": "Join",
       "Params": {
         "TableName": "Bikini Bottom",
-        "GameType": "Holdem",
-        "Variant": "Texas Hold'em",
+        "Variant": "TexasHoldem",
         "MinPlayersToStart": 2,
         "MaxPlayers": 10,
         "WaitingTimes": {
@@ -261,17 +271,16 @@ The list of active tables will be sent back
           "AfterBoardDealed": 500,
           "AfterPotWon": 2500
         },
-        "MoneyUnit": 10,
+        "GameSize": 10,
+        "Arguments": "",
+        "Blind": "Blinds",
+        "Limit": "NoLimit",
+        "Options": {
+          "OptionType": "CommunityCardsPoker"
+        },
         "Lobby": {
           "OptionType": "QuickMode",
           "StartingAmount": 1500
-        },
-        "Blind": {
-          "OptionType": "Blinds",
-          "MoneyUnit": 10
-        },
-        "Limit": {
-          "OptionType": "NoLimit"
         }
       }
     }

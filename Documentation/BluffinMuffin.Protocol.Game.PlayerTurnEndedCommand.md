@@ -33,6 +33,7 @@ Server informs all the clients that a player has taken action.
         "PostSmallBlind",
         "PostBigBlind",
         "PostAnte",
+        "PostBringIn",
         "DoNothing"
       ]
     },

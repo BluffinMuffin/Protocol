@@ -2,19 +2,32 @@
 
 namespace BluffinMuffin.Protocol.DataTypes.EventHandling
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class PlayerActionEventArgs : PlayerInfoEventArgs
     {
-        private readonly GameActionEnum m_Action;
-        private readonly int m_AmountPlayed;
+        /// <summary>
+        /// 
+        /// </summary>
+        public GameActionEnum Action { get; }
 
-        public GameActionEnum Action { get { return m_Action; } }
-        public int AmountPlayed { get { return m_AmountPlayed; } }
+        /// <summary>
+        /// 
+        /// </summary>
+        public int AmountPlayed { get; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="p"></param>
+        /// <param name="action"></param>
+        /// <param name="amnt"></param>
         public PlayerActionEventArgs(PlayerInfo p, GameActionEnum action, int amnt)
             : base(p)
         {
-            m_Action = action;
-            m_AmountPlayed = amnt;
+            Action = action;
+            AmountPlayed = amnt;
         }
     }
 }

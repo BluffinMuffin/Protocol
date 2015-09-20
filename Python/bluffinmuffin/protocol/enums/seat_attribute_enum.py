@@ -6,6 +6,7 @@ class SeatAttributeEnum(Enum):
     SmallBlind = 1
     BigBlind = 2
     CurrentPlayer = 3
+    FirstTalker = 4
 
     @classmethod
     def parse(cls, str):

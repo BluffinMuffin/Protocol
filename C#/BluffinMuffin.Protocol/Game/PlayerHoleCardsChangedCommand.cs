@@ -16,10 +16,16 @@ namespace BluffinMuffin.Protocol.Game
         public int NoSeat { get; set; }
 
         /// <summary>
-        /// The cards currently in the hands of the player
+        /// The cards in hand that are currently facing up (visible to other players).
         /// </summary>
-        [ExampleValues(2, "4h", "Qs")]
-        public string[] Cards { get; set; }
+        [ExampleValues(2, "2s", "Ah")]
+        public string[] FaceUpCards { get; set; }
+
+        /// <summary>
+        /// The cards in hand that are currently facing down (hidden to other players).
+        /// </summary>
+        [ExampleValues(2, "??", "??")]
+        public string[] FaceDownCards { get; set; }
 
         /// <summary>
         /// The state of the player.

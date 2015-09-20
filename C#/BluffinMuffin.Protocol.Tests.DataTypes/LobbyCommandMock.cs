@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using BluffinMuffin.Protocol.DataTypes.Enums;
 using BluffinMuffin.Protocol.Lobby;
 using BluffinMuffin.Protocol.Lobby.RegisteredMode;
@@ -21,7 +22,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
             var response = CheckCompatibilityCommand().ResponseSuccess();
             response.ImplementedProtocolVersion = "1.0";
             response.SupportedLobbyTypes = new[] {LobbyTypeEnum.QuickMode, LobbyTypeEnum.RegisteredMode};
-            response.Rules = RuleInfoMock.GetAllRules().ToArray();
+            response.AvailableGames = GameInfoMock.GetAllGames().ToArray();
             return response;
         }
 
@@ -44,7 +45,15 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static JoinTableResponse JoinTableResponse()
         {
-            return JoinTableCommand().ResponseSuccess();
+            var response = JoinTableCommand().ResponseSuccess();
+            response.Params = TableParamsMock.ParamsOne();
+            response.TotalPotAmount = 126;
+            response.PotsAmount = new List<int>() { 5, 10, 15, 20 };
+            response.BoardCards = new[] { "2s", "5h", "Jd", "Ac" };
+            response.Seats = SeatInfoMock.AllSeats();
+            response.GameHasStarted = true;
+
+            return response;
         }
 
         public static LeaveTableCommand LeaveTableCommand()

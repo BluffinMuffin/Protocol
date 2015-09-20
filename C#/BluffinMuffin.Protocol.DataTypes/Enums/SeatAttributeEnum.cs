@@ -24,6 +24,11 @@
         /// <summary>
         /// CurrentPlayer
         /// </summary>
-        CurrentPlayer
+        CurrentPlayer,
+
+        /// <summary>
+        /// FirstTalker
+        /// </summary>
+        FirstTalker
     }
 }
