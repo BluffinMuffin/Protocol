@@ -107,12 +107,28 @@ def test_player_hole_cards_changed_command():
     assert_command(player_hole_cards_changed_command_json(), player_hole_cards_changed_command_obj())
 
 
-def test_player_joined_command():
-    assert_command(player_joined_command_json(), player_joined_command_obj())
+def game_message_general_information_command():
+    assert_command(game_message_general_information_command_json(), game_message_general_information_command_obj())
 
 
-def test_player_left_command():
-    assert_command(player_left_command_json(), player_left_command_obj())
+def test_game_message_raising_capped_command():
+    assert_command(game_message_raising_capped_command_json(), game_message_raising_capped_command_obj())
+
+
+def test_game_message_stud_bring_in_command():
+    assert_command(game_message_stud_bring_in_command_json(), game_message_stud_bring_in_command_obj())
+
+
+def test_game_message_stud_highest_hand_command():
+    assert_command(game_message_stud_highest_hand_command_json(), game_message_stud_highest_hand_command_obj())
+
+
+def test_game_message_player_joined_command():
+    assert_command(game_message_player_joined_command_json(), game_message_player_joined_command_obj())
+
+
+def test_game_message_player_left_command():
+    assert_command(game_message_player_left_command_json(), game_message_player_left_command_obj())
 
 
 def test_player_turn_began_command():
@@ -133,10 +149,6 @@ def test_seat_updated_command():
 
 def test_table_closed_command():
     assert_command(table_closed_command_json(), table_closed_command_obj())
-
-
-def test_table_info_command():
-    assert_command(table_info_command_json(), table_info_command_obj())
 
 
 def test_player_discard_action_command():

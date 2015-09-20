@@ -34,6 +34,10 @@ class GameMessageOptionGeneralInformation(GameMessageOption):
     def __str__(self):
         return super().__str__()
 
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
+        d['Message'] = self.message
+
     @classmethod
     def decode(cls, obj):
         return cls(
@@ -48,6 +52,10 @@ class GameMessageOptionPlayerJoined(GameMessageOption):
 
     def __str__(self):
         return super().__str__()
+
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
+        d['PlayerName'] = self.player_name
 
     @classmethod
     def decode(cls, obj):
@@ -64,6 +72,10 @@ class GameMessageOptionPlayerLeft(GameMessageOption):
     def __str__(self):
         return super().__str__()
 
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
+        d['PlayerName'] = self.player_name
+
     @classmethod
     def decode(cls, obj):
         return cls(
@@ -77,6 +89,9 @@ class GameMessageOptionsRaisingCapped(GameMessageOption):
 
     def __str__(self):
         return super().__str__()
+
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
 
     @classmethod
     def decode(cls, obj):
@@ -92,6 +107,12 @@ class GameMessageOptionsStudBringIn(GameMessageOption):
 
     def __str__(self):
         return super().__str__()
+
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
+        d['PlayerName'] = self.player_name
+        d['LowestHand'] = PokerHandEnum.to_string(self.lowest_hand)
+        d['Cards'] = self.cards
 
     @classmethod
     def decode(cls, obj):
@@ -111,6 +132,12 @@ class GameMessageOptionsStudHighestHand(GameMessageOption):
 
     def __str__(self):
         return super().__str__()
+
+    def _encode_specific(self, d):
+        super()._encode_specific(d)
+        d['PlayerName'] = self.player_name
+        d['HighestHand'] = PokerHandEnum.to_string(self.highest_hand)
+        d['Cards'] = self.cards
 
     @classmethod
     def decode(cls, obj):

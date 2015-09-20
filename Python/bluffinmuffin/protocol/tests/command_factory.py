@@ -34,7 +34,7 @@ def identify_response_obj():
 
 
 def create_table_command_json():
-    return '{  "CommandName": "CreateTableCommand",  "Params": {    "TableName": "Bikini Bottom",    "GameType": "CommunityCardsPoker",    "Variant": "Texas Hold\'em",    "MinPlayersToStart": 2,    "MaxPlayers": 10,    "WaitingTimes": {      "AfterPlayerAction": 500,      "AfterBoardDealed": 500,      "AfterPotWon": 2500    },    "MoneyUnit": 10,    "Lobby": {      "OptionType": "QuickMode",      "StartingAmount": 1500    },    "Blind": {      "OptionType": "Blinds",      "MoneyUnit": 10    },    "Limit": {      "OptionType": "NoLimit"    }  }}'
+    return '{  "CommandName": "CreateTableCommand",  "Params": {    "TableName": "Bikini Bottom",    "Variant": "TexasHoldem",    "MinPlayersToStart": 2,    "MaxPlayers": 10,    "WaitingTimes": {      "AfterPlayerAction": 500,      "AfterBoardDealed": 500,      "AfterPotWon": 2500    },    "GameSize": 10,    "Arguments": "",    "Blind": "Blinds",    "Limit": "NoLimit",    "Options": {      "OptionType": "CommunityCardsPoker"    },    "Lobby": {      "OptionType": "QuickMode",      "StartingAmount": 1500    }  }}'
 
 
 def create_table_command_obj():
@@ -42,7 +42,7 @@ def create_table_command_obj():
 
 
 def create_table_response_json():
-    return '{  "CommandName": "CreateTableResponse",  "Success": true,  "MessageId": "None",  "Message": "",  "IdTable": 42,  "Command": {    "CommandName": "CreateTableCommand",    "Params": {      "TableName": "Bikini Bottom",      "GameType": "CommunityCardsPoker",      "Variant": "Texas Hold\'em",      "MinPlayersToStart": 2,      "MaxPlayers": 10,      "WaitingTimes": {        "AfterPlayerAction": 500,        "AfterBoardDealed": 500,        "AfterPotWon": 2500      },      "MoneyUnit": 10,      "Lobby": {        "OptionType": "QuickMode",        "StartingAmount": 1500      },      "Blind": {        "OptionType": "Blinds",        "MoneyUnit": 10      },      "Limit": {        "OptionType": "NoLimit"      }    }  }}'
+    return '{  "CommandName": "CreateTableResponse",  "Success": true,  "MessageId": "None",  "Message": "",  "IdTable": 42,  "Command": {  "CommandName": "CreateTableCommand",  "Params": {    "TableName": "Bikini Bottom",    "Variant": "TexasHoldem",    "MinPlayersToStart": 2,    "MaxPlayers": 10,    "WaitingTimes": {      "AfterPlayerAction": 500,      "AfterBoardDealed": 500,      "AfterPotWon": 2500    },    "GameSize": 10,    "Arguments": "",    "Blind": "Blinds",    "Limit": "NoLimit",    "Options": {      "OptionType": "CommunityCardsPoker"    },    "Lobby": {      "OptionType": "QuickMode",      "StartingAmount": 1500    }  }}}'
 
 
 def create_table_response_obj():
@@ -59,11 +59,11 @@ def join_table_command_obj():
 
 
 def join_table_response_json():
-    return '{  "CommandName": "JoinTableResponse",  "Success": true,  "MessageId": "None",  "Message": "",  "Command": {    "CommandName": "JoinTableCommand",    "TableId": 42  }}'
+    return '{  "CommandName": "JoinTableResponse",  "Success": true,  "MessageId": "None",  "Message": "",  "Params": {    "TableName": "Bikini Bottom",    "Variant": "TexasHoldem",    "MinPlayersToStart": 2,    "MaxPlayers": 10,    "WaitingTimes": {      "AfterPlayerAction": 500,      "AfterBoardDealed": 500,      "AfterPotWon": 2500    },    "GameSize": 10,    "Arguments": "",    "Blind": "Blinds",    "Limit": "NoLimit",    "Options": {      "OptionType": "CommunityCardsPoker"    },    "Lobby": {      "OptionType": "QuickMode",      "StartingAmount": 1500    }  },  "TotalPotAmount": 42000,  "PotsAmount": [    4200,    420  ],  "BoardCards": [    "2s",    "Kh",    "5d"  ],  "Seats": [    {      "NoSeat": 7,      "Player": {        "NoSeat": 7,        "Name": "SpongeBob",        "MoneySafeAmnt": 1000,        "MoneyBetAmnt": 42,        "FaceUpCards": [          "2s",          "Ah"        ],        "FaceDownCards": [          "??",          "??"        ],        "State": "Playing"      },      "SeatAttributes": [        "CurrentPlayer",        "BigBlind"      ]    },{"NoSeat": 8, "Player": null, "SeatAttributes": ["SmallBlind"]}  ],  "GameHasStarted": true,  "Command": {    "CommandName": "JoinTableCommand",    "TableId": 42  }}'
 
 
 def join_table_response_obj():
-    return JoinTableResponse(True, BluffinMessageIdEnum.Nothing, '', json.loads(join_table_command_obj().encode()))
+    return JoinTableResponse(True, BluffinMessageIdEnum.Nothing, '', json.loads(join_table_command_obj().encode()), table_params1_obj(), 42000, [4200, 420], ["2s", "Kh", "5d"], [seat_info_obj(),empty_seat_info_obj()], True)
 
 
 def leave_table_command_json():
@@ -83,7 +83,7 @@ def list_table_command_obj():
 
 
 def list_table_response_json():
-    return '{  "CommandName": "ListTableResponse",  "Success": true,  "MessageId": "None",  "Message": "",  "Tables": [    {      "IdTable": 42,      "NbPlayers": 6,      "PossibleAction": "Join",      "Params": {        "TableName": "Bikini Bottom",        "GameType": "CommunityCardsPoker",        "Variant": "Texas Hold\'em",        "MinPlayersToStart": 2,        "MaxPlayers": 10,        "WaitingTimes": {          "AfterPlayerAction": 500,          "AfterBoardDealed": 500,          "AfterPotWon": 2500        },        "MoneyUnit": 10,        "Lobby": {          "OptionType": "QuickMode",          "StartingAmount": 1500        },        "Blind": {          "OptionType": "Blinds",          "MoneyUnit": 10        },        "Limit": {          "OptionType": "NoLimit"        }      }    },    {      "IdTable": 84,      "NbPlayers": 3,      "PossibleAction": "Leave",      "Params": {        "TableName": "Pokemon World",        "GameType": "CommunityCardsPoker",        "Variant": "Texas Hold\'em",        "MinPlayersToStart": 2,        "MaxPlayers": 10,        "WaitingTimes": {          "AfterPlayerAction": 500,          "AfterBoardDealed": 500,          "AfterPotWon": 2500        },        "MoneyUnit": 10,        "Lobby": {          "OptionType": "QuickMode",          "StartingAmount": 1500        },        "Blind": {          "OptionType": "Antes",          "MoneyUnit": 10        },        "Limit": {          "OptionType": "NoLimit"        }      }    }  ],  "Command": {    "CommandName": "ListTableCommand",    "LobbyTypes": [      "QuickMode",      "RegisteredMode"    ]  }}'
+    return '{  "CommandName": "ListTableResponse",  "Success": true,  "MessageId": "None",  "Message": "",  "Tables": [    {      "IdTable": 42,      "NbPlayers": 6,      "PossibleAction": "Join",      "Params": {    "TableName": "Bikini Bottom",    "Variant": "TexasHoldem",    "MinPlayersToStart": 2,    "MaxPlayers": 10,    "WaitingTimes": {      "AfterPlayerAction": 500,      "AfterBoardDealed": 500,      "AfterPotWon": 2500    },    "GameSize": 10,    "Arguments": "",    "Blind": "Blinds",    "Limit": "NoLimit",    "Options": {      "OptionType": "CommunityCardsPoker"    },    "Lobby": {      "OptionType": "QuickMode",      "StartingAmount": 1500    }  }    },    {      "IdTable": 84,      "NbPlayers": 3,      "PossibleAction": "Leave",      "Params": {    "TableName": "Pokemon World",    "Variant": "TexasHoldem",    "MinPlayersToStart": 2,    "MaxPlayers": 10,    "WaitingTimes": {      "AfterPlayerAction": 500,      "AfterBoardDealed": 500,      "AfterPotWon": 2500    },    "GameSize": 10,    "Arguments": "",    "Blind": "Antes",    "Limit": "NoLimit",    "Options": {      "OptionType": "CommunityCardsPoker"    },    "Lobby": {      "OptionType": "QuickMode",      "StartingAmount": 1500    }  }    }  ],  "Command": {    "CommandName": "ListTableCommand",    "LobbyTypes": [      "QuickMode",      "RegisteredMode"    ]  }}'
 
 
 def list_table_response_obj():
@@ -100,13 +100,13 @@ def check_compatibility_command_obj():
 
 
 def check_compatibility_response_json():
-    return '{  "CommandName": "CheckCompatibilityResponse",  "Success": true,  "MessageId": "None",  "Message": "",  "ImplementedProtocolVersion": "2.0.0",  "SupportedLobbyTypes": [    "QuickMode",    "RegisteredMode"  ],  "Rules": [    {      "GameType": "CommunityCardsPoker",      "Name": "Texas Hold\'em",      "MinPlayers": 2,      "MaxPlayers": 10,      "AvailableLimits": [        "NoLimit"      ],      "DefaultLimit": "NoLimit",      "AvailableBlinds": [        "Blinds",        "Antes",        "None"      ],      "DefaultBlind": "Blinds",      "CanConfigWaitingTime": true,      "AvailableLobbys": [        "QuickMode",        "RegisteredMode"      ]    }  ],  "Command": {    "CommandName": "CheckCompatibilityCommand",    "ImplementedProtocolVersion": "2.0.0"  }}'
+    return '{  "CommandName": "CheckCompatibilityResponse",  "Success": true,  "MessageId": "None",  "Message": "",  "ImplementedProtocolVersion": "2.0.0",  "SupportedLobbyTypes": [    "QuickMode",    "RegisteredMode"  ],  "AvailableGames": [    {      "GameType": "CommunityCardsPoker",      "AvailableVariants": [        "TexasHoldem",        "OmahaHoldem",        "CrazyPineapple"      ],      "AvailableLimits": [        "NoLimit",        "FixedLimit",        "PotLimit"      ],      "AvailableBlinds": [        "Blinds", "Antes", "None"      ],      "MinPlayers": 2,      "MaxPlayers": 10    }  ],  "Command": {    "CommandName": "CheckCompatibilityCommand",    "ImplementedProtocolVersion": "2.0.0"  }}'
 
 
 def check_compatibility_response_obj():
     return CheckCompatibilityResponse(True, BluffinMessageIdEnum.Nothing, '',
                                       json.loads(check_compatibility_command_obj().encode()), "2.0.0",
-                                      [LobbyTypeEnum.QuickMode, LobbyTypeEnum.RegisteredMode], [rule_info_obj()])
+                                      [LobbyTypeEnum.QuickMode, LobbyTypeEnum.RegisteredMode], [game_info_obj()])
 
 
 def authenticate_user_command_json():
@@ -202,11 +202,11 @@ def bet_turn_ended_command_obj():
 
 
 def bet_turn_started_command_json():
-    return '{  "CommandName": "BetTurnStartedCommand",  "TableId": 42,  "BettingRoundId": 1,  "Cards": [    "2s",    "Kh",    "5d"  ]}'
+    return '{  "CommandName": "BetTurnStartedCommand",  "TableId": 42,  "BettingRoundId": 1,  "Cards": [    "2s",    "Kh",    "5d"  ],  "Seats": [    {      "NoSeat": 7,      "Player": {        "NoSeat": 7,        "Name": "SpongeBob",        "MoneySafeAmnt": 1000,        "MoneyBetAmnt": 42,        "FaceUpCards": [          "2s",          "Ah"        ],        "FaceDownCards": [          "??",          "??"        ],        "State": "Playing"      },      "SeatAttributes": [        "CurrentPlayer",        "BigBlind"      ]    },{"NoSeat": 8, "Player": null, "SeatAttributes": ["SmallBlind"]}  ]}'
 
 
 def bet_turn_started_command_obj():
-    return BetTurnStartedCommand(42, 1, ["2s", "Kh", "5d"])
+    return BetTurnStartedCommand(42, 1, ["2s", "Kh", "5d"], [seat_info_obj(),empty_seat_info_obj()])
 
 
 def discard_round_ended_command_json():
@@ -234,43 +234,69 @@ def game_ended_command_obj():
 
 
 def game_started_command_json():
-    return '{  "CommandName": "GameStartedCommand",  "TableId": 42,  "NeededBlindAmount": 10}'
+    return '{  "CommandName": "GameStartedCommand",  "TableId": 42,  "NeededBlindAmount": 10,  "Seats": [    {      "NoSeat": 7,      "Player": {        "NoSeat": 7,        "Name": "SpongeBob",        "MoneySafeAmnt": 1000,        "MoneyBetAmnt": 42,        "FaceUpCards": [          "2s",          "Ah"        ],        "FaceDownCards": [          "??",          "??"        ],        "State": "Playing"      },      "SeatAttributes": [        "CurrentPlayer",        "BigBlind"      ]    },{"NoSeat": 8, "Player": null, "SeatAttributes": ["SmallBlind"]}  ]}'
 
 
 def game_started_command_obj():
-    return GameStartedCommand(42, 10)
+    return GameStartedCommand(42, 10, [seat_info_obj(),empty_seat_info_obj()])
 
 
 def player_hole_cards_changed_command_json():
-    return '{  "CommandName": "PlayerHoleCardsChangedCommand",  "TableId": 42,  "NoSeat": 7,  "Cards": [    "4h",    "Qs"  ],  "PlayerState": "Playing"}'
+    return '{  "CommandName": "PlayerHoleCardsChangedCommand",  "TableId": 42,  "NoSeat": 7,  "FaceUpCards": [    "2s",    "Ah"  ],  "FaceDownCards": [    "??",    "??"  ],  "PlayerState": "Playing"}'
 
 
 def player_hole_cards_changed_command_obj():
-    return PlayerHoleCardsChangedCommand(42, 7, ["4h", "Qs"], PlayerStateEnum.Playing)
+    return PlayerHoleCardsChangedCommand(42, 7, ["2s", "Ah"], ["??", "??"], PlayerStateEnum.Playing)
 
 
-def player_joined_command_json():
-    return '{  "CommandName": "PlayerJoinedCommand",  "TableId": 42,  "PlayerName": "Sponge Bob"}'
+def game_message_general_information_command_json():
+    return '{  "CommandName": "GameMessageCommand",  "TableId": 42,  "Message": "General message sent by the server",  "Info": {    "OptionType": "GeneralInformation",    "Message": "General message sent by the server"  }}'
 
 
-def player_joined_command_obj():
-    return PlayerJoinedCommand(42, "Sponge Bob")
+def game_message_general_information_command_obj():
+    return GameMessageCommand(42, "General message sent by the server", GameMessageOptionGeneralInformation("General message sent by the server"))
 
 
-def player_left_command_json():
-    return '{  "CommandName": "PlayerLeftCommand",  "TableId": 42,  "PlayerName": "Sponge Bob"}'
+def game_message_raising_capped_command_json():
+    return '{  "CommandName": "GameMessageCommand",  "TableId": 42,  "Message": "Raising is capped",  "Info": {    "OptionType": "RaisingCapped"  }}'
+
+def game_message_raising_capped_command_obj():
+    return GameMessageCommand(42, "Raising is capped", GameMessageOptionsRaisingCapped())
 
 
-def player_left_command_obj():
-    return PlayerLeftCommand(42, "Sponge Bob")
+def game_message_stud_bring_in_command_json():
+    return '{  "CommandName": "GameMessageCommand",  "TableId": 42,  "Message": "SpongeBob is the bring-in",  "Info": {  "OptionType": "StudBringIn",  "Cards": [    "5s"  ],  "LowestHand": "HighCard",  "PlayerName": "SpongeBob"}}'
 
+def game_message_stud_bring_in_command_obj():
+    return GameMessageCommand(42, "SpongeBob is the bring-in", GameMessageOptionsStudBringIn("SpongeBob",PokerHandEnum.HighCard,["5s"]))
+
+
+def game_message_stud_highest_hand_command_json():
+    return '{  "CommandName": "GameMessageCommand",  "TableId": 42,  "Message": "SpongeBob has the highest hand",  "Info": {  "OptionType": "StudHighestHand",  "Cards": [    "As",    "Ah"  ],  "HighestHand": "OnePair",  "PlayerName": "SpongeBob"}}'
+
+def game_message_stud_highest_hand_command_obj():
+    return GameMessageCommand(42, "SpongeBob has the highest hand", GameMessageOptionsStudHighestHand("SpongeBob",PokerHandEnum.OnePair,["As","Ah"]))
+
+
+def game_message_player_joined_command_json():
+    return '{  "CommandName": "GameMessageCommand",  "TableId": 42,  "Message": "SpongeBob just joined the table",  "Info": {    "OptionType": "PlayerJoined",    "PlayerName": "SpongeBob"  }}'
+
+def game_message_player_joined_command_obj():
+    return GameMessageCommand(42, "SpongeBob just joined the table", GameMessageOptionPlayerJoined("SpongeBob"))
+
+
+def game_message_player_left_command_json():
+    return '{  "CommandName": "GameMessageCommand",  "TableId": 42,  "Message": "SpongeBob just left the table",  "Info": {  "OptionType": "PlayerLeft",  "PlayerName": "SpongeBob"}}'
+
+def game_message_player_left_command_obj():
+    return GameMessageCommand(42, "SpongeBob just left the table", GameMessageOptionPlayerLeft("SpongeBob"))
 
 def player_turn_began_command_json():
-    return '{  "CommandName": "PlayerTurnBeganCommand",  "TableId": 42,  "NoSeat": 7, "AmountNeeded":21, "MinimumRaiseAmount": 42}'
+    return '{  "CommandName": "PlayerTurnBeganCommand",  "TableId": 42,  "NoSeat": 7,  "AmountNeeded": 21,  "CanFold": true,  "MinimumRaiseAmount": 42,  "MaximumRaiseAmount": 4200}'
 
 
 def player_turn_began_command_obj():
-    return PlayerTurnBeganCommand(42, 7, 21, 42)
+    return PlayerTurnBeganCommand(42, 7, 21, True, 42, 4200)
 
 
 def player_turn_ended_command_json():
@@ -290,7 +316,7 @@ def player_won_pot_command_obj():
 
 
 def seat_updated_command_json():
-    return '{  "CommandName": "SeatUpdatedCommand",  "TableId": 42,  "Seat": {    "NoSeat": 7,    "Player": {      "NoSeat": 7,      "Name": "SpongeBob",      "MoneySafeAmnt": 1000,      "MoneyBetAmnt": 42,      "HoleCards": [        "2s",        "Ah"      ],      "State": "Playing",      "IsShowingCards": true    },    "SeatAttributes": [      "CurrentPlayer",      "BigBlind"    ]  }}'
+    return '{  "CommandName": "SeatUpdatedCommand",  "TableId": 42,  "Seat": {    "NoSeat": 7,    "Player": {      "NoSeat": 7,      "Name": "SpongeBob",      "MoneySafeAmnt": 1000,      "MoneyBetAmnt": 42,      "FaceUpCards": [        "2s",        "Ah"      ],      "FaceDownCards": [        "??",        "??"      ],      "State": "Playing"    },    "SeatAttributes": [      "CurrentPlayer",      "BigBlind"    ]  }}'
 
 
 def seat_updated_command_obj():
@@ -303,14 +329,6 @@ def table_closed_command_json():
 
 def table_closed_command_obj():
     return TableClosedCommand(42)
-
-
-def table_info_command_json():
-    return '{  "CommandName": "TableInfoCommand",  "TableId": 42,  "Params": {    "TableName": "Bikini Bottom",    "GameType": "CommunityCardsPoker",    "Variant": "Texas Hold\'em",    "MinPlayersToStart": 2,    "MaxPlayers": 10,    "WaitingTimes": {      "AfterPlayerAction": 500,      "AfterBoardDealed": 500,      "AfterPotWon": 2500    },    "MoneyUnit": 10,    "Lobby": {      "OptionType": "QuickMode",      "StartingAmount": 1500    },    "Blind": {      "OptionType": "Blinds",      "MoneyUnit": 10    },    "Limit": {      "OptionType": "NoLimit"    }  },  "TotalPotAmount": 42000,  "PotsAmount": [    4200,    420  ],  "BoardCards": [    "2s",    "Kh",    "5d"  ],  "Seats": [    {      "NoSeat": 7,      "Player": {        "NoSeat": 7,        "Name": "SpongeBob",        "MoneySafeAmnt": 1000,        "MoneyBetAmnt": 42,        "HoleCards": [          "2s",          "Ah"        ],        "State": "Playing",        "IsShowingCards": true      },      "SeatAttributes": [        "CurrentPlayer",        "BigBlind"      ]    }, {      "NoSeat": 8,      "Player": null,      "SeatAttributes": [        "SmallBlind"      ]    }  ],  "GameHasStarted": true}'
-
-
-def table_info_command_obj():
-    return TableInfoCommand(42, table_params1_obj(), 42000, [4200, 420], ["2s", "Kh", "5d"], [seat_info_obj(),empty_seat_info_obj()], True)
 
 
 def player_discard_action_command_json():

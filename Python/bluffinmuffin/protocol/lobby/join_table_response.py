@@ -42,7 +42,6 @@ class JoinTableResponse(AbstractResponse):
             BluffinMessageIdEnum.parse(obj['MessageId']),
             obj['Message'],
             obj['Command'],
-            obj["TableId"],
             TableParams.decode(obj['Params']),
             obj["TotalPotAmount"],
             obj["PotsAmount"],
