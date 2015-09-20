@@ -80,12 +80,21 @@
 </ul>
 
 <h3>
-<a id="current-version-231-2015-09-07" class="anchor" href="#current-version-231-2015-09-07" aria-hidden="true"><span class="octicon octicon-link"></span></a>Current Version: <a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.3.1">2.3.1</a> <em>(2015-09-07)</em>
+<a id="current-version-300-2015-09-20" class="anchor" href="#current-version-300-2015-09-20" aria-hidden="true"><span class="octicon octicon-link"></span></a>Current Version: <a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v3.0.0">3.0.0</a> <em>(2015-09-20)</em>
 </h3>
 
 <ul>
-<li>Python correction to handle empty seats</li>
-<li>Python correction to handle amount_needed not sended by the server on player_turn_began</li>
+<li>GameTypeEnum now contrains Community, Stud &amp; Draw</li>
+<li>RoundTypeEnum is no more supported</li>
+<li>TableInfoCommand is now useless since JoinTableResponse, GameStarted and BetTurnStartedCommand command now have more information. TableInfoCommand have been removed. </li>
+<li>Cards in the hand of the player are now represented by FaceUpCards and FaceDownCards. PlayerInfo datatype and PlayerHoleCardsChangedCommand have been modified accordingly.</li>
+<li>CheckCompatibilityResponse now have an AvailableGames field instead of SupportedRules. GameInfo replaces RuleInfo.</li>
+<li>Available poker variants that can be implemented by the server are now listed in GameSubTypeEnum</li>
+<li>CreateTableCommand has been simplified</li>
+<li>Enhancement Issue #18: Validate email on registering</li>
+<li>Better support of Stud Poker</li>
+<li>PlayerTurnBeganCommand now have more information</li>
+<li>PlayerJoinedCommand and PlayerLeftCommand are replaced with GameMessageCommand.</li>
 <li><em><a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/CHANGELOG.md">Full changelog ...</a></em></li>
 </ul>
 
