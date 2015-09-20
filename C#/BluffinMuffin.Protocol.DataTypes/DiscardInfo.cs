@@ -1,7 +1,4 @@
-﻿using System.Linq;
-using BluffinMuffin.Protocol.DataTypes.Attributes;
-using BluffinMuffin.Protocol.DataTypes.Enums;
-using Newtonsoft.Json;
+﻿using BluffinMuffin.Protocol.DataTypes.Attributes;
 
 namespace BluffinMuffin.Protocol.DataTypes
 {

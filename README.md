@@ -19,18 +19,24 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
     
 ####Known Implementations
  * **[BluffinMuffin.Beta 0.6.0](http://ericmas001.github.io/BluffinMuffin.Beta)** *(Protocol v1.0.0)*
- * **[BluffinMuffin.Server 0.9.0](http://ericmas001.github.io/BluffinMuffin.Server)** *(Protocol v2.1.0)*
- * **[BluffinMuffin.Client 0.9.0](http://ericmas001.github.io/BluffinMuffin.Client)** *(Protocol v2.1.0)*
- * **[BluffinMuffin.AIClient](https://github.com/mgermain/BluffinMuffin.AIClient)** *(Protocol v2.2.0)*
+ * **[BluffinMuffin.Server 0.11.0](http://ericmas001.github.io/BluffinMuffin.Server)** *(Protocol v3.0.0)*
+ * **[BluffinMuffin.Client 0.11.0](http://ericmas001.github.io/BluffinMuffin.Client)** *(Protocol v3.0.0)*
+ * **[BluffinMuffin.AIClient](https://github.com/mgermain/BluffinMuffin.AIClient)** *(Protocol v2.3.1)*
 
  
 
-###Current Version: [2.3.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v2.3.0) *(2015-09-06)*
- * Correction in documentations (#22)
- * Adding "AmountNeeded" to the PlayerTurnBeganCommand (#29)
- * Python commands now accept data in __init__. Decoding json is now done with decode(obj)
- * Python tests now compare json with object
- * Python tests are now splitted in multiple tests, not juste one big ugly test
+###Current Version: [3.0.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v3.0.0) *(2015-09-20)*
+ * GameTypeEnum now contrains Community, Stud & Draw
+ * RoundTypeEnum is no more supported
+ * TableInfoCommand is now useless since JoinTableResponse, GameStarted and BetTurnStartedCommand command now have more information. TableInfoCommand have been removed. 
+ * Cards in the hand of the player are now represented by FaceUpCards and FaceDownCards. PlayerInfo datatype and PlayerHoleCardsChangedCommand have been modified accordingly.
+ * CheckCompatibilityResponse now have an AvailableGames field instead of SupportedRules. GameInfo replaces RuleInfo.
+ * Available poker variants that can be implemented by the server are now listed in GameSubTypeEnum
+ * CreateTableCommand has been simplified
+ * Enhancement Issue #18: Validate email on registering
+ * Better support of Stud Poker
+ * PlayerTurnBeganCommand now have more information
+ * PlayerJoinedCommand and PlayerLeftCommand are replaced with GameMessageCommand.
  * *[Full changelog ...](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/CHANGELOG.md)*
 
 

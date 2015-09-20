@@ -60,6 +60,7 @@ The client is telling the server that he wants to sit out
         "UsernameAlreadyUsed",
         "UsernameNotFound",
         "InvalidPassword",
+        "InvalidEmail",
         "SeatChanged",
         "NoMoreSeats",
         "NotAuthenticated",

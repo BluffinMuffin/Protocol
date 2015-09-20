@@ -50,13 +50,9 @@ These are all the commands that are used during the game. The *Client Commands* 
 
    This command is send by the server to inform everybody that the cards of a player just changed. This is used to inform a player of the cards he just got dealed, to inform other players that some cards has been dealt to a player, or to show cards to everybody at showdown.
    
- * **[PlayerJoinedCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Game.PlayerJoinedCommand.md)**
+ * **[GameMessageCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Game.GameMessageCommand.md)**
 
-   This command is there to inform players that someone just joined the table. This will be sent before the player sits in. If the player is only there to view, people are still notified of his presence.
-
- * **[PlayerLeftCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Game.PlayerLeftCommand.md)**
-
-   This command is there to inform players that someone just **left** the table. (Sitting out doesn't mean leaving)
+   This command is there to inform players of something. This is for additionnal information, ignoring this message should not change anything to the game.
    
  * **[PlayerTurnBeganCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Game.PlayerTurnBeganCommand.md)**
 
@@ -77,7 +73,3 @@ These are all the commands that are used during the game. The *Client Commands* 
  * **[TableClosedCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Game.TableClosedCommand.md)**
 
    Informs the clients that the table is closed and that there will be no more games on this table.
-
- * **[TableInfoCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Game.TableInfoCommand.md)**
-
-   Sends all the information about the current state of the table, to put everybody on the same page.

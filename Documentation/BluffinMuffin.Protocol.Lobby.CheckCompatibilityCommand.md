@@ -66,6 +66,7 @@ The supported version, all the supported lobby types and all the supported rules
         "UsernameAlreadyUsed",
         "UsernameNotFound",
         "InvalidPassword",
+        "InvalidEmail",
         "SeatChanged",
         "NoMoreSeats",
         "NotAuthenticated",
@@ -77,18 +78,14 @@ The supported version, all the supported lobby types and all the supported rules
       "description": "The message. Empty if no messages",
       "type": "string"
     },
-    "ImplementedProtocolVersion": {
-      "description": "The version of the Implemented Bluffin Protocol by the client, Represented as \"Major.Minor.Revision\"",
-      "type": "string"
-    },
-    "Rules": {
-      "description": "All the rules supported by the server",
+    "AvailableGames": {
+      "description": "The different games available on the server",
       "type": "array",
       "items": {
-        "type": "BluffinMuffin.Protocol.DataTypes.RuleInfo",
+        "type": "BluffinMuffin.Protocol.DataTypes.GameInfo",
         "properties": {
           "AvailableBlinds": {
-            "description": "Available Blind Options",
+            "description": "Available blind types for this type of game",
             "type": "array",
             "items": {
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
@@ -100,7 +97,7 @@ The supported version, all the supported lobby types and all the supported rules
             }
           },
           "AvailableLimits": {
-            "description": "Avaliable limits",
+            "description": "Available betting limits for this type of game",
             "type": "array",
             "items": {
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
@@ -111,63 +108,53 @@ The supported version, all the supported lobby types and all the supported rules
               ]
             }
           },
-          "AvailableLobbys": {
-            "description": "What kind of lobby are offered ?",
+          "AvailableVariants": {
+            "description": "Available variants of this type of game",
             "type": "array",
             "items": {
-              "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
+              "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameSubTypeEnum",
               "enum": [
-                "QuickMode",
-                "RegisteredMode"
+                "TexasHoldem",
+                "OmahaHoldem",
+                "Pineapple",
+                "CrazyPineapple",
+                "LazyPineapple",
+                "ThreeCardsHoldem",
+                "IrishPoker",
+                "SpanishPoker",
+                "ManilaPoker",
+                "FiveCardsStud",
+                "SevenCardsStud",
+                "FiveCardsDraw"
               ]
             }
-          },
-          "CanConfigWaitingTime": {
-            "description": "Are waiting times configurable ?? (At different stage of the game, the server will wait before continuing to making it feel real !)",
-            "type": "bool"
-          },
-          "DefaultBlind": {
-            "description": "Default Blind Option",
-            "type": "BluffinMuffin.Protocol.DataTypes.Enums.BlindTypeEnum",
-            "enum": [
-              "Blinds",
-              "Antes",
-              "None"
-            ]
-          },
-          "DefaultLimit": {
-            "description": "Default Limit",
-            "type": "BluffinMuffin.Protocol.DataTypes.Enums.LimitTypeEnum",
-            "enum": [
-              "NoLimit",
-              "FixedLimit",
-              "PotLimit"
-            ]
           },
           "GameType": {
             "description": "Type of Game",
             "type": "BluffinMuffin.Protocol.DataTypes.Enums.GameTypeEnum",
             "enum": [
-              "Holdem"
+              "CommunityCardsPoker",
+              "StudPoker",
+              "DrawPoker"
             ]
           },
           "MaxPlayers": {
-            "description": "Maximum amount of players that can sit at the table (Must be >= MinPlayers)",
+            "description": "Maximum number of player on the table",
             "type": "int"
           },
           "MinPlayers": {
-            "description": "Minimum amount of sitting player required to start a game",
+            "description": "Minimum number of player on the table to be able to play the game",
             "type": "int"
-          },
-          "Name": {
-            "description": "Name of the Variant",
-            "type": "string"
           }
         }
       }
     },
+    "ImplementedProtocolVersion": {
+      "description": "The version of the Implemented Bluffin Protocol by the client, Represented as \"Major.Minor.Revision\"",
+      "type": "string"
+    },
     "SupportedLobbyTypes": {
-      "description": "All the rules supported by the server",
+      "description": "The LobbyTypes available on the server",
       "type": "array",
       "items": {
         "type": "BluffinMuffin.Protocol.DataTypes.Enums.LobbyTypeEnum",
@@ -208,27 +195,24 @@ The supported version, all the supported lobby types and all the supported rules
     "QuickMode",
     "RegisteredMode"
   ],
-  "Rules": [
+  "AvailableGames": [
     {
-      "GameType": "Holdem",
-      "Name": "Texas Hold'em",
-      "MinPlayers": 2,
-      "MaxPlayers": 10,
+      "GameType": "CommunityCardsPoker",
+      "AvailableVariants": [
+        "TexasHoldem",
+        "OmahaHoldem",
+        "CrazyPineapple"
+      ],
       "AvailableLimits": [
-        "NoLimit"
+        "NoLimit",
+        "FixedLimit",
+        "PotLimit"
       ],
-      "DefaultLimit": "NoLimit",
       "AvailableBlinds": [
-        "Blinds",
-        "Antes",
-        "None"
+        "Blinds"
       ],
-      "DefaultBlind": "Blinds",
-      "CanConfigWaitingTime": true,
-      "AvailableLobbys": [
-        "QuickMode",
-        "RegisteredMode"
-      ]
+      "MinPlayers": 2,
+      "MaxPlayers": 10
     }
   ],
   "Command": {

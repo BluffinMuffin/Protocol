@@ -31,16 +31,19 @@ Server informs clients that a seat has changed state. Usually sent when player s
           "description": "The information of the player sitting in this seat. If null, there is nobody.",
           "type": "BluffinMuffin.Protocol.DataTypes.PlayerInfo",
           "properties": {
-            "HoleCards": {
-              "description": "The cards in the hands of the player",
+            "FaceDownCards": {
+              "description": "The cards in hand that are currently facing down (hidden to other players).",
               "type": "array",
               "items": {
                 "type": "string"
               }
             },
-            "IsShowingCards": {
-              "description": "true if the player cards are public (ex: during showdown)",
-              "type": "bool"
+            "FaceUpCards": {
+              "description": "The cards in hand that are currently facing up (visible to other players).",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             },
             "MoneyBetAmnt": {
               "description": "Current Money Amount of the player that he played this round",
@@ -80,7 +83,8 @@ Server informs clients that a seat has changed state. Usually sent when player s
               "Dealer",
               "SmallBlind",
               "BigBlind",
-              "CurrentPlayer"
+              "CurrentPlayer",
+              "FirstTalker"
             ]
           }
         }
@@ -103,12 +107,15 @@ Server informs clients that a seat has changed state. Usually sent when player s
       "Name": "SpongeBob",
       "MoneySafeAmnt": 1000,
       "MoneyBetAmnt": 42,
-      "HoleCards": [
+      "FaceUpCards": [
         "2s",
         "Ah"
       ],
-      "State": "Playing",
-      "IsShowingCards": true
+      "FaceDownCards": [
+        "??",
+        "??"
+      ],
+      "State": "Playing"
     },
     "SeatAttributes": [
       "CurrentPlayer",

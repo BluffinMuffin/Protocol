@@ -64,6 +64,7 @@ In Quick mode, you must **identify** yourself. This action puts a unique name to
         "UsernameAlreadyUsed",
         "UsernameNotFound",
         "InvalidPassword",
+        "InvalidEmail",
         "SeatChanged",
         "NoMoreSeats",
         "NotAuthenticated",

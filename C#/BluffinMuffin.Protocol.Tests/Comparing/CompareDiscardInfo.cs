@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using BluffinMuffin.Protocol.DataTypes;
+﻿using BluffinMuffin.Protocol.DataTypes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BluffinMuffin.Protocol.Tests.Comparing

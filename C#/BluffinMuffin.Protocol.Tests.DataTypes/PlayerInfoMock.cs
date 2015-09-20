@@ -13,8 +13,8 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
                 State = PlayerStateEnum.Playing,
                 NoSeat = 7,
                 Name = "Dora",
-                HoleCards = new[] { GameCardMock.AceOfClubs(), GameCardMock.JackOfHearts() },
-                IsShowingCards = true,
+                FaceDownCards = new[] { GameCardMock.AceOfClubs(), GameCardMock.JackOfHearts() },
+                FaceUpCards = new string[0],
                 MoneyBetAmnt = 84,
                 MoneySafeAmnt = 126
             };
@@ -27,8 +27,8 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
                 State = PlayerStateEnum.Zombie,
                 NoSeat = 6,
                 Name = "Diego",
-                HoleCards = new[] { GameCardMock.TenOfDiamonds(), GameCardMock.TwoOfSpades() },
-                IsShowingCards = true,
+                FaceDownCards = new[] { GameCardMock.TenOfDiamonds(), GameCardMock.TwoOfSpades() },
+                FaceUpCards = new[] { GameCardMock.AceOfClubs() },
                 MoneyBetAmnt = 21,
                 MoneySafeAmnt = 63
             };

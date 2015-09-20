@@ -13,6 +13,7 @@ namespace BluffinMuffin.Protocol.Tests
         {
             var c = GeneralCommandMock.DisconnectCommand();
             var dc =EncodeDecodeHelper.GetDecodedCommand(c);
+            Assert.AreEqual(c.CommandName, dc.CommandName);
         }
     }
 }

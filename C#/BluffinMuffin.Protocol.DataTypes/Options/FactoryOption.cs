@@ -3,9 +3,20 @@ using System.Linq;
 
 namespace BluffinMuffin.Protocol.DataTypes.Options
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="TOption"></typeparam>
+    /// <typeparam name="TEnum"></typeparam>
     public static class FactoryOption<TOption, TEnum>
         where TOption : IOption<TEnum>
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="enumValue"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         public static TOption GenerateOption(string enumValue)
         {
             if (!typeof(TEnum).IsEnum)

@@ -1,5 +1,6 @@
 ﻿using BluffinMuffin.Protocol.DataTypes.Attributes;
 using BluffinMuffin.Protocol.DataTypes.Enums;
+using Newtonsoft.Json;
 
 namespace BluffinMuffin.Protocol.DataTypes.Options
 {
@@ -11,16 +12,30 @@ namespace BluffinMuffin.Protocol.DataTypes.Options
         /// <summary>
         /// 
         /// </summary>
-        public override LobbyTypeEnum OptionType
-        {
-            get { return LobbyTypeEnum.RegisteredMode; }
-        }
+        public override LobbyTypeEnum OptionType => LobbyTypeEnum.RegisteredMode;
 
         /// <summary>
-        /// The Money unit. Should always be equal to the moneyUnit of the table.
+        /// MinimumBuyInParameter
         /// </summary>
-        [ExampleValue(10)]
-        public int MoneyUnit { get; set; }
+        [JsonIgnore]
+        public override BuyInParameterEnum MinimumBuyInParameter => BuyInParameterEnum.Multiplicator;
+
+        /// <summary>
+        /// MinimumBuyInValue
+        /// </summary>
+        [JsonIgnore]
+        public override int MinimumBuyInValue => 20;
+        /// <summary>
+        /// MaximumBuyInParameter
+        /// </summary>
+        [JsonIgnore]
+        public override BuyInParameterEnum MaximumBuyInParameter => IsMaximumBuyInLimited ? BuyInParameterEnum.Multiplicator : BuyInParameterEnum.Unlimited;
+
+        /// <summary>
+        /// MaximumBuyInValue
+        /// </summary>
+        [JsonIgnore]
+        public override int MaximumBuyInValue => 100;
 
         /// <summary>
         /// If Limited, the maximum buy-in will be 100*MoneyUnit. If not, a player can sit with all his money if he wants.
@@ -33,22 +48,7 @@ namespace BluffinMuffin.Protocol.DataTypes.Options
         /// </summary>
         public LobbyOptionsRegisteredMode()
         {
-            MoneyUnit = 10;
             IsMaximumBuyInLimited = false;
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public override int MaximumAmountForBuyIn
-        {
-            get { return IsMaximumBuyInLimited ? 100 * MoneyUnit : int.MaxValue; }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public override int MinimumAmountForBuyIn
-        {
-            get { return 20 * MoneyUnit; }
         }
     }
 }

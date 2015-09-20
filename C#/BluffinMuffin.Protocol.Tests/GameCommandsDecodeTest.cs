@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using BluffinMuffin.Protocol.DataTypes.Options;
 using BluffinMuffin.Protocol.Game;
 using BluffinMuffin.Protocol.Tests.Comparing;
 using BluffinMuffin.Protocol.Tests.Helpers;
@@ -42,6 +43,9 @@ namespace BluffinMuffin.Protocol.Tests
             Assert.AreEqual(c.BettingRoundId, dc.BettingRoundId);
             Assert.AreEqual(c.Cards.Length, dc.Cards.Length);
             Assert.IsFalse(c.Cards.Except(dc.Cards).Any());
+            Assert.AreEqual(c.Seats.Count, dc.Seats.Count);
+            for (int i = 0; i < c.Seats.Count; ++i)
+                CompareSeatInfo.Compare(c.Seats[i], dc.Seats[i]);
         }
         [TestMethod]
         public void DiscardRoundStartedCommand()
@@ -65,13 +69,18 @@ namespace BluffinMuffin.Protocol.Tests
         {
             var c = GameCommandMock.GameEndedCommand();
             var dc = GetDecodedCommand(c);
+            Assert.AreEqual(c.CommandName, dc.CommandName);
         }
+
         [TestMethod]
         public void GameStartedCommand()
         {
             var c = GameCommandMock.GameStartedCommand();
             var dc = GetDecodedCommand(c);
             Assert.AreEqual(c.NeededBlindAmount, dc.NeededBlindAmount);
+            Assert.AreEqual(c.Seats.Count, dc.Seats.Count);
+            for (int i = 0; i < c.Seats.Count; ++i)
+                CompareSeatInfo.Compare(c.Seats[i], dc.Seats[i]);
         }
         [TestMethod]
         public void PlayerDiscardActionCommand()
@@ -87,23 +96,98 @@ namespace BluffinMuffin.Protocol.Tests
             var c = GameCommandMock.PlayerHoleCardsChangedCommand();
             var dc = GetDecodedCommand(c);
             Assert.AreEqual(c.NoSeat, dc.NoSeat);
-            Assert.AreEqual(c.Cards.Length, dc.Cards.Length);
-            Assert.IsFalse(c.Cards.Except(dc.Cards).Any());
+            Assert.AreEqual(c.FaceDownCards.Length, dc.FaceDownCards.Length);
+            Assert.IsFalse(c.FaceDownCards.Except(dc.FaceDownCards).Any());
+            Assert.AreEqual(c.FaceUpCards.Length, dc.FaceUpCards.Length);
+            Assert.IsFalse(c.FaceUpCards.Except(dc.FaceUpCards).Any());
             Assert.AreEqual(c.PlayerState, dc.PlayerState);
         }
         [TestMethod]
-        public void PlayerJoinedCommand()
+        public void GameMessageCommandPlayerJoined()
         {
-            var c = GameCommandMock.PlayerJoinedCommand();
+            var c = GameCommandMock.GameMessageCommandPlayerJoined();
             var dc = GetDecodedCommand(c);
-            Assert.AreEqual(c.PlayerName, dc.PlayerName);
+            Assert.AreEqual(c.Message, dc.Message);
+            Assert.AreEqual(c.Info.OptionType, dc.Info.OptionType);
+
+            var ci = (GameMessageOptionPlayerJoined)c.Info;
+            var dci = (GameMessageOptionPlayerJoined)dc.Info;
+
+            Assert.AreEqual(ci.PlayerName, dci.PlayerName);
         }
         [TestMethod]
-        public void PlayerLeftCommand()
+        public void GameMessageCommandPlayerLeft()
         {
-            var c = GameCommandMock.PlayerLeftCommand();
+            var c = GameCommandMock.GameMessageCommandPlayerLeft();
             var dc = GetDecodedCommand(c);
-            Assert.AreEqual(c.PlayerName, dc.PlayerName);
+            Assert.AreEqual(c.Message, dc.Message);
+
+            var ci = (GameMessageOptionPlayerLeft)c.Info;
+            var dci = (GameMessageOptionPlayerLeft)dc.Info;
+
+            Assert.AreEqual(ci.OptionType, dci.OptionType);
+            Assert.AreEqual(ci.PlayerName, dci.PlayerName);
+        }
+        [TestMethod]
+        public void GameMessageCommandGeneralInformation()
+        {
+            var c = GameCommandMock.GameMessageCommandGeneralInformation();
+            var dc = GetDecodedCommand(c);
+            Assert.AreEqual(c.Message, dc.Message);
+
+            var ci = (GameMessageOptionGeneralInformation)c.Info;
+            var dci = (GameMessageOptionGeneralInformation)dc.Info;
+
+            Assert.AreEqual(ci.OptionType, dci.OptionType);
+            Assert.AreEqual(ci.Message, dci.Message);
+        }
+        [TestMethod]
+        public void GameMessageCommandRaisingCapped()
+        {
+            var c = GameCommandMock.GameMessageCommandRaisingCapped();
+            var dc = GetDecodedCommand(c);
+            Assert.AreEqual(c.Message, dc.Message);
+
+            var ci = (GameMessageOptionsRaisingCapped)c.Info;
+            var dci = (GameMessageOptionsRaisingCapped)dc.Info;
+
+            Assert.AreEqual(ci.OptionType, dci.OptionType);
+        }
+        [TestMethod]
+        public void GameMessageCommandStudBringIn()
+        {
+            var c = GameCommandMock.GameMessageCommandStudBringIn();
+            var dc = GetDecodedCommand(c);
+            Assert.AreEqual(c.Message, dc.Message);
+            Assert.AreEqual(c.Info.OptionType, dc.Info.OptionType);
+
+            var ci = (GameMessageOptionsStudBringIn)c.Info;
+            var dci = (GameMessageOptionsStudBringIn)dc.Info;
+
+            Assert.AreEqual(ci.OptionType, dci.OptionType);
+            Assert.AreEqual(ci.PlayerName, dci.PlayerName);
+            Assert.AreEqual(ci.LowestHand, dci.LowestHand);
+            Assert.AreEqual(ci.Cards.Length, dci.Cards.Length);
+            for (int i = 0; i < ci.Cards.Length; ++i)
+                Assert.AreEqual(ci.Cards[i], dci.Cards[i]);
+        }
+        [TestMethod]
+        public void GameMessageCommandStudHighestHand()
+        {
+            var c = GameCommandMock.GameMessageCommandStudHighestHand();
+            var dc = GetDecodedCommand(c);
+            Assert.AreEqual(c.Message, dc.Message);
+            Assert.AreEqual(c.Info.OptionType, dc.Info.OptionType);
+
+            var ci = (GameMessageOptionsStudHighestHand)c.Info;
+            var dci = (GameMessageOptionsStudHighestHand)dc.Info;
+
+            Assert.AreEqual(ci.OptionType, dci.OptionType);
+            Assert.AreEqual(ci.PlayerName, dci.PlayerName);
+            Assert.AreEqual(ci.HighestHand, dci.HighestHand);
+            Assert.AreEqual(ci.Cards.Length, dci.Cards.Length);
+            for (int i = 0; i < ci.Cards.Length; ++i)
+                Assert.AreEqual(ci.Cards[i], dci.Cards[i]);
         }
         [TestMethod]
         public void PlayerPlayMoneyCommand()
@@ -150,6 +234,9 @@ namespace BluffinMuffin.Protocol.Tests
             var dc = GetDecodedCommand(c);
             Assert.AreEqual(c.NoSeat, dc.NoSeat);
             Assert.AreEqual(c.MinimumRaiseAmount, dc.MinimumRaiseAmount);
+            Assert.AreEqual(c.MaximumRaiseAmount, dc.MaximumRaiseAmount);
+            Assert.AreEqual(c.AmountNeeded, dc.AmountNeeded);
+            Assert.AreEqual(c.CanFold, dc.CanFold);
         }
         [TestMethod]
         public void PlayerTurnEndedCommand()
@@ -191,22 +278,7 @@ namespace BluffinMuffin.Protocol.Tests
         {
             var c = GameCommandMock.TableClosedCommand();
             var dc = GetDecodedCommand(c);
-        }
-        [TestMethod]
-        public void TableInfoCommand()
-        {
-            var c = GameCommandMock.TableInfoCommand();
-            var dc = GetDecodedCommand(c);
-            CompareTableParams.Compare(c.Params, dc.Params);
-            Assert.AreEqual(c.TotalPotAmount, dc.TotalPotAmount);
-            Assert.AreEqual(c.PotsAmount.Count, dc.PotsAmount.Count);
-            Assert.IsFalse(c.PotsAmount.Except(dc.PotsAmount).Any());
-            Assert.AreEqual(c.BoardCards.Length, dc.BoardCards.Length);
-            Assert.IsFalse(c.BoardCards.Except(dc.BoardCards).Any());
-            Assert.AreEqual(c.Seats.Count, dc.Seats.Count);
-            for (int i = 0; i < c.Seats.Count; ++i)
-                CompareSeatInfo.Compare(c.Seats[i], dc.Seats[i]);
-            Assert.AreEqual(c.GameHasStarted, dc.GameHasStarted);
+            Assert.AreEqual(c.CommandName, dc.CommandName);
         }
 
         private static void ComparePlayerSitInCommand(PlayerSitInCommand c, PlayerSitInCommand dc)
@@ -216,6 +288,7 @@ namespace BluffinMuffin.Protocol.Tests
         }
         private static void ComparePlayerSitOutCommand(PlayerSitOutCommand c, PlayerSitOutCommand dc)
         {
+            Assert.AreEqual(c.CommandName, dc.CommandName);
         }
     }
 }

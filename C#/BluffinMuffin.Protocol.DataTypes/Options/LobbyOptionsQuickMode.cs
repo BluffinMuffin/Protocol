@@ -1,4 +1,5 @@
 ﻿using BluffinMuffin.Protocol.DataTypes.Enums;
+using Newtonsoft.Json;
 
 namespace BluffinMuffin.Protocol.DataTypes.Options
 {
@@ -10,10 +11,30 @@ namespace BluffinMuffin.Protocol.DataTypes.Options
         /// <summary>
         /// 
         /// </summary>
-        public override LobbyTypeEnum OptionType
-        {
-            get { return LobbyTypeEnum.QuickMode; }
-        }
+        public override LobbyTypeEnum OptionType => LobbyTypeEnum.QuickMode;
+
+        /// <summary>
+        /// MinimumBuyInParameter
+        /// </summary>
+        [JsonIgnore]
+        public override BuyInParameterEnum MinimumBuyInParameter => BuyInParameterEnum.FixedAmount;
+
+        /// <summary>
+        /// MinimumBuyInValue
+        /// </summary>
+        [JsonIgnore]
+        public override int MinimumBuyInValue => StartingAmount;
+        /// <summary>
+        /// MaximumBuyInParameter
+        /// </summary>
+        [JsonIgnore]
+        public override BuyInParameterEnum MaximumBuyInParameter => BuyInParameterEnum.FixedAmount;
+
+        /// <summary>
+        /// MaximumBuyInValue
+        /// </summary>
+        [JsonIgnore]
+        public override int MaximumBuyInValue => StartingAmount;
 
         /// <summary>
         /// The amount of money that will be given to every player that sits in.
@@ -26,21 +47,6 @@ namespace BluffinMuffin.Protocol.DataTypes.Options
         public LobbyOptionsQuickMode()
         {
             StartingAmount = 1500;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public override int MaximumAmountForBuyIn
-        {
-            get { return StartingAmount; }
-        }
-        /// <summary>
-        /// 
-        /// </summary>
-        public override int MinimumAmountForBuyIn
-        {
-            get { return StartingAmount; }
         }
     }
 }

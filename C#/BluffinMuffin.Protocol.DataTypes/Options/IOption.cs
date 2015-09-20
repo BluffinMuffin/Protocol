@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BluffinMuffin.Protocol.DataTypes.Options
+﻿namespace BluffinMuffin.Protocol.DataTypes.Options
 {
-    public interface IOption<T>
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    public interface IOption<out T>
     {
+        /// <summary>
+        /// 
+        /// </summary>
         T OptionType { get; }
     }
 }

@@ -1,10 +1,12 @@
 from bluffinmuffin.protocol.data_types import *
 
 
-def rule_info_obj():
-    return RuleInfo(GameTypeEnum.Holdem, "Texas Hold'em", 2, 10, [LimitTypeEnum.NoLimit], LimitTypeEnum.NoLimit,
-                    [BlindTypeEnum.Blinds, BlindTypeEnum.Antes, BlindTypeEnum.Nothing], BlindTypeEnum.Blinds, True,
-                    [LobbyTypeEnum.QuickMode, LobbyTypeEnum.RegisteredMode])
+def game_info_obj():
+    return GameInfo(GameTypeEnum.CommunityCardsPoker,
+                    [GameSubTypeEnum.TexasHoldem,GameSubTypeEnum.OmahaHoldem, GameSubTypeEnum.CrazyPineapple],
+                    [LimitTypeEnum.NoLimit, LimitTypeEnum.FixedLimit, LimitTypeEnum.PotLimit],
+                    [BlindTypeEnum.Blinds, BlindTypeEnum.Antes, BlindTypeEnum.Nothing],
+                    2, 10)
 
 
 def tuple_table1_obj():
@@ -24,33 +26,25 @@ def configurable_waiting_times_obj():
 
 
 def table_params1_obj():
-    return TableParams("Bikini Bottom", GameTypeEnum.Holdem, "Texas Hold'em", 2, 10, configurable_waiting_times_obj(),
-                       10, lobby_option_obj(), blind_option_obj(), limit_option_obj())
+    return TableParams("Bikini Bottom", GameSubTypeEnum.TexasHoldem, 2, 10, configurable_waiting_times_obj(),
+                       10, lobby_option_obj(), BlindTypeEnum.Blinds, LimitTypeEnum.NoLimit, "", game_type_option_obj())
 
 
 def table_params2_obj():
-    return TableParams("Pokemon World", GameTypeEnum.Holdem, "Texas Hold'em", 2, 10, configurable_waiting_times_obj(),
-                       10, lobby_option_obj(), antes_option_obj(), limit_option_obj())
+    return TableParams("Pokemon World", GameSubTypeEnum.TexasHoldem, 2, 10, configurable_waiting_times_obj(),
+                       10, lobby_option_obj(), BlindTypeEnum.Antes, LimitTypeEnum.NoLimit, "", game_type_option_obj())
 
 
-def blind_option_obj():
-    return BlindOptionsBlinds(10)
-
-
-def antes_option_obj():
-    return BlindOptionsAnte(10)
+def game_type_option_obj():
+    return GameTypeOptionsCommunity()
 
 
 def lobby_option_obj():
     return LobbyOptionsQuickMode(1500)
 
 
-def limit_option_obj():
-    return LimitOptionsNoLimit()
-
-
 def player_info_obj():
-    return PlayerInfo(7, "SpongeBob", 1000, 42, ["2s", "Ah"], PlayerStateEnum.Playing, True)
+    return PlayerInfo(7, "SpongeBob", 1000, 42, ["2s", "Ah"], ["??", "??"], PlayerStateEnum.Playing)
 
 
 def seat_info_obj():

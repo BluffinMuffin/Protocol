@@ -39,10 +39,7 @@ namespace BluffinMuffin.Protocol
         /// <summary>
         /// 
         /// </summary>
-        public override BluffinCommandEnum CommandType
-        {
-            get { return Command.CommandType; }
-        }
+        public override BluffinCommandEnum CommandType => Command.CommandType;
 
         /// <summary>
         /// 

@@ -41,6 +41,11 @@
         InvalidPassword,
 
         /// <summary>
+        /// InvalidEmail
+        /// </summary>
+        InvalidEmail,
+
+        /// <summary>
         /// SeatChanged
         /// </summary>
         SeatChanged,

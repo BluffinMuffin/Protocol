@@ -1,19 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BluffinMuffin.Protocol.DataTypes.EventHandling
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class SeatEventArgs : EventArgs
     {
-        private readonly SeatInfo m_Seat;
-        public SeatInfo Seat { get { return m_Seat; } }
+        /// <summary>
+        /// 
+        /// </summary>
+        public SeatInfo Seat { get; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="s"></param>
         public SeatEventArgs(SeatInfo s)
         {
-            m_Seat = s;
+            Seat = s;
         }
     }
 }

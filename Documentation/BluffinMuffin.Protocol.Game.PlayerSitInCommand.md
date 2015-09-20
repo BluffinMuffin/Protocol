@@ -70,6 +70,7 @@ The client is telling the server that he wants to sit at a specific seat
         "UsernameAlreadyUsed",
         "UsernameNotFound",
         "InvalidPassword",
+        "InvalidEmail",
         "SeatChanged",
         "NoMoreSeats",
         "NotAuthenticated",

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using BluffinMuffin.Protocol.DataTypes;
 using BluffinMuffin.Protocol.DataTypes.Enums;
+using BluffinMuffin.Protocol.DataTypes.Options;
 using BluffinMuffin.Protocol.Game;
 
 namespace BluffinMuffin.Protocol.Tests.DataTypes
@@ -14,7 +15,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static BetTurnStartedCommand BetTurnStartedCommand()
         {
-            return new BetTurnStartedCommand() { TableId = 42, Cards = new[] { "2s", "5h", "Jd", "Ac" }, BettingRoundId = 4 };
+            return new BetTurnStartedCommand() { TableId = 42, Cards = new[] { "2s", "5h", "Jd", "Ac" }, BettingRoundId = 4, Seats = SeatInfoMock.AllSeats() };
         }
 
         public static DiscardRoundStartedCommand DiscardRoundStartedCommand()
@@ -34,22 +35,42 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static GameStartedCommand GameStartedCommand()
         {
-            return new GameStartedCommand() {TableId = 42, NeededBlindAmount = 84};
+            return new GameStartedCommand() {TableId = 42, NeededBlindAmount = 84, Seats = SeatInfoMock.AllSeats()};
         }
 
         public static PlayerHoleCardsChangedCommand PlayerHoleCardsChangedCommand()
         {
-            return new PlayerHoleCardsChangedCommand() { TableId = 42, Cards = new[] { "2s", "5h" }, NoSeat = 7, PlayerState = PlayerStateEnum.Playing };
+            return new PlayerHoleCardsChangedCommand() { TableId = 42, FaceUpCards = new[] { "2s", "5h" }, FaceDownCards = new[] { "??", "??" }, NoSeat = 7, PlayerState = PlayerStateEnum.Playing };
         }
 
-        public static PlayerJoinedCommand PlayerJoinedCommand()
+        public static GameMessageCommand GameMessageCommandPlayerJoined()
         {
-            return new PlayerJoinedCommand() { TableId = 42, PlayerName = "SpongeBob" };
+            return new GameMessageCommand { TableId = 42, Info = new GameMessageOptionPlayerJoined { PlayerName = "SpongeBob" } };
         }
 
-        public static PlayerLeftCommand PlayerLeftCommand()
+        public static GameMessageCommand GameMessageCommandPlayerLeft()
         {
-            return new PlayerLeftCommand() { TableId = 42, PlayerName = "SpongeBob" };
+            return new GameMessageCommand { TableId = 42, Info = new GameMessageOptionPlayerLeft { PlayerName = "SpongeBob" } };
+        }
+
+        public static GameMessageCommand GameMessageCommandStudBringIn()
+        {
+            return new GameMessageCommand { TableId = 42, Info = new GameMessageOptionsStudBringIn {Cards = new[] { "2s", "5h" }, LowestHand = PokerHandEnum.HighCard, PlayerName = "SpongeBob"} };
+        }
+
+        public static GameMessageCommand GameMessageCommandStudHighestHand()
+        {
+            return new GameMessageCommand { TableId = 42, Info = new GameMessageOptionsStudHighestHand { Cards = new[] { "2s", "5h" }, HighestHand = PokerHandEnum.HighCard, PlayerName = "SpongeBob" } };
+        }
+
+        public static GameMessageCommand GameMessageCommandRaisingCapped()
+        {
+            return new GameMessageCommand { TableId = 42, Info = new GameMessageOptionsRaisingCapped() };
+        }
+
+        public static GameMessageCommand GameMessageCommandGeneralInformation()
+        {
+            return new GameMessageCommand { TableId = 42, Info = new GameMessageOptionGeneralInformation {Message="This is an important message from the server !!!"} };
         }
 
         public static PlayerPlayMoneyCommand PlayerPlayMoneyCommand()
@@ -86,7 +107,7 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
 
         public static PlayerTurnBeganCommand PlayerTurnBeganCommand()
         {
-            return new PlayerTurnBeganCommand() {TableId = 42, NoSeat = 7, MinimumRaiseAmount = 84};
+            return new PlayerTurnBeganCommand() {TableId = 42, NoSeat = 7, MinimumRaiseAmount = 84, MaximumRaiseAmount = 4200};
         }
 
         public static PlayerTurnEndedCommand PlayerTurnEndedCommand()
@@ -107,11 +128,6 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
         public static TableClosedCommand TableClosedCommand()
         {
             return new TableClosedCommand() {TableId = 42};
-        }
-
-        public static TableInfoCommand TableInfoCommand()
-        {
-            return new TableInfoCommand() { TableId = 42, Params = TableParamsMock.ParamsOne(), TotalPotAmount = 126, PotsAmount = new List<int>() { 5, 10, 15, 20 }, BoardCards = new[] { "2s", "5h", "Jd", "Ac" }, Seats = SeatInfoMock.AllSeats(), GameHasStarted = true };
         }
     }
 }

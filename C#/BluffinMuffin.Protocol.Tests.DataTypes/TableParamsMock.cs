@@ -10,22 +10,20 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
         {
             return new TableParams()
             {
-                Blind = new BlindOptionsAnte()
-                {
-                    MoneyUnit = 10
-                },
-                GameType = GameTypeEnum.Holdem,
-                MoneyUnit = 10,
-                Limit = new LimitOptionsNoLimit(),
-                Lobby = new LobbyOptionsQuickMode()
+                Blind = BlindTypeEnum.Blinds,
+                Options = new GameTypeOptionsCommunity(),
+                GameSize = 10,
+                Limit = LimitTypeEnum.NoLimit,
+                Lobby = new LobbyOptionsQuickMode
                 {
                     StartingAmount = 1500
                 },
                 MaxPlayers = 5,
                 MinPlayersToStart = 10,
                 TableName = "Table One",
-                Variant = "Wtf Is this field",
-                WaitingTimes = new ConfigurableWaitingTimes()
+                Arguments = "",
+                Variant = GameSubTypeEnum.TexasHoldem,
+                WaitingTimes = new ConfigurableWaitingTimes
                 {
                     AfterBoardDealed = 1,
                     AfterPlayerAction = 2,
@@ -37,23 +35,20 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
         {
             return new TableParams()
             {
-                Blind = new BlindOptionsBlinds()
+                Blind = BlindTypeEnum.Blinds,
+                Options = new GameTypeOptionsCommunity(),
+                GameSize = 100,
+                Limit = LimitTypeEnum.FixedLimit,
+                Lobby = new LobbyOptionsRegisteredMode
                 {
-                    MoneyUnit = 100
-                },
-                GameType = GameTypeEnum.Holdem,
-                MoneyUnit = 100,
-                Limit = new LimitOptionsPot(),
-                Lobby = new LobbyOptionsRegisteredMode()
-                {
-                    MoneyUnit = 100,
                     IsMaximumBuyInLimited = true
                 },
                 MaxPlayers = 10,
                 MinPlayersToStart = 8,
                 TableName = "Table Two",
-                Variant = "Wtf Is this field again",
-                WaitingTimes = new ConfigurableWaitingTimes()
+                Arguments = "",
+                Variant = GameSubTypeEnum.OmahaHoldem,
+                WaitingTimes = new ConfigurableWaitingTimes
                 {
                     AfterBoardDealed = 1,
                     AfterPlayerAction = 2,
@@ -65,23 +60,20 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
         {
             return new TableParams()
             {
-                Blind = new BlindOptionsNone()
+                Blind = BlindTypeEnum.Blinds,
+                Options = new GameTypeOptionsCommunity(),
+                GameSize = 1000,
+                Limit = LimitTypeEnum.NoLimit,
+                Lobby = new LobbyOptionsRegisteredMode
                 {
-                    MoneyUnit = 100
-                },
-                GameType = GameTypeEnum.Holdem,
-                MoneyUnit = 1000,
-                Limit = new LimitOptionsFixed(),
-                Lobby = new LobbyOptionsRegisteredMode()
-                {
-                    MoneyUnit = 100,
                     IsMaximumBuyInLimited = true
                 },
                 MaxPlayers = 6,
                 MinPlayersToStart = 3,
                 TableName = "Table Three",
-                Variant = "Wtf Is this field again!",
-                WaitingTimes = new ConfigurableWaitingTimes()
+                Arguments = "--verbose",
+                Variant = GameSubTypeEnum.CrazyPineapple,
+                WaitingTimes = new ConfigurableWaitingTimes
                 {
                     AfterBoardDealed = 1,
                     AfterPlayerAction = 2,

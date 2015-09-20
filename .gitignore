@@ -6,6 +6,8 @@
 /C#/*/obj
 *.~vsdx
 /BluffinMuffin.Protocol.v*.zip
+*.suo
+*.user
 
 *.py[cod]
 
