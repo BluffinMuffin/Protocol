@@ -5,17 +5,19 @@ from .check_compatibility_command import CheckCompatibilityCommand
 
 
 class CheckCompatibilityResponse(AbstractResponse):
-    def __init__(self, success, message_id, message, jsonCommand, implemented_protocol_version, supported_lobby_types,
-                 available_games):
+    def __init__(self, success, message_id, message, jsonCommand, implemented_protocol_version, server_identification,
+                 supported_lobby_types, available_games):
         super().__init__(success, message_id, message, CheckCompatibilityCommand.decode(jsonCommand))
         self.implemented_protocol_version = implemented_protocol_version
+        self.server_identification = server_identification
         self.supported_lobby_types = supported_lobby_types
         self.available_games = available_games
 
     def __str__(self):
-        return '{0} => {1} ({2}) ({3})'.format(
+        return '{0} => {1} {2} ({3}) ({4})'.format(
             super().__str__(),
             self.implemented_protocol_version,
+            self.server_identification,
             ', '.join([LobbyTypeEnum.to_string(x) for x in self.supported_lobby_types]),
             ', '.join([x.__str__() for x in self.available_games])
         )
@@ -23,6 +25,7 @@ class CheckCompatibilityResponse(AbstractResponse):
     def _encode_specific(self, d):
         super()._encode_specific(d)
         d['ImplementedProtocolVersion'] = self.implemented_protocol_version
+        d['ServerIdentification'] = self.server_identification
         d['SupportedLobbyTypes'] = [LobbyTypeEnum.to_string(x) for x in self.supported_lobby_types]
         d['AvailableGames'] = [x.encode() for x in self.available_games]
 
@@ -34,6 +37,7 @@ class CheckCompatibilityResponse(AbstractResponse):
             obj['Message'],
             obj['Command'],
             obj['ImplementedProtocolVersion'],
+            obj['ServerIdentification'],
             [LobbyTypeEnum.parse(x) for x in obj['SupportedLobbyTypes']],
             [GameInfo.decode(x) for x in obj['AvailableGames']]
         )
