@@ -10,19 +10,16 @@ namespace BluffinMuffin.Protocol.DataTypes.Enums
         /// <summary>
         /// NoLimit
         /// </summary>
-        [Description("No Limit")]
         NoLimit,
 
         /// <summary>
         /// FixedLimit
         /// </summary>
-        [Description("Fixed Limit")]
         FixedLimit,
 
         /// <summary>
         /// PotLimit
         /// </summary>
-        [Description("Pot Limit")]
         PotLimit
     }
 }
