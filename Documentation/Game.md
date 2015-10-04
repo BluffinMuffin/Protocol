@@ -2,6 +2,39 @@
 
 These are all the commands that are used during the game. The *Client Commands* are initiated by the client, and the *Server Informations* are initiated by the server.
 
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Sequences/BluffinMuffin.Protocol.Game.png"></p>
+
+## Initializing table
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Sequences/BluffinMuffin.Protocol.Game.Init.png"></p>
+
+Blablabla
+
+## Waiting for players
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Sequences/BluffinMuffin.Protocol.Game.WaitForPlayers.png"></p>
+
+Blablabla
+
+## Starting the game
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Sequences/BluffinMuffin.Protocol.Game.StartingGame.png"></p>
+
+Blablabla
+
+## Specific game variant logic
+
+Blablabla
+
+## Ending game
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Sequences/BluffinMuffin.Protocol.Game.EndingGame.png"></p>
+
+Blablabla
+
+## Closing table
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Sequences/BluffinMuffin.Protocol.Game.ClosingTable.png"></p>
+
+Blablabla
+
+# Game Command Index
+
 ## Client Commands
 
  * **[PlayerDiscardActionCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.Game.PlayerDiscardActionCommand.md)** 

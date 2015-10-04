@@ -95,6 +95,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Activities", "Activities", 
 		..\Documentation\Activities\LobbyActivity.vsdx = ..\Documentation\Activities\LobbyActivity.vsdx
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Game", "Game", "{EB943A5A-9E23-4EFA-BD20-5D25CEDB4859}"
+	ProjectSection(SolutionItems) = preProject
+		..\Documentation\Activities\GameActivities.vsdx = ..\Documentation\Activities\GameActivities.vsdx
+		..\Documentation\Activities\Protocol.Game.ClosingTable.png = ..\Documentation\Activities\Protocol.Game.ClosingTable.png
+		..\Documentation\Activities\Protocol.Game.EndingGame.png = ..\Documentation\Activities\Protocol.Game.EndingGame.png
+		..\Documentation\Activities\Protocol.Game.Init.png = ..\Documentation\Activities\Protocol.Game.Init.png
+		..\Documentation\Activities\Protocol.Game.png = ..\Documentation\Activities\Protocol.Game.png
+		..\Documentation\Activities\Protocol.Game.StartingGame.png = ..\Documentation\Activities\Protocol.Game.StartingGame.png
+		..\Documentation\Activities\Protocol.Game.WaitForPlayers.png = ..\Documentation\Activities\Protocol.Game.WaitForPlayers.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -190,5 +201,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D22EA46B-64A4-4DAC-9093-6184BC4A498E} = {E469F8A0-7DB7-48CF-B40A-03BE833DD893}
 		{DA8A9842-8831-44D5-A23F-B20310BF14CE} = {E469F8A0-7DB7-48CF-B40A-03BE833DD893}
+		{EB943A5A-9E23-4EFA-BD20-5D25CEDB4859} = {DA8A9842-8831-44D5-A23F-B20310BF14CE}
 	EndGlobalSection
 EndGlobal
