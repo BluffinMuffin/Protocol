@@ -13,7 +13,7 @@ At this stage, we wait for palyer to join the game and sit in. We stay in this s
 
    The client is telling the server that he wants to sit out
 
-## SENT Commands
+## SEND Commands
    
  * **[PlayerSitInResponse](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/BluffinMuffin.Protocol.Game.PlayerSitInCommand.md#playersitinresponse)**
 
