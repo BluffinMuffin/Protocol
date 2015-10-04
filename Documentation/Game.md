@@ -5,11 +5,11 @@ These are all the commands that are used during the game. The *Client Commands* 
 <p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Activities/Protocol.Game.png"></p>
 
  * [Initializing table](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.Init.md)
- * [Waiting for players](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.Init.md)
- * [Starting the game](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.Init.md)
- * [Specific game variant logic](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.Init.md)
- * [Ending game](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.Init.md)
- * [Closing table](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.Init.md)
+ * [Waiting for players](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.WaitForPlayers.md)
+ * [Starting the game](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.StartingGame.md)
+ * [Specific game variant logic](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.VariantGameLogic.md)
+ * [Ending game](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.EndingGame.md)
+ * [Closing table](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.ClosingTable.md)
 
 
 # Game Command Index
