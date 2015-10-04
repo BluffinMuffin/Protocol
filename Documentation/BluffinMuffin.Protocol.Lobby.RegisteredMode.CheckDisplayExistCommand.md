@@ -2,9 +2,9 @@
 
 In the User Creation Process, it's useful to check if the display name is already taken. You can then validate the display name before actually creating the user. (Display name is the name viewed by other players on the table)
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckDisplayExistCommand.png" alt="Sequence Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckDisplayExistCommand.png" alt="Sequence Diagram"></p>
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Activities/BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckDisplayExistCommand.png" alt="Activity Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Activities/BluffinMuffin.Protocol.Lobby.RegisteredMode.CheckDisplayExistCommand.png" alt="Activity Diagram"></p>
 
 ## CheckDisplayExistCommand
 
