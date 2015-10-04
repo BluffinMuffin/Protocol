@@ -1,5 +1,19 @@
 # 3.*
 
+## 3.1.*
+
+### [3.1.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v3.1.0) *(2015-10-04)*
+ * Enhancement Issue #36: Adding ClientIdentification & ServerIdentification
+ * The DLLs are now portable
+  * .NET Framework 4
+  * Silverlight 5
+  * Windows 8
+  * Windows Phone 8.1
+  * Windows Phone Silverlight 8
+  * Xamarin.Android
+  * Xamarin.iOS
+  * Xamarin.iOS (Classic)
+
 ## 3.0.*
 
 ### [3.0.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v3.0.0) *(2015-09-20)*
