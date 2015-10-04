@@ -26,6 +26,7 @@ namespace BluffinMuffin.Protocol.Tests
             var dc = EncodeDecodeHelper.GetDecodedCommand(c);
 
             Assert.AreEqual(c.ImplementedProtocolVersion, dc.ImplementedProtocolVersion);
+            Assert.AreEqual(c.ServerIdentification, dc.ServerIdentification);
             Assert.IsFalse(c.SupportedLobbyTypes.Except(dc.SupportedLobbyTypes).Any());
             Assert.AreEqual(c.AvailableGames.Length, dc.AvailableGames.Length);
             for (int i = 0; i < c.AvailableGames.Length; ++i)
@@ -109,7 +110,8 @@ namespace BluffinMuffin.Protocol.Tests
 
         private static void CompareCheckCompatibilityCommand(CheckCompatibilityCommand c, CheckCompatibilityCommand dc)
         {
-            Assert.AreEqual(c.ImplementedProtocolVersion,dc.ImplementedProtocolVersion);
+            Assert.AreEqual(c.ImplementedProtocolVersion, dc.ImplementedProtocolVersion);
+            Assert.AreEqual(c.ClientIdentification, dc.ClientIdentification);
         }
 
         private static void CompareListTableCommand(ListTableCommand c, ListTableCommand dc)

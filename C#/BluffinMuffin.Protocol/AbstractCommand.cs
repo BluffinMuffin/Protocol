@@ -32,8 +32,8 @@ namespace BluffinMuffin.Protocol
         /// </summary>
         public static AbstractCommand DeserializeCommand(string data)
         {
-            var cmd = JsonConvert.DeserializeObject<AbstractCommand>(data);
-            Type commType = Assembly.GetExecutingAssembly().GetTypes().Single(t => t.IsClass && !t.IsAbstract && t.IsSubclassOf(typeof(AbstractCommand)) && t.Name == cmd.CommandName);
+            var cmd = JsonConvert.DeserializeObject<JObject>(data);
+            Type commType = Assembly.GetExecutingAssembly().GetTypes().Single(t => t.IsClass && !t.IsAbstract && t.IsSubclassOf(typeof(AbstractCommand)) && t.Name == cmd["CommandName"].Value<string>());
             MethodInfo method = typeof(JsonConvert).GetMethods().First(m => m.Name == "DeserializeObject" && m.IsGenericMethod).MakeGenericMethod(commType);
             return (AbstractCommand)method.Invoke(null, new object[] { data });
         }
