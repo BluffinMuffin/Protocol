@@ -6,4 +6,4 @@ Because of the stripped deck, a flush beats a full house. Also, an ace may not b
 
  * [Wikipedia](https://en.wikipedia.org/wiki/Community_card_poker#Manila)
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/Protocol.Game.Variant.Holdem.ManilaPoker.png"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Activities/Protocol.Game.Variant.Holdem.ManilaPoker.png"></p>

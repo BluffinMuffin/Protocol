@@ -4,9 +4,9 @@ This should be sent one time, at the beginning, to know what the server can do.
 
 The supported version, all the supported lobby types and all the supported rules are then sent back to the client.
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.png" alt="Sequence Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.png" alt="Sequence Diagram"></p>
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.png" alt="Activity Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Activities/BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.png" alt="Activity Diagram"></p>
 
 ## CheckCompatibilityCommand
 

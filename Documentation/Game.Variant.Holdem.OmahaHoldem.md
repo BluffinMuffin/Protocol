@@ -6,4 +6,4 @@ Omaha uses a 52-card French deck. Limit Omaha hold 'em 8-or-better is the "O" ga
 
  * [Wikipedia](https://en.wikipedia.org/wiki/Omaha_hold_%27em)
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/Protocol.Game.Variant.Holdem.OmahaHoldem.png"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Activities/Protocol.Game.Variant.Holdem.OmahaHoldem.png"></p>
