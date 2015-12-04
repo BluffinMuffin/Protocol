@@ -37,12 +37,6 @@ namespace BluffinMuffin.Protocol.DataTypes
         public int MoneyBetAmnt { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        [JsonIgnore]
-        public string[] Cards => FaceDownCards.Concat(FaceUpCards).ToArray();
-
-        /// <summary>
         /// The cards in hand that are currently facing up (visible to other players).
         /// </summary>
         [ExampleValues(2, "2s", "Ah")]
@@ -69,7 +63,6 @@ namespace BluffinMuffin.Protocol.DataTypes
             NoSeat = -1;
             MoneySafeAmnt = 0;
             MoneyBetAmnt = 0;
-            State = PlayerStateEnum.Zombie;
             FaceUpCards = new string[0];
             FaceDownCards = new string[0];
         }
@@ -86,6 +79,12 @@ namespace BluffinMuffin.Protocol.DataTypes
             Name = name;
             MoneySafeAmnt = money;
         }
+
+        /// <summary>
+        /// All the Cards Facing up or down
+        /// </summary>
+        [JsonIgnore]
+        public string[] Cards => FaceDownCards.Concat(FaceUpCards).ToArray();
 
         /// <summary>
         /// Current Money Amount of the player (Safe + Bet)
@@ -110,56 +109,6 @@ namespace BluffinMuffin.Protocol.DataTypes
                 State = State,
             };
         }
-
-        /// <summary>
-        /// Check if the player has enough money to bet some amount
-        /// </summary>
-        public bool CanBet(int amnt)
-        {
-            return amnt <= MoneySafeAmnt;
-        }
-
-        /// <summary>
-        /// Tries to put some money on the table
-        /// </summary>
-        /// <returns>True if the money has been successfully played</returns>
-        public bool TryBet(int amnt)
-        {
-            if (!CanBet(amnt))
-            {
-                return false;
-            }
-
-            MoneySafeAmnt -= amnt;
-            MoneyBetAmnt += amnt;
-            return true;
-        }
-
-        /// <summary>
-        /// Is the player Playing ? False if Folded, AllIn or NotPlaying
-        /// If set to true, IsAllIn must be false
-        /// </summary>
-        [JsonIgnore]
-        public bool IsPlaying => State == PlayerStateEnum.Playing;
-
-        /// <summary>
-        /// Is the player AllIn ?
-        /// If set to true, IsPlaying must be false
-        /// </summary>
-        [JsonIgnore]
-        public bool IsAllIn => State == PlayerStateEnum.AllIn;
-
-        /// <summary>
-        /// A player who was playing but disconnected is a Zombie. He will remain in place and put blinds / check / fold
-        /// </summary>
-        [JsonIgnore]
-        public bool IsZombie => State == PlayerStateEnum.Zombie;
-
-        /// <summary>
-        /// A player who can play has money and is seated !
-        /// </summary>
-        [JsonIgnore]
-        public bool CanPlay => NoSeat >= 0 && MoneySafeAmnt > 0;
 
         /// <summary>
         /// 

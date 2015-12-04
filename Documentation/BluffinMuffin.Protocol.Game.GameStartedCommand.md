@@ -73,7 +73,7 @@ It's important to understand that a *game* is only one iteration. It's starts wi
                 "description": "Current state of the player",
                 "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
                 "enum": [
-                  "Zombie",
+                  "None",
                   "Joined",
                   "SitIn",
                   "AllIn",

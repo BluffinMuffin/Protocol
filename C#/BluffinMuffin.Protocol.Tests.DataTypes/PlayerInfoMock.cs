@@ -24,7 +24,6 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
         {
             return new PlayerInfo()
             {
-                State = PlayerStateEnum.Zombie,
                 NoSeat = 6,
                 Name = "Diego",
                 FaceDownCards = new[] { GameCardMock.TenOfDiamonds(), GameCardMock.TwoOfSpades() },

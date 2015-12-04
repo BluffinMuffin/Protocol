@@ -1,8 +1,10 @@
-# 3.*
+# 4.*
 
-## 3.1.*
+## 4.0.*
 
-### [3.1.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v3.1.0) *(2015-10-04)*
+### [4.0.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v4.0.0) *(2015-12-04)*
+ * Documentation for Game Commands (#17)
+ * Removing unsused stuff that was only for the server side
  * Enhancement Issue #36: Adding ClientIdentification & ServerIdentification
  * The DLLs are now portable
   * .NET Framework 4
@@ -13,6 +15,8 @@
   * Xamarin.Android
   * Xamarin.iOS
   * Xamarin.iOS (Classic)
+
+# 3.*
 
 ## 3.0.*
 

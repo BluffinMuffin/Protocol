@@ -65,7 +65,7 @@ Server informs clients that a seat has changed state. Usually sent when player s
               "description": "Current state of the player",
               "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
               "enum": [
-                "Zombie",
+                "None",
                 "Joined",
                 "SitIn",
                 "AllIn",
