@@ -1,10 +1,7 @@
-# Game - Community Cards (Hold'em) - Crazy Pineapple
+# Game - Stud - Five Card Stud
 
-Pineapple hold'em exists halfway between Texas hold'em and Omaha hold'em and has been very popular in Australia and South America, specifically in Medellin, Colombia, where it was first introduced in a private poker room since 2010. Players are initially dealt three cards. Each player then discards one of the three cards (Pre-flop, Post-flop or at Showdown), and the game proceeds exactly as in Texas hold'em.
+Seven-card stud, also known as Seven-Toed Pete or Down-The-River is a variant of stud poker. Until the recent increase in popularity of Texas hold 'em, seven-card stud was the most widely played poker variant in home games across the United States, and in casinos in the eastern part of the country. Two to eight players is common, though eight may require special rules for the last cards dealt if no players fold. With experienced players who fold often, even playing with nine players is possible. 
 
-*Crazy Pineapple:* Players discard their third (unwanted or unneeded) card after the flop, before the fourth community card is dealt.
+ * [Wikipedia](https://en.wikipedia.org/wiki/Seven-card_stud)
 
- * [Wikipedia](https://en.wikipedia.org/wiki/Community_card_poker#Crazy_Pineapple)
- * [PokerListing](http://www.pokerlistings.com/pineapple-rules-complete-rules-strategy-for-crazy-pineapple-poker)
-
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Activities/Protocol.Game.Variant.Holdem.CrazyPineapple.png"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Activities/Protocol.Game.Variant.Stud.SevenCardsStud.png"></p>
