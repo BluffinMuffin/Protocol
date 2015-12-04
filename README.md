@@ -25,7 +25,7 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
 
  
 
-###Current Version: [4.0.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v4.0.0) *(2015-??)*
+###Current Version: [4.0.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v4.0.0) *(2015-12-04)*
  * Documentation for Game Commands (#17)
  * Removing unsused stuff that was only for the server side
  * Enhancement Issue #36: Adding ClientIdentification & ServerIdentification
