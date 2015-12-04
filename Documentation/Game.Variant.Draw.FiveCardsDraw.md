@@ -4,4 +4,4 @@ Five-card draw (also known as a Cantrell draw) is a poker variant that is consid
 
  * [Wikipedia](https://en.wikipedia.org/wiki/Five-card_draw)
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Activities/Protocol.Game.Variant.Draw.FiveCardsDraw.png"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/Protocol.Game.Variant.Draw.FiveCardsDraw.png"></p>

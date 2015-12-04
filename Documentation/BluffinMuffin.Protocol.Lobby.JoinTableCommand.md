@@ -4,9 +4,9 @@ To join a table, you have to send a **Join Table ** command with the id of the t
 
 The success of the operation will be sent back
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.JoinTableCommand.png" alt="Sequence Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.JoinTableCommand.png" alt="Sequence Diagram"></p>
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Activities/BluffinMuffin.Protocol.Lobby.JoinTableCommand.png" alt="Activity Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/BluffinMuffin.Protocol.Lobby.JoinTableCommand.png" alt="Activity Diagram"></p>
 
 ## JoinTableCommand
 

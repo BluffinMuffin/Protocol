@@ -7,4 +7,4 @@ Pineapple hold'em exists halfway between Texas hold'em and Omaha hold'em and has
  * [Wikipedia](https://en.wikipedia.org/wiki/Community_card_poker#Tahoe_.28Lazy_Pineapple.29)
  * [PokerListing](http://www.pokerlistings.com/pineapple-rules-complete-rules-strategy-for-crazy-pineapple-poker)
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Activities/Protocol.Game.Variant.Holdem.LazyPineapple.png"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/Protocol.Game.Variant.Holdem.LazyPineapple.png"></p>

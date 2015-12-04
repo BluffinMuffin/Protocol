@@ -2,9 +2,9 @@
 
 This command is sent to inform the other end of the Tcp Connection that the communication should end
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Sequences/BluffinMuffin.Protocol.DisconnectCommand.png" alt="Sequence Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Sequences/BluffinMuffin.Protocol.DisconnectCommand.png" alt="Sequence Diagram"></p>
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Activities/BluffinMuffin.Protocol.DisconnectCommand.png" alt="Activity Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/BluffinMuffin.Protocol.DisconnectCommand.png" alt="Activity Diagram"></p>
 
 ## DisconnectCommand
 

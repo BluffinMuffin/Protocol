@@ -2,9 +2,9 @@
 
 In Quick mode, you must **identify** yourself. This action puts a unique name to your Tcp Connection for the server. This name will be used as your playername on every table that you will play.
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.png" alt="Sequence Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.png" alt="Sequence Diagram"></p>
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Activities/BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.png" alt="Activity Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/BluffinMuffin.Protocol.Lobby.QuickMode.IdentifyCommand.png" alt="Activity Diagram"></p>
 
 ## IdentifyCommand
 

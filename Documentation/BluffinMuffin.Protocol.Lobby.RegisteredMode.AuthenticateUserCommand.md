@@ -2,9 +2,9 @@
 
 This command will try to authenticate the client against the user database on the server.
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand.png" alt="Sequence Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand.png" alt="Sequence Diagram"></p>
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Activities/BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand.png" alt="Activity Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/BluffinMuffin.Protocol.Lobby.RegisteredMode.AuthenticateUserCommand.png" alt="Activity Diagram"></p>
 
 ## AuthenticateUserCommand
 

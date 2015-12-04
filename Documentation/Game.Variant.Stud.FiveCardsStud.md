@@ -4,4 +4,4 @@ Five-card stud is the earliest form of the card game stud poker, originating dur
 
  * [Wikipedia](https://en.wikipedia.org/wiki/Five-card_stud)
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Activities/Protocol.Game.Variant.Stud.FiveCardsStud.png"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/Protocol.Game.Variant.Stud.FiveCardsStud.png"></p>

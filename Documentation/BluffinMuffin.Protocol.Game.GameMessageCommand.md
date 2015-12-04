@@ -4,7 +4,7 @@ This command is there to inform players of something. This is for additionnal in
 
 More information on ...
 
-* [GameMessageOption](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/BluffinMuffin.Protocol.DataTypes.Options.GameMessageOption.md)
+* [GameMessageOption](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/BluffinMuffin.Protocol.DataTypes.Options.GameMessageOption.md)
 
 ## GameMessageCommand
 

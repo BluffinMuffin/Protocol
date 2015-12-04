@@ -4,9 +4,9 @@ To list tables, you have to send a **List Table** command with the types of lobb
 
 The list of active tables will be sent back
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.ListTableCommand.png" alt="Sequence Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.ListTableCommand.png" alt="Sequence Diagram"></p>
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Activities/BluffinMuffin.Protocol.Lobby.ListTableCommand.png" alt="Activity Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/BluffinMuffin.Protocol.Lobby.ListTableCommand.png" alt="Activity Diagram"></p>
 
 ## ListTableCommand
 

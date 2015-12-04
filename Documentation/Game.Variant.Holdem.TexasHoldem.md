@@ -6,4 +6,4 @@ Texas Hold 'em is the "H" game featured in H.O.R.S.E and in H.O.S.E.
 
  * [Wikipedia](https://en.wikipedia.org/wiki/Texas_hold_%27em)
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Activities/Protocol.Game.Variant.Holdem.TexasHoldem.png"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/Protocol.Game.Variant.Holdem.TexasHoldem.png"></p>
