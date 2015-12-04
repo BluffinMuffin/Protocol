@@ -3,9 +3,9 @@
 At this stage, each variant of the game have it's own logic. You can see the logic of each supported game variant below:
  * [TexasHoldem](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.Variant.Holdem.TexasHoldem.md)
  * [OmahaHoldem](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.Variant.Holdem.OmahaHoldem.md)
- * Pineapple
- * CrazyPineapple
- * LazyPineapple
+ * [Pineapple](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.Variant.Holdem.Pineapple.md)
+ * [CrazyPineapple](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.Variant.Holdem.CrazyPineapple.md)
+ * [LazyPineapple](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.Variant.Holdem.LazyPineapple.md)
  * ThreeCardsHoldem
  * IrishPoker
  * SpanishPoker
