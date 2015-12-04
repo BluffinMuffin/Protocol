@@ -4,4 +4,4 @@ Seven-card stud, also known as Seven-Toed Pete or Down-The-River is a variant of
 
  * [Wikipedia](https://en.wikipedia.org/wiki/Seven-card_stud)
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/Protocol.Game.Variant.Stud.SevenCardsStud.png"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Activities/Protocol.Game.Variant.Stud.SevenCardsStud.png"></p>

@@ -6,4 +6,4 @@ Pineapple hold'em exists halfway between Texas hold'em and Omaha hold'em and has
 
  * [PokerListing](http://www.pokerlistings.com/pineapple-rules-complete-rules-strategy-for-crazy-pineapple-poker)
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/Protocol.Game.Variant.Holdem.ThreeCardsHoldem.png"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Activities/Protocol.Game.Variant.Holdem.ThreeCardsHoldem.png"></p>

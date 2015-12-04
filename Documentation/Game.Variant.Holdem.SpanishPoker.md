@@ -6,4 +6,4 @@ All players are dealt 2 cards pre-flop and are then allowed to bet. After the fl
 
  * [Wikipedia](https://en.wikipedia.org/wiki/Spanish_poker)
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/Protocol.Game.Variant.Holdem.SpanishPoker.png"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Activities/Protocol.Game.Variant.Holdem.SpanishPoker.png"></p>
