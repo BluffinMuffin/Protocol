@@ -12,8 +12,13 @@ namespace BluffinMuffin.Protocol.Lobby
         /// <summary>
         /// The version of the Implemented Bluffin Protocol by the client, Represented as "Major.Minor.Revision"
         /// </summary>
-        [ExampleValue("2.0.0")]
+        [ExampleValue("3.0.0")]
         public string ImplementedProtocolVersion { get; set; }
+        /// <summary>
+        /// Something to identify what is the client.
+        /// </summary>
+        [ExampleValue("BluffinMuffin.Client .Net 1.0.0")]
+        public string ClientIdentification { get; set; }
         /// <summary>
         /// 
         /// </summary>

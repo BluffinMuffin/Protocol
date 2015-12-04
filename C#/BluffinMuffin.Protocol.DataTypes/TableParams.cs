@@ -97,43 +97,5 @@ namespace BluffinMuffin.Protocol.DataTypes
             Limit = LimitTypeEnum.NoLimit;
             Options = new GameTypeOptionsCommunity();
         }
-
-        /// <summary>
-        /// MinimumBuyInAmount
-        /// </summary>
-        [JsonIgnore]
-        public int MinimumBuyInAmount
-        {
-            get
-            {
-                switch (Lobby.MinimumBuyInParameter)
-                {
-                    case BuyInParameterEnum.FixedAmount:
-                        return Lobby.MinimumBuyInValue;
-                    case BuyInParameterEnum.Multiplicator:
-                        return Lobby.MinimumBuyInValue*GameSize;
-                }
-                return 0;
-            }
-        }
-
-        /// <summary>
-        /// MaximumBuyInAmount
-        /// </summary>
-        [JsonIgnore]
-        public int MaximumBuyInAmount
-        {
-            get
-            {
-                switch (Lobby.MaximumBuyInParameter)
-                {
-                    case BuyInParameterEnum.FixedAmount:
-                        return Lobby.MaximumBuyInValue;
-                    case BuyInParameterEnum.Multiplicator:
-                        return Lobby.MaximumBuyInValue * GameSize;
-                }
-                return int.MaxValue;
-            }
-        }
     }
 }

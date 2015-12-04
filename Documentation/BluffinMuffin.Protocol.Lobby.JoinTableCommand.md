@@ -4,9 +4,9 @@ To join a table, you have to send a **Join Table ** command with the id of the t
 
 The success of the operation will be sent back
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.JoinTableCommand.png" alt="Sequence Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.JoinTableCommand.png" alt="Sequence Diagram"></p>
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Activities/BluffinMuffin.Protocol.Lobby.JoinTableCommand.png" alt="Activity Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/BluffinMuffin.Protocol.Lobby.JoinTableCommand.png" alt="Activity Diagram"></p>
 
 ## JoinTableCommand
 
@@ -253,7 +253,7 @@ The success of the operation will be sent back
                 "description": "Current state of the player",
                 "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
                 "enum": [
-                  "Zombie",
+                  "None",
                   "Joined",
                   "SitIn",
                   "AllIn",

@@ -92,20 +92,21 @@ def list_table_response_obj():
 
 
 def check_compatibility_command_json():
-    return '{  "CommandName": "CheckCompatibilityCommand",  "ImplementedProtocolVersion": "2.0.0"}'
+    return '{  "CommandName": "CheckCompatibilityCommand",  "ImplementedProtocolVersion": "3.0.0",  "ClientIdentification": "BluffinMuffin.Client Python 1.0.0"}'
 
 
 def check_compatibility_command_obj():
-    return CheckCompatibilityCommand("2.0.0")
+    return CheckCompatibilityCommand("3.0.0","BluffinMuffin.Client Python 1.0.0")
 
 
 def check_compatibility_response_json():
-    return '{  "CommandName": "CheckCompatibilityResponse",  "Success": true,  "MessageId": "None",  "Message": "",  "ImplementedProtocolVersion": "2.0.0",  "SupportedLobbyTypes": [    "QuickMode",    "RegisteredMode"  ],  "AvailableGames": [    {      "GameType": "CommunityCardsPoker",      "AvailableVariants": [        "TexasHoldem",        "OmahaHoldem",        "CrazyPineapple"      ],      "AvailableLimits": [        "NoLimit",        "FixedLimit",        "PotLimit"      ],      "AvailableBlinds": [        "Blinds", "Antes", "None"      ],      "MinPlayers": 2,      "MaxPlayers": 10    }  ],  "Command": {    "CommandName": "CheckCompatibilityCommand",    "ImplementedProtocolVersion": "2.0.0"  }}'
+    return '{  "CommandName": "CheckCompatibilityResponse",  "Success": true,  "MessageId": "None",  "Message": "",  "ImplementedProtocolVersion": "3.0.0",  "ServerIdentification": "BluffinMuffin.Server Python 1.0.0",  "SupportedLobbyTypes": [    "QuickMode",    "RegisteredMode"  ],  "AvailableGames": [    {      "GameType": "CommunityCardsPoker",      "AvailableVariants": [        "TexasHoldem",        "OmahaHoldem",        "CrazyPineapple"      ],      "AvailableLimits": [        "NoLimit",        "FixedLimit",        "PotLimit"      ],      "AvailableBlinds": [        "Blinds", "Antes", "None"      ],      "MinPlayers": 2,      "MaxPlayers": 10    }  ],  "Command": {    "CommandName": "CheckCompatibilityCommand",    "ImplementedProtocolVersion": "3.0.0",  "ClientIdentification": "BluffinMuffin.Client Python 1.0.0"  }}'
 
 
 def check_compatibility_response_obj():
     return CheckCompatibilityResponse(True, BluffinMessageIdEnum.Nothing, '',
-                                      json.loads(check_compatibility_command_obj().encode()), "2.0.0",
+                                      json.loads(check_compatibility_command_obj().encode()), "3.0.0",
+                                      "BluffinMuffin.Server Python 1.0.0",
                                       [LobbyTypeEnum.QuickMode, LobbyTypeEnum.RegisteredMode], [game_info_obj()])
 
 

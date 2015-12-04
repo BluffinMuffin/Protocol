@@ -6,13 +6,13 @@ If successful, the id of the table will be received. If not, server will send "-
 
 More information on ...
 
-* [LobbyOptions](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.DataTypes.Options.LobbyOptions.md)
+* [LobbyOptions](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/BluffinMuffin.Protocol.DataTypes.Options.LobbyOptions.md)
 
-* [GameTypeOptions](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptions.md)
+* [GameTypeOptions](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/BluffinMuffin.Protocol.DataTypes.Options.GameTypeOptions.md)
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.CreateTableCommand.png" alt="Sequence Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.CreateTableCommand.png" alt="Sequence Diagram"></p>
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Activities/BluffinMuffin.Protocol.Lobby.CreateTableCommand.png" alt="Activity Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/BluffinMuffin.Protocol.Lobby.CreateTableCommand.png" alt="Activity Diagram"></p>
 
 ## CreateTableCommand
 

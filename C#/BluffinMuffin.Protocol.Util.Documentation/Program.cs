@@ -70,7 +70,7 @@ namespace BluffinMuffin.Protocol.Util.Documentation
             foreach (var line in summary.Trim().Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries))
             {
                 sw.WriteLine();
-                sw.WriteLine(line.Replace("]({", "](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/").Replace("})", ".md)").Trim());
+                sw.WriteLine(line.Replace("]({", "](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/").Replace("})", ".md)").Trim());
             }
         }
 
@@ -132,12 +132,12 @@ namespace BluffinMuffin.Protocol.Util.Documentation
                 if (File.Exists(Path.Combine(GetWorkingDirectory(), @"..\..\..\..\Documentation\Sequences\", fullname + ".png")))
                 {
                     sw.WriteLine();
-                    sw.WriteLine("<p align=center><img src=\"https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/{0}.png\" alt=\"Sequence Diagram\"></p>", fullname);
+                    sw.WriteLine("<p align=center><img src=\"https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Sequences/{0}.png\" alt=\"Sequence Diagram\"></p>", fullname);
                 }
                 if (File.Exists(Path.Combine(GetWorkingDirectory(), @"..\..\..\..\Documentation\Activities\", fullname + ".png")))
                 {
                     sw.WriteLine();
-                    sw.WriteLine("<p align=center><img src=\"https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Activities/{0}.png\" alt=\"Activity Diagram\"></p>", fullname);
+                    sw.WriteLine("<p align=center><img src=\"https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/{0}.png\" alt=\"Activity Diagram\"></p>", fullname);
                 }
                 sw.WriteLine();
                 sw.WriteLine("## {0}", commandName);

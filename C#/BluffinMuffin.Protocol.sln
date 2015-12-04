@@ -48,7 +48,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentat
 		..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.CreateUserCommand.md
 		..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.md = ..\Documentation\BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.md
 		..\CHANGELOG.md = ..\CHANGELOG.md
+		..\Documentation\Game.ClosingTable.md = ..\Documentation\Game.ClosingTable.md
+		..\Documentation\Game.EndingGame.md = ..\Documentation\Game.EndingGame.md
+		..\Documentation\Game.Init.md = ..\Documentation\Game.Init.md
 		..\Documentation\Game.md = ..\Documentation\Game.md
+		..\Documentation\Game.StartingGame.md = ..\Documentation\Game.StartingGame.md
+		..\Documentation\Game.VariantGameLogic.md = ..\Documentation\Game.VariantGameLogic.md
+		..\Documentation\Game.WaitForPlayers.md = ..\Documentation\Game.WaitForPlayers.md
 		..\Documentation\LobbyQuickMode.md = ..\Documentation\LobbyQuickMode.md
 		..\Documentation\LobbyRegisteredMode.md = ..\Documentation\LobbyRegisteredMode.md
 		..\Documentation\PlayingCard.md = ..\Documentation\PlayingCard.md
@@ -93,6 +99,48 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Activities", "Activities", 
 		..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.png = ..\Documentation\Activities\BluffinMuffin.Protocol.Lobby.RegisteredMode.GetUserCommand.png
 		..\Documentation\Activities\GeneralActivity.vsdx = ..\Documentation\Activities\GeneralActivity.vsdx
 		..\Documentation\Activities\LobbyActivity.vsdx = ..\Documentation\Activities\LobbyActivity.vsdx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Game", "Game", "{EB943A5A-9E23-4EFA-BD20-5D25CEDB4859}"
+	ProjectSection(SolutionItems) = preProject
+		..\Documentation\Activities\GameActivities.vsdx = ..\Documentation\Activities\GameActivities.vsdx
+		..\Documentation\Activities\GameVariantDraw.vsdx = ..\Documentation\Activities\GameVariantDraw.vsdx
+		..\Documentation\Activities\GameVariantHoldem.vsdx = ..\Documentation\Activities\GameVariantHoldem.vsdx
+		..\Documentation\Activities\GameVariantStud.vsdx = ..\Documentation\Activities\GameVariantStud.vsdx
+		..\Documentation\Activities\Protocol.Game.ClosingTable.png = ..\Documentation\Activities\Protocol.Game.ClosingTable.png
+		..\Documentation\Activities\Protocol.Game.EndingGame.png = ..\Documentation\Activities\Protocol.Game.EndingGame.png
+		..\Documentation\Activities\Protocol.Game.Init.png = ..\Documentation\Activities\Protocol.Game.Init.png
+		..\Documentation\Activities\Protocol.Game.png = ..\Documentation\Activities\Protocol.Game.png
+		..\Documentation\Activities\Protocol.Game.StartingGame.png = ..\Documentation\Activities\Protocol.Game.StartingGame.png
+		..\Documentation\Activities\Protocol.Game.Variant.Draw.FiveCardsDraw.png = ..\Documentation\Activities\Protocol.Game.Variant.Draw.FiveCardsDraw.png
+		..\Documentation\Activities\Protocol.Game.Variant.Holdem.CrazyPineapple.png = ..\Documentation\Activities\Protocol.Game.Variant.Holdem.CrazyPineapple.png
+		..\Documentation\Activities\Protocol.Game.Variant.Holdem.IrishPoker.png = ..\Documentation\Activities\Protocol.Game.Variant.Holdem.IrishPoker.png
+		..\Documentation\Activities\Protocol.Game.Variant.Holdem.LazyPineapple.png = ..\Documentation\Activities\Protocol.Game.Variant.Holdem.LazyPineapple.png
+		..\Documentation\Activities\Protocol.Game.Variant.Holdem.ManilaPoker.png = ..\Documentation\Activities\Protocol.Game.Variant.Holdem.ManilaPoker.png
+		..\Documentation\Activities\Protocol.Game.Variant.Holdem.OmahaHoldem.png = ..\Documentation\Activities\Protocol.Game.Variant.Holdem.OmahaHoldem.png
+		..\Documentation\Activities\Protocol.Game.Variant.Holdem.Pineapple.png = ..\Documentation\Activities\Protocol.Game.Variant.Holdem.Pineapple.png
+		..\Documentation\Activities\Protocol.Game.Variant.Holdem.SpanishPoker.png = ..\Documentation\Activities\Protocol.Game.Variant.Holdem.SpanishPoker.png
+		..\Documentation\Activities\Protocol.Game.Variant.Holdem.TexasHoldem.png = ..\Documentation\Activities\Protocol.Game.Variant.Holdem.TexasHoldem.png
+		..\Documentation\Activities\Protocol.Game.Variant.Holdem.ThreeCardsHoldem.png = ..\Documentation\Activities\Protocol.Game.Variant.Holdem.ThreeCardsHoldem.png
+		..\Documentation\Activities\Protocol.Game.Variant.Stud.FiveCardsStud.png = ..\Documentation\Activities\Protocol.Game.Variant.Stud.FiveCardsStud.png
+		..\Documentation\Activities\Protocol.Game.Variant.Stud.SevenCardsStud.png = ..\Documentation\Activities\Protocol.Game.Variant.Stud.SevenCardsStud.png
+		..\Documentation\Activities\Protocol.Game.WaitForPlayers.png = ..\Documentation\Activities\Protocol.Game.WaitForPlayers.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Variants", "Variants", "{44FE0A19-8197-4F3C-95C3-6008C1ED33F6}"
+	ProjectSection(SolutionItems) = preProject
+		..\Documentation\Game.Variant.Draw.FiveCardsDraw.md = ..\Documentation\Game.Variant.Draw.FiveCardsDraw.md
+		..\Documentation\Game.Variant.Holdem.CrazyPineapple.md = ..\Documentation\Game.Variant.Holdem.CrazyPineapple.md
+		..\Documentation\Game.Variant.Holdem.IrishPoker.md = ..\Documentation\Game.Variant.Holdem.IrishPoker.md
+		..\Documentation\Game.Variant.Holdem.LazyPineapple.md = ..\Documentation\Game.Variant.Holdem.LazyPineapple.md
+		..\Documentation\Game.Variant.Holdem.ManilaPoker.md = ..\Documentation\Game.Variant.Holdem.ManilaPoker.md
+		..\Documentation\Game.Variant.Holdem.OmahaHoldem.md = ..\Documentation\Game.Variant.Holdem.OmahaHoldem.md
+		..\Documentation\Game.Variant.Holdem.Pineapple.md = ..\Documentation\Game.Variant.Holdem.Pineapple.md
+		..\Documentation\Game.Variant.Holdem.SpanishPoker.md = ..\Documentation\Game.Variant.Holdem.SpanishPoker.md
+		..\Documentation\Game.Variant.Holdem.TexasHoldem.md = ..\Documentation\Game.Variant.Holdem.TexasHoldem.md
+		..\Documentation\Game.Variant.Holdem.ThreeCardsHoldem.md = ..\Documentation\Game.Variant.Holdem.ThreeCardsHoldem.md
+		..\Documentation\Game.Variant.Stud.FiveCardsStud.md = ..\Documentation\Game.Variant.Stud.FiveCardsStud.md
+		..\Documentation\Game.Variant.Stud.SevenCardsStud.md = ..\Documentation\Game.Variant.Stud.SevenCardsStud.md
 	EndProjectSection
 EndProject
 Global
@@ -190,5 +238,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D22EA46B-64A4-4DAC-9093-6184BC4A498E} = {E469F8A0-7DB7-48CF-B40A-03BE833DD893}
 		{DA8A9842-8831-44D5-A23F-B20310BF14CE} = {E469F8A0-7DB7-48CF-B40A-03BE833DD893}
+		{EB943A5A-9E23-4EFA-BD20-5D25CEDB4859} = {DA8A9842-8831-44D5-A23F-B20310BF14CE}
+		{44FE0A19-8197-4F3C-95C3-6008C1ED33F6} = {E469F8A0-7DB7-48CF-B40A-03BE833DD893}
 	EndGlobalSection
 EndGlobal

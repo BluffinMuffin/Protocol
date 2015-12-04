@@ -13,14 +13,16 @@ namespace BluffinMuffin.Protocol.Tests.DataTypes
         {
             return new CheckCompatibilityCommand()
             {
-                ImplementedProtocolVersion = "1.0"
+                ImplementedProtocolVersion = "3.0.0",
+                ClientIdentification= "BluffinMuffin.Client .Net 1.0.0"
             };
         }
 
         public static CheckCompatibilityResponse CheckCompatibilityResponse()
         {
             var response = CheckCompatibilityCommand().ResponseSuccess();
-            response.ImplementedProtocolVersion = "1.0";
+            response.ImplementedProtocolVersion = "3.0.0";
+            response.ServerIdentification = "BluffinMuffin.Server .Net 1.0.0";
             response.SupportedLobbyTypes = new[] {LobbyTypeEnum.QuickMode, LobbyTypeEnum.RegisteredMode};
             response.AvailableGames = GameInfoMock.GetAllGames().ToArray();
             return response;

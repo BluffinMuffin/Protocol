@@ -13,7 +13,7 @@ namespace BluffinMuffin.Protocol.Lobby
         /// <summary>
         /// The version of the Implemented Bluffin Protocol by the client, Represented as "Major.Minor.Revision"
         /// </summary>
-        [ExampleValue("2.0.0")]
+        [ExampleValue("3.0.0")]
         public string ImplementedProtocolVersion { get; set; }
 
         /// <summary>
@@ -27,6 +27,12 @@ namespace BluffinMuffin.Protocol.Lobby
         /// </summary>
         [ExampleValues(1)]
         public GameInfo[] AvailableGames { get; set; }
+
+        /// <summary>
+        /// Something to identify what is the server.
+        /// </summary>
+        [ExampleValue("BluffinMuffin.Server .Net 1.0.0")]
+        public string ServerIdentification { get; set; }
 
         /// <summary>
         /// 

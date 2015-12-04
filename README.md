@@ -25,18 +25,19 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
 
  
 
-###Current Version: [3.0.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v3.0.0) *(2015-09-20)*
- * GameTypeEnum now contrains Community, Stud & Draw
- * RoundTypeEnum is no more supported
- * TableInfoCommand is now useless since JoinTableResponse, GameStarted and BetTurnStartedCommand command now have more information. TableInfoCommand have been removed. 
- * Cards in the hand of the player are now represented by FaceUpCards and FaceDownCards. PlayerInfo datatype and PlayerHoleCardsChangedCommand have been modified accordingly.
- * CheckCompatibilityResponse now have an AvailableGames field instead of SupportedRules. GameInfo replaces RuleInfo.
- * Available poker variants that can be implemented by the server are now listed in GameSubTypeEnum
- * CreateTableCommand has been simplified
- * Enhancement Issue #18: Validate email on registering
- * Better support of Stud Poker
- * PlayerTurnBeganCommand now have more information
- * PlayerJoinedCommand and PlayerLeftCommand are replaced with GameMessageCommand.
+###Current Version: [4.0.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v4.0.0) *(2015-12-04)*
+ * Documentation for Game Commands (#17)
+ * Removing unsused stuff that was only for the server side
+ * Enhancement Issue #36: Adding ClientIdentification & ServerIdentification
+ * The DLLs are now portable
+  * .NET Framework 4
+  * Silverlight 5
+  * Windows 8
+  * Windows Phone 8.1
+  * Windows Phone Silverlight 8
+  * Xamarin.Android
+  * Xamarin.iOS
+  * Xamarin.iOS (Classic)
  * *[Full changelog ...](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/CHANGELOG.md)*
 
 
@@ -45,7 +46,7 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
 ----
 
 ## Playing Cards
-Playing Cards sended and received with this protocol are always represented with a [normalized string](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/PlayingCard.md).
+Playing Cards sended and received with this protocol are always represented with a [normalized string](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/PlayingCard.md).
 
 ## Obsolete Information
 Obsolete information is information required by the protocol for retro-compatibility, but will disappear in the next major version.
@@ -56,7 +57,7 @@ When implementing a version of the protocol that has an Obsolete information, th
 ## General Commands
 General commands are for communication everywhere.
 
- * **[DisconnectCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/BluffinMuffin.Protocol.DisconnectCommand.md)** 
+ * **[DisconnectCommand](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/BluffinMuffin.Protocol.DisconnectCommand.md)** 
 
    This command is sent to inform the other end of the Tcp Connection that the communication should end
 
@@ -66,12 +67,12 @@ The lobby has two modes: ***Quick mode*** and ***Registered mode***.
 
 ### Quick mode
 The Quick mode is a mode where the money is given to the player when he enters the table. For example, If the amount is set to 1500 on Table1, every player will receive 1500$ to play with when they will enter the Table.
-For more information on this mode, see the [Quick Mode Documentation](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/LobbyQuickMode.md) section.
+For more information on this mode, see the [Quick Mode Documentation](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/LobbyQuickMode.md) section.
 
 ### Registered mode
 The Registered mode is a mode where a player connects with an account. He then have some money, that he uses throughout different games. When entering a game, he will take some of that money to play, and when he leaves what was left of that money will be given back to him.
-For more information on this mode, see the [Registered Mode Documentation](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/LobbyRegisteredMode.md) section.
+For more information on this mode, see the [Registered Mode Documentation](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/LobbyRegisteredMode.md) section.
 
 ## Game Commands
 Game commands are for communication inside a specific table. It's for all the actions on a poker game.
-For more information on these commands, see the [Game Commands Documentation](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Game.md) section.
+For more information on these commands, see the [Game Commands Documentation](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Game.md) section.

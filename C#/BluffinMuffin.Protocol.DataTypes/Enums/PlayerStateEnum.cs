@@ -8,9 +8,9 @@
     {
 
         /// <summary>
-        /// Zombie
+        /// None
         /// </summary>
-        Zombie,
+        None,
 
         /// <summary>
         /// Joined

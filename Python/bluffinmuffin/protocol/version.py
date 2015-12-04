@@ -1,7 +1,7 @@
 # BluffinMuffin.Protocol version information.  An empty _version_extra corresponds to a
 # full release.  '.dev' as a _version_extra string means this is a development
 # version
-_version_major = 3
+_version_major = 4
 _version_minor = 0
 _version_micro = 0
 # _version_extra = 'dev'

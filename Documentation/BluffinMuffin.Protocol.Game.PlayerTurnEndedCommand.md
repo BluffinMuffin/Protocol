@@ -45,7 +45,7 @@ Server informs all the clients that a player has taken action.
       "description": "The current state of the player that just played",
       "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
       "enum": [
-        "Zombie",
+        "None",
         "Joined",
         "SitIn",
         "AllIn",

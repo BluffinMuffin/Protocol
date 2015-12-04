@@ -2,7 +2,7 @@ from enum import Enum
 
 
 class PlayerStateEnum(Enum):
-    Zombie = 0
+    Nothing = 0
     Joined = 1
     SitIn = 2
     AllIn = 3
@@ -10,8 +10,12 @@ class PlayerStateEnum(Enum):
 
     @classmethod
     def parse(cls, str):
+        if str == 'None':
+            return cls.Nothing
         return cls[str]
 
     @classmethod
     def to_string(cls, value):
+        if value == cls.Nothing:
+            return 'None'
         return value.name

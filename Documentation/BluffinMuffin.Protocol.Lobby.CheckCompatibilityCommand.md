@@ -4,9 +4,9 @@ This should be sent one time, at the beginning, to know what the server can do.
 
 The supported version, all the supported lobby types and all the supported rules are then sent back to the client.
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.png" alt="Sequence Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Sequences/BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.png" alt="Sequence Diagram"></p>
 
-<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/Documentation/Activities/BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.png" alt="Activity Diagram"></p>
+<p align=center><img src="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/main/Documentation/Activities/BluffinMuffin.Protocol.Lobby.CheckCompatibilityCommand.png" alt="Activity Diagram"></p>
 
 ## CheckCompatibilityCommand
 
@@ -19,6 +19,10 @@ The supported version, all the supported lobby types and all the supported rules
   "properties": {
     "CommandName": {
       "description": "Always contains 'CheckCompatibilityCommand' to distinguish the command from others.",
+      "type": "string"
+    },
+    "ClientIdentification": {
+      "description": "Something to identify what is the client.",
       "type": "string"
     },
     "ImplementedProtocolVersion": {
@@ -34,7 +38,8 @@ The supported version, all the supported lobby types and all the supported rules
 ```json
 {
   "CommandName": "CheckCompatibilityCommand",
-  "ImplementedProtocolVersion": "2.0.0"
+  "ImplementedProtocolVersion": "3.0.0",
+  "ClientIdentification": "BluffinMuffin.Client .Net 1.0.0"
 }
 ```
 
@@ -153,6 +158,10 @@ The supported version, all the supported lobby types and all the supported rules
       "description": "The version of the Implemented Bluffin Protocol by the client, Represented as \"Major.Minor.Revision\"",
       "type": "string"
     },
+    "ServerIdentification": {
+      "description": "Something to identify what is the server.",
+      "type": "string"
+    },
     "SupportedLobbyTypes": {
       "description": "The LobbyTypes available on the server",
       "type": "array",
@@ -170,6 +179,10 @@ The supported version, all the supported lobby types and all the supported rules
       "properties": {
         "CommandName": {
           "description": "Always contains 'CheckCompatibilityCommand' to distinguish the command from others.",
+          "type": "string"
+        },
+        "ClientIdentification": {
+          "description": "Something to identify what is the client.",
           "type": "string"
         },
         "ImplementedProtocolVersion": {
@@ -190,7 +203,7 @@ The supported version, all the supported lobby types and all the supported rules
   "Success": true,
   "MessageId": "None",
   "Message": "",
-  "ImplementedProtocolVersion": "2.0.0",
+  "ImplementedProtocolVersion": "3.0.0",
   "SupportedLobbyTypes": [
     "QuickMode",
     "RegisteredMode"
@@ -215,9 +228,11 @@ The supported version, all the supported lobby types and all the supported rules
       "MaxPlayers": 10
     }
   ],
+  "ServerIdentification": "BluffinMuffin.Server .Net 1.0.0",
   "Command": {
     "CommandName": "CheckCompatibilityCommand",
-    "ImplementedProtocolVersion": "2.0.0"
+    "ImplementedProtocolVersion": "3.0.0",
+    "ClientIdentification": "BluffinMuffin.Client .Net 1.0.0"
   }
 }
 ```
