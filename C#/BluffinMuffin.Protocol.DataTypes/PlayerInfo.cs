@@ -63,7 +63,6 @@ namespace BluffinMuffin.Protocol.DataTypes
             NoSeat = -1;
             MoneySafeAmnt = 0;
             MoneyBetAmnt = 0;
-            State = PlayerStateEnum.Zombie;
             FaceUpCards = new string[0];
             FaceDownCards = new string[0];
         }

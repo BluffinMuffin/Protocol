@@ -78,7 +78,7 @@ This command is issued by the server when a betting round is starting. For examp
                 "description": "Current state of the player",
                 "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
                 "enum": [
-                  "Zombie",
+                  "None",
                   "Joined",
                   "SitIn",
                   "AllIn",

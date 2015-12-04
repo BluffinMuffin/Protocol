@@ -253,7 +253,7 @@ The success of the operation will be sent back
                 "description": "Current state of the player",
                 "type": "BluffinMuffin.Protocol.DataTypes.Enums.PlayerStateEnum",
                 "enum": [
-                  "Zombie",
+                  "None",
                   "Joined",
                   "SitIn",
                   "AllIn",
