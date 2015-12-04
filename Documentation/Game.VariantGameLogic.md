@@ -6,8 +6,8 @@ At this stage, each variant of the game have it's own logic. You can see the log
  * [Pineapple](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.Variant.Holdem.Pineapple.md)
  * [CrazyPineapple](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.Variant.Holdem.CrazyPineapple.md)
  * [LazyPineapple](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.Variant.Holdem.LazyPineapple.md)
- * ThreeCardsHoldem
- * IrishPoker
+ * [ThreeCardsHoldem](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.Variant.Holdem.ThreeCardsHoldem.md)
+ * [IrishPoker](https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/develop/Documentation/Game.Variant.Holdem.IrishPoker.md)
  * SpanishPoker
  * ManilaPoker
  * FiveCardsStud
