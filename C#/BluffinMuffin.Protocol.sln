@@ -112,6 +112,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Game", "Game", "{EB943A5A-9
 		..\Documentation\Activities\Protocol.Game.WaitForPlayers.png = ..\Documentation\Activities\Protocol.Game.WaitForPlayers.png
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Variants", "Variants", "{44FE0A19-8197-4F3C-95C3-6008C1ED33F6}"
+	ProjectSection(SolutionItems) = preProject
+		..\Documentation\Game.Variant.Holdem.OmahaHoldem.md = ..\Documentation\Game.Variant.Holdem.OmahaHoldem.md
+		..\Documentation\Game.Variant.Holdem.TexasHoldem.md = ..\Documentation\Game.Variant.Holdem.TexasHoldem.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -208,5 +214,6 @@ Global
 		{D22EA46B-64A4-4DAC-9093-6184BC4A498E} = {E469F8A0-7DB7-48CF-B40A-03BE833DD893}
 		{DA8A9842-8831-44D5-A23F-B20310BF14CE} = {E469F8A0-7DB7-48CF-B40A-03BE833DD893}
 		{EB943A5A-9E23-4EFA-BD20-5D25CEDB4859} = {DA8A9842-8831-44D5-A23F-B20310BF14CE}
+		{44FE0A19-8197-4F3C-95C3-6008C1ED33F6} = {E469F8A0-7DB7-48CF-B40A-03BE833DD893}
 	EndGlobalSection
 EndGlobal
