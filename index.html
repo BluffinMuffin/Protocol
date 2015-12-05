@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Bluffinmuffin.Protocol by Ericmas001</title>
+    <title>Bluffinmuffin.Protocol by BluffinMuffin</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-dark.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -20,9 +20,9 @@
   <body>
       <div id="header">
         <nav>
-          <li class="fork"><a href="https://github.com/Ericmas001/BluffinMuffin.Protocol">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/tarball/master">TAR</a></li>
+          <li class="fork"><a href="https://github.com/BluffinMuffin/Protocol">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/BluffinMuffin/Protocol/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/BluffinMuffin/Protocol/tarball/master">TAR</a></li>
           <li class="title">DOWNLOADS</li>
         </nav>
       </div><!-- end header -->
@@ -34,7 +34,7 @@
           <h1>Bluffinmuffin.Protocol</h1>
           <p>Communication Protocol for Poker Game</p>
           <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/Ericmas001">Ericmas001</a></span>
+          <span class="credits left">Project maintained by <a href="https://github.com/BluffinMuffin">BluffinMuffin</a></span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
         </div>
 
@@ -87,21 +87,26 @@
 </ul>
 
 <h3>
-<a id="current-version-300-2015-09-20" class="anchor" href="#current-version-300-2015-09-20" aria-hidden="true"><span class="octicon octicon-link"></span></a>Current Version: <a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v3.0.0">3.0.0</a> <em>(2015-09-20)</em>
+<a id="current-version-400-2015-12-04" class="anchor" href="#current-version-400-2015-12-04" aria-hidden="true"><span class="octicon octicon-link"></span></a>Current Version: <a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v4.0.0">4.0.0</a> <em>(2015-12-04)</em>
 </h3>
 
 <ul>
-<li>GameTypeEnum now contrains Community, Stud &amp; Draw</li>
-<li>RoundTypeEnum is no more supported</li>
-<li>TableInfoCommand is now useless since JoinTableResponse, GameStarted and BetTurnStartedCommand command now have more information. TableInfoCommand have been removed. </li>
-<li>Cards in the hand of the player are now represented by FaceUpCards and FaceDownCards. PlayerInfo datatype and PlayerHoleCardsChangedCommand have been modified accordingly.</li>
-<li>CheckCompatibilityResponse now have an AvailableGames field instead of SupportedRules. GameInfo replaces RuleInfo.</li>
-<li>Available poker variants that can be implemented by the server are now listed in GameSubTypeEnum</li>
-<li>CreateTableCommand has been simplified</li>
-<li>Enhancement Issue #18: Validate email on registering</li>
-<li>Better support of Stud Poker</li>
-<li>PlayerTurnBeganCommand now have more information</li>
-<li>PlayerJoinedCommand and PlayerLeftCommand are replaced with GameMessageCommand.</li>
+<li>Documentation for Game Commands (#17)</li>
+<li>Removing unsused stuff that was only for the server side</li>
+<li>Enhancement Issue #36: Adding ClientIdentification &amp; ServerIdentification</li>
+<li>The DLLs are now portable
+
+<ul>
+<li>.NET Framework 4</li>
+<li>Silverlight 5</li>
+<li>Windows 8</li>
+<li>Windows Phone 8.1</li>
+<li>Windows Phone Silverlight 8</li>
+<li>Xamarin.Android</li>
+<li>Xamarin.iOS</li>
+<li>Xamarin.iOS (Classic)</li>
+</ul>
+</li>
 <li><em><a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/blob/master/CHANGELOG.md">Full changelog ...</a></em></li>
 </ul>
 
