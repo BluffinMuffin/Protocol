@@ -3,7 +3,7 @@
 BluffinMuffin Protocol is a Bi-directional Communication Protocol for Poker Game. It has been proven on TCP using C#, but it not confined to it.
 
 The project will be released using [Semantic Versioning](http://semver.org) and developped using [Vincent Driessen's Git Model](http://nvie.com/posts/a-successful-git-branching-model/).
-###Current Version: [4.0.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v4.0.0) *(2015-12-04)*
+###Current Version: 4.0.0 *(2015-12-04)*
 <table align="center" width="100%">
     <tbody>
         <tr>
