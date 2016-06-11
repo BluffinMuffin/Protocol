@@ -3,7 +3,69 @@
 BluffinMuffin Protocol is a Bi-directional Communication Protocol for Poker Game. It has been proven on TCP using C#, but it not confined to it.
 
 The project will be released using [Semantic Versioning](http://semver.org) and developped using [Vincent Driessen's Git Model](http://nvie.com/posts/a-successful-git-branching-model/).
-
+###Current Version: [4.0.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v4.0.0) *(2015-12-04)*
+<table align="center" width="100%">
+    <tbody>
+        <tr>
+            <td rowspan=4>.Net</td>
+            <td align="center">
+            <a href="https://www.nuget.org/packages/BluffinMuffin.Protocol/" target="_blank">
+            BluffinMuffin.Protocol <br />
+            <img src="https://raw.githubusercontent.com/NuGet/Home/master/resources/nuget.png" alt="NuGet" width=150 />
+            </a>
+            </td>
+            <td align="left">
+                <div class="nuget-badge">
+                    <b>PM&gt; Install-Package BluffinMuffin.Protocol </b> <br />
+                    or Install via VS <a href="https://docs.nuget.org/consume/package-manager-dialog" target="_blank">Package Management</a> window.
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+            <a href="https://www.nuget.org/packages/BluffinMuffin.Protocol.DataTypes/" target="_blank">
+            BluffinMuffin.Protocol.DataTypes <br />
+            <img src="https://raw.githubusercontent.com/NuGet/Home/master/resources/nuget.png" alt="NuGet" width=150 />
+            </a>
+            </td>
+            <td align="left">
+                <div class="nuget-badge">
+                    <b>PM&gt; Install-Package BluffinMuffin.Protocol.DataTypes </b> <br />
+                    or Install via VS <a href="https://docs.nuget.org/consume/package-manager-dialog" target="_blank">Package Management</a> window.
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+            <a href="https://www.nuget.org/packages/BluffinMuffin.Protocol.Tests.DataTypes/" target="_blank">
+            BluffinMuffin.Protocol.Tests.DataTypes <br />
+            <img src="https://raw.githubusercontent.com/NuGet/Home/master/resources/nuget.png" alt="NuGet" width=150 />
+            </a>
+            </td>
+            <td align="left">
+                <div class="nuget-badge">
+                    <b>PM&gt; Install-Package BluffinMuffin.Protocol.Tests.DataTypes </b> <br />
+                    or Install via VS <a href="https://docs.nuget.org/consume/package-manager-dialog" target="_blank">Package Management</a> window.
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" colspan=2>
+                <div class="vs-package-management">
+                <a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v4.0.0" target="_blank">Download Manually</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan=1>Python</td>
+            <td align="left" colspan=2>
+                <div class="vs-package-management">
+                <a href="https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v4.0.0" target="_blank">Download Manually</a>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
 ####Project includes
  * **Documentation that defines the protocol**
 
@@ -25,7 +87,7 @@ The project will be released using [Semantic Versioning](http://semver.org) and 
 
  
 
-###Current Version: [4.0.0](https://github.com/Ericmas001/BluffinMuffin.Protocol/releases/tag/v4.0.0) *(2015-12-04)*
+###Changelog
  * Documentation for Game Commands (#17)
  * Removing unsused stuff that was only for the server side
  * Enhancement Issue #36: Adding ClientIdentification & ServerIdentification
